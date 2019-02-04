@@ -1,86 +1,11 @@
 {% import "element.njk" as element %}
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Periodic</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<style>
-html { font-size: 12pt; }
 
-body {
-	margin: 0;
-	padding: 0;
-}
-#app .table {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
-#app .table > li {
-	border: 1px solid #666;
-	margin: 0;
-	margin: padding;
-	height: 2rem;
-}
-
-.lanthanoids, .actinoids { display: none; }
-
-@media only screen and (min-width: 920px) {
-	#app {
-		text-align: center; 
-	}
-
-	#app .table {
-		width: auto;
-		text-align: left;
-		display: inline-grid;
-		grid-template-columns: repeat(18, 3rem);
-		grid-template-rows: repeat(10, 3rem);
-		gap: 4px 4px;
-		border: 1px solid #000;
-		margin-left: auto;
-	}
-
-	#app .table > li {
-		border: 1px solid #666;
-		height: 3rem;
-		width: 3rem;
-		place-self: stretch;
-	}
-
-	.lanthanoids, .actinoids { display: block; }
-
-	.He { grid-column-start: 18; }
-	.B, .Al { grid-column-start: 13; }
-
-	.La, .Ce, .Pr, .Nd, .Pm, .Sm, .Eu, .Gd, 
-	.Tb, .Dy, .Ho, .Er, .Tm, .Yb, .Lu
-	{ grid-row-start: 9; }
-
-	.Ac, .Th, .Pa, .U, .Np, .Pu, .Am, .Cm,
-	.Bk, .Cf, .Es, .Fm, .Md, .No, .Lr
-	{ grid-row-start: 10; }
-
-	.La, .Ac { grid-column-start: 3; }
-	.Ce, .Th { grid-column-start: 4; }
-	.Pr, .Pa { grid-column-start: 5; }
-	.Nd, .U { grid-column-start: 6; }
-	.Pm, .Np { grid-column-start: 7; }
-	.Sm, .Pu { grid-column-start: 8; }
-	.Eu, .Am { grid-column-start: 9; }
-	.Gd, .Cm { grid-column-start: 10; }
-	.Tb, .Bk { grid-column-start: 11; }
-	.Dy, .Cf { grid-column-start: 12; }
-	.Ho, .Es { grid-column-start: 13; }
-	.Er, .Fm { grid-column-start: 14; }
-	.Tm, .Md { grid-column-start: 15; }
-	.Yb, .No { grid-column-start: 16; }
-	.Lu, .Lr { grid-column-start: 17; }
-}
-</style>
 <body>
 	<div id="app">
 		<ul class="table">
