@@ -5,10 +5,205 @@
 <head>
 	<title>Periodic</title>
 </head>
+<style>
+html { font-size: 12pt; }
+
+body {
+	margin: 0;
+	padding: 0;
+}
+#app .table {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#app .table > li {
+	border: 1px solid #666;
+	margin: 0;
+	margin: padding;
+	height: 2rem;
+}
+
+.lanthanoids, .actinoids { display: none; }
+
+@media only screen and (min-width: 920px) {
+	#app {
+		text-align: center; 
+	}
+
+	#app .table {
+		width: auto;
+		text-align: left;
+		display: inline-grid;
+		grid-template-columns: repeat(18, 3rem);
+		grid-template-rows: repeat(10, 3rem);
+		gap: 4px 4px;
+		border: 1px solid #000;
+		margin-left: auto;
+	}
+
+	#app .table > li {
+		border: 1px solid #666;
+		height: 3rem;
+		width: 3rem;
+		place-self: stretch;
+	}
+
+	.lanthanoids, .actinoids { display: block; }
+
+	.He { grid-column-start: 18; }
+	.B, .Al { grid-column-start: 13; }
+
+	.La, .Ce, .Pr, .Nd, .Pm, .Sm, .Eu, .Gd, 
+	.Tb, .Dy, .Ho, .Er, .Tm, .Yb, .Lu
+	{ grid-row-start: 9; }
+
+	.Ac, .Th, .Pa, .U, .Np, .Pu, .Am, .Cm,
+	.Bk, .Cf, .Es, .Fm, .Md, .No, .Lr
+	{ grid-row-start: 10; }
+
+	.La, .Ac { grid-column-start: 3; }
+	.Ce, .Th { grid-column-start: 4; }
+	.Pr, .Pa { grid-column-start: 5; }
+	.Nd, .U { grid-column-start: 6; }
+	.Pm, .Np { grid-column-start: 7; }
+	.Sm, .Pu { grid-column-start: 8; }
+	.Eu, .Am { grid-column-start: 9; }
+	.Gd, .Cm { grid-column-start: 10; }
+	.Tb, .Bk { grid-column-start: 11; }
+	.Dy, .Cf { grid-column-start: 12; }
+	.Ho, .Es { grid-column-start: 13; }
+	.Er, .Fm { grid-column-start: 14; }
+	.Tm, .Md { grid-column-start: 15; }
+	.Yb, .No { grid-column-start: 16; }
+	.Lu, .Lr { grid-column-start: 17; }
+}
+</style>
 <body>
-	<div id="periodic">
-		<ul class="">
-			
+	<div id="app">
+		<ul class="table">
+			<li class="H">H</li>
+			<li class="He">He</li>
+			<li class="Li">Li</li>
+			<li class="Be">Be</li>
+			<li class="B">B</li>
+			<li class="C">C</li>
+			<li class="N">N</li>
+			<li class="O">O</li>
+			<li class="F">F</li>
+			<li class="Ne">Ne</li>
+			<li class="Na">Na</li>
+			<li class="Mg">Mg</li>
+			<li class="Al">Al</li>
+			<li class="Si">Si</li>
+			<li class="P">P</li>
+			<li class="S">S</li>
+			<li class="Cl">Cl</li>
+			<li class="Ar">Ar</li>
+			<li class="K">K</li>
+			<li class="Ca">Ca</li>
+			<li class="Sc">Sc</li>
+			<li class="Ti">Ti</li>
+			<li class="V">V</li>
+			<li class="Cr">Cr</li>
+			<li class="Mn">Mn</li>
+			<li class="Fe">Fe</li>
+			<li class="Co">Co</li>
+			<li class="Ni">Ni</li>
+			<li class="Cu">Cu</li>
+			<li class="Zn">Zn</li>
+			<li class="Ga">Ga</li>
+			<li class="Ge">Ge</li>
+			<li class="As">As</li>
+			<li class="Se">Se</li>
+			<li class="Br">Br</li>
+			<li class="Kr">Kr</li>
+			<li class="Rb">Rb</li>
+			<li class="Sr">Sr</li>
+			<li class="Y">Y</li>
+			<li class="Zr">Zr</li>
+			<li class="Nb">Nb</li>
+			<li class="Mo">Mo</li>
+			<li class="Tc">Tc</li>
+			<li class="Ru">Ru</li>
+			<li class="Rh">Rh</li>
+			<li class="Pd">Pd</li>
+			<li class="Ag">Ag</li>
+			<li class="Cd">Cd</li>
+			<li class="In">In</li>
+			<li class="Sn">Sn</li>
+			<li class="Sb">Sb</li>
+			<li class="Te">Te</li>
+			<li class="I">I</li>
+			<li class="Xe">Xe</li>
+			<li class="Cs">Cs</li>
+			<li class="Ba">Ba</li>
+			<li class="lanthanoids">57-71</li>
+			<li class="La">La</li>
+			<li class="Ce">Ce</li>
+			<li class="Pr">Pr</li>
+			<li class="Nd">Nd</li>
+			<li class="Pm">Pm</li>
+			<li class="Sm">Sm</li>
+			<li class="Eu">Eu</li>
+			<li class="Gd">Gd</li>
+			<li class="Tb">Tb</li>
+			<li class="Dy">Dy</li>
+			<li class="Ho">Ho</li>
+			<li class="Er">Er</li>
+			<li class="Tm">Tm</li>
+			<li class="Yb">Yb</li>
+			<li class="Lu">Lu</li>
+			<li class="Hf">Hf</li>
+			<li class="Ta">Ta</li>
+			<li class="W">W</li>
+			<li class="Re">Re</li>
+			<li class="Os">Os</li>
+			<li class="Ir">Ir</li>
+			<li class="Pt">Pt</li>
+			<li class="Au">Au</li>
+			<li class="Hg">Hg</li>
+			<li class="Tl">Tl</li>
+			<li class="Pb">Pb</li>
+			<li class="Bi">Bi</li>
+			<li class="Po">Po</li>
+			<li class="At">At</li>
+			<li class="Ra">Ra</li>
+			<li class="Fr">Fr</li>
+			<li class="Ra">Ra</li>
+			<li class="actinoids">89-103</li>
+			<li class="Ac">Ac</li>
+			<li class="Th">Th</li>
+			<li class="Pa">Pa</li>
+			<li class="U">U</li>
+			<li class="Np">Np</li>
+			<li class="Pu">Pu</li>
+			<li class="Am">Am</li>
+			<li class="Cm">Cm</li>
+			<li class="Bk">Bk</li>
+			<li class="Cf">Cf</li>
+			<li class="Es">Es</li>
+			<li class="Fm">Fm</li>
+			<li class="Md">Md</li>
+			<li class="No">No</li>
+			<li class="Lr">Lr</li>
+			<li class="Rf">Rf</li>
+			<li class="Db">Db</li>
+			<li class="Sg">Sg</li>
+			<li class="Bh">Bh</li>
+			<li class="Hs">Hs</li>
+			<li class="Mt">Mt</li>
+			<li class="Ds">Ds</li>
+			<li class="Rg">Rg</li>
+			<li class="Cn">Cn</li>
+			<li class="Nh">Nh</li>
+			<li class="Fl">Fl</li>
+			<li class="Mc">Mc</li>
+			<li class="Lv">Lv</li>
+			<li class="Ts">Ts</li>
+			<li class="Og">Og</li>
 		</ul>
 	</div>
 </body>
