@@ -1,5 +1,6 @@
 module.exports = {
   "H": {
+    "id": "H",
     "symbol": "H",
     "name": {
       "en": "Hydrogen"
@@ -47,6 +48,7 @@ module.exports = {
     ]
   },
   "He": {
+    "id": "He",
     "symbol": "He",
     "name": {
       "en": "Helium"
@@ -59,6 +61,7 @@ module.exports = {
     "isotopes": []
   },
   "Li": {
+    "id": "Li",
     "symbol": "Li",
     "name": {
       "en": "Lithium"
@@ -71,6 +74,7 @@ module.exports = {
     "isotopes": []
   },
   "Be": {
+    "id": "Be",
     "symbol": "Be",
     "name": {
       "en": "Berilium"
@@ -83,6 +87,7 @@ module.exports = {
     "isotopes": []
   },
   "B": {
+    "id": "B",
     "symbol": "B",
     "name": {
       "en": "Borum"
@@ -95,6 +100,7 @@ module.exports = {
     "isotopes": []
   },
   "C": {
+    "id": "C",
     "symbol": "C",
     "name": {
       "en": "Carbon"
@@ -107,6 +113,7 @@ module.exports = {
     "isotopes": []
   },
   "N": {
+    "id": "N",
     "symbol": "N",
     "name": {
       "en": "Nitrogen"
@@ -119,6 +126,7 @@ module.exports = {
     "isotopes": []
   },
   "O": {
+    "id": "O",
     "symbol": "O",
     "name": {
       "en": "Oxygen"
@@ -131,6 +139,7 @@ module.exports = {
     "isotopes": []
   },
   "F": {
+    "id": "F",
     "symbol": "F",
     "name": {
       "en": "Fluor"
@@ -143,6 +152,7 @@ module.exports = {
     "isotopes": []
   },
   "Ne": {
+    "id": "Ne",
     "symbol": "Ne",
     "name": {
       "en": "Neonium"
@@ -155,6 +165,7 @@ module.exports = {
     "isotopes": []
   },
   "Na": {
+    "id": "Na",
     "symbol": "Na",
     "name": {
       "en": "Sodium"
@@ -167,6 +178,7 @@ module.exports = {
     "isotopes": []
   },
   "Mg": {
+    "id": "Mg",
     "symbol": "Mg",
     "name": {
       "en": "Magnesium"
@@ -179,6 +191,7 @@ module.exports = {
     "isotopes": []
   },
   "Al": {
+    "id": "Al",
     "symbol": "Al",
     "name": {
       "en": "Aluminium"
@@ -191,6 +204,7 @@ module.exports = {
     "isotopes": []
   },
   "Si": {
+    "id": "Si",
     "symbol": "Si",
     "name": {
       "en": "Silicium"
@@ -203,6 +217,7 @@ module.exports = {
     "isotopes": []
   },
   "P": {
+    "id": "P",
     "symbol": "P",
     "name": {
       "en": "Phosphorum"
@@ -215,6 +230,7 @@ module.exports = {
     "isotopes": []
   },
   "S": {
+    "id": "S",
     "symbol": "S",
     "name": {
       "en": "Sulfur"
@@ -227,6 +243,7 @@ module.exports = {
     "isotopes": []
   },
   "Cl": {
+    "id": "Cl",
     "symbol": "Cl",
     "name": {
       "en": "Chloride"
@@ -239,6 +256,7 @@ module.exports = {
     "isotopes": []
   },
   "Ar": {
+    "id": "Ar",
     "symbol": "Ar",
     "name": {
       "en": "Argonium"
@@ -251,6 +269,7 @@ module.exports = {
     "isotopes": []
   },
   "K": {
+    "id": "K",
     "symbol": "K",
     "name": {
       "en": "alkali_metal"
@@ -263,6 +282,7 @@ module.exports = {
     "isotopes": []
   },
   "Ca": {
+    "id": "Ca",
     "symbol": "Ca",
     "name": {
       "en": "Calcium"
@@ -275,6 +295,7 @@ module.exports = {
     "isotopes": []
   },
   "Sc": {
+    "id": "Sc",
     "symbol": "Sc",
     "name": {
       "en": "Sc"
@@ -287,6 +308,7 @@ module.exports = {
     "isotopes": []
   },
   "Ti": {
+    "id": "Ti",
     "symbol": "Ti",
     "name": {
       "en": "Titanium"
@@ -299,6 +321,7 @@ module.exports = {
     "isotopes": []
   },
   "V": {
+    "id": "V",
     "symbol": "V",
     "name": {
       "en": "Vanadium"
@@ -311,6 +334,7 @@ module.exports = {
     "isotopes": []
   },
   "Cr": {
+    "id": "Cr",
     "symbol": "Cr",
     "name": {
       "en": "Chromium"
@@ -323,6 +347,7 @@ module.exports = {
     "isotopes": []
   },
   "Mn": {
+    "id": "Mn",
     "symbol": "Mn",
     "name": {
       "en": "Manganese"
@@ -335,6 +360,7 @@ module.exports = {
     "isotopes": []
   },
   "Fe": {
+    "id": "Fe",
     "symbol": "Fe",
     "name": {
       "en": "Iron"
@@ -347,6 +373,7 @@ module.exports = {
     "isotopes": []
   },
   "Co": {
+    "id": "Co",
     "symbol": "Co",
     "name": {
       "en": "Cobalt"
@@ -359,6 +386,7 @@ module.exports = {
     "isotopes": []
   },
   "Ni": {
+    "id": "Ni",
     "symbol": "Ni",
     "name": {
       "en": "Nickel"
@@ -371,6 +399,7 @@ module.exports = {
     "isotopes": []
   },
   "Cu": {
+    "id": "Cu",
     "symbol": "Cu",
     "name": {
       "en": "Copper"
@@ -383,6 +412,7 @@ module.exports = {
     "isotopes": []
   },
   "Zn": {
+    "id": "Zn",
     "symbol": "Zn",
     "name": {
       "en": "Zinc"
@@ -395,6 +425,7 @@ module.exports = {
     "isotopes": []
   },
   "Ga": {
+    "id": "Ga",
     "symbol": "Ga",
     "name": {
       "en": "Galium"
@@ -407,6 +438,7 @@ module.exports = {
     "isotopes": []
   },
   "Ge": {
+    "id": "Ge",
     "symbol": "Ge",
     "name": {
       "en": "Germanium"
@@ -419,6 +451,7 @@ module.exports = {
     "isotopes": []
   },
   "As": {
+    "id": "As",
     "symbol": "As",
     "name": {
       "en": "Arsenium"
@@ -431,6 +464,7 @@ module.exports = {
     "isotopes": []
   },
   "Se": {
+    "id": "Se",
     "symbol": "Se",
     "name": {
       "en": "Selenium"
@@ -443,6 +477,7 @@ module.exports = {
     "isotopes": []
   },
   "Br": {
+    "id": "Br",
     "symbol": "Br",
     "name": {
       "en": "Bromium"
@@ -455,6 +490,7 @@ module.exports = {
     "isotopes": []
   },
   "Kr": {
+    "id": "Kr",
     "symbol": "Kr",
     "name": {
       "en": "Kryptonium"
@@ -467,6 +503,7 @@ module.exports = {
     "isotopes": []
   },
   "Rb": {
+    "id": "Rb",
     "symbol": "Rb",
     "name": {
       "en": "Rubidium"
@@ -479,6 +516,7 @@ module.exports = {
     "isotopes": []
   },
   "Sr": {
+    "id": "Sr",
     "symbol": "Sr",
     "name": {
       "en": "Stroncium"
@@ -491,6 +529,7 @@ module.exports = {
     "isotopes": []
   },
   "Y": {
+    "id": "Y",
     "symbol": "Y",
     "name": {
       "en": "Yridium"
@@ -503,6 +542,7 @@ module.exports = {
     "isotopes": []
   },
   "Zr": {
+    "id": "Zr",
     "symbol": "Zr",
     "name": {
       "en": "Zirconium"
@@ -515,6 +555,7 @@ module.exports = {
     "isotopes": []
   },
   "Nb": {
+    "id": "Nb",
     "symbol": "Nb",
     "name": {
       "en": "Niobium"
@@ -527,6 +568,7 @@ module.exports = {
     "isotopes": []
   },
   "Mo": {
+    "id": "Mo",
     "symbol": "Mo",
     "name": {
       "en": "Molibdenium"
@@ -539,6 +581,7 @@ module.exports = {
     "isotopes": []
   },
   "Tc": {
+    "id": "Tc",
     "symbol": "Tc",
     "name": {
       "en": "Tc"
@@ -551,6 +594,7 @@ module.exports = {
     "isotopes": []
   },
   "Ru": {
+    "id": "Ru",
     "symbol": "Ru",
     "name": {
       "en": "Ru"
@@ -563,6 +607,7 @@ module.exports = {
     "isotopes": []
   },
   "Rh": {
+    "id": "Rh",
     "symbol": "Rh",
     "name": {
       "en": "Rh"
@@ -575,6 +620,7 @@ module.exports = {
     "isotopes": []
   },
   "Pd": {
+    "id": "Pd",
     "symbol": "Pd",
     "name": {
       "en": "Paladium"
@@ -587,6 +633,7 @@ module.exports = {
     "isotopes": []
   },
   "Ag": {
+    "id": "Ag",
     "symbol": "Ag",
     "name": {
       "en": "Silver"
@@ -599,6 +646,7 @@ module.exports = {
     "isotopes": []
   },
   "Cd": {
+    "id": "Cd",
     "symbol": "Cd",
     "name": {
       "en": "Cadmium"
@@ -611,6 +659,7 @@ module.exports = {
     "isotopes": []
   },
   "In": {
+    "id": "In",
     "symbol": "In",
     "name": {
       "en": "Indium"
@@ -623,6 +672,7 @@ module.exports = {
     "isotopes": []
   },
   "Sn": {
+    "id": "Sn",
     "symbol": "Sn",
     "name": {
       "en": "Tin"
@@ -635,6 +685,7 @@ module.exports = {
     "isotopes": []
   },
   "Sb": {
+    "id": "Sb",
     "symbol": "Sb",
     "name": {
       "en": "Antimonium"
@@ -647,6 +698,7 @@ module.exports = {
     "isotopes": []
   },
   "Te": {
+    "id": "Te",
     "symbol": "Te",
     "name": {
       "en": "Telurium"
@@ -659,6 +711,7 @@ module.exports = {
     "isotopes": []
   },
   "I": {
+    "id": "I",
     "symbol": "I",
     "name": {
       "en": "I"
@@ -671,6 +724,7 @@ module.exports = {
     "isotopes": []
   },
   "Xe": {
+    "id": "Xe",
     "symbol": "Xe",
     "name": {
       "en": "Xenonium"
@@ -683,6 +737,7 @@ module.exports = {
     "isotopes": []
   },
   "Cs": {
+    "id": "Cs",
     "symbol": "Cs",
     "name": {
       "en": "Caesium"
@@ -695,6 +750,7 @@ module.exports = {
     "isotopes": []
   },
   "Ba": {
+    "id": "Ba",
     "symbol": "Ba",
     "name": {
       "en": "Barium"
@@ -707,6 +763,7 @@ module.exports = {
     "isotopes": []
   },
   "La": {
+    "id": "La",
     "symbol": "La",
     "name": {
       "en": "Lanthanium"
@@ -719,6 +776,7 @@ module.exports = {
     "isotopes": []
   },
   "Ce": {
+    "id": "Ce",
     "symbol": "Ce",
     "name": {
       "en": "Ce"
@@ -731,6 +789,7 @@ module.exports = {
     "isotopes": []
   },
   "Pr": {
+    "id": "Pr",
     "symbol": "Pr",
     "name": {
       "en": "Pr"
@@ -743,6 +802,7 @@ module.exports = {
     "isotopes": []
   },
   "Nd": {
+    "id": "Nd",
     "symbol": "Nd",
     "name": {
       "en": "Neodimium"
@@ -755,6 +815,7 @@ module.exports = {
     "isotopes": []
   },
   "Pm": {
+    "id": "Pm",
     "symbol": "Pm",
     "name": {
       "en": "Pm"
@@ -767,6 +828,7 @@ module.exports = {
     "isotopes": []
   },
   "Sm": {
+    "id": "Sm",
     "symbol": "Sm",
     "name": {
       "en": "Samarium"
@@ -779,6 +841,7 @@ module.exports = {
     "isotopes": []
   },
   "Eu": {
+    "id": "Eu",
     "symbol": "Eu",
     "name": {
       "en": "Europium"
@@ -791,6 +854,7 @@ module.exports = {
     "isotopes": []
   },
   "Gd": {
+    "id": "Gd",
     "symbol": "Gd",
     "name": {
       "en": "Gd"
@@ -803,6 +867,7 @@ module.exports = {
     "isotopes": []
   },
   "Tb": {
+    "id": "Tb",
     "symbol": "Tb",
     "name": {
       "en": "Tb"
@@ -815,6 +880,7 @@ module.exports = {
     "isotopes": []
   },
   "Dy": {
+    "id": "Dy",
     "symbol": "Dy",
     "name": {
       "en": "Dy"
@@ -827,6 +893,7 @@ module.exports = {
     "isotopes": []
   },
   "Ho": {
+    "id": "Ho",
     "symbol": "Ho",
     "name": {
       "en": "Ho"
@@ -839,6 +906,7 @@ module.exports = {
     "isotopes": []
   },
   "Er": {
+    "id": "Er",
     "symbol": "Er",
     "name": {
       "en": "Er"
@@ -851,6 +919,7 @@ module.exports = {
     "isotopes": []
   },
   "Tm": {
+    "id": "Tm",
     "symbol": "Tm",
     "name": {
       "en": "Tm"
@@ -863,6 +932,7 @@ module.exports = {
     "isotopes": []
   },
   "Yb": {
+    "id": "Yb",
     "symbol": "Yb",
     "name": {
       "en": "Yn"
@@ -875,6 +945,7 @@ module.exports = {
     "isotopes": []
   },
   "Lu": {
+    "id": "Lu",
     "symbol": "Lu",
     "name": {
       "en": "Lu"
@@ -887,6 +958,7 @@ module.exports = {
     "isotopes": []
   },
   "Hf": {
+    "id": "Hf",
     "symbol": "Hf",
     "name": {
       "en": "Hafnium"
@@ -899,6 +971,7 @@ module.exports = {
     "isotopes": []
   },
   "Ta": {
+    "id": "Ta",
     "symbol": "Ta",
     "name": {
       "en": "Tantalum"
@@ -911,6 +984,7 @@ module.exports = {
     "isotopes": []
   },
   "W": {
+    "id": "W",
     "symbol": "W",
     "name": {
       "en": "Tungsten"
@@ -923,6 +997,7 @@ module.exports = {
     "isotopes": []
   },
   "Re": {
+    "id": "Re",
     "symbol": "Re",
     "name": {
       "en": "Renium"
@@ -935,6 +1010,7 @@ module.exports = {
     "isotopes": []
   },
   "Os": {
+    "id": "Os",
     "symbol": "Os",
     "name": {
       "en": "Osmium"
@@ -947,6 +1023,7 @@ module.exports = {
     "isotopes": []
   },
   "Ir": {
+    "id": "Ir",
     "symbol": "Ir",
     "name": {
       "en": "Ir"
@@ -959,6 +1036,7 @@ module.exports = {
     "isotopes": []
   },
   "Pt": {
+    "id": "Pt",
     "symbol": "Pt",
     "name": {
       "en": "Platinum"
@@ -971,6 +1049,7 @@ module.exports = {
     "isotopes": []
   },
   "Au": {
+    "id": "Au",
     "symbol": "Au",
     "name": {
       "en": "Gold"
@@ -983,6 +1062,7 @@ module.exports = {
     "isotopes": []
   },
   "Hg": {
+    "id": "Hg",
     "symbol": "Hg",
     "name": {
       "en": "Mercury"
@@ -995,6 +1075,7 @@ module.exports = {
     "isotopes": []
   },
   "Tl": {
+    "id": "Tl",
     "symbol": "Tl",
     "name": {
       "en": "Tl"
@@ -1007,6 +1088,7 @@ module.exports = {
     "isotopes": []
   },
   "Pb": {
+    "id": "Pb",
     "symbol": "Pb",
     "name": {
       "en": "Lead"
@@ -1019,6 +1101,7 @@ module.exports = {
     "isotopes": []
   },
   "Bi": {
+    "id": "Bi",
     "symbol": "Bi",
     "name": {
       "en": "Bismuth"
@@ -1031,6 +1114,7 @@ module.exports = {
     "isotopes": []
   },
   "Po": {
+    "id": "Po",
     "symbol": "Po",
     "name": {
       "en": "Po"
@@ -1043,6 +1127,7 @@ module.exports = {
     "isotopes": []
   },
   "At": {
+    "id": "At",
     "symbol": "At",
     "name": {
       "en": "At"
@@ -1055,6 +1140,7 @@ module.exports = {
     "isotopes": []
   },
   "Rn": {
+    "id": "Rn",
     "symbol": "Rn",
     "name": {
       "en": "Radonium"
@@ -1067,6 +1153,7 @@ module.exports = {
     "isotopes": []
   },
   "Fr": {
+    "id": "Fr",
     "symbol": "Fr",
     "name": {
       "en": "Francium"
@@ -1079,6 +1166,7 @@ module.exports = {
     "isotopes": []
   },
   "Ra": {
+    "id": "Ra",
     "symbol": "Ra",
     "name": {
       "en": "Radium"
@@ -1091,6 +1179,7 @@ module.exports = {
     "isotopes": []
   },
   "Ac": {
+    "id": "Ac",
     "symbol": "Ac",
     "name": {
       "en": "Actinium"
@@ -1103,6 +1192,7 @@ module.exports = {
     "isotopes": []
   },
   "Th": {
+    "id": "Th",
     "symbol": "Th",
     "name": {
       "en": "Thorium"
@@ -1115,6 +1205,7 @@ module.exports = {
     "isotopes": []
   },
   "Pa": {
+    "id": "Pa",
     "symbol": "Pa",
     "name": {
       "en": "Pa"
@@ -1127,6 +1218,7 @@ module.exports = {
     "isotopes": []
   },
   "U": {
+    "id": "U",
     "symbol": "U",
     "name": {
       "en": "Uranium"
@@ -1139,6 +1231,7 @@ module.exports = {
     "isotopes": []
   },
   "Np": {
+    "id": "Np",
     "symbol": "Np",
     "name": {
       "en": "Np"
@@ -1151,6 +1244,7 @@ module.exports = {
     "isotopes": []
   },
   "Pu": {
+    "id": "Pu",
     "symbol": "Pu",
     "name": {
       "en": "Plutonium"
@@ -1163,6 +1257,7 @@ module.exports = {
     "isotopes": []
   },
   "Am": {
+    "id": "Am",
     "symbol": "Am",
     "name": {
       "en": "Am"
@@ -1175,6 +1270,7 @@ module.exports = {
     "isotopes": []
   },
   "Cm": {
+    "id": "Cm",
     "symbol": "Cm",
     "name": {
       "en": "Californium"
@@ -1187,6 +1283,7 @@ module.exports = {
     "isotopes": []
   },
   "Bk": {
+    "id": "Bk",
     "symbol": "Bk",
     "name": {
       "en": "Berkelium"
@@ -1199,6 +1296,7 @@ module.exports = {
     "isotopes": []
   },
   "Cf": {
+    "id": "Cf",
     "symbol": "Cf",
     "name": {
       "en": "Cf"
@@ -1211,6 +1309,7 @@ module.exports = {
     "isotopes": []
   },
   "Es": {
+    "id": "Es",
     "symbol": "Es",
     "name": {
       "en": "Es"
@@ -1223,6 +1322,7 @@ module.exports = {
     "isotopes": []
   },
   "Fm": {
+    "id": "Fm",
     "symbol": "Fm",
     "name": {
       "en": "Fermium"
@@ -1235,6 +1335,7 @@ module.exports = {
     "isotopes": []
   },
   "Md": {
+    "id": "Md",
     "symbol": "Md",
     "name": {
       "en": "Mendelevium"
@@ -1247,6 +1348,7 @@ module.exports = {
     "isotopes": []
   },
   "No": {
+    "id": "No",
     "symbol": "No",
     "name": {
       "en": "Nobelium"
@@ -1259,6 +1361,7 @@ module.exports = {
     "isotopes": []
   },
   "Lr": {
+    "id": "Lr",
     "symbol": "Lr",
     "name": {
       "en": "Lr"
@@ -1271,6 +1374,7 @@ module.exports = {
     "isotopes": []
   },
   "Rf": {
+    "id": "Rf",
     "symbol": "Rf",
     "name": {
       "en": "Rf"
@@ -1283,6 +1387,7 @@ module.exports = {
     "isotopes": []
   },
   "Db": {
+    "id": "Db",
     "symbol": "Db",
     "name": {
       "en": "Db"
@@ -1295,6 +1400,7 @@ module.exports = {
     "isotopes": []
   },
   "Sg": {
+    "id": "Sg",
     "symbol": "Sg",
     "name": {
       "en": "Sg"
@@ -1307,6 +1413,7 @@ module.exports = {
     "isotopes": []
   },
   "Bh": {
+    "id": "Bh",
     "symbol": "Bh",
     "name": {
       "en": "Bh"
@@ -1319,6 +1426,7 @@ module.exports = {
     "isotopes": []
   },
   "Hs": {
+    "id": "Hs",
     "symbol": "Hs",
     "name": {
       "en": "Hs"
@@ -1331,6 +1439,7 @@ module.exports = {
     "isotopes": []
   },
   "Mt": {
+    "id": "Mt",
     "symbol": "Mt",
     "name": {
       "en": "Mt"
@@ -1343,6 +1452,7 @@ module.exports = {
     "isotopes": []
   },
   "Ds": {
+    "id": "Ds",
     "symbol": "Ds",
     "name": {
       "en": "Ds"
@@ -1355,6 +1465,7 @@ module.exports = {
     "isotopes": []
   },
   "Rg": {
+    "id": "Rg",
     "symbol": "Rg",
     "name": {
       "en": "Rg"
@@ -1367,6 +1478,7 @@ module.exports = {
     "isotopes": []
   },
   "Cn": {
+    "id": "Cn",
     "symbol": "Cn",
     "name": {
       "en": "Cn"
@@ -1379,6 +1491,7 @@ module.exports = {
     "isotopes": []
   },
   "Nh": {
+    "id": "Nh",
     "symbol": "Nh",
     "name": {
       "en": "Nh"
@@ -1391,6 +1504,7 @@ module.exports = {
     "isotopes": []
   },
   "Fl": {
+    "id": "Fl",
     "symbol": "Fl",
     "name": {
       "en": "Fl"
@@ -1403,6 +1517,7 @@ module.exports = {
     "isotopes": []
   },
   "Mc": {
+    "id": "Mc",
     "symbol": "Mc",
     "name": {
       "en": "Mc"
@@ -1415,6 +1530,7 @@ module.exports = {
     "isotopes": []
   },
   "Lv": {
+    "id": "Lv",
     "symbol": "Lv",
     "name": {
       "en": "Lv"
@@ -1427,6 +1543,7 @@ module.exports = {
     "isotopes": []
   },
   "Ts": {
+    "id": "Ts",
     "symbol": "Ts",
     "name": {
       "en": "Ts"
@@ -1439,6 +1556,7 @@ module.exports = {
     "isotopes": []
   },
   "Og": {
+    "id": "Og",
     "symbol": "Og",
     "name": {
       "en": "Og"
@@ -1449,5 +1567,21 @@ module.exports = {
     "group": 18,
     "type": "unknown_type",
     "isotopes": []
-  }
+  },
+  "lanthanoids": {
+    "id": "lanthanoids",
+    "symbol": "57-71",
+    "name": {
+      "en": "Lanthanoids"
+    },
+    "classList": ['lanthanoid']
+  },
+  "actinoids": {
+    "id": "actinoids",
+    "symbol": "89-103",
+    "name": {
+      "en": "Actinoids"
+    },
+    "classList": ['actinoid']
+  },
 };

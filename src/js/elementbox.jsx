@@ -11,9 +11,10 @@ export default class ElementBox extends React.Component {
 
   render() {
     let classes = [
-      this.props.elem.symbol,
+      this.props.elem.id,
       this.props.elem.type
-    ].join(' ');
+    ].concat(this.props.elem.classList).join(' ');
+    
     return (
       <li className={classes}>
         { this.props.elem.symbol }
