@@ -1,3 +1,5 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
 html { font-size: 12pt; }
 
 body {
@@ -7,6 +9,7 @@ body {
 #app .table {
 	list-style: none;
 	margin: 0;
+	margin-top: 20px;
 	padding: 0;
 	width: 100%;
 }
@@ -16,21 +19,33 @@ body {
 	margin: 0;
 	margin: padding;
 	height: 2rem;
+	cursor: pointer;
 }
 
 .lanthanoids, .actinoids { display: none; }
 
-.nonmetal { background: #22FF22; }
-.alkali_metal { background: #FFCC33; }
-.alkaline_earth { background: #FFFF44; }
-.transition_metal { background: #DDBBBB; }
-.metalloid { background: #77DD88; }
-.post_transitional { background: #99DDCC; }
-.noble_gas { background: #77CCFF; }
-.lanthanoid { background: #FFBB99; }
-.actinoid { background: #EEBBDD; }
+.nonmetal { background: #22FF22; } 
+.alkali_metal { background: #FFCC33; } 
+.alkaline_earth { background: #FFFF44; } 
+.transition_metal { background: #DDBBBB; } 
+.metalloid { background: #77DD88; } 
+.post_transitional { background: #99DDCC; } 
+.noble_gas { background: #77CCFF; } 
+.lanthanoid { background: #FFBB99; } 
+.actinoid { background: #EEBBDD; } 
 
 @media only screen and (min-width: 920px) {
+	.nonmetal.active { background: radial-gradient(#22FF22, rgba(255,255,255,0.5) 120%); }
+	.alkali_metal.active { background: radial-gradient(#FFCC33, rgba(255,255,255,0.5) 120%); }
+	.alkaline_earth.active { background: radial-gradient(#FFFF44, rgba(255,255,255,0.5) 120%); }
+	.transition_metal.active { background: radial-gradient(#DDBBBB, rgba(255,255,255,0.5) 120%); }
+	.metalloid.active { background: radial-gradient(#77DD88, rgba(255,255,255,0.5) 120%); }
+	.post_transitional.active { background: radial-gradient(#99DDCC, rgba(255,255,255,0.5) 120%); }
+	.noble_gas.active { background: radial-gradient(#77CCFF, rgba(255,255,255,0.5) 120%); }
+	.lanthanoid.active { background: radial-gradient(#FFBB99, rgba(255,255,255,0.5) 120%); }
+	.actinoid.active { background: radial-gradient(#EEBBDD, rgba(255,255,255,0.5) 120%); }
+
+	
 	#app {
 		text-align: center; 
 	}
@@ -54,7 +69,6 @@ body {
 		".  .  .  La Ce Pr Nd Pm Sm Eu Gd  Tb  Dy   Ho  Er  Tm  Yb  Lu ."
 		".  .  .  Ac Th Pa U  Np Pu Am Cm  Bk  Cf   Es  Fm  Md  No  Lr .";
 		gap: 4px 4px;
-		border: 1px solid #000;
 		margin-left: auto;
 	}
 
@@ -63,6 +77,7 @@ body {
 		height: 3rem;
 		width: 3rem;
 		place-self: stretch;
+		border-radius: 2px;
 	}
 
 	.disabled {
