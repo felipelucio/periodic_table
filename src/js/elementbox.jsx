@@ -38,17 +38,27 @@ export default class ElementBox extends React.Component {
       'element'
     ].concat(this.props.elem.classList).join(' ');
    
+   let elem = this.props.elem;
     return (
       <li className={classes} 
-        data-key={this.props.elem.id}
-        data-type={this.props.elem.type}
+        data-key={elem.id}
+        data-type={elem.type}
         onPointerEnter={(e) => this.onPointerEnter(e)}
         onPointerLeave={(e) => this.onPointerLeave(e)}
       >
-        <span className="name">{ this.props.elem.name['en'] }</span>
-        <span className="symbol">{ this.props.elem.symbol }</span>
-        <span className="atomic_number">{ this.props.elem.atomic_number }</span>
-        <span className="weight">{ this.props.elem.weight }</span>
+        <span className="name">{ elem.name['en'] }</span>
+        <span className="symbol">{ elem.symbol }</span>
+        <span className="atomic_number">{ elem.atomic_number }</span>
+        <span className="weight">{ elem.weight }</span>
+        <span className="electrons hide">
+          <p>{ elem.electrons[0] }</p>
+          <p>{ elem.electrons[1] }</p>
+          <p>{ elem.electrons[2] }</p>
+          <p>{ elem.electrons[3] }</p>
+          <p>{ elem.electrons[4] }</p>
+          <p>{ elem.electrons[5] }</p>
+          <p>{ elem.electrons[6] }</p>
+        </span>
       </li>
     );
   }

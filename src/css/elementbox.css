@@ -40,3 +40,21 @@ li.element {
 	justify-self: center;
 	font-size: 0.6rem;
 }
+.element .electrons {
+	grid-row: 1 / span 4;
+	grid-column: 3;
+	font-size: 0.55rem;
+	justify-self: right;
+	text-align: right;
+	margin-right: 0.15rem;
+	margin-top: 0.1rem;
+	display: none;
+}
+.element.active .electrons {
+	display: block;
+}
+.element .electrons p {
+	margin: 0;
+	padding: 0;
+	line-height: 0.6rem;
+}

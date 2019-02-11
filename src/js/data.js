@@ -10,6 +10,7 @@ module.exports = {
     "period": 1,
     "group": 1,
     "type": "nonmetal",
+    "electrons": [1],
     "isotopes": [
       {
         "id": "hydrogen-1",
@@ -58,6 +59,7 @@ module.exports = {
     "period": 1,
     "group": 18,
     "type": "noble_gas",
+    "electrons": [2],
     "isotopes": []
   },
   "Li": {
@@ -66,11 +68,12 @@ module.exports = {
     "name": {
       "en": "Lithium"
     },
-    "atomic_number": 2,
+    "atomic_number": 3,
     "weight": 4.0026,
     "period": 2,
     "group": 1,
     "type": "alkali_metal",
+    "electrons": [2, 1],
     "isotopes": []
   },
   "Be": {
@@ -79,11 +82,12 @@ module.exports = {
     "name": {
       "en": "Beryllium"
     },
-    "atomic_number": 2,
+    "atomic_number": 4,
     "weight": 4.0026,
     "period": 2,
     "group": 2,
     "type": "alkaline_earth",
+    "electrons": [2, 2],
     "isotopes": []
   },
   "B": {
@@ -92,11 +96,12 @@ module.exports = {
     "name": {
       "en": "Boron"
     },
-    "atomic_number": 2,
+    "atomic_number": 5,
     "weight": 4.0026,
     "period": 1,
     "group": 13,
     "type": "metalloid",
+    "electrons": [2, 3],
     "isotopes": []
   },
   "C": {
@@ -105,11 +110,12 @@ module.exports = {
     "name": {
       "en": "Carbon"
     },
-    "atomic_number": 2,
+    "atomic_number": 6,
     "weight": 4.0026,
     "period": 2,
     "group": 14,
     "type": "nonmetal",
+    "electrons": [2, 4],
     "isotopes": []
   },
   "N": {
@@ -118,11 +124,12 @@ module.exports = {
     "name": {
       "en": "Nitrogen"
     },
-    "atomic_number": 2,
+    "atomic_number": 7,
     "weight": 4.0026,
     "period": 2,
     "group": 15,
     "type": "nonmetal",
+    "electrons": [2, 5],
     "isotopes": []
   },
   "O": {
@@ -131,11 +138,12 @@ module.exports = {
     "name": {
       "en": "Oxygen"
     },
-    "atomic_number": 2,
+    "atomic_number": 8,
     "weight": 4.0026,
     "period": 2,
     "group": 16,
     "type": "nonmetal",
+    "electrons": [2, 6],
     "isotopes": []
   },
   "F": {
@@ -144,11 +152,12 @@ module.exports = {
     "name": {
       "en": "Fluorine"
     },
-    "atomic_number": 2,
+    "atomic_number": 9,
     "weight": 4.0026,
     "period": 2,
     "group": 17,
     "type": "nonmetal",
+    "electrons": [2, 7],
     "isotopes": []
   },
   "Ne": {
@@ -157,11 +166,12 @@ module.exports = {
     "name": {
       "en": "Neon"
     },
-    "atomic_number": 2,
+    "atomic_number": 10,
     "weight": 4.0026,
     "period": 2,
     "group": 18,
     "type": "noble_gas",
+    "electrons": [2, 8],
     "isotopes": []
   },
   "Na": {
@@ -170,11 +180,12 @@ module.exports = {
     "name": {
       "en": "Sodium"
     },
-    "atomic_number": 2,
+    "atomic_number": 11,
     "weight": 4.0026,
     "period": 3,
     "group": 1,
     "type": "alkali_metal",
+    "electrons": [2, 8, 1],
     "isotopes": []
   },
   "Mg": {
@@ -183,11 +194,12 @@ module.exports = {
     "name": {
       "en": "Magnesium"
     },
-    "atomic_number": 2,
+    "atomic_number": 12,
     "weight": 4.0026,
     "period": 3,
     "group": 2,
     "type": "alkaline_earth",
+    "electrons": [2, 8, 2],
     "isotopes": []
   },
   "Al": {
@@ -196,11 +208,12 @@ module.exports = {
     "name": {
       "en": "Aluminium"
     },
-    "atomic_number": 2,
+    "atomic_number": 13,
     "weight": 4.0026,
     "period": 3,
     "group": 13,
     "type": "post_transitional",
+    "electrons": [2, 8, 3],
     "isotopes": []
   },
   "Si": {
@@ -209,11 +222,12 @@ module.exports = {
     "name": {
       "en": "Silicon"
     },
-    "atomic_number": 2,
+    "atomic_number": 14,
     "weight": 4.0026,
     "period": 3,
     "group": 14,
     "type": "metalloid",
+    "electrons": [2, 8, 4],
     "isotopes": []
   },
   "P": {
@@ -222,11 +236,12 @@ module.exports = {
     "name": {
       "en": "Phosphorus"
     },
-    "atomic_number": 2,
+    "atomic_number": 15,
     "weight": 4.0026,
     "period": 3,
     "group": 15,
     "type": "nonmetal",
+    "electrons": [2, 8, 5],
     "isotopes": []
   },
   "S": {
@@ -235,11 +250,12 @@ module.exports = {
     "name": {
       "en": "Sulfur"
     },
-    "atomic_number": 2,
+    "atomic_number": 16,
     "weight": 4.0026,
     "period": 3,
     "group": 16,
     "type": "nonmetal",
+    "electrons": [2, 8, 6],
     "isotopes": []
   },
   "Cl": {
@@ -248,11 +264,12 @@ module.exports = {
     "name": {
       "en": "Chlorine"
     },
-    "atomic_number": 2,
+    "atomic_number": 17,
     "weight": 4.0026,
     "period": 3,
     "group": 17,
     "type": "nonmetal",
+    "electrons": [2, 8, 7],
     "isotopes": []
   },
   "Ar": {
@@ -261,11 +278,12 @@ module.exports = {
     "name": {
       "en": "Argon"
     },
-    "atomic_number": 2,
+    "atomic_number": 18,
     "weight": 4.0026,
     "period": 3,
     "group": 18,
     "type": "noble_gas",
+    "electrons": [2, 8, 8],
     "isotopes": []
   },
   "K": {
@@ -274,11 +292,12 @@ module.exports = {
     "name": {
       "en": "Potassium"
     },
-    "atomic_number": 2,
+    "atomic_number": 19,
     "weight": 4.0026,
     "period": 4,
     "group": 1,
     "type": "alkali_metal",
+    "electrons": [2, 8, 8, 1],
     "isotopes": []
   },
   "Ca": {
@@ -287,11 +306,12 @@ module.exports = {
     "name": {
       "en": "Calcium"
     },
-    "atomic_number": 2,
+    "atomic_number": 20,
     "weight": 4.0026,
     "period": 4,
     "group": 2,
     "type": "alkaline_earth",
+    "electrons": [2, 8, 8, 2],
     "isotopes": []
   },
   "Sc": {
@@ -300,11 +320,12 @@ module.exports = {
     "name": {
       "en": "Scandium"
     },
-    "atomic_number": 2,
+    "atomic_number": 21,
     "weight": 4.0026,
     "period": 4,
     "group": 3,
     "type": "transition_metal",
+    "electrons": [2, 8, 9, 2],
     "isotopes": []
   },
   "Ti": {
@@ -313,11 +334,12 @@ module.exports = {
     "name": {
       "en": "Titanium"
     },
-    "atomic_number": 2,
+    "atomic_number": 22,
     "weight": 4.0026,
     "period": 4,
     "group": 4,
     "type": "transition_metal",
+    "electrons": [2, 8, 10, 2],
     "isotopes": []
   },
   "V": {
@@ -326,11 +348,12 @@ module.exports = {
     "name": {
       "en": "Vanadium"
     },
-    "atomic_number": 2,
+    "atomic_number": 23,
     "weight": 4.0026,
     "period": 4,
     "group": 5,
     "type": "transition_metal",
+    "electrons": [2, 8, 11, 2],
     "isotopes": []
   },
   "Cr": {
@@ -339,11 +362,12 @@ module.exports = {
     "name": {
       "en": "Chromium"
     },
-    "atomic_number": 2,
+    "atomic_number": 24,
     "weight": 4.0026,
     "period": 4,
     "group": 6,
     "type": "transition_metal",
+    "electrons": [2, 8, 13, 1],
     "isotopes": []
   },
   "Mn": {
@@ -352,11 +376,12 @@ module.exports = {
     "name": {
       "en": "Manganese"
     },
-    "atomic_number": 2,
+    "atomic_number": 25,
     "weight": 4.0026,
     "period": 4,
     "group": 7,
     "type": "transition_metal",
+    "electrons": [2, 8, 13, 2],
     "isotopes": []
   },
   "Fe": {
@@ -365,11 +390,12 @@ module.exports = {
     "name": {
       "en": "Iron"
     },
-    "atomic_number": 2,
+    "atomic_number": 26,
     "weight": 4.0026,
     "period": 4,
     "group": 8,
     "type": "transition_metal",
+    "electrons": [2, 8, 14, 2],
     "isotopes": []
   },
   "Co": {
@@ -378,11 +404,12 @@ module.exports = {
     "name": {
       "en": "Cobalt"
     },
-    "atomic_number": 2,
+    "atomic_number": 27,
     "weight": 4.0026,
     "period": 4,
     "group": 9,
     "type": "transition_metal",
+    "electrons": [2, 8, 15, 2],
     "isotopes": []
   },
   "Ni": {
@@ -391,11 +418,12 @@ module.exports = {
     "name": {
       "en": "Nickel"
     },
-    "atomic_number": 2,
+    "atomic_number": 28,
     "weight": 4.0026,
     "period": 4,
     "group": 10,
     "type": "transition_metal",
+    "electrons": [2, 8, 16, 2],
     "isotopes": []
   },
   "Cu": {
@@ -404,11 +432,12 @@ module.exports = {
     "name": {
       "en": "Copper"
     },
-    "atomic_number": 2,
+    "atomic_number": 29,
     "weight": 4.0026,
     "period": 4,
     "group": 11,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 1],
     "isotopes": []
   },
   "Zn": {
@@ -417,11 +446,12 @@ module.exports = {
     "name": {
       "en": "Zinc"
     },
-    "atomic_number": 2,
+    "atomic_number": 30,
     "weight": 4.0026,
     "period": 4,
     "group": 12,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 2],
     "isotopes": []
   },
   "Ga": {
@@ -430,11 +460,12 @@ module.exports = {
     "name": {
       "en": "Gallium"
     },
-    "atomic_number": 2,
+    "atomic_number": 31,
     "weight": 4.0026,
     "period": 4,
     "group": 13,
     "type": "post_transitional",
+    "electrons": [2, 8, 18, 3],
     "isotopes": []
   },
   "Ge": {
@@ -443,11 +474,12 @@ module.exports = {
     "name": {
       "en": "Germanium"
     },
-    "atomic_number": 2,
+    "atomic_number": 32,
     "weight": 4.0026,
     "period": 4,
     "group": 14,
     "type": "metalloid",
+    "electrons": [2, 8, 18, 4],
     "isotopes": []
   },
   "As": {
@@ -456,11 +488,12 @@ module.exports = {
     "name": {
       "en": "Arsenic"
     },
-    "atomic_number": 2,
+    "atomic_number": 33,
     "weight": 4.0026,
     "period": 4,
     "group": 15,
     "type": "metalloid",
+    "electrons": [2, 8, 18, 5],
     "isotopes": []
   },
   "Se": {
@@ -469,11 +502,12 @@ module.exports = {
     "name": {
       "en": "Selenium"
     },
-    "atomic_number": 2,
+    "atomic_number": 34,
     "weight": 4.0026,
     "period": 4,
     "group": 16,
     "type": "nonmetal",
+    "electrons": [2, 8, 18, 6],
     "isotopes": []
   },
   "Br": {
@@ -482,11 +516,12 @@ module.exports = {
     "name": {
       "en": "Bromine"
     },
-    "atomic_number": 2,
+    "atomic_number": 35,
     "weight": 4.0026,
     "period": 4,
     "group": 17,
     "type": "nonmetal",
+    "electrons": [2, 8, 18, 7],
     "isotopes": []
   },
   "Kr": {
@@ -495,11 +530,12 @@ module.exports = {
     "name": {
       "en": "Krypton"
     },
-    "atomic_number": 2,
+    "atomic_number": 36,
     "weight": 4.0026,
     "period": 4,
     "group": 18,
     "type": "noble_gas",
+    "electrons": [2, 8, 18, 8],
     "isotopes": []
   },
   "Rb": {
@@ -508,11 +544,12 @@ module.exports = {
     "name": {
       "en": "Rubidium"
     },
-    "atomic_number": 2,
+    "atomic_number": 37,
     "weight": 4.0026,
     "period": 5,
     "group": 1,
     "type": "alkali_metal",
+    "electrons": [2, 8, 18, 8, 1],
     "isotopes": []
   },
   "Sr": {
@@ -521,11 +558,12 @@ module.exports = {
     "name": {
       "en": "Strontium"
     },
-    "atomic_number": 2,
+    "atomic_number": 38,
     "weight": 4.0026,
     "period": 5,
     "group": 2,
     "type": "alkaline_earth",
+    "electrons": [2, 8, 18, 8, 2],
     "isotopes": []
   },
   "Y": {
@@ -534,11 +572,12 @@ module.exports = {
     "name": {
       "en": "Yttrium"
     },
-    "atomic_number": 2,
+    "atomic_number": 39,
     "weight": 4.0026,
     "period": 5,
     "group": 3,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 9, 2],
     "isotopes": []
   },
   "Zr": {
@@ -547,11 +586,12 @@ module.exports = {
     "name": {
       "en": "Zirconium"
     },
-    "atomic_number": 2,
+    "atomic_number": 40,
     "weight": 4.0026,
     "period": 5,
     "group": 4,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 10, 2],
     "isotopes": []
   },
   "Nb": {
@@ -560,11 +600,12 @@ module.exports = {
     "name": {
       "en": "Niobium"
     },
-    "atomic_number": 2,
+    "atomic_number": 41,
     "weight": 4.0026,
     "period": 5,
     "group": 5,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 12, 1],
     "isotopes": []
   },
   "Mo": {
@@ -573,11 +614,12 @@ module.exports = {
     "name": {
       "en": "Molybdenum"
     },
-    "atomic_number": 2,
+    "atomic_number": 42,
     "weight": 4.0026,
     "period": 5,
     "group": 6,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 13, 1],
     "isotopes": []
   },
   "Tc": {
@@ -586,11 +628,12 @@ module.exports = {
     "name": {
       "en": "Technetium"
     },
-    "atomic_number": 2,
+    "atomic_number": 43,
     "weight": 4.0026,
     "period": 5,
     "group": 7,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 13, 2],
     "isotopes": []
   },
   "Ru": {
@@ -599,11 +642,12 @@ module.exports = {
     "name": {
       "en": "Ruthenium"
     },
-    "atomic_number": 2,
+    "atomic_number": 44,
     "weight": 4.0026,
     "period": 5,
     "group": 8,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 15, 1],
     "isotopes": []
   },
   "Rh": {
@@ -612,11 +656,12 @@ module.exports = {
     "name": {
       "en": "Rhodium"
     },
-    "atomic_number": 2,
+    "atomic_number": 45,
     "weight": 4.0026,
     "period": 5,
     "group": 9,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 16, 1],
     "isotopes": []
   },
   "Pd": {
@@ -625,11 +670,12 @@ module.exports = {
     "name": {
       "en": "Palladium"
     },
-    "atomic_number": 2,
+    "atomic_number": 46,
     "weight": 4.0026,
     "period": 5,
     "group": 10,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 18],
     "isotopes": []
   },
   "Ag": {
@@ -638,11 +684,12 @@ module.exports = {
     "name": {
       "en": "Silver"
     },
-    "atomic_number": 2,
+    "atomic_number": 47,
     "weight": 4.0026,
     "period": 5,
     "group": 11,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 18, 1],
     "isotopes": []
   },
   "Cd": {
@@ -651,11 +698,12 @@ module.exports = {
     "name": {
       "en": "Cadmium"
     },
-    "atomic_number": 2,
+    "atomic_number": 48,
     "weight": 4.0026,
     "period": 5,
     "group": 12,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 18, 2],
     "isotopes": []
   },
   "In": {
@@ -664,11 +712,12 @@ module.exports = {
     "name": {
       "en": "Indium"
     },
-    "atomic_number": 2,
+    "atomic_number": 49,
     "weight": 4.0026,
     "period": 5,
     "group": 13,
     "type": "post_transitional",
+    "electrons": [2, 8, 18, 18, 3],
     "isotopes": []
   },
   "Sn": {
@@ -677,11 +726,12 @@ module.exports = {
     "name": {
       "en": "Tin"
     },
-    "atomic_number": 2,
+    "atomic_number": 50,
     "weight": 4.0026,
     "period": 5,
     "group": 14,
     "type": "post_transitional",
+    "electrons": [2, 8, 18, 18, 4],
     "isotopes": []
   },
   "Sb": {
@@ -690,11 +740,12 @@ module.exports = {
     "name": {
       "en": "Antimony"
     },
-    "atomic_number": 2,
+    "atomic_number": 51,
     "weight": 4.0026,
     "period": 5,
     "group": 15,
     "type": "metalloid",
+    "electrons": [2, 8, 18, 18, 5],
     "isotopes": []
   },
   "Te": {
@@ -703,11 +754,12 @@ module.exports = {
     "name": {
       "en": "Telurium"
     },
-    "atomic_number": 2,
+    "atomic_number": 52,
     "weight": 4.0026,
     "period": 5,
     "group": 16,
     "type": "metalloid",
+    "electrons": [2, 8, 18, 18, 6],
     "isotopes": []
   },
   "I": {
@@ -716,11 +768,12 @@ module.exports = {
     "name": {
       "en": "Iodine"
     },
-    "atomic_number": 2,
+    "atomic_number": 53,
     "weight": 4.0026,
     "period": 5,
     "group": 17,
     "type": "nonmetal",
+    "electrons": [2, 8, 18, 18, 7],
     "isotopes": []
   },
   "Xe": {
@@ -729,11 +782,12 @@ module.exports = {
     "name": {
       "en": "Xenon"
     },
-    "atomic_number": 2,
+    "atomic_number": 54,
     "weight": 4.0026,
     "period": 5,
     "group": 18,
     "type": "noble_gas",
+    "electrons": [2, 8, 18, 18, 8],
     "isotopes": []
   },
   "Cs": {
@@ -742,11 +796,12 @@ module.exports = {
     "name": {
       "en": "Caesium"
     },
-    "atomic_number": 2,
+    "atomic_number": 55,
     "weight": 4.0026,
     "period": 6,
     "group": 1,
     "type": "alkali_metal",
+    "electrons": [2, 8, 18, 18, 8, 1],
     "isotopes": []
   },
   "Ba": {
@@ -755,11 +810,12 @@ module.exports = {
     "name": {
       "en": "Barium"
     },
-    "atomic_number": 2,
+    "atomic_number": 56,
     "weight": 4.0026,
     "period": 6,
     "group": 2,
     "type": "alkaline_earth",
+    "electrons": [2, 8, 18, 18, 8, 2],
     "isotopes": []
   },
   "La": {
@@ -768,11 +824,12 @@ module.exports = {
     "name": {
       "en": "Lanthanum"
     },
-    "atomic_number": 2,
+    "atomic_number": 57,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 18, 9, 2],
     "isotopes": []
   },
   "Ce": {
@@ -781,11 +838,12 @@ module.exports = {
     "name": {
       "en": "Cerium"
     },
-    "atomic_number": 2,
+    "atomic_number": 58,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 19, 9, 2],
     "isotopes": []
   },
   "Pr": {
@@ -794,11 +852,12 @@ module.exports = {
     "name": {
       "en": "Praseodymium"
     },
-    "atomic_number": 2,
+    "atomic_number": 59,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 21, 8, 2],
     "isotopes": []
   },
   "Nd": {
@@ -807,11 +866,12 @@ module.exports = {
     "name": {
       "en": "Neodymium"
     },
-    "atomic_number": 2,
+    "atomic_number": 60,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 22, 8, 2],
     "isotopes": []
   },
   "Pm": {
@@ -820,11 +880,12 @@ module.exports = {
     "name": {
       "en": "Promethium"
     },
-    "atomic_number": 2,
+    "atomic_number": 61,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 23, 8, 2],
     "isotopes": []
   },
   "Sm": {
@@ -833,11 +894,12 @@ module.exports = {
     "name": {
       "en": "Samarium"
     },
-    "atomic_number": 2,
+    "atomic_number": 62,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 24, 8, 2],
     "isotopes": []
   },
   "Eu": {
@@ -846,11 +908,12 @@ module.exports = {
     "name": {
       "en": "Europium"
     },
-    "atomic_number": 2,
+    "atomic_number": 63,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 25, 8, 2],
     "isotopes": []
   },
   "Gd": {
@@ -859,11 +922,12 @@ module.exports = {
     "name": {
       "en": "Gadolinium"
     },
-    "atomic_number": 2,
+    "atomic_number": 64,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 25, 9, 2],
     "isotopes": []
   },
   "Tb": {
@@ -872,11 +936,12 @@ module.exports = {
     "name": {
       "en": "Terbium"
     },
-    "atomic_number": 2,
+    "atomic_number": 65,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 27, 8, 2],
     "isotopes": []
   },
   "Dy": {
@@ -885,11 +950,12 @@ module.exports = {
     "name": {
       "en": "Dysprosium"
     },
-    "atomic_number": 2,
+    "atomic_number": 66,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 28, 8, 2],
     "isotopes": []
   },
   "Ho": {
@@ -898,11 +964,12 @@ module.exports = {
     "name": {
       "en": "Holmium"
     },
-    "atomic_number": 2,
+    "atomic_number": 67,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 29, 8, 2],
     "isotopes": []
   },
   "Er": {
@@ -911,11 +978,12 @@ module.exports = {
     "name": {
       "en": "Erbium"
     },
-    "atomic_number": 2,
+    "atomic_number": 68,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 30, 8, 2],
     "isotopes": []
   },
   "Tm": {
@@ -924,11 +992,12 @@ module.exports = {
     "name": {
       "en": "Thulium"
     },
-    "atomic_number": 2,
+    "atomic_number": 69,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 31, 8, 2],
     "isotopes": []
   },
   "Yb": {
@@ -937,11 +1006,12 @@ module.exports = {
     "name": {
       "en": "Ytterbium"
     },
-    "atomic_number": 2,
+    "atomic_number": 70,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 32, 8, 2],
     "isotopes": []
   },
   "Lu": {
@@ -950,11 +1020,12 @@ module.exports = {
     "name": {
       "en": "Lutetium"
     },
-    "atomic_number": 2,
+    "atomic_number": 71,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "electrons": [2, 8, 18, 32, 9, 2],
     "isotopes": []
   },
   "Hf": {
@@ -963,11 +1034,12 @@ module.exports = {
     "name": {
       "en": "Hafnium"
     },
-    "atomic_number": 2,
+    "atomic_number": 72,
     "weight": 4.0026,
     "period": 6,
     "group": 4,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 10, 2],
     "isotopes": []
   },
   "Ta": {
@@ -976,11 +1048,12 @@ module.exports = {
     "name": {
       "en": "Tantalum"
     },
-    "atomic_number": 2,
+    "atomic_number": 73,
     "weight": 4.0026,
     "period": 6,
     "group": 5,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 11, 2],
     "isotopes": []
   },
   "W": {
@@ -989,11 +1062,12 @@ module.exports = {
     "name": {
       "en": "Tungsten"
     },
-    "atomic_number": 2,
+    "atomic_number": 74,
     "weight": 4.0026,
     "period": 6,
     "group": 6,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 12, 2],
     "isotopes": []
   },
   "Re": {
@@ -1002,11 +1076,12 @@ module.exports = {
     "name": {
       "en": "Rhenium"
     },
-    "atomic_number": 2,
+    "atomic_number": 75,
     "weight": 4.0026,
     "period": 6,
     "group": 7,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 13, 2],
     "isotopes": []
   },
   "Os": {
@@ -1015,11 +1090,12 @@ module.exports = {
     "name": {
       "en": "Osmium"
     },
-    "atomic_number": 2,
+    "atomic_number": 76,
     "weight": 4.0026,
     "period": 6,
     "group": 8,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 14, 2],
     "isotopes": []
   },
   "Ir": {
@@ -1028,11 +1104,12 @@ module.exports = {
     "name": {
       "en": "Iridium"
     },
-    "atomic_number": 2,
+    "atomic_number": 77,
     "weight": 4.0026,
     "period": 6,
     "group": 9,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 15, 2],
     "isotopes": []
   },
   "Pt": {
@@ -1041,11 +1118,12 @@ module.exports = {
     "name": {
       "en": "Platinum"
     },
-    "atomic_number": 2,
+    "atomic_number": 78,
     "weight": 4.0026,
     "period": 6,
     "group": 10,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 17, 1],
     "isotopes": []
   },
   "Au": {
@@ -1054,11 +1132,12 @@ module.exports = {
     "name": {
       "en": "Gold"
     },
-    "atomic_number": 2,
+    "atomic_number": 79,
     "weight": 4.0026,
     "period": 6,
     "group": 11,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 18, 1],
     "isotopes": []
   },
   "Hg": {
@@ -1067,11 +1146,12 @@ module.exports = {
     "name": {
       "en": "Mercury"
     },
-    "atomic_number": 2,
+    "atomic_number": 80,
     "weight": 4.0026,
     "period": 6,
     "group": 12,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 18, 2],
     "isotopes": []
   },
   "Tl": {
@@ -1080,11 +1160,12 @@ module.exports = {
     "name": {
       "en": "Thallium"
     },
-    "atomic_number": 2,
+    "atomic_number": 81,
     "weight": 4.0026,
     "period": 6,
     "group": 13,
     "type": "post_transitional",
+    "electrons": [2, 8, 18, 32, 18, 3],
     "isotopes": []
   },
   "Pb": {
@@ -1093,11 +1174,12 @@ module.exports = {
     "name": {
       "en": "Lead"
     },
-    "atomic_number": 2,
+    "atomic_number": 82,
     "weight": 4.0026,
     "period": 6,
     "group": 14,
     "type": "post_transitional",
+    "electrons": [2, 8, 18, 32, 18, 4],
     "isotopes": []
   },
   "Bi": {
@@ -1106,11 +1188,12 @@ module.exports = {
     "name": {
       "en": "Bismuth"
     },
-    "atomic_number": 2,
+    "atomic_number": 83,
     "weight": 4.0026,
     "period": 6,
     "group": 15,
     "type": "post_transitional",
+    "electrons": [2, 8, 18, 32, 18, 5],
     "isotopes": []
   },
   "Po": {
@@ -1119,11 +1202,12 @@ module.exports = {
     "name": {
       "en": "Polonium"
     },
-    "atomic_number": 2,
+    "atomic_number": 84,
     "weight": 4.0026,
     "period": 6,
     "group": 16,
     "type": "post_transitional",
+    "electrons": [2, 8, 18, 32, 18, 6],
     "isotopes": []
   },
   "At": {
@@ -1132,11 +1216,12 @@ module.exports = {
     "name": {
       "en": "Astatine"
     },
-    "atomic_number": 2,
+    "atomic_number": 85,
     "weight": 4.0026,
     "period": 6,
     "group": 17,
     "type": "metalloid",
+    "electrons": [2, 8, 18, 32, 18, 7],
     "isotopes": []
   },
   "Rn": {
@@ -1145,11 +1230,12 @@ module.exports = {
     "name": {
       "en": "Radon"
     },
-    "atomic_number": 2,
+    "atomic_number": 86,
     "weight": 4.0026,
     "period": 6,
     "group": 18,
     "type": "noble_gas",
+    "electrons": [2, 8, 18, 32, 18, 8],
     "isotopes": []
   },
   "Fr": {
@@ -1158,11 +1244,12 @@ module.exports = {
     "name": {
       "en": "Francium"
     },
-    "atomic_number": 2,
+    "atomic_number": 87,
     "weight": 4.0026,
     "period": 7,
     "group": 1,
     "type": "alkali_metal",
+    "electrons": [2, 8, 18, 32, 18, 8, 1],
     "isotopes": []
   },
   "Ra": {
@@ -1171,11 +1258,12 @@ module.exports = {
     "name": {
       "en": "Radium"
     },
-    "atomic_number": 2,
+    "atomic_number": 88,
     "weight": 4.0026,
     "period": 7,
     "group": 2,
     "type": "alkaline_earth",
+    "electrons": [2, 8, 18, 32, 18, 8, 2],
     "isotopes": []
   },
   "Ac": {
@@ -1184,11 +1272,12 @@ module.exports = {
     "name": {
       "en": "Actinium"
     },
-    "atomic_number": 2,
+    "atomic_number": 89,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 18, 9, 2],
     "isotopes": []
   },
   "Th": {
@@ -1197,11 +1286,12 @@ module.exports = {
     "name": {
       "en": "Thorium"
     },
-    "atomic_number": 2,
+    "atomic_number": 90,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 18, 10, 2],
     "isotopes": []
   },
   "Pa": {
@@ -1210,11 +1300,12 @@ module.exports = {
     "name": {
       "en": "Protactinium"
     },
-    "atomic_number": 2,
+    "atomic_number": 91,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 20, 9, 2],
     "isotopes": []
   },
   "U": {
@@ -1223,11 +1314,12 @@ module.exports = {
     "name": {
       "en": "Uranium"
     },
-    "atomic_number": 2,
+    "atomic_number": 92,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 21, 9, 2],
     "isotopes": []
   },
   "Np": {
@@ -1236,11 +1328,12 @@ module.exports = {
     "name": {
       "en": "Neptunium"
     },
-    "atomic_number": 2,
+    "atomic_number": 93,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 22, 9, 2],
     "isotopes": []
   },
   "Pu": {
@@ -1249,11 +1342,12 @@ module.exports = {
     "name": {
       "en": "Plutonium"
     },
-    "atomic_number": 2,
+    "atomic_number": 94,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 24, 8, 2],
     "isotopes": []
   },
   "Am": {
@@ -1262,11 +1356,12 @@ module.exports = {
     "name": {
       "en": "Americium"
     },
-    "atomic_number": 2,
+    "atomic_number": 95,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 25, 8, 2],
     "isotopes": []
   },
   "Cm": {
@@ -1275,11 +1370,12 @@ module.exports = {
     "name": {
       "en": "Curium"
     },
-    "atomic_number": 2,
+    "atomic_number": 96,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 25, 9, 2],
     "isotopes": []
   },
   "Bk": {
@@ -1288,11 +1384,12 @@ module.exports = {
     "name": {
       "en": "Berkelium"
     },
-    "atomic_number": 2,
+    "atomic_number": 97,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 27, 8, 2],
     "isotopes": []
   },
   "Cf": {
@@ -1301,11 +1398,12 @@ module.exports = {
     "name": {
       "en": "Californium"
     },
-    "atomic_number": 2,
+    "atomic_number": 98,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 28, 8, 2],
     "isotopes": []
   },
   "Es": {
@@ -1314,11 +1412,12 @@ module.exports = {
     "name": {
       "en": "Einsteinium"
     },
-    "atomic_number": 2,
+    "atomic_number": 99,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 29, 8, 2],
     "isotopes": []
   },
   "Fm": {
@@ -1327,11 +1426,12 @@ module.exports = {
     "name": {
       "en": "Fermium"
     },
-    "atomic_number": 2,
+    "atomic_number": 100,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 30, 8, 2],
     "isotopes": []
   },
   "Md": {
@@ -1340,11 +1440,12 @@ module.exports = {
     "name": {
       "en": "Mendelevium"
     },
-    "atomic_number": 2,
+    "atomic_number": 101,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 31, 8, 2],
     "isotopes": []
   },
   "No": {
@@ -1353,11 +1454,12 @@ module.exports = {
     "name": {
       "en": "Nobelium"
     },
-    "atomic_number": 2,
+    "atomic_number": 102,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 32, 8, 2],
     "isotopes": []
   },
   "Lr": {
@@ -1366,11 +1468,12 @@ module.exports = {
     "name": {
       "en": "Lawrencium"
     },
-    "atomic_number": 2,
+    "atomic_number": 103,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "electrons": [2, 8, 18, 32, 32, 8, 3],
     "isotopes": []
   },
   "Rf": {
@@ -1379,11 +1482,12 @@ module.exports = {
     "name": {
       "en": "Rutherfordium"
     },
-    "atomic_number": 2,
+    "atomic_number": 104,
     "weight": 4.0026,
     "period": 7,
     "group": 4,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 32, 10, 2],
     "isotopes": []
   },
   "Db": {
@@ -1392,11 +1496,12 @@ module.exports = {
     "name": {
       "en": "Dubnium"
     },
-    "atomic_number": 2,
+    "atomic_number": 105,
     "weight": 4.0026,
     "period": 7,
     "group": 5,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 32, 11, 2],
     "isotopes": []
   },
   "Sg": {
@@ -1405,11 +1510,12 @@ module.exports = {
     "name": {
       "en": "Seaborgium"
     },
-    "atomic_number": 2,
+    "atomic_number": 106,
     "weight": 4.0026,
     "period": 7,
     "group": 6,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 32, 12, 2],
     "isotopes": []
   },
   "Bh": {
@@ -1418,11 +1524,12 @@ module.exports = {
     "name": {
       "en": "Bohrium"
     },
-    "atomic_number": 2,
+    "atomic_number": 107,
     "weight": 4.0026,
     "period": 7,
     "group": 7,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 32, 13, 2],
     "isotopes": []
   },
   "Hs": {
@@ -1431,11 +1538,12 @@ module.exports = {
     "name": {
       "en": "Hassium"
     },
-    "atomic_number": 2,
+    "atomic_number": 108,
     "weight": 4.0026,
     "period": 7,
     "group": 8,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 32, 14, 2],
     "isotopes": []
   },
   "Mt": {
@@ -1444,11 +1552,12 @@ module.exports = {
     "name": {
       "en": "Meitnerium"
     },
-    "atomic_number": 2,
+    "atomic_number": 109,
     "weight": 4.0026,
     "period": 7,
     "group": 9,
     "type": "unknown_type",
+    "electrons": [2, 8, 18, 32, 32, 15, 2],
     "isotopes": []
   },
   "Ds": {
@@ -1457,11 +1566,12 @@ module.exports = {
     "name": {
       "en": "Darmstadtium"
     },
-    "atomic_number": 2,
+    "atomic_number": 110,
     "weight": 4.0026,
     "period": 7,
     "group": 10,
     "type": "unknown_type",
+    "electrons": [2, 8, 18, 32, 32, 17, 1],
     "isotopes": []
   },
   "Rg": {
@@ -1470,11 +1580,12 @@ module.exports = {
     "name": {
       "en": "Roentgenium"
     },
-    "atomic_number": 2,
+    "atomic_number": 111,
     "weight": 4.0026,
     "period": 7,
     "group": 11,
     "type": "unknown_type",
+    "electrons": [2, 8, 18, 32, 32, 17, 2],
     "isotopes": []
   },
   "Cn": {
@@ -1483,11 +1594,12 @@ module.exports = {
     "name": {
       "en": "Copernicium"
     },
-    "atomic_number": 2,
+    "atomic_number": 112,
     "weight": 4.0026,
     "period": 7,
     "group": 12,
     "type": "transition_metal",
+    "electrons": [2, 8, 18, 32, 32, 18, 2],
     "isotopes": []
   },
   "Nh": {
@@ -1496,11 +1608,12 @@ module.exports = {
     "name": {
       "en": "Nihonium"
     },
-    "atomic_number": 2,
+    "atomic_number": 113,
     "weight": 4.0026,
     "period": 7,
     "group": 13,
     "type": "unknown_type",
+    "electrons": [2, 8, 18, 32, 32, 18, 3],
     "isotopes": []
   },
   "Fl": {
@@ -1509,11 +1622,12 @@ module.exports = {
     "name": {
       "en": "Flerovium"
     },
-    "atomic_number": 2,
+    "atomic_number": 114,
     "weight": 4.0026,
     "period": 7,
     "group": 14,
     "type": "post_transitional",
+    "electrons": [2, 8, 18, 32, 32, 18, 4],
     "isotopes": []
   },
   "Mc": {
@@ -1522,11 +1636,12 @@ module.exports = {
     "name": {
       "en": "Moscouvium"
     },
-    "atomic_number": 2,
+    "atomic_number": 115,
     "weight": 4.0026,
     "period": 7,
     "group": 15,
     "type": "unknown_type",
+    "electrons": [2, 8, 18, 32, 32, 18, 5],
     "isotopes": []
   },
   "Lv": {
@@ -1535,11 +1650,12 @@ module.exports = {
     "name": {
       "en": "Livermorium"
     },
-    "atomic_number": 2,
+    "atomic_number": 116,
     "weight": 4.0026,
     "period": 7,
     "group": 16,
     "type": "unknown_type",
+    "electrons": [2, 8, 18, 32, 32, 18, 6],
     "isotopes": []
   },
   "Ts": {
@@ -1548,11 +1664,12 @@ module.exports = {
     "name": {
       "en": "Tennessine"
     },
-    "atomic_number": 2,
+    "atomic_number": 117,
     "weight": 4.0026,
     "period": 7,
     "group": 17,
     "type": "unknown_type",
+    "electrons": [2, 8, 18, 32, 32, 18, 7],
     "isotopes": []
   },
   "Og": {
@@ -1561,11 +1678,12 @@ module.exports = {
     "name": {
       "en": "Oganesson"
     },
-    "atomic_number": 2,
+    "atomic_number": 118,
     "weight": 4.0026,
     "period": 7,
     "group": 18,
     "type": "unknown_type",
+    "electrons": [2, 8, 18, 32, 32, 10, 8],
     "isotopes": []
   },
   "lanthanoids": {
@@ -1577,6 +1695,7 @@ module.exports = {
     "period": 6,
     "group": 3,
     "type": "lanthanoids",
+    "electrons": [],
     "classList": ['lanthanoid']
   },
   "actinoids": {
@@ -1588,6 +1707,7 @@ module.exports = {
     "period": 7,
     "group": 3,
     "type": "actinoids",
+    "electrons": [],
     "classList": ['actinoid']
   },
 };

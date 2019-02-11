@@ -35,6 +35,8 @@ body {
 .actinoid { background: #EEBBDD; } 
 .unknown_type { background: #FFF; }
 
+.hide { display: none; }
+
 @media only screen and (min-width: 920px) {
 	.nonmetal.active { background: radial-gradient(#22FF22, rgba(255,255,255,1) 120%); }
 	.alkali_metal.active { background: radial-gradient(#FFCC33, rgba(255,255,255,1) 120%); }
