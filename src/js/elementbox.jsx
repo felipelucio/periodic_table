@@ -15,26 +15,20 @@ export default class ElementBox extends React.Component {
     return 'state-gas';
   }
 
-  toggleActive(e) {
-    let el = e.currentTarget;
-    el.classList.toggle('active');
-  }
-
   onPointerEnter(e) {
     if (this.props.onPointerEnter) {
+      let id = e.currentTarget.getAttribute('data-key');
       let type = e.currentTarget.getAttribute('data-type');
-      console.log(type)
-      this.props.onPointerEnter(type);
+      this.props.onPointerEnter(id, type);
     } 
-    this.toggleActive(e);
   }
 
   onPointerLeave(e) {
     if (this.props.onPointerLeave) {
+      let id = e.currentTarget.getAttribute('data-key');
       let type = e.currentTarget.getAttribute('data-type');
-      this.props.onPointerLeave(type);
+      this.props.onPointerLeave(id, type);
     } 
-    this.toggleActive(e);
   }
 
   render() {
@@ -43,12 +37,11 @@ export default class ElementBox extends React.Component {
       this.props.elem.type,
       'element'
     ].concat(this.props.elem.classList).join(' ');
-
-    let type = this.props.elem.type;
-    
+   
     return (
       <li className={classes} 
-        data-type={type}
+        data-key={this.props.elem.id}
+        data-type={this.props.elem.type}
         onPointerEnter={(e) => this.onPointerEnter(e)}
         onPointerLeave={(e) => this.onPointerLeave(e)}
       >

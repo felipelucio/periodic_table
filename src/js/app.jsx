@@ -12,25 +12,27 @@ export default class App extends React.Component {
       elements: data
     };
     
-    this.toggleHighlightType = this.toggleHighlightType.bind(this);
+    this.toggleHighlight = this.toggleHighlight.bind(this);
     this.toggleHighlightPeriod = this.toggleHighlightPeriod.bind(this);
     this.toggleHighlightGroup = this.toggleHighlightGroup.bind(this);
   }
 
-  toggleHighlightType(type) {
+  toggleHighlight(id, type) {
     let elems = [];
+    
     switch(type) {
       case 'lanthanoids':
         elems = ['La','Ce','Pr','Nd','Pm','Sm','Eu','Gd','Tb',
-          'Dy','Ho','Er','Tm','Yb','Lu'];
+          'Dy','Ho','Er','Tm','Yb','Lu','lanthanoids'];
         break;
       case 'actinoids':
         elems = ['Ac','Th','Pa','U','Np','Pu','Am','Cm','Bk',
-          'Cf','Es','Fm','Md','No','Lr'];
+          'Cf','Es','Fm','Md','No','Lr','actinoids'];
         break;
     };
 
-    this._toggleElementsClass(elems, 'disabled');
+    if (elems.length) this._toggleElementsClass(elems, 'disabled');
+    this._toggleClass(id, 'active');
   }
 
   toggleHighlightPeriod(e) {
@@ -67,29 +69,6 @@ export default class App extends React.Component {
     };
 
     this._toggleElementsClass(elems, 'disabled');
-  }
-
-  _toggleElementsClass(elems, class_name) {
-    this.setState(function(state, props) {
-      let els = Object.keys(state.elements).filter(function(e) {
-        if(elems.indexOf(e) < 0) return true;
-      });
-        
-      let upd = {};
-      els.map(function(el) {
-        let class_list = state.elements[el].classList || [];
-        if(class_list.indexOf(class_name) > -1) {
-          let new_list = class_list.filter(function(e) { return e !== class_name} );
-          class_list = new_list;
-        } else {
-          class_list.push(class_name);
-        }
-
-        upd[el] = { classList: {$set: class_list}};
-      });
-
-      return { elements: update(state.elements, upd) }
-    });
   }
 
   toggleHighlightGroup(e) {
@@ -160,6 +139,48 @@ export default class App extends React.Component {
     };
 
     this._toggleElementsClass(elems, 'disabled');
+  }
+
+  _toggleElementsClass(elems, class_name) {
+    this.setState(function(state, props) {
+      let els = Object.keys(state.elements).filter(function(e) {
+        if(elems.indexOf(e) < 0) return true;
+      });
+        
+      let upd = {};
+      els.map(function(el) {
+        let class_list = state.elements[el].classList || [];
+        if(class_list.indexOf(class_name) > -1) {
+          let new_list = class_list.filter(function(e) { return e !== class_name} );
+          class_list = new_list;
+        } else {
+          class_list.push(class_name);
+        }
+
+        upd[el] = { classList: {$set: class_list}};
+      });
+
+      return { elements: update(state.elements, upd) }
+    });
+  }
+
+  _toggleClass(id, class_name) {
+    this.setState(function(state, props) {
+      if(state.elements[id]) {
+        let upd = {};
+        let class_list = state.elements[id].classList || [];
+        if(class_list.indexOf(class_name) > -1) {
+          let new_list = class_list.filter(function(e) { return e !== class_name} );
+          class_list = new_list;
+        } else {
+          class_list.push(class_name);
+        }
+
+        upd[id] = { classList: {$set: class_list}};
+
+        return { elements: update(state.elements, upd) }
+      }       
+    });
   }
 
   render() {
@@ -267,135 +288,487 @@ export default class App extends React.Component {
             onPointerEnter={this.toggleHighlightPeriod}
             onPointerLeave={this.toggleHighlightPeriod}
           >7</li>
-          <ElementBox elem={this.state.elements.H} />
-          <ElementBox elem={this.state.elements.He} />
-          <ElementBox elem={this.state.elements.Li} />
-          <ElementBox elem={this.state.elements.Be} />
-          <ElementBox elem={this.state.elements.B} />
-          <ElementBox elem={this.state.elements.C} />
-          <ElementBox elem={this.state.elements.N} />
-          <ElementBox elem={this.state.elements.O} />
-          <ElementBox elem={this.state.elements.F} />
-          <ElementBox elem={this.state.elements.Ne} />
-          <ElementBox elem={this.state.elements.Na} />
-          <ElementBox elem={this.state.elements.Mg} />
-          <ElementBox elem={this.state.elements.Al} />
-          <ElementBox elem={this.state.elements.Si} />
-          <ElementBox elem={this.state.elements.P} />
-          <ElementBox elem={this.state.elements.S} />
-          <ElementBox elem={this.state.elements.Cl} />
-          <ElementBox elem={this.state.elements.Ar} />
-          <ElementBox elem={this.state.elements.K} />
-          <ElementBox elem={this.state.elements.Ca} />
-          <ElementBox elem={this.state.elements.Sc} />
-          <ElementBox elem={this.state.elements.Ti} />
-          <ElementBox elem={this.state.elements.V} />
-          <ElementBox elem={this.state.elements.Cr} />
-          <ElementBox elem={this.state.elements.Mn} />
-          <ElementBox elem={this.state.elements.Fe} />
-          <ElementBox elem={this.state.elements.Co} />
-          <ElementBox elem={this.state.elements.Ni} />
-          <ElementBox elem={this.state.elements.Cu} />
-          <ElementBox elem={this.state.elements.Zn} />
-          <ElementBox elem={this.state.elements.Ga} />
-          <ElementBox elem={this.state.elements.Ge} />
-          <ElementBox elem={this.state.elements.As} />
-          <ElementBox elem={this.state.elements.Se} />
-          <ElementBox elem={this.state.elements.Br} />
-          <ElementBox elem={this.state.elements.Kr} />
-          <ElementBox elem={this.state.elements.Rb} />
-          <ElementBox elem={this.state.elements.Sr} />
-          <ElementBox elem={this.state.elements.Y} />
-          <ElementBox elem={this.state.elements.Zr} />
-          <ElementBox elem={this.state.elements.Nb} />
-          <ElementBox elem={this.state.elements.Mo} />
-          <ElementBox elem={this.state.elements.Tc} />
-          <ElementBox elem={this.state.elements.Ru} />
-          <ElementBox elem={this.state.elements.Rh} />
-          <ElementBox elem={this.state.elements.Pd} />
-          <ElementBox elem={this.state.elements.Ag} />
-          <ElementBox elem={this.state.elements.Cd} />
-          <ElementBox elem={this.state.elements.In} />
-          <ElementBox elem={this.state.elements.Sn} />
-          <ElementBox elem={this.state.elements.Sb} />
-          <ElementBox elem={this.state.elements.Te} />
-          <ElementBox elem={this.state.elements.I} />
-          <ElementBox elem={this.state.elements.Xe} />
-          <ElementBox elem={this.state.elements.Cs} />
-          <ElementBox elem={this.state.elements.Ba} />
+          <ElementBox elem={this.state.elements.H} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.He} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Li} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Be} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.B} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.C} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.N} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.O} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.F} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ne} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Na} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Mg} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Al} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Si} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.P} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.S} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Cl} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ar} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.K} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ca} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Sc} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ti} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.V} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Cr} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Mn} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Fe} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Co} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ni} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Cu} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Zn} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ga} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ge} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.As} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Se} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Br} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Kr} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Rb} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Sr} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Y} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Zr} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Nb} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Mo} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Tc} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ru} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Rh} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Pd} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ag} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Cd} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.In} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Sn} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Sb} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Te} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.I} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Xe} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Cs} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ba} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
           <ElementBox elem={this.state.elements.lanthanoids} 
-            data-type="lanthanoids" 
-            onPointerEnter={this.toggleHighlightType}
-            onPointerLeave={this.toggleHighlightType}
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
           />
-          <ElementBox elem={this.state.elements.La} />
-          <ElementBox elem={this.state.elements.Ce} />
-          <ElementBox elem={this.state.elements.Pr} />
-          <ElementBox elem={this.state.elements.Nd} />
-          <ElementBox elem={this.state.elements.Pm} />
-          <ElementBox elem={this.state.elements.Sm} />
-          <ElementBox elem={this.state.elements.Eu} />
-          <ElementBox elem={this.state.elements.Gd} />
-          <ElementBox elem={this.state.elements.Tb} />
-          <ElementBox elem={this.state.elements.Dy} />
-          <ElementBox elem={this.state.elements.Ho} />
-          <ElementBox elem={this.state.elements.Er} />
-          <ElementBox elem={this.state.elements.Tm} />
-          <ElementBox elem={this.state.elements.Yb} />
-          <ElementBox elem={this.state.elements.Lu} />
+          <ElementBox elem={this.state.elements.La} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ce} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Pr} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Nd} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Pm} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Sm} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Eu} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Gd} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Tb} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Dy} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ho} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Er} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Tm} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Yb} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Lu} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
           <ElementBox elem={this.state.elements.actinoids}
-            data-type="actinoids" 
-            onPointerEnter={this.toggleHighlightType}
-            onPointerLeave={this.toggleHighlightType}
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
           />
-          <ElementBox elem={this.state.elements.Hf} />
-          <ElementBox elem={this.state.elements.Ta} />
-          <ElementBox elem={this.state.elements.W} />
-          <ElementBox elem={this.state.elements.Re} />
-          <ElementBox elem={this.state.elements.Os} />
-          <ElementBox elem={this.state.elements.Ir} />
-          <ElementBox elem={this.state.elements.Pt} />
-          <ElementBox elem={this.state.elements.Au} />
-          <ElementBox elem={this.state.elements.Hg} />
-          <ElementBox elem={this.state.elements.Tl} />
-          <ElementBox elem={this.state.elements.Pb} />
-          <ElementBox elem={this.state.elements.Bi} />
-          <ElementBox elem={this.state.elements.Po} />
-          <ElementBox elem={this.state.elements.At} />
-          <ElementBox elem={this.state.elements.Rn} />
-          <ElementBox elem={this.state.elements.Fr} />
-          <ElementBox elem={this.state.elements.Ra} />
+          <ElementBox elem={this.state.elements.Hf} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ta} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.W} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Re} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Os} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ir} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Pt} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Au} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Hg} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Tl} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Pb} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Bi} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Po} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.At} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Rn} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Fr} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ra} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
           
-          <ElementBox elem={this.state.elements.Ac} />
-          <ElementBox elem={this.state.elements.Th} />
-          <ElementBox elem={this.state.elements.Pa} />
-          <ElementBox elem={this.state.elements.U} />
-          <ElementBox elem={this.state.elements.Np} />
-          <ElementBox elem={this.state.elements.Pu} />
-          <ElementBox elem={this.state.elements.Am} />
-          <ElementBox elem={this.state.elements.Cm} />
-          <ElementBox elem={this.state.elements.Bk} />
-          <ElementBox elem={this.state.elements.Cf} />
-          <ElementBox elem={this.state.elements.Es} />
-          <ElementBox elem={this.state.elements.Fm} />
-          <ElementBox elem={this.state.elements.Md} />
-          <ElementBox elem={this.state.elements.No} />
-          <ElementBox elem={this.state.elements.Lr} />
-          <ElementBox elem={this.state.elements.Rf} />
-          <ElementBox elem={this.state.elements.Db} />
-          <ElementBox elem={this.state.elements.Sg} /> 
-          <ElementBox elem={this.state.elements.Bh} />
-          <ElementBox elem={this.state.elements.Hs} />
-          <ElementBox elem={this.state.elements.Mt} />
-          <ElementBox elem={this.state.elements.Ds} />
-          <ElementBox elem={this.state.elements.Rg} />
-          <ElementBox elem={this.state.elements.Cn} />
-          <ElementBox elem={this.state.elements.Nh} />
-          <ElementBox elem={this.state.elements.Fl} />
-          <ElementBox elem={this.state.elements.Mc} />
-          <ElementBox elem={this.state.elements.Lv} />
-          <ElementBox elem={this.state.elements.Ts} />
-          <ElementBox elem={this.state.elements.Og} />
+          <ElementBox elem={this.state.elements.Ac} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Th} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Pa} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.U} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Np} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Pu} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Am} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Cm} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Bk} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Cf} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Es} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Fm} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Md} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.No} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Lr} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Rf} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Db} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Sg} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          /> 
+          <ElementBox elem={this.state.elements.Bh} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Hs} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Mt} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ds} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Rg} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Cn} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Nh} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Fl} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Mc} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Lv} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Ts} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
+          <ElementBox elem={this.state.elements.Og} 
+            onPointerEnter={this.toggleHighlight}
+            onPointerLeave={this.toggleHighlight}
+          />
         </ul>
       </div>
     );
