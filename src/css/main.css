@@ -54,8 +54,8 @@ body {
 		width: auto;
 		text-align: left;
 		display: inline-grid;
-		grid-template-columns: repeat(19, 3rem);
-		grid-template-rows: repeat(11, 3rem);
+		grid-template-columns: repeat(19, 3.5rem);
+		grid-template-rows: repeat(11, 3.5rem);
 		grid-template-areas:
 		".  g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18"
 		"p1 H  .  .  .  .  .  .  .  .   .   .   .   .   .   .   .   .  He"
@@ -74,8 +74,8 @@ body {
 
 	#app .table > li {
 		border: 1px solid #666;
-		height: 3rem;
-		width: 3rem;
+		height: 3.5rem;
+		width: 3.5rem;
 		place-self: stretch;
 		border-radius: 2px;
 	}
@@ -163,4 +163,6 @@ body {
 	.Am { grid-area: Am; } .Cm { grid-area: Cm; } .Bk { grid-area: Bk; }  
 	.Cf { grid-area: Cf; } .Es { grid-area: Es; } .Fm { grid-area: Fm; }  
 	.Md { grid-area: Md; } .No { grid-area: No; } .Lr { grid-area: Lr; }
+
+	@import "./elementbox.css"
 }

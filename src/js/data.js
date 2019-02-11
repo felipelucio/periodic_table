@@ -1574,6 +1574,7 @@ module.exports = {
     "name": {
       "en": "Lanthanoids"
     },
+    "type": "lanthanoids",
     "classList": ['lanthanoid']
   },
   "actinoids": {
@@ -1582,6 +1583,7 @@ module.exports = {
     "name": {
       "en": "Actinoids"
     },
+    "type": "actinoids",
     "classList": ['actinoid']
   },
 };

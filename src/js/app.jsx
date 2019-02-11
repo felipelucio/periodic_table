@@ -12,14 +12,25 @@ export default class App extends React.Component {
       elements: data
     };
     
-
-    this.handlePointOver = this.handlePointOver.bind(this);
+    this.toggleHighlightType = this.toggleHighlightType.bind(this);
     this.toggleHighlightPeriod = this.toggleHighlightPeriod.bind(this);
     this.toggleHighlightGroup = this.toggleHighlightGroup.bind(this);
   }
 
-  handlePointOver(e) {
-    
+  toggleHighlightType(type) {
+    let elems = [];
+    switch(type) {
+      case 'lanthanoids':
+        elems = ['La','Ce','Pr','Nd','Pm','Sm','Eu','Gd','Tb',
+          'Dy','Ho','Er','Tm','Yb','Lu'];
+        break;
+      case 'actinoids':
+        elems = ['Ac','Th','Pa','U','Np','Pu','Am','Cm','Bk',
+          'Cf','Es','Fm','Md','No','Lr'];
+        break;
+    };
+
+    this._toggleElementsClass(elems, 'disabled');
   }
 
   toggleHighlightPeriod(e) {
@@ -55,11 +66,11 @@ export default class App extends React.Component {
         break;
     };
 
-    this.toggleElementsClass(elems, 'disabled');
+    this._toggleElementsClass(elems, 'disabled');
   }
 
-  toggleElementsClass(elems, class_name) {
-    this.setState(function(state, prop) {
+  _toggleElementsClass(elems, class_name) {
+    this.setState(function(state, props) {
       let els = Object.keys(state.elements).filter(function(e) {
         if(elems.indexOf(e) < 0) return true;
       });
@@ -148,7 +159,7 @@ export default class App extends React.Component {
         break;
     };
 
-    this.toggleElementsClass(elems, 'disabled');
+    this._toggleElementsClass(elems, 'disabled');
   }
 
   render() {
@@ -312,7 +323,11 @@ export default class App extends React.Component {
           <ElementBox elem={this.state.elements.Xe} />
           <ElementBox elem={this.state.elements.Cs} />
           <ElementBox elem={this.state.elements.Ba} />
-          <ElementBox className="lanthanoid" elem={this.state.elements.lanthanoids} />
+          <ElementBox elem={this.state.elements.lanthanoids} 
+            data-type="lanthanoids" 
+            onPointerEnter={this.toggleHighlightType}
+            onPointerLeave={this.toggleHighlightType}
+          />
           <ElementBox elem={this.state.elements.La} />
           <ElementBox elem={this.state.elements.Ce} />
           <ElementBox elem={this.state.elements.Pr} />
@@ -328,7 +343,11 @@ export default class App extends React.Component {
           <ElementBox elem={this.state.elements.Tm} />
           <ElementBox elem={this.state.elements.Yb} />
           <ElementBox elem={this.state.elements.Lu} />
-          <ElementBox className="actinoid" elem={this.state.elements.actinoids} />
+          <ElementBox elem={this.state.elements.actinoids}
+            data-type="actinoids" 
+            onPointerEnter={this.toggleHighlightType}
+            onPointerLeave={this.toggleHighlightType}
+          />
           <ElementBox elem={this.state.elements.Hf} />
           <ElementBox elem={this.state.elements.Ta} />
           <ElementBox elem={this.state.elements.W} />

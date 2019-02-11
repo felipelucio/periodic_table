@@ -4,24 +4,36 @@
 		"selected_items":
 		[
 			[
-				"toggl",
-				"toggleElementsClass"
+				"on",
+				"onPointerLeave"
 			],
 			[
-				"class",
-				"class_list"
+				"to",
+				"toggleActive"
+			],
+			[
+				"toggle",
+				"toggleHighlightType"
 			],
 			[
 				"clas",
-				"class_list"
+				"classList"
 			],
 			[
 				"cla",
 				"classList"
 			],
 			[
-				"toggle",
-				"toggleHighlightPeriod"
+				"grid",
+				"grid-column\tproperty"
+			],
+			[
+				"toggl",
+				"toggleElementsClass"
+			],
+			[
+				"class",
+				"class_list"
 			],
 			[
 				"hi",
@@ -502,18 +514,6 @@
 			[
 				"_fram",
 				"_frame_w"
-			],
-			[
-				"_frame",
-				"_frame_size"
-			],
-			[
-				"frame",
-				"frame_size"
-			],
-			[
-				"spr",
-				"sprites"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "src/layout.html",
 			"settings":
 			{
-				"buffer_size": 234,
+				"buffer_size": 349,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -532,7 +532,7 @@
 			"file": "src/css/main.css",
 			"settings":
 			{
-				"buffer_size": 6065,
+				"buffer_size": 7019,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -550,7 +550,16 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 535,
+				"buffer_size": 562,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/css/elementbox.css",
+			"settings":
+			{
+				"buffer_size": 680,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -559,7 +568,7 @@
 			"file": "src/js/elementbox.jsx",
 			"settings":
 			{
-				"buffer_size": 547,
+				"buffer_size": 1517,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -568,7 +577,16 @@
 			"file": "src/js/app.jsx",
 			"settings":
 			{
-				"buffer_size": 14717,
+				"buffer_size": 15903,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/js/nav_bar.jsx",
+			"settings":
+			{
+				"buffer_size": 707,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -807,15 +825,19 @@
 		"selected_items":
 		[
 			[
-				"tog",
+				"to",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"t",
 				"Terminus: Toggle Panel"
 			],
 			[
 				"term",
-				"Terminus: Open Default Shell in Panel"
+				"Terminus: Toggle Panel"
 			],
 			[
-				"to",
+				"tog",
 				"Terminus: Toggle Panel"
 			],
 			[
@@ -1104,6 +1126,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"key",
+			"Enter",
+			"toggleActive",
+			"Enter",
+			"toggleHighlightType",
+			"Pointer",
+			"Enter",
+			"ElementsClass",
+			"toggleElementsClass",
+			"4",
+			"mb",
+			"rm",
+			"mm",
+			"lt",
+			"active",
+			"0.7",
+			"0",
+			"0.5",
+			"elem=",
+			"React.Fragment",
+			"NavBar",
+			"React.Fragment",
 			"1'",
 			"'p",
 			"'P",
@@ -1196,15 +1240,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 234,
+						"buffer_size": 349,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								209,
-								209
+								141,
+								141
 							]
 						],
 						"settings":
@@ -1219,7 +1263,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1228,15 +1272,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6065,
+						"buffer_size": 7019,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1840,
-								1840
+								2768,
+								2768
 							]
 						],
 						"settings":
@@ -1247,10 +1291,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 973.0,
+						"translation.y": 1674.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1282,7 +1326,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1291,7 +1335,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 535,
+						"buffer_size": 562,
 						"regions":
 						{
 						},
@@ -1314,24 +1358,118 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "src/js/elementbox.jsx",
+					"file": "src/css/elementbox.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 547,
+						"buffer_size": 680,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								358,
-								358
+								310,
+								310
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/js/elementbox.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								183,
+								183
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/js/app.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								558,
+								558
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/js/nav_bar.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								184
 							]
 						],
 						"settings":
@@ -1350,39 +1488,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/js/app.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14717,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4024,
-								4024
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5334.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "src/js/data.js",
 					"semi_transient": false,
 					"settings":
@@ -1394,8 +1500,8 @@
 						"selection":
 						[
 							[
-								26959,
-								26959
+								26960,
+								26960
 							]
 						],
 						"settings":
@@ -1407,10 +1513,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 28106.0,
+						"translation.y": 28006.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
