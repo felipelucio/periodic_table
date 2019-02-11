@@ -23,8 +23,9 @@ li.element {
 .element .atomic_number { 
 	grid-row: 1; 
 	grid-column: 1; 
-	justify-self: center;
+	justify-self: left;
 	font-size: 0.7rem; 
+	margin-left: 0.15rem;
 }
 
 .element .name { 
@@ -38,8 +39,28 @@ li.element {
 	grid-row: 4;
 	grid-column: 1 / span 3;
 	justify-self: center;
+	text-align: center;
 	font-size: 0.6rem;
+	white-space: nowrap;
 }
+
+.element.active .weight.small {
+	display: none;
+}
+
+.element .weight.big {
+	display: none;
+}
+.element .weight.big p {
+	margin: 0;
+	padding: 0;
+	line-height: 0.6rem;
+}
+
+.element.active .weight.big {
+	display: block;
+}
+
 .element .electrons {
 	grid-row: 1 / span 4;
 	grid-column: 3;

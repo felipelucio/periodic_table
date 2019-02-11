@@ -39,6 +39,42 @@ export default class ElementBox extends React.Component {
     return this.props.elem.name['en'];
   }
 
+  _precision(a) {
+    let e = 1;
+    while (Math.round(a * e) / e !== a) e *= 10;
+    return Math.log(e) / Math.LN10;
+  }
+
+  getWeight(precision=3) {
+    if(!this.props.elem.hasOwnProperty('weight')) return false;
+
+    let weights = this.props.elem.weight;
+    
+    if(weights.hasOwnProperty('most_stable')) {
+      return `(${weights.most_stable})`;
+    } else { 
+      if(weights.hasOwnProperty('conventional')) {
+        return weights.conventional;
+      } else {
+        if(Array.isArray(weights.standard)) {
+          return `[${weights.standard[0]}, ${weights.standard[1]}]`;
+        }
+      }
+    }
+
+    
+    if(!precision || (this._precision(weights.standard) < precision)) {
+      let str = weights.standard.toString();
+      let last_digit = str[str.length - 1];
+      return `${str.substr(0, str.length - 1)}(${last_digit})`;
+    } else {
+      let num = weights.standard.toFixed(precision);
+      let str = num.toString();
+      let last_digit = str[str.length - 1];
+      return `${str.substr(0, str.length - 1)}`;
+    }
+  }
+
   render() {
     let classes = [
       this.props.elem.id,
@@ -57,8 +93,14 @@ export default class ElementBox extends React.Component {
         <span className="name">{ this.getName() }</span>
         <span className="symbol">{ elem.symbol }</span>
         <span className="atomic_number">{ elem.atomic_number }</span>
-        <span className="weight">{ elem.weight }</span>
-        <span className="electrons hide">
+        <span className="weight small">{ this.getWeight(3) }</span>
+        <span className="weight big">
+          {elem.weight && elem.weight.hasOwnProperty('conventional') &&
+            <p>{`[${elem.weight.standard[0]},${elem.weight.standard[1]}]`}</p>
+          }
+          <p>{ this.getWeight(false) }</p>
+        </span>
+        <span className="electrons">
           <p>{ elem.electrons[0] }</p>
           <p>{ elem.electrons[1] }</p>
           <p>{ elem.electrons[2] }</p>

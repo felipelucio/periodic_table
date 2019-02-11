@@ -83,8 +83,8 @@ body {
 		border-radius: 2px;
 	}
 	#app .table > li.active {
-		height: 5rem;
-		width: 5rem;
+		height: 5.5rem;
+		width: 5.5rem;
 		left: -0.5rem;
 		top: -0.5rem;
 		position: relative;

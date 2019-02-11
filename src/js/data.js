@@ -7,7 +7,7 @@ module.exports = {
       "pt-BR": "Hidrogênio"
     },
     "atomic_number": 1,
-    "weight": 1.008,
+    "weight": { "conventional": 1.008, "standard": [1.00784, 1.00811] },
     "period": 1,
     "group": 1,
     "type": "nonmetal",
@@ -21,7 +21,7 @@ module.exports = {
           "en": "Protium"
         },
         "neutrons": 1,
-        "weight": 1.00782503207,
+        "weight": { "conventional": 1.00782503207 },
         "abundance": 99.9885,
         "decays": "stable"
       },
@@ -31,7 +31,7 @@ module.exports = {
           "en": "Deuterium"
         },
         "neutrons": 2,
-        "weight": 2.01410177785,
+        "weight": { "conventional": 2.01410177785 },
         "abundance": 0.0115,
         "decays": "stable"
       },
@@ -40,7 +40,7 @@ module.exports = {
         "name": {
           "en": "Tritium",
           "neutrons": 3,
-          "weight": 3.01604927767,
+          "weight": { "conventional": 3.01604927767 },
           "abundance": 0,
           "decays": [{
             "mode": "beta_emission",
@@ -59,7 +59,7 @@ module.exports = {
       "pt-BR": "Hélio"
     },
     "atomic_number": 2,
-    "weight": 4.0026,
+    "weight": { "standard": 4.0026022 },
     "period": 1,
     "group": 18,
     "type": "noble_gas",
@@ -76,7 +76,7 @@ module.exports = {
       "pt-BR": "Lítio"
     },
     "atomic_number": 3,
-    "weight": 4.0026,
+    "weight": { "conventional": 6.94, "standard": [6.938, 6.997] },
     "period": 2,
     "group": 1,
     "type": "alkali_metal",
@@ -93,7 +93,7 @@ module.exports = {
       "pt-BR": "Berílio"
     },
     "atomic_number": 4,
-    "weight": 4.0026,
+    "weight": { "standard": 9.01218315 },
     "period": 2,
     "group": 2,
     "type": "alkaline_earth",
@@ -110,7 +110,7 @@ module.exports = {
       "pt-BR": "Boro"
     },
     "atomic_number": 5,
-    "weight": 4.0026,
+    "weight": { "conventional": 10.81, "standard": [10.806, 10.821] },
     "period": 1,
     "group": 13,
     "type": "metalloid",
@@ -127,7 +127,7 @@ module.exports = {
       "pt-BR": "Carbono"
     },
     "atomic_number": 6,
-    "weight": 4.0026,
+    "weight": { "conventional": 12.011, "standard": [12.0096, 12.0116] },
     "period": 2,
     "group": 14,
     "type": "nonmetal",
@@ -144,7 +144,7 @@ module.exports = {
       "pt-BR": "Nitrogênio"
     },
     "atomic_number": 7,
-    "weight": 4.0026,
+    "weight": { "conventional": 14.007, "standard": [14.00643, 14.00728] },
     "period": 2,
     "group": 15,
     "type": "nonmetal",
@@ -161,7 +161,7 @@ module.exports = {
       "pt-BR": "Oxigênio"
     },
     "atomic_number": 8,
-    "weight": 4.0026,
+    "weight": { "conventional": 15.999, "standard": [15.99903, 15.99977] },
     "period": 2,
     "group": 16,
     "type": "nonmetal",
@@ -178,7 +178,7 @@ module.exports = {
       "pt-BR": "Flúor"
     },
     "atomic_number": 9,
-    "weight": 4.0026,
+    "weight": { "standard": 18.9984031636 },
     "period": 2,
     "group": 17,
     "type": "nonmetal",
@@ -195,7 +195,7 @@ module.exports = {
       "pt-BR": "Neônio"
     },
     "atomic_number": 10,
-    "weight": 4.0026,
+    "weight": { "standard": 20.17976 },
     "period": 2,
     "group": 18,
     "type": "noble_gas",
@@ -212,7 +212,7 @@ module.exports = {
       "pt-BR": "Sódio"
     },
     "atomic_number": 11,
-    "weight": 4.0026,
+    "weight": { "standard": 22.989769282 },
     "period": 3,
     "group": 1,
     "type": "alkali_metal",
@@ -229,7 +229,7 @@ module.exports = {
       "pt-BR": "Magnésio"
     },
     "atomic_number": 12,
-    "weight": 4.0026,
+    "weight": { "conventional": 24.305, "standard": [24.304, 24.307] },
     "period": 3,
     "group": 2,
     "type": "alkaline_earth",
@@ -246,7 +246,7 @@ module.exports = {
       "pt-BR": "Alumínio"
     },
     "atomic_number": 13,
-    "weight": 4.0026,
+    "weight": { "standard": 26.98153843 },
     "period": 3,
     "group": 13,
     "type": "post_transitional",
@@ -263,7 +263,7 @@ module.exports = {
       "pt-BR": "Silício"
     },
     "atomic_number": 14,
-    "weight": 4.0026,
+    "weight": { "conventional": 28.085, "standard": [28.084, 28.086] },
     "period": 3,
     "group": 14,
     "type": "metalloid",
@@ -280,7 +280,7 @@ module.exports = {
       "pt-BR": "Fósforo"
     },
     "atomic_number": 15,
-    "weight": 4.0026,
+    "weight": { "standard": 30.9737619985 },
     "period": 3,
     "group": 15,
     "type": "nonmetal",
@@ -297,7 +297,7 @@ module.exports = {
       "pt-BR": "Enxofre"
     },
     "atomic_number": 16,
-    "weight": 4.0026,
+    "weight": { "conventional": 32.06, "standard": [32.059, 32.076] },
     "period": 3,
     "group": 16,
     "type": "nonmetal",
@@ -314,7 +314,7 @@ module.exports = {
       "pt-BR": "Cloro"
     },
     "atomic_number": 17,
-    "weight": 4.0026,
+    "weight": { "conventional": 35.45, "standard": [35.446, 35.457] },
     "period": 3,
     "group": 17,
     "type": "nonmetal",
@@ -331,7 +331,7 @@ module.exports = {
       "pt-BR": "Argônio"
     },
     "atomic_number": 18,
-    "weight": 4.0026,
+    "weight": { "conventional": 39.948, "standard": [39.792, 39.963] },
     "period": 3,
     "group": 18,
     "type": "noble_gas",
@@ -348,7 +348,7 @@ module.exports = {
       "pt-BR": "Potássio"
     },
     "atomic_number": 19,
-    "weight": 4.0026,
+    "weight": { "standard": 39.09831 },
     "period": 4,
     "group": 1,
     "type": "alkali_metal",
@@ -365,7 +365,7 @@ module.exports = {
       "pt-BR": "Cálcio"
     },
     "atomic_number": 20,
-    "weight": 4.0026,
+    "weight": { "standard": 40.0784 },
     "period": 4,
     "group": 2,
     "type": "alkaline_earth",
@@ -382,7 +382,7 @@ module.exports = {
       "pt-BR": "Escândio"
     },
     "atomic_number": 21,
-    "weight": 4.0026,
+    "weight": { "standard": 44.9559085 },
     "period": 4,
     "group": 3,
     "type": "transition_metal",
@@ -399,7 +399,7 @@ module.exports = {
       "pt-BR": "Titânio"
     },
     "atomic_number": 22,
-    "weight": 4.0026,
+    "weight": { "standard": 47.8671 },
     "period": 4,
     "group": 4,
     "type": "transition_metal",
@@ -416,7 +416,7 @@ module.exports = {
       "pt-BR": "Vanádio"
     },
     "atomic_number": 23,
-    "weight": 4.0026,
+    "weight": { "standard": 50.94151 },
     "period": 4,
     "group": 5,
     "type": "transition_metal",
@@ -433,7 +433,7 @@ module.exports = {
       "pt-BR": "Crômio"
     },
     "atomic_number": 24,
-    "weight": 4.0026,
+    "weight": { "standard": 51.99616 },
     "period": 4,
     "group": 6,
     "type": "transition_metal",
@@ -450,7 +450,7 @@ module.exports = {
       "pt-BR": "Manganês"
     },
     "atomic_number": 25,
-    "weight": 4.0026,
+    "weight": { "standard": 54.9380432 },
     "period": 4,
     "group": 7,
     "type": "transition_metal",
@@ -467,7 +467,7 @@ module.exports = {
       "pt-BR": "Ferro"
     },
     "atomic_number": 26,
-    "weight": 4.0026,
+    "weight": { "standard": 55.8452 },
     "period": 4,
     "group": 8,
     "type": "transition_metal",
@@ -484,7 +484,7 @@ module.exports = {
       "pt-BR": "Cobalto"
     },
     "atomic_number": 27,
-    "weight": 4.0026,
+    "weight": { "standard": 58.9331943 },
     "period": 4,
     "group": 9,
     "type": "transition_metal",
@@ -501,7 +501,7 @@ module.exports = {
       "pt-BR": "Níquel"
     },
     "atomic_number": 28,
-    "weight": 4.0026,
+    "weight": { "standard": 58.69344 },
     "period": 4,
     "group": 10,
     "type": "transition_metal",
@@ -518,7 +518,7 @@ module.exports = {
       "pt-BR": "Cobre"
     },
     "atomic_number": 29,
-    "weight": 4.0026,
+    "weight": { "standard": 63.5463 },
     "period": 4,
     "group": 11,
     "type": "transition_metal",
@@ -535,7 +535,7 @@ module.exports = {
       "pt-BR": "Zinco"
     },
     "atomic_number": 30,
-    "weight": 4.0026,
+    "weight": { "standard": 65.382 },
     "period": 4,
     "group": 12,
     "type": "transition_metal",
@@ -552,7 +552,7 @@ module.exports = {
       "pt-BR": "Gálio"
     },
     "atomic_number": 31,
-    "weight": 4.0026,
+    "weight": { "standard": 69.7231 },
     "period": 4,
     "group": 13,
     "type": "post_transitional",
@@ -569,7 +569,7 @@ module.exports = {
       "pt-BR": "Germânio"
     },
     "atomic_number": 32,
-    "weight": 4.0026,
+    "weight": { "standard": 72.6308 },
     "period": 4,
     "group": 14,
     "type": "metalloid",
@@ -586,7 +586,7 @@ module.exports = {
       "pt-BR": "Arsênio"
     },
     "atomic_number": 33,
-    "weight": 4.0026,
+    "weight": { "standard": 74.9215956 },
     "period": 4,
     "group": 15,
     "type": "metalloid",
@@ -603,7 +603,7 @@ module.exports = {
       "pt-BR": "Selênio"
     },
     "atomic_number": 34,
-    "weight": 4.0026,
+    "weight": { "standard": 78.9718 },
     "period": 4,
     "group": 16,
     "type": "nonmetal",
@@ -620,7 +620,7 @@ module.exports = {
       "pt-BR": "Bromo"
     },
     "atomic_number": 35,
-    "weight": 4.0026,
+    "weight": { "conventional": 79.904, "standard": [79.901, 79.907] },
     "period": 4,
     "group": 17,
     "type": "nonmetal",
@@ -637,7 +637,7 @@ module.exports = {
       "pt-BR": "Criptônio"
     },
     "atomic_number": 36,
-    "weight": 4.0026,
+    "weight": { "standard": 83.7982 },
     "period": 4,
     "group": 18,
     "type": "noble_gas",
@@ -654,7 +654,7 @@ module.exports = {
       "pt-BR": "Rubídio"
     },
     "atomic_number": 37,
-    "weight": 4.0026,
+    "weight": { "standard": 85.46783 },
     "period": 5,
     "group": 1,
     "type": "alkali_metal",
@@ -671,7 +671,7 @@ module.exports = {
       "pt-BR": "Estrôncio"
     },
     "atomic_number": 38,
-    "weight": 4.0026,
+    "weight": { "standard": 87.621 },
     "period": 5,
     "group": 2,
     "type": "alkaline_earth",
@@ -688,7 +688,7 @@ module.exports = {
       "pt-BR": "Ítrio"
     },
     "atomic_number": 39,
-    "weight": 4.0026,
+    "weight": { "standard": 88.905841 },
     "period": 5,
     "group": 3,
     "type": "transition_metal",
@@ -705,7 +705,7 @@ module.exports = {
       "pt-BR": "Zircônio"
     },
     "atomic_number": 40,
-    "weight": 4.0026,
+    "weight": { "standard": 91.2242 },
     "period": 5,
     "group": 4,
     "type": "transition_metal",
@@ -722,7 +722,7 @@ module.exports = {
       "pt-BR": "Nióbio"
     },
     "atomic_number": 41,
-    "weight": 4.0026,
+    "weight": { "standard": 92.906371 },
     "period": 5,
     "group": 5,
     "type": "transition_metal",
@@ -739,7 +739,7 @@ module.exports = {
       "pt-BR": "Molibdênio"
     },
     "atomic_number": 42,
-    "weight": 4.0026,
+    "weight": { "standard": 95.951 },
     "period": 5,
     "group": 6,
     "type": "transition_metal",
@@ -756,7 +756,7 @@ module.exports = {
       "pt-BR": "Tecnécio"
     },
     "atomic_number": 43,
-    "weight": 4.0026,
+    "weight": { "most_stable": 98 },
     "period": 5,
     "group": 7,
     "type": "transition_metal",
@@ -773,7 +773,7 @@ module.exports = {
       "pt-BR": "Rutênio"
     },
     "atomic_number": 44,
-    "weight": 4.0026,
+    "weight": { "standard": 101.072 },
     "period": 5,
     "group": 8,
     "type": "transition_metal",
@@ -790,7 +790,7 @@ module.exports = {
       "pt-BR": "Ródio"
     },
     "atomic_number": 45,
-    "weight": 4.0026,
+    "weight": { "standard": 102.905492 },
     "period": 5,
     "group": 9,
     "type": "transition_metal",
@@ -807,7 +807,7 @@ module.exports = {
       "pt-BR": "Paládio"
     },
     "atomic_number": 46,
-    "weight": 4.0026,
+    "weight": { "standard": 106.421 },
     "period": 5,
     "group": 10,
     "type": "transition_metal",
@@ -824,7 +824,7 @@ module.exports = {
       "pt-BR": "Prata"
     },
     "atomic_number": 47,
-    "weight": 4.0026,
+    "weight": { "standard": 107.86822 },
     "period": 5,
     "group": 11,
     "type": "transition_metal",
@@ -841,7 +841,7 @@ module.exports = {
       "pt-BR": "Cádmio"
     },
     "atomic_number": 48,
-    "weight": 4.0026,
+    "weight": { "standard": 112.4144 },
     "period": 5,
     "group": 12,
     "type": "transition_metal",
@@ -858,7 +858,7 @@ module.exports = {
       "pt-BR": "Índio"
     },
     "atomic_number": 49,
-    "weight": 4.0026,
+    "weight": { "standard": 114.8181 },
     "period": 5,
     "group": 13,
     "type": "post_transitional",
@@ -875,7 +875,7 @@ module.exports = {
       "pt-BR": "Estanho"
     },
     "atomic_number": 50,
-    "weight": 4.0026,
+    "weight": { "standard": 118.7107 },
     "period": 5,
     "group": 14,
     "type": "post_transitional",
@@ -892,7 +892,7 @@ module.exports = {
       "pt-BR": "Antimônio"
     },
     "atomic_number": 51,
-    "weight": 4.0026,
+    "weight": { "standard": 121.7601 },
     "period": 5,
     "group": 15,
     "type": "metalloid",
@@ -909,7 +909,7 @@ module.exports = {
       "pt-BR": "Telúrio"
     },
     "atomic_number": 52,
-    "weight": 4.0026,
+    "weight": { "standard": 127.603 },
     "period": 5,
     "group": 16,
     "type": "metalloid",
@@ -926,7 +926,7 @@ module.exports = {
       "pt-BR": "Iodo"
     },
     "atomic_number": 53,
-    "weight": 4.0026,
+    "weight": { "standard": 126.904473 },
     "period": 5,
     "group": 17,
     "type": "nonmetal",
@@ -943,7 +943,7 @@ module.exports = {
       "pt-BR": "Xenônio"
     },
     "atomic_number": 54,
-    "weight": 4.0026,
+    "weight": { "standard": 131.2936 },
     "period": 5,
     "group": 18,
     "type": "noble_gas",
@@ -960,7 +960,7 @@ module.exports = {
       "pt-BR": "Césio"
     },
     "atomic_number": 55,
-    "weight": 4.0026,
+    "weight": { "standard": 132.905451966 },
     "period": 6,
     "group": 1,
     "type": "alkali_metal",
@@ -977,7 +977,7 @@ module.exports = {
       "pt-BR": "Bário"
     },
     "atomic_number": 56,
-    "weight": 4.0026,
+    "weight": { "standard": 137.3277 },
     "period": 6,
     "group": 2,
     "type": "alkaline_earth",
@@ -994,7 +994,7 @@ module.exports = {
       "pt-BR": "Lantânio"
     },
     "atomic_number": 57,
-    "weight": 4.0026,
+    "weight": { "standard": 138.905477 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1011,7 +1011,7 @@ module.exports = {
       "pt-BR": "Cério"
     },
     "atomic_number": 58,
-    "weight": 4.0026,
+    "weight": { "standard": 140.1161 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1028,7 +1028,7 @@ module.exports = {
       "pt-BR": "Praseodímio"
     },
     "atomic_number": 59,
-    "weight": 4.0026,
+    "weight": { "standard": 140.907661 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1045,7 +1045,7 @@ module.exports = {
       "pt-BR": "Neodímio"
     },
     "atomic_number": 60,
-    "weight": 4.0026,
+    "weight": { "standard": 144.2423 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1062,7 +1062,7 @@ module.exports = {
       "pt-BR": "Promécio"
     },
     "atomic_number": 61,
-    "weight": 4.0026,
+    "weight": { "most_stable": 145 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1079,7 +1079,7 @@ module.exports = {
       "pt-BR": "Samário"
     },
     "atomic_number": 62,
-    "weight": 4.0026,
+    "weight": { "standard": 150.362 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1096,7 +1096,7 @@ module.exports = {
       "pt-BR": "Európio"
     },
     "atomic_number": 63,
-    "weight": 4.0026,
+    "weight": { "standard": 151.9641 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1113,7 +1113,7 @@ module.exports = {
       "pt-BR": "Gadolínio"
     },
     "atomic_number": 64,
-    "weight": 4.0026,
+    "weight": { "standard": 157.253 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1130,7 +1130,7 @@ module.exports = {
       "pt-BR": "Térbio"
     },
     "atomic_number": 65,
-    "weight": 4.0026,
+    "weight": { "standard": 158.9253548 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1147,7 +1147,7 @@ module.exports = {
       "pt-BR": "Disprósio"
     },
     "atomic_number": 66,
-    "weight": 4.0026,
+    "weight": { "standard": 162.5001 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1164,7 +1164,7 @@ module.exports = {
       "pt-BR": "Hólmio"
     },
     "atomic_number": 67,
-    "weight": 4.0026,
+    "weight": { "standard": 164.9303287 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1181,7 +1181,7 @@ module.exports = {
       "pt-BR": "Érbio"
     },
     "atomic_number": 68,
-    "weight": 4.0026,
+    "weight": { "standard": 167.2593 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1198,7 +1198,7 @@ module.exports = {
       "pt-BR": "Túlio"
     },
     "atomic_number": 69,
-    "weight": 4.0026,
+    "weight": { "standard": 168.9342186 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1215,7 +1215,7 @@ module.exports = {
       "pt-BR": "Yttérbio"
     },
     "atomic_number": 70,
-    "weight": 4.0026,
+    "weight": { "standard": 173.0451 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1232,7 +1232,7 @@ module.exports = {
       "pt-BR": "Lutécio"
     },
     "atomic_number": 71,
-    "weight": 4.0026,
+    "weight": { "standard": 174.96681 },
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
@@ -1249,7 +1249,7 @@ module.exports = {
       "pt-BR": "Háfnio"
     },
     "atomic_number": 72,
-    "weight": 4.0026,
+    "weight": { "standard": 178.492 },
     "period": 6,
     "group": 4,
     "type": "transition_metal",
@@ -1266,7 +1266,7 @@ module.exports = {
       "pt-BR": "Tântalo"
     },
     "atomic_number": 73,
-    "weight": 4.0026,
+    "weight": { "standard": 180.947882 },
     "period": 6,
     "group": 5,
     "type": "transition_metal",
@@ -1283,7 +1283,7 @@ module.exports = {
       "pt-BR": "Tungstênio"
     },
     "atomic_number": 74,
-    "weight": 4.0026,
+    "weight": { "standard": 183.841 },
     "period": 6,
     "group": 6,
     "type": "transition_metal",
@@ -1300,7 +1300,7 @@ module.exports = {
       "pt-BR": "Rênio"
     },
     "atomic_number": 75,
-    "weight": 4.0026,
+    "weight": { "standard": 186.2071 },
     "period": 6,
     "group": 7,
     "type": "transition_metal",
@@ -1317,7 +1317,7 @@ module.exports = {
       "pt-BR": "Ósmio"
     },
     "atomic_number": 76,
-    "weight": 4.0026,
+    "weight": { "standard": 190.233 },
     "period": 6,
     "group": 8,
     "type": "transition_metal",
@@ -1334,7 +1334,7 @@ module.exports = {
       "pt-BR": "Irídio"
     },
     "atomic_number": 77,
-    "weight": 4.0026,
+    "weight": { "standard": 192.2172 },
     "period": 6,
     "group": 9,
     "type": "transition_metal",
@@ -1351,7 +1351,7 @@ module.exports = {
       "pt-BR": "Platina"
     },
     "atomic_number": 78,
-    "weight": 4.0026,
+    "weight": { "standard": 195.0849 },
     "period": 6,
     "group": 10,
     "type": "transition_metal",
@@ -1368,7 +1368,7 @@ module.exports = {
       "pt-BR": "Ouro"
     },
     "atomic_number": 79,
-    "weight": 4.0026,
+    "weight": { "standard": 196.9665704 },
     "period": 6,
     "group": 11,
     "type": "transition_metal",
@@ -1385,7 +1385,7 @@ module.exports = {
       "pt-BR": "Mercúrio"
     },
     "atomic_number": 80,
-    "weight": 4.0026,
+    "weight": { "standard": 200.5923 },
     "period": 6,
     "group": 12,
     "type": "transition_metal",
@@ -1402,7 +1402,7 @@ module.exports = {
       "pt-BR": "Tálio"
     },
     "atomic_number": 81,
-    "weight": 4.0026,
+    "weight": { "conventional": 204.38, "standard": [204.382, 204.385] },
     "period": 6,
     "group": 13,
     "type": "post_transitional",
@@ -1419,7 +1419,7 @@ module.exports = {
       "pt-BR": "Chumbo"
     },
     "atomic_number": 82,
-    "weight": 4.0026,
+    "weight": { "standard": 207.21 },
     "period": 6,
     "group": 14,
     "type": "post_transitional",
@@ -1436,7 +1436,7 @@ module.exports = {
       "pt-BR": "Bismuto"
     },
     "atomic_number": 83,
-    "weight": 4.0026,
+    "weight": { "standard": 208.980401 },
     "period": 6,
     "group": 15,
     "type": "post_transitional",
@@ -1453,7 +1453,7 @@ module.exports = {
       "pt-BR": "Polônio"
     },
     "atomic_number": 84,
-    "weight": 4.0026,
+    "weight": { "most_stable": 209 },
     "period": 6,
     "group": 16,
     "type": "post_transitional",
@@ -1470,7 +1470,7 @@ module.exports = {
       "pt-BR": "Ástato"
     },
     "atomic_number": 85,
-    "weight": 4.0026,
+    "weight": { "most_stable": 210 },
     "period": 6,
     "group": 17,
     "type": "metalloid",
@@ -1487,7 +1487,7 @@ module.exports = {
       "pt-BR": "Radônio"
     },
     "atomic_number": 86,
-    "weight": 4.0026,
+    "weight": { "most_stable": 222 },
     "period": 6,
     "group": 18,
     "type": "noble_gas",
@@ -1504,7 +1504,7 @@ module.exports = {
       "pt-BR": "Frâncio"
     },
     "atomic_number": 87,
-    "weight": 4.0026,
+    "weight": { "most_stable": 223 },
     "period": 7,
     "group": 1,
     "type": "alkali_metal",
@@ -1521,7 +1521,7 @@ module.exports = {
       "pt-BR": "Rádio"
     },
     "atomic_number": 88,
-    "weight": 4.0026,
+    "weight": { "most_stable": 226 },
     "period": 7,
     "group": 2,
     "type": "alkaline_earth",
@@ -1538,7 +1538,7 @@ module.exports = {
       "pt-BR": "Actínio"
     },
     "atomic_number": 89,
-    "weight": 4.0026,
+    "weight": { "most_stable": 227 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1555,7 +1555,7 @@ module.exports = {
       "pt-BR": "Tório"
     },
     "atomic_number": 90,
-    "weight": 4.0026,
+    "weight": { "standard": 232.03774 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1572,7 +1572,7 @@ module.exports = {
       "pt-BR": "Protactínio"
     },
     "atomic_number": 91,
-    "weight": 4.0026,
+    "weight": { "standard": 231.035881 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1589,7 +1589,7 @@ module.exports = {
       "pt-BR": "Urânio"
     },
     "atomic_number": 92,
-    "weight": 4.0026,
+    "weight": { "standard": 238.028913 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1606,7 +1606,7 @@ module.exports = {
       "pt-BR": "Neptúnio"
     },
     "atomic_number": 93,
-    "weight": 4.0026,
+    "weight": { "most_stable": 237 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1623,7 +1623,7 @@ module.exports = {
       "pt-BR": "Plutônio"
     },
     "atomic_number": 94,
-    "weight": 4.0026,
+    "weight": { "most_stable": 244 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1640,7 +1640,7 @@ module.exports = {
       "pt-BR": "Amerício"
     },
     "atomic_number": 95,
-    "weight": 4.0026,
+    "weight": { "most_stable": 243 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1657,7 +1657,7 @@ module.exports = {
       "pt-BR": "Cúrio"
     },
     "atomic_number": 96,
-    "weight": 4.0026,
+    "weight": { "most_stable": 247 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1674,7 +1674,7 @@ module.exports = {
       "pt-BR": "Berkélio"
     },
     "atomic_number": 97,
-    "weight": 4.0026,
+    "weight": { "most_stable": 247 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1691,7 +1691,7 @@ module.exports = {
       "pt-BR": "Califórnio"
     },
     "atomic_number": 98,
-    "weight": 4.0026,
+    "weight": { "most_stable": 251 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1708,7 +1708,7 @@ module.exports = {
       "pt-BR": "Einstênio"
     },
     "atomic_number": 99,
-    "weight": 4.0026,
+    "weight": { "most_stable": 252 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1725,7 +1725,7 @@ module.exports = {
       "pt-BR": "Férmio"
     },
     "atomic_number": 100,
-    "weight": 4.0026,
+    "weight": { "most_stable": 257 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1742,7 +1742,7 @@ module.exports = {
       "pt-BR": "Mendelévio"
     },
     "atomic_number": 101,
-    "weight": 4.0026,
+    "weight": { "most_stable": 258 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1759,7 +1759,7 @@ module.exports = {
       "pt-BR": "Nobélio"
     },
     "atomic_number": 102,
-    "weight": 4.0026,
+    "weight": { "most_stable": 259 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1776,7 +1776,7 @@ module.exports = {
       "pt-BR": "Lawrêncio"
     },
     "atomic_number": 103,
-    "weight": 4.0026,
+    "weight": { "most_stable": 266 },
     "period": 7,
     "group": 3,
     "type": "actinoid",
@@ -1793,7 +1793,7 @@ module.exports = {
       "pt-BR": "Rutherfórdio"
     },
     "atomic_number": 104,
-    "weight": 4.0026,
+    "weight": { "most_stable": 267 },
     "period": 7,
     "group": 4,
     "type": "transition_metal",
@@ -1810,7 +1810,7 @@ module.exports = {
       "pt-BR": "Dúbnio"
     },
     "atomic_number": 105,
-    "weight": 4.0026,
+    "weight": { "most_stable": 268 },
     "period": 7,
     "group": 5,
     "type": "transition_metal",
@@ -1827,7 +1827,7 @@ module.exports = {
       "pt-BR": "Seabórgio"
     },
     "atomic_number": 106,
-    "weight": 4.0026,
+    "weight": { "most_stable": 269 },
     "period": 7,
     "group": 6,
     "type": "transition_metal",
@@ -1844,7 +1844,7 @@ module.exports = {
       "pt-BR": "Bóhrio"
     },
     "atomic_number": 107,
-    "weight": 4.0026,
+    "weight": { "most_stable": 270 },
     "period": 7,
     "group": 7,
     "type": "transition_metal",
@@ -1861,7 +1861,7 @@ module.exports = {
       "pt-BR": "Hássio"
     },
     "atomic_number": 108,
-    "weight": 4.0026,
+    "weight": { "most_stable": 277 },
     "period": 7,
     "group": 8,
     "type": "transition_metal",
@@ -1878,7 +1878,7 @@ module.exports = {
       "pt-BR": "Meitnério"
     },
     "atomic_number": 109,
-    "weight": 4.0026,
+    "weight": { "most_stable": 278 },
     "period": 7,
     "group": 9,
     "type": "unknown_type",
@@ -1895,7 +1895,7 @@ module.exports = {
       "pt-BR": "Darmstácio"
     },
     "atomic_number": 110,
-    "weight": 4.0026,
+    "weight": { "most_stable": 281 },
     "period": 7,
     "group": 10,
     "type": "unknown_type",
@@ -1912,7 +1912,7 @@ module.exports = {
       "pt-BR": "Roentgênio"
     },
     "atomic_number": 111,
-    "weight": 4.0026,
+    "weight": { "most_stable": 282 },
     "period": 7,
     "group": 11,
     "type": "unknown_type",
@@ -1929,7 +1929,7 @@ module.exports = {
       "pt-BR": "Copernício"
     },
     "atomic_number": 112,
-    "weight": 4.0026,
+    "weight": { "most_stable": 285 },
     "period": 7,
     "group": 12,
     "type": "transition_metal",
@@ -1946,7 +1946,7 @@ module.exports = {
       "pt-BR": "Nihônio"
     },
     "atomic_number": 113,
-    "weight": 4.0026,
+    "weight": { "most_stable": 286 },
     "period": 7,
     "group": 13,
     "type": "unknown_type",
@@ -1963,7 +1963,7 @@ module.exports = {
       "pt-BR": "Fleróvio"
     },
     "atomic_number": 114,
-    "weight": 4.0026,
+    "weight": { "most_stable": 289 },
     "period": 7,
     "group": 14,
     "type": "post_transitional",
@@ -1980,7 +1980,7 @@ module.exports = {
       "pt-BR": "Moscóvio"
     },
     "atomic_number": 115,
-    "weight": 4.0026,
+    "weight": { "most_stable": 290 },
     "period": 7,
     "group": 15,
     "type": "unknown_type",
@@ -1997,7 +1997,7 @@ module.exports = {
       "pt-BR": "Livermório"
     },
     "atomic_number": 116,
-    "weight": 4.0026,
+    "weight": { "most_stable": 293 },
     "period": 7,
     "group": 16,
     "type": "unknown_type",
@@ -2014,7 +2014,7 @@ module.exports = {
       "pt-BR": "Tennesso"
     },
     "atomic_number": 117,
-    "weight": 4.0026,
+    "weight": { "most_stable": 294 },
     "period": 7,
     "group": 17,
     "type": "unknown_type",
@@ -2031,7 +2031,7 @@ module.exports = {
       "pt-BR": "Oganessônio"
     },
     "atomic_number": 118,
-    "weight": 4.0026,
+    "weight": { "most_stable": 294 },
     "period": 7,
     "group": 18,
     "type": "unknown_type",
