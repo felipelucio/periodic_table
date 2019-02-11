@@ -33,17 +33,18 @@ body {
 .noble_gas { background: #77CCFF; } 
 .lanthanoid { background: #FFBB99; } 
 .actinoid { background: #EEBBDD; } 
+.unknown_type { background: #FFF; }
 
 @media only screen and (min-width: 920px) {
-	.nonmetal.active { background: radial-gradient(#22FF22, rgba(255,255,255,0.5) 120%); }
-	.alkali_metal.active { background: radial-gradient(#FFCC33, rgba(255,255,255,0.5) 120%); }
-	.alkaline_earth.active { background: radial-gradient(#FFFF44, rgba(255,255,255,0.5) 120%); }
-	.transition_metal.active { background: radial-gradient(#DDBBBB, rgba(255,255,255,0.5) 120%); }
-	.metalloid.active { background: radial-gradient(#77DD88, rgba(255,255,255,0.5) 120%); }
-	.post_transitional.active { background: radial-gradient(#99DDCC, rgba(255,255,255,0.5) 120%); }
-	.noble_gas.active { background: radial-gradient(#77CCFF, rgba(255,255,255,0.5) 120%); }
-	.lanthanoid.active { background: radial-gradient(#FFBB99, rgba(255,255,255,0.5) 120%); }
-	.actinoid.active { background: radial-gradient(#EEBBDD, rgba(255,255,255,0.5) 120%); }
+	.nonmetal.active { background: radial-gradient(#22FF22, rgba(255,255,255,1) 120%); }
+	.alkali_metal.active { background: radial-gradient(#FFCC33, rgba(255,255,255,1) 120%); }
+	.alkaline_earth.active { background: radial-gradient(#FFFF44, rgba(255,255,255,1) 120%); }
+	.transition_metal.active { background: radial-gradient(#DDBBBB, rgba(255,255,255,1) 120%); }
+	.metalloid.active { background: radial-gradient(#77DD88, rgba(255,255,255,1) 120%); }
+	.post_transitional.active { background: radial-gradient(#99DDCC, rgba(255,255,255,1) 120%); }
+	.noble_gas.active { background: radial-gradient(#77CCFF, rgba(255,255,255,1) 120%); }
+	.lanthanoid.active { background: radial-gradient(#FFBB99, rgba(255,255,255,1) 120%); }
+	.actinoid.active { background: radial-gradient(#EEBBDD, rgba(255,255,255,1) 120%); }
 
 	
 	#app {
@@ -78,6 +79,14 @@ body {
 		width: 3.5rem;
 		place-self: stretch;
 		border-radius: 2px;
+	}
+	#app .table > li.active {
+		height: 5rem;
+		width: 5rem;
+		left: -0.5rem;
+		top: -0.5rem;
+		position: relative;
+		z-index: 100;
 	}
 
 	.disabled {

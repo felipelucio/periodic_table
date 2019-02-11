@@ -1,7 +1,7 @@
 li.element {
 	display: inline-grid;
 	grid-template-columns: repeat(3, 33.3%);
-	grid-template-rows: 20% 30% 25% 25%;
+	grid-template-rows: 15% 35% 25% 25%;
 	overflow: hidden;
 }
 

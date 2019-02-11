@@ -77,7 +77,7 @@ module.exports = {
     "id": "Be",
     "symbol": "Be",
     "name": {
-      "en": "Berilium"
+      "en": "Beryllium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -90,7 +90,7 @@ module.exports = {
     "id": "B",
     "symbol": "B",
     "name": {
-      "en": "Borum"
+      "en": "Boron"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -142,7 +142,7 @@ module.exports = {
     "id": "F",
     "symbol": "F",
     "name": {
-      "en": "Fluor"
+      "en": "Fluorine"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -155,7 +155,7 @@ module.exports = {
     "id": "Ne",
     "symbol": "Ne",
     "name": {
-      "en": "Neonium"
+      "en": "Neon"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -207,7 +207,7 @@ module.exports = {
     "id": "Si",
     "symbol": "Si",
     "name": {
-      "en": "Silicium"
+      "en": "Silicon"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -220,7 +220,7 @@ module.exports = {
     "id": "P",
     "symbol": "P",
     "name": {
-      "en": "Phosphorum"
+      "en": "Phosphorus"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -246,7 +246,7 @@ module.exports = {
     "id": "Cl",
     "symbol": "Cl",
     "name": {
-      "en": "Chloride"
+      "en": "Chlorine"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -259,7 +259,7 @@ module.exports = {
     "id": "Ar",
     "symbol": "Ar",
     "name": {
-      "en": "Argonium"
+      "en": "Argon"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -272,7 +272,7 @@ module.exports = {
     "id": "K",
     "symbol": "K",
     "name": {
-      "en": "alkali_metal"
+      "en": "Potassium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -298,7 +298,7 @@ module.exports = {
     "id": "Sc",
     "symbol": "Sc",
     "name": {
-      "en": "Sc"
+      "en": "Scandium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -428,7 +428,7 @@ module.exports = {
     "id": "Ga",
     "symbol": "Ga",
     "name": {
-      "en": "Galium"
+      "en": "Gallium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -454,7 +454,7 @@ module.exports = {
     "id": "As",
     "symbol": "As",
     "name": {
-      "en": "Arsenium"
+      "en": "Arsenic"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -480,7 +480,7 @@ module.exports = {
     "id": "Br",
     "symbol": "Br",
     "name": {
-      "en": "Bromium"
+      "en": "Bromine"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -493,7 +493,7 @@ module.exports = {
     "id": "Kr",
     "symbol": "Kr",
     "name": {
-      "en": "Kryptonium"
+      "en": "Krypton"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -519,7 +519,7 @@ module.exports = {
     "id": "Sr",
     "symbol": "Sr",
     "name": {
-      "en": "Stroncium"
+      "en": "Strontium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -532,7 +532,7 @@ module.exports = {
     "id": "Y",
     "symbol": "Y",
     "name": {
-      "en": "Yridium"
+      "en": "Yttrium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -571,7 +571,7 @@ module.exports = {
     "id": "Mo",
     "symbol": "Mo",
     "name": {
-      "en": "Molibdenium"
+      "en": "Molybdenum"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -584,7 +584,7 @@ module.exports = {
     "id": "Tc",
     "symbol": "Tc",
     "name": {
-      "en": "Tc"
+      "en": "Technetium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -597,7 +597,7 @@ module.exports = {
     "id": "Ru",
     "symbol": "Ru",
     "name": {
-      "en": "Ru"
+      "en": "Ruthenium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -610,7 +610,7 @@ module.exports = {
     "id": "Rh",
     "symbol": "Rh",
     "name": {
-      "en": "Rh"
+      "en": "Rhodium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -623,7 +623,7 @@ module.exports = {
     "id": "Pd",
     "symbol": "Pd",
     "name": {
-      "en": "Paladium"
+      "en": "Palladium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -688,7 +688,7 @@ module.exports = {
     "id": "Sb",
     "symbol": "Sb",
     "name": {
-      "en": "Antimonium"
+      "en": "Antimony"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -714,7 +714,7 @@ module.exports = {
     "id": "I",
     "symbol": "I",
     "name": {
-      "en": "I"
+      "en": "Iodine"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -727,7 +727,7 @@ module.exports = {
     "id": "Xe",
     "symbol": "Xe",
     "name": {
-      "en": "Xenonium"
+      "en": "Xenon"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -766,7 +766,7 @@ module.exports = {
     "id": "La",
     "symbol": "La",
     "name": {
-      "en": "Lanthanium"
+      "en": "Lanthanum"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -779,7 +779,7 @@ module.exports = {
     "id": "Ce",
     "symbol": "Ce",
     "name": {
-      "en": "Ce"
+      "en": "Cerium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -792,7 +792,7 @@ module.exports = {
     "id": "Pr",
     "symbol": "Pr",
     "name": {
-      "en": "Pr"
+      "en": "Praseodymium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -805,7 +805,7 @@ module.exports = {
     "id": "Nd",
     "symbol": "Nd",
     "name": {
-      "en": "Neodimium"
+      "en": "Neodymium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -818,7 +818,7 @@ module.exports = {
     "id": "Pm",
     "symbol": "Pm",
     "name": {
-      "en": "Pm"
+      "en": "Promethium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -857,7 +857,7 @@ module.exports = {
     "id": "Gd",
     "symbol": "Gd",
     "name": {
-      "en": "Gd"
+      "en": "Gadolinium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -870,7 +870,7 @@ module.exports = {
     "id": "Tb",
     "symbol": "Tb",
     "name": {
-      "en": "Tb"
+      "en": "Terbium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -883,7 +883,7 @@ module.exports = {
     "id": "Dy",
     "symbol": "Dy",
     "name": {
-      "en": "Dy"
+      "en": "Dysprosium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -896,7 +896,7 @@ module.exports = {
     "id": "Ho",
     "symbol": "Ho",
     "name": {
-      "en": "Ho"
+      "en": "Holmium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -909,7 +909,7 @@ module.exports = {
     "id": "Er",
     "symbol": "Er",
     "name": {
-      "en": "Er"
+      "en": "Erbium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -922,7 +922,7 @@ module.exports = {
     "id": "Tm",
     "symbol": "Tm",
     "name": {
-      "en": "Tm"
+      "en": "Thulium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -935,7 +935,7 @@ module.exports = {
     "id": "Yb",
     "symbol": "Yb",
     "name": {
-      "en": "Yn"
+      "en": "Ytterbium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -948,7 +948,7 @@ module.exports = {
     "id": "Lu",
     "symbol": "Lu",
     "name": {
-      "en": "Lu"
+      "en": "Lutetium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1000,7 +1000,7 @@ module.exports = {
     "id": "Re",
     "symbol": "Re",
     "name": {
-      "en": "Renium"
+      "en": "Rhenium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1026,7 +1026,7 @@ module.exports = {
     "id": "Ir",
     "symbol": "Ir",
     "name": {
-      "en": "Ir"
+      "en": "Iridium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1078,7 +1078,7 @@ module.exports = {
     "id": "Tl",
     "symbol": "Tl",
     "name": {
-      "en": "Tl"
+      "en": "Thallium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1117,7 +1117,7 @@ module.exports = {
     "id": "Po",
     "symbol": "Po",
     "name": {
-      "en": "Po"
+      "en": "Polonium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1130,7 +1130,7 @@ module.exports = {
     "id": "At",
     "symbol": "At",
     "name": {
-      "en": "At"
+      "en": "Astatine"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1143,7 +1143,7 @@ module.exports = {
     "id": "Rn",
     "symbol": "Rn",
     "name": {
-      "en": "Radonium"
+      "en": "Radon"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1208,7 +1208,7 @@ module.exports = {
     "id": "Pa",
     "symbol": "Pa",
     "name": {
-      "en": "Pa"
+      "en": "Protactinium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1234,7 +1234,7 @@ module.exports = {
     "id": "Np",
     "symbol": "Np",
     "name": {
-      "en": "Np"
+      "en": "Neptunium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1260,7 +1260,7 @@ module.exports = {
     "id": "Am",
     "symbol": "Am",
     "name": {
-      "en": "Am"
+      "en": "Americium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1273,7 +1273,7 @@ module.exports = {
     "id": "Cm",
     "symbol": "Cm",
     "name": {
-      "en": "Californium"
+      "en": "Curium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1299,7 +1299,7 @@ module.exports = {
     "id": "Cf",
     "symbol": "Cf",
     "name": {
-      "en": "Cf"
+      "en": "Californium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1312,7 +1312,7 @@ module.exports = {
     "id": "Es",
     "symbol": "Es",
     "name": {
-      "en": "Es"
+      "en": "Einsteinium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1364,7 +1364,7 @@ module.exports = {
     "id": "Lr",
     "symbol": "Lr",
     "name": {
-      "en": "Lr"
+      "en": "Lawrencium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1377,7 +1377,7 @@ module.exports = {
     "id": "Rf",
     "symbol": "Rf",
     "name": {
-      "en": "Rf"
+      "en": "Rutherfordium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1390,7 +1390,7 @@ module.exports = {
     "id": "Db",
     "symbol": "Db",
     "name": {
-      "en": "Db"
+      "en": "Dubnium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1403,7 +1403,7 @@ module.exports = {
     "id": "Sg",
     "symbol": "Sg",
     "name": {
-      "en": "Sg"
+      "en": "Seaborgium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1416,7 +1416,7 @@ module.exports = {
     "id": "Bh",
     "symbol": "Bh",
     "name": {
-      "en": "Bh"
+      "en": "Bohrium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1429,7 +1429,7 @@ module.exports = {
     "id": "Hs",
     "symbol": "Hs",
     "name": {
-      "en": "Hs"
+      "en": "Hassium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1442,7 +1442,7 @@ module.exports = {
     "id": "Mt",
     "symbol": "Mt",
     "name": {
-      "en": "Mt"
+      "en": "Meitnerium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1455,7 +1455,7 @@ module.exports = {
     "id": "Ds",
     "symbol": "Ds",
     "name": {
-      "en": "Ds"
+      "en": "Darmstadtium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1468,7 +1468,7 @@ module.exports = {
     "id": "Rg",
     "symbol": "Rg",
     "name": {
-      "en": "Rg"
+      "en": "Roentgenium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1481,7 +1481,7 @@ module.exports = {
     "id": "Cn",
     "symbol": "Cn",
     "name": {
-      "en": "Cn"
+      "en": "Copernicium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1494,7 +1494,7 @@ module.exports = {
     "id": "Nh",
     "symbol": "Nh",
     "name": {
-      "en": "Nh"
+      "en": "Nihonium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1507,7 +1507,7 @@ module.exports = {
     "id": "Fl",
     "symbol": "Fl",
     "name": {
-      "en": "Fl"
+      "en": "Flerovium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1520,7 +1520,7 @@ module.exports = {
     "id": "Mc",
     "symbol": "Mc",
     "name": {
-      "en": "Mc"
+      "en": "Moscouvium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1533,7 +1533,7 @@ module.exports = {
     "id": "Lv",
     "symbol": "Lv",
     "name": {
-      "en": "Lv"
+      "en": "Livermorium"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1546,7 +1546,7 @@ module.exports = {
     "id": "Ts",
     "symbol": "Ts",
     "name": {
-      "en": "Ts"
+      "en": "Tennessine"
     },
     "atomic_number": 2,
     "weight": 4.0026,
@@ -1559,7 +1559,7 @@ module.exports = {
     "id": "Og",
     "symbol": "Og",
     "name": {
-      "en": "Og"
+      "en": "Oganesson"
     },
     "atomic_number": 2,
     "weight": 4.0026,
