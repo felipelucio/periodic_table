@@ -19,7 +19,7 @@ export default class ElementBox extends React.Component {
     if (this.props.onPointerEnter) {
       let id = e.currentTarget.getAttribute('data-key');
       let type = e.currentTarget.getAttribute('data-type');
-      this.props.onPointerEnter(id, type);
+      this.props.onPointerEnter(id, type, e);
     } 
   }
 
@@ -27,7 +27,7 @@ export default class ElementBox extends React.Component {
     if (this.props.onPointerLeave) {
       let id = e.currentTarget.getAttribute('data-key');
       let type = e.currentTarget.getAttribute('data-type');
-      this.props.onPointerLeave(id, type);
+      this.props.onPointerLeave(id, type, e);
     } 
   }
 

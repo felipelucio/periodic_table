@@ -17,7 +17,7 @@ export default class App extends React.Component {
     this.toggleHighlightGroup = this.toggleHighlightGroup.bind(this);
   }
 
-  toggleHighlight(id, type) {
+  toggleHighlight(id, type, event) {
     let elems = [];
     
     switch(type) {
@@ -32,6 +32,20 @@ export default class App extends React.Component {
     };
 
     if (elems.length) this._toggleElementsClass(elems, 'disabled');
+    
+    let gref = 'g' + this.state.elements[id].group;
+    let pref = 'p' + this.state.elements[id].period;
+    let group = this.refs[gref];
+    let period = this.refs[pref];
+    if (event.type == 'pointerenter') {
+      group.classList.add('highlight');
+      period.classList.add('highlight');
+    } 
+    if (event.type == 'pointerleave') {
+      group.classList.remove('highlight');
+      period.classList.remove('highlight');
+    }
+
     this._toggleClass(id, 'active');
   }
 
@@ -188,103 +202,103 @@ export default class App extends React.Component {
       <div>
         <NavBar />
         <ul className="table">
-          <li data-key="g1" className="g1"
+          <li ref="g1"  data-key="g1" className="g1"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >1</li>
-          <li data-key="g2" className="g2"
+          <li ref="g2"  data-key="g2" className="g2"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >2</li>
-          <li data-key="g3" className="g3"
+          <li ref="g3"  data-key="g3" className="g3"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >3</li>
-          <li data-key="g4" className="g4"
+          <li ref="g4"  data-key="g4" className="g4"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >4</li>
-          <li data-key="g5" className="g5"
+          <li ref="g5"  data-key="g5" className="g5"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >5</li>
-          <li data-key="g6" className="g6"
+          <li ref="g6"  data-key="g6" className="g6"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >6</li>
-          <li data-key="g7" className="g7"
+          <li ref="g7"  data-key="g7" className="g7"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >7</li>
-          <li data-key="g8" className="g8"
+          <li ref="g8"  data-key="g8" className="g8"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >8</li>
-          <li data-key="g9" className="g9"
+          <li ref="g9"  data-key="g9" className="g9"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >9</li>
-          <li data-key="g10" className="g10"
+          <li ref="g10" data-key="g10" className="g10"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >10</li>
-          <li data-key="g11" className="g11"
+          <li ref="g11" data-key="g11" className="g11"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >11</li>
-          <li data-key="g12" className="g12"
+          <li ref="g12" data-key="g12" className="g12"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >12</li>
-          <li data-key="g13" className="g13"
+          <li ref="g13" data-key="g13" className="g13"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >13</li>
-          <li data-key="g14" className="g14"
+          <li ref="g14" data-key="g14" className="g14"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >14</li>
-          <li data-key="g15" className="g15"
+          <li ref="g15" data-key="g15" className="g15"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >15</li>
-          <li data-key="g16" className="g16"
+          <li ref="g16" data-key="g16" className="g16"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >16</li>
-          <li data-key="g17" className="g17"
+          <li ref="g17" data-key="g17" className="g17"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >17</li>
-          <li data-key="g18" className="g18"
+          <li ref="g18" data-key="g18" className="g18"
             onPointerEnter={this.toggleHighlightGroup}
             onPointerLeave={this.toggleHighlightGroup}
           >18</li>
-          <li data-key="p1" className="p1"
+          <li ref="p1" data-key="p1" className="p1"
             onPointerEnter={this.toggleHighlightPeriod}
             onPointerLeave={this.toggleHighlightPeriod}
           >1</li>
-          <li data-key="p2" className="p2"
+          <li ref="p2" data-key="p2" className="p2"
             onPointerEnter={this.toggleHighlightPeriod}
             onPointerLeave={this.toggleHighlightPeriod}
           >2</li>
-          <li data-key="p3" className="p3"
+          <li ref="p3" data-key="p3" className="p3"
             onPointerEnter={this.toggleHighlightPeriod}
             onPointerLeave={this.toggleHighlightPeriod}
           >3</li>
-          <li data-key="p4" className="p4"
+          <li ref="p4" data-key="p4" className="p4"
             onPointerEnter={this.toggleHighlightPeriod}
             onPointerLeave={this.toggleHighlightPeriod}
           >4</li>
-          <li data-key="p5" className="p5"
+          <li ref="p5" data-key="p5" className="p5"
             onPointerEnter={this.toggleHighlightPeriod}
             onPointerLeave={this.toggleHighlightPeriod}
           >5</li>
-          <li data-key="p6" className="p6"
+          <li ref="p6" data-key="p6" className="p6"
             onPointerEnter={this.toggleHighlightPeriod}
             onPointerLeave={this.toggleHighlightPeriod}
           >6</li>
-          <li data-key="p7" className="p7"
+          <li ref="p7" data-key="p7" className="p7"
             onPointerEnter={this.toggleHighlightPeriod}
             onPointerLeave={this.toggleHighlightPeriod}
           >7</li>
