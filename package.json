@@ -2,9 +2,9 @@
   "name": "periodic_app",
   "version": "1.0.0",
   "description": "",
-  "main": "src/layout.html",
+  "main": "src/index.html",
   "scripts": {
-    "dev": "parcel src/layout.html"
+    "dev": "parcel src/index.html"
   },
   "keywords": [],
   "author": "",
