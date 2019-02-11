@@ -3,13 +3,16 @@ module.exports = {
     "id": "H",
     "symbol": "H",
     "name": {
-      "en": "Hydrogen"
+      "en": "Hydrogen",
+      "pt-BR": "Hidrogênio"
     },
     "atomic_number": 1,
     "weight": 1.008,
     "period": 1,
     "group": 1,
     "type": "nonmetal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [1],
     "isotopes": [
       {
@@ -52,13 +55,16 @@ module.exports = {
     "id": "He",
     "symbol": "He",
     "name": {
-      "en": "Helium"
+      "en": "Helium",
+      "pt-BR": "Hélio"
     },
     "atomic_number": 2,
     "weight": 4.0026,
     "period": 1,
     "group": 18,
     "type": "noble_gas",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2],
     "isotopes": []
   },
@@ -66,13 +72,16 @@ module.exports = {
     "id": "Li",
     "symbol": "Li",
     "name": {
-      "en": "Lithium"
+      "en": "Lithium",
+      "pt-BR": "Lítio"
     },
     "atomic_number": 3,
     "weight": 4.0026,
     "period": 2,
     "group": 1,
     "type": "alkali_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 1],
     "isotopes": []
   },
@@ -80,13 +89,16 @@ module.exports = {
     "id": "Be",
     "symbol": "Be",
     "name": {
-      "en": "Beryllium"
+      "en": "Beryllium",
+      "pt-BR": "Berílio"
     },
     "atomic_number": 4,
     "weight": 4.0026,
     "period": 2,
     "group": 2,
     "type": "alkaline_earth",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 2],
     "isotopes": []
   },
@@ -94,13 +106,16 @@ module.exports = {
     "id": "B",
     "symbol": "B",
     "name": {
-      "en": "Boron"
+      "en": "Boron",
+      "pt-BR": "Boro"
     },
     "atomic_number": 5,
     "weight": 4.0026,
     "period": 1,
     "group": 13,
     "type": "metalloid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 3],
     "isotopes": []
   },
@@ -108,13 +123,16 @@ module.exports = {
     "id": "C",
     "symbol": "C",
     "name": {
-      "en": "Carbon"
+      "en": "Carbon",
+      "pt-BR": "Carbono"
     },
     "atomic_number": 6,
     "weight": 4.0026,
     "period": 2,
     "group": 14,
     "type": "nonmetal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 4],
     "isotopes": []
   },
@@ -122,13 +140,16 @@ module.exports = {
     "id": "N",
     "symbol": "N",
     "name": {
-      "en": "Nitrogen"
+      "en": "Nitrogen",
+      "pt-BR": "Nitrogênio"
     },
     "atomic_number": 7,
     "weight": 4.0026,
     "period": 2,
     "group": 15,
     "type": "nonmetal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 5],
     "isotopes": []
   },
@@ -136,13 +157,16 @@ module.exports = {
     "id": "O",
     "symbol": "O",
     "name": {
-      "en": "Oxygen"
+      "en": "Oxygen",
+      "pt-BR": "Oxigênio"
     },
     "atomic_number": 8,
     "weight": 4.0026,
     "period": 2,
     "group": 16,
     "type": "nonmetal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 6],
     "isotopes": []
   },
@@ -150,13 +174,16 @@ module.exports = {
     "id": "F",
     "symbol": "F",
     "name": {
-      "en": "Fluorine"
+      "en": "Fluorine",
+      "pt-BR": "Flúor"
     },
     "atomic_number": 9,
     "weight": 4.0026,
     "period": 2,
     "group": 17,
     "type": "nonmetal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 7],
     "isotopes": []
   },
@@ -164,13 +191,16 @@ module.exports = {
     "id": "Ne",
     "symbol": "Ne",
     "name": {
-      "en": "Neon"
+      "en": "Neon",
+      "pt-BR": "Neônio"
     },
     "atomic_number": 10,
     "weight": 4.0026,
     "period": 2,
     "group": 18,
     "type": "noble_gas",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8],
     "isotopes": []
   },
@@ -178,13 +208,16 @@ module.exports = {
     "id": "Na",
     "symbol": "Na",
     "name": {
-      "en": "Sodium"
+      "en": "Sodium",
+      "pt-BR": "Sódio"
     },
     "atomic_number": 11,
     "weight": 4.0026,
     "period": 3,
     "group": 1,
     "type": "alkali_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 1],
     "isotopes": []
   },
@@ -192,13 +225,16 @@ module.exports = {
     "id": "Mg",
     "symbol": "Mg",
     "name": {
-      "en": "Magnesium"
+      "en": "Magnesium",
+      "pt-BR": "Magnésio"
     },
     "atomic_number": 12,
     "weight": 4.0026,
     "period": 3,
     "group": 2,
     "type": "alkaline_earth",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 2],
     "isotopes": []
   },
@@ -206,13 +242,16 @@ module.exports = {
     "id": "Al",
     "symbol": "Al",
     "name": {
-      "en": "Aluminium"
+      "en": "Aluminium",
+      "pt-BR": "Alumínio"
     },
     "atomic_number": 13,
     "weight": 4.0026,
     "period": 3,
     "group": 13,
     "type": "post_transitional",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 3],
     "isotopes": []
   },
@@ -220,13 +259,16 @@ module.exports = {
     "id": "Si",
     "symbol": "Si",
     "name": {
-      "en": "Silicon"
+      "en": "Silicon",
+      "pt-BR": "Silício"
     },
     "atomic_number": 14,
     "weight": 4.0026,
     "period": 3,
     "group": 14,
     "type": "metalloid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 4],
     "isotopes": []
   },
@@ -234,13 +276,16 @@ module.exports = {
     "id": "P",
     "symbol": "P",
     "name": {
-      "en": "Phosphorus"
+      "en": "Phosphorus",
+      "pt-BR": "Fósforo"
     },
     "atomic_number": 15,
     "weight": 4.0026,
     "period": 3,
     "group": 15,
     "type": "nonmetal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 5],
     "isotopes": []
   },
@@ -248,13 +293,16 @@ module.exports = {
     "id": "S",
     "symbol": "S",
     "name": {
-      "en": "Sulfur"
+      "en": "Sulfur",
+      "pt-BR": "Enxofre"
     },
     "atomic_number": 16,
     "weight": 4.0026,
     "period": 3,
     "group": 16,
     "type": "nonmetal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 6],
     "isotopes": []
   },
@@ -262,13 +310,16 @@ module.exports = {
     "id": "Cl",
     "symbol": "Cl",
     "name": {
-      "en": "Chlorine"
+      "en": "Chlorine",
+      "pt-BR": "Cloro"
     },
     "atomic_number": 17,
     "weight": 4.0026,
     "period": 3,
     "group": 17,
     "type": "nonmetal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 7],
     "isotopes": []
   },
@@ -276,13 +327,16 @@ module.exports = {
     "id": "Ar",
     "symbol": "Ar",
     "name": {
-      "en": "Argon"
+      "en": "Argon",
+      "pt-BR": "Argônio"
     },
     "atomic_number": 18,
     "weight": 4.0026,
     "period": 3,
     "group": 18,
     "type": "noble_gas",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 8],
     "isotopes": []
   },
@@ -290,13 +344,16 @@ module.exports = {
     "id": "K",
     "symbol": "K",
     "name": {
-      "en": "Potassium"
+      "en": "Potassium",
+      "pt-BR": "Potássio"
     },
     "atomic_number": 19,
     "weight": 4.0026,
     "period": 4,
     "group": 1,
     "type": "alkali_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 8, 1],
     "isotopes": []
   },
@@ -304,13 +361,16 @@ module.exports = {
     "id": "Ca",
     "symbol": "Ca",
     "name": {
-      "en": "Calcium"
+      "en": "Calcium",
+      "pt-BR": "Cálcio"
     },
     "atomic_number": 20,
     "weight": 4.0026,
     "period": 4,
     "group": 2,
     "type": "alkaline_earth",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 8, 2],
     "isotopes": []
   },
@@ -318,13 +378,16 @@ module.exports = {
     "id": "Sc",
     "symbol": "Sc",
     "name": {
-      "en": "Scandium"
+      "en": "Scandium",
+      "pt-BR": "Escândio"
     },
     "atomic_number": 21,
     "weight": 4.0026,
     "period": 4,
     "group": 3,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 9, 2],
     "isotopes": []
   },
@@ -332,13 +395,16 @@ module.exports = {
     "id": "Ti",
     "symbol": "Ti",
     "name": {
-      "en": "Titanium"
+      "en": "Titanium",
+      "pt-BR": "Titânio"
     },
     "atomic_number": 22,
     "weight": 4.0026,
     "period": 4,
     "group": 4,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 10, 2],
     "isotopes": []
   },
@@ -346,13 +412,16 @@ module.exports = {
     "id": "V",
     "symbol": "V",
     "name": {
-      "en": "Vanadium"
+      "en": "Vanadium",
+      "pt-BR": "Vanádio"
     },
     "atomic_number": 23,
     "weight": 4.0026,
     "period": 4,
     "group": 5,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 11, 2],
     "isotopes": []
   },
@@ -360,13 +429,16 @@ module.exports = {
     "id": "Cr",
     "symbol": "Cr",
     "name": {
-      "en": "Chromium"
+      "en": "Chromium",
+      "pt-BR": "Crômio"
     },
     "atomic_number": 24,
     "weight": 4.0026,
     "period": 4,
     "group": 6,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 13, 1],
     "isotopes": []
   },
@@ -374,13 +446,16 @@ module.exports = {
     "id": "Mn",
     "symbol": "Mn",
     "name": {
-      "en": "Manganese"
+      "en": "Manganese",
+      "pt-BR": "Manganês"
     },
     "atomic_number": 25,
     "weight": 4.0026,
     "period": 4,
     "group": 7,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 13, 2],
     "isotopes": []
   },
@@ -388,13 +463,16 @@ module.exports = {
     "id": "Fe",
     "symbol": "Fe",
     "name": {
-      "en": "Iron"
+      "en": "Iron",
+      "pt-BR": "Ferro"
     },
     "atomic_number": 26,
     "weight": 4.0026,
     "period": 4,
     "group": 8,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 14, 2],
     "isotopes": []
   },
@@ -402,13 +480,16 @@ module.exports = {
     "id": "Co",
     "symbol": "Co",
     "name": {
-      "en": "Cobalt"
+      "en": "Cobalt",
+      "pt-BR": "Cobalto"
     },
     "atomic_number": 27,
     "weight": 4.0026,
     "period": 4,
     "group": 9,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 15, 2],
     "isotopes": []
   },
@@ -416,13 +497,16 @@ module.exports = {
     "id": "Ni",
     "symbol": "Ni",
     "name": {
-      "en": "Nickel"
+      "en": "Nickel",
+      "pt-BR": "Níquel"
     },
     "atomic_number": 28,
     "weight": 4.0026,
     "period": 4,
     "group": 10,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 16, 2],
     "isotopes": []
   },
@@ -430,13 +514,16 @@ module.exports = {
     "id": "Cu",
     "symbol": "Cu",
     "name": {
-      "en": "Copper"
+      "en": "Copper",
+      "pt-BR": "Cobre"
     },
     "atomic_number": 29,
     "weight": 4.0026,
     "period": 4,
     "group": 11,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 1],
     "isotopes": []
   },
@@ -444,13 +531,16 @@ module.exports = {
     "id": "Zn",
     "symbol": "Zn",
     "name": {
-      "en": "Zinc"
+      "en": "Zinc",
+      "pt-BR": "Zinco"
     },
     "atomic_number": 30,
     "weight": 4.0026,
     "period": 4,
     "group": 12,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 2],
     "isotopes": []
   },
@@ -458,13 +548,16 @@ module.exports = {
     "id": "Ga",
     "symbol": "Ga",
     "name": {
-      "en": "Gallium"
+      "en": "Gallium",
+      "pt-BR": "Gálio"
     },
     "atomic_number": 31,
     "weight": 4.0026,
     "period": 4,
     "group": 13,
     "type": "post_transitional",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 3],
     "isotopes": []
   },
@@ -472,13 +565,16 @@ module.exports = {
     "id": "Ge",
     "symbol": "Ge",
     "name": {
-      "en": "Germanium"
+      "en": "Germanium",
+      "pt-BR": "Germânio"
     },
     "atomic_number": 32,
     "weight": 4.0026,
     "period": 4,
     "group": 14,
     "type": "metalloid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 4],
     "isotopes": []
   },
@@ -486,13 +582,16 @@ module.exports = {
     "id": "As",
     "symbol": "As",
     "name": {
-      "en": "Arsenic"
+      "en": "Arsenic",
+      "pt-BR": "Arsênio"
     },
     "atomic_number": 33,
     "weight": 4.0026,
     "period": 4,
     "group": 15,
     "type": "metalloid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 5],
     "isotopes": []
   },
@@ -500,13 +599,16 @@ module.exports = {
     "id": "Se",
     "symbol": "Se",
     "name": {
-      "en": "Selenium"
+      "en": "Selenium",
+      "pt-BR": "Selênio"
     },
     "atomic_number": 34,
     "weight": 4.0026,
     "period": 4,
     "group": 16,
     "type": "nonmetal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 6],
     "isotopes": []
   },
@@ -514,13 +616,16 @@ module.exports = {
     "id": "Br",
     "symbol": "Br",
     "name": {
-      "en": "Bromine"
+      "en": "Bromine",
+      "pt-BR": "Bromo"
     },
     "atomic_number": 35,
     "weight": 4.0026,
     "period": 4,
     "group": 17,
     "type": "nonmetal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 7],
     "isotopes": []
   },
@@ -528,13 +633,16 @@ module.exports = {
     "id": "Kr",
     "symbol": "Kr",
     "name": {
-      "en": "Krypton"
+      "en": "Krypton",
+      "pt-BR": "Criptônio"
     },
     "atomic_number": 36,
     "weight": 4.0026,
     "period": 4,
     "group": 18,
     "type": "noble_gas",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 8],
     "isotopes": []
   },
@@ -542,13 +650,16 @@ module.exports = {
     "id": "Rb",
     "symbol": "Rb",
     "name": {
-      "en": "Rubidium"
+      "en": "Rubidium",
+      "pt-BR": "Rubídio"
     },
     "atomic_number": 37,
     "weight": 4.0026,
     "period": 5,
     "group": 1,
     "type": "alkali_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 8, 1],
     "isotopes": []
   },
@@ -556,13 +667,16 @@ module.exports = {
     "id": "Sr",
     "symbol": "Sr",
     "name": {
-      "en": "Strontium"
+      "en": "Strontium",
+      "pt-BR": "Estrôncio"
     },
     "atomic_number": 38,
     "weight": 4.0026,
     "period": 5,
     "group": 2,
     "type": "alkaline_earth",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 8, 2],
     "isotopes": []
   },
@@ -570,13 +684,16 @@ module.exports = {
     "id": "Y",
     "symbol": "Y",
     "name": {
-      "en": "Yttrium"
+      "en": "Yttrium",
+      "pt-BR": "Ítrio"
     },
     "atomic_number": 39,
     "weight": 4.0026,
     "period": 5,
     "group": 3,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 9, 2],
     "isotopes": []
   },
@@ -584,13 +701,16 @@ module.exports = {
     "id": "Zr",
     "symbol": "Zr",
     "name": {
-      "en": "Zirconium"
+      "en": "Zirconium",
+      "pt-BR": "Zircônio"
     },
     "atomic_number": 40,
     "weight": 4.0026,
     "period": 5,
     "group": 4,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 10, 2],
     "isotopes": []
   },
@@ -598,13 +718,16 @@ module.exports = {
     "id": "Nb",
     "symbol": "Nb",
     "name": {
-      "en": "Niobium"
+      "en": "Niobium",
+      "pt-BR": "Nióbio"
     },
     "atomic_number": 41,
     "weight": 4.0026,
     "period": 5,
     "group": 5,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 12, 1],
     "isotopes": []
   },
@@ -612,13 +735,16 @@ module.exports = {
     "id": "Mo",
     "symbol": "Mo",
     "name": {
-      "en": "Molybdenum"
+      "en": "Molybdenum",
+      "pt-BR": "Molibdênio"
     },
     "atomic_number": 42,
     "weight": 4.0026,
     "period": 5,
     "group": 6,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 13, 1],
     "isotopes": []
   },
@@ -626,13 +752,16 @@ module.exports = {
     "id": "Tc",
     "symbol": "Tc",
     "name": {
-      "en": "Technetium"
+      "en": "Technetium",
+      "pt-BR": "Tecnécio"
     },
     "atomic_number": 43,
     "weight": 4.0026,
     "period": 5,
     "group": 7,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 13, 2],
     "isotopes": []
   },
@@ -640,13 +769,16 @@ module.exports = {
     "id": "Ru",
     "symbol": "Ru",
     "name": {
-      "en": "Ruthenium"
+      "en": "Ruthenium",
+      "pt-BR": "Rutênio"
     },
     "atomic_number": 44,
     "weight": 4.0026,
     "period": 5,
     "group": 8,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 15, 1],
     "isotopes": []
   },
@@ -654,13 +786,16 @@ module.exports = {
     "id": "Rh",
     "symbol": "Rh",
     "name": {
-      "en": "Rhodium"
+      "en": "Rhodium",
+      "pt-BR": "Ródio"
     },
     "atomic_number": 45,
     "weight": 4.0026,
     "period": 5,
     "group": 9,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 16, 1],
     "isotopes": []
   },
@@ -668,13 +803,16 @@ module.exports = {
     "id": "Pd",
     "symbol": "Pd",
     "name": {
-      "en": "Palladium"
+      "en": "Palladium",
+      "pt-BR": "Paládio"
     },
     "atomic_number": 46,
     "weight": 4.0026,
     "period": 5,
     "group": 10,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18],
     "isotopes": []
   },
@@ -682,13 +820,16 @@ module.exports = {
     "id": "Ag",
     "symbol": "Ag",
     "name": {
-      "en": "Silver"
+      "en": "Silver",
+      "pt-BR": "Prata"
     },
     "atomic_number": 47,
     "weight": 4.0026,
     "period": 5,
     "group": 11,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18, 1],
     "isotopes": []
   },
@@ -696,13 +837,16 @@ module.exports = {
     "id": "Cd",
     "symbol": "Cd",
     "name": {
-      "en": "Cadmium"
+      "en": "Cadmium",
+      "pt-BR": "Cádmio"
     },
     "atomic_number": 48,
     "weight": 4.0026,
     "period": 5,
     "group": 12,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18, 2],
     "isotopes": []
   },
@@ -710,13 +854,16 @@ module.exports = {
     "id": "In",
     "symbol": "In",
     "name": {
-      "en": "Indium"
+      "en": "Indium",
+      "pt-BR": "Índio"
     },
     "atomic_number": 49,
     "weight": 4.0026,
     "period": 5,
     "group": 13,
     "type": "post_transitional",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18, 3],
     "isotopes": []
   },
@@ -724,13 +871,16 @@ module.exports = {
     "id": "Sn",
     "symbol": "Sn",
     "name": {
-      "en": "Tin"
+      "en": "Tin",
+      "pt-BR": "Estanho"
     },
     "atomic_number": 50,
     "weight": 4.0026,
     "period": 5,
     "group": 14,
     "type": "post_transitional",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18, 4],
     "isotopes": []
   },
@@ -738,13 +888,16 @@ module.exports = {
     "id": "Sb",
     "symbol": "Sb",
     "name": {
-      "en": "Antimony"
+      "en": "Antimony",
+      "pt-BR": "Antimônio"
     },
     "atomic_number": 51,
     "weight": 4.0026,
     "period": 5,
     "group": 15,
     "type": "metalloid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18, 5],
     "isotopes": []
   },
@@ -752,13 +905,16 @@ module.exports = {
     "id": "Te",
     "symbol": "Te",
     "name": {
-      "en": "Telurium"
+      "en": "Telurium",
+      "pt-BR": "Telúrio"
     },
     "atomic_number": 52,
     "weight": 4.0026,
     "period": 5,
     "group": 16,
     "type": "metalloid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18, 6],
     "isotopes": []
   },
@@ -766,13 +922,16 @@ module.exports = {
     "id": "I",
     "symbol": "I",
     "name": {
-      "en": "Iodine"
+      "en": "Iodine",
+      "pt-BR": "Iodo"
     },
     "atomic_number": 53,
     "weight": 4.0026,
     "period": 5,
     "group": 17,
     "type": "nonmetal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18, 7],
     "isotopes": []
   },
@@ -780,13 +939,16 @@ module.exports = {
     "id": "Xe",
     "symbol": "Xe",
     "name": {
-      "en": "Xenon"
+      "en": "Xenon",
+      "pt-BR": "Xenônio"
     },
     "atomic_number": 54,
     "weight": 4.0026,
     "period": 5,
     "group": 18,
     "type": "noble_gas",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18, 8],
     "isotopes": []
   },
@@ -794,13 +956,16 @@ module.exports = {
     "id": "Cs",
     "symbol": "Cs",
     "name": {
-      "en": "Caesium"
+      "en": "Caesium",
+      "pt-BR": "Césio"
     },
     "atomic_number": 55,
     "weight": 4.0026,
     "period": 6,
     "group": 1,
     "type": "alkali_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18, 8, 1],
     "isotopes": []
   },
@@ -808,13 +973,16 @@ module.exports = {
     "id": "Ba",
     "symbol": "Ba",
     "name": {
-      "en": "Barium"
+      "en": "Barium",
+      "pt-BR": "Bário"
     },
     "atomic_number": 56,
     "weight": 4.0026,
     "period": 6,
     "group": 2,
     "type": "alkaline_earth",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18, 8, 2],
     "isotopes": []
   },
@@ -822,13 +990,16 @@ module.exports = {
     "id": "La",
     "symbol": "La",
     "name": {
-      "en": "Lanthanum"
+      "en": "Lanthanum",
+      "pt-BR": "Lantânio"
     },
     "atomic_number": 57,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 18, 9, 2],
     "isotopes": []
   },
@@ -836,13 +1007,16 @@ module.exports = {
     "id": "Ce",
     "symbol": "Ce",
     "name": {
-      "en": "Cerium"
+      "en": "Cerium",
+      "pt-BR": "Cério"
     },
     "atomic_number": 58,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 19, 9, 2],
     "isotopes": []
   },
@@ -850,13 +1024,16 @@ module.exports = {
     "id": "Pr",
     "symbol": "Pr",
     "name": {
-      "en": "Praseodymium"
+      "en": "Praseodymium",
+      "pt-BR": "Praseodímio"
     },
     "atomic_number": 59,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 21, 8, 2],
     "isotopes": []
   },
@@ -864,13 +1041,16 @@ module.exports = {
     "id": "Nd",
     "symbol": "Nd",
     "name": {
-      "en": "Neodymium"
+      "en": "Neodymium",
+      "pt-BR": "Neodímio"
     },
     "atomic_number": 60,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 22, 8, 2],
     "isotopes": []
   },
@@ -878,13 +1058,16 @@ module.exports = {
     "id": "Pm",
     "symbol": "Pm",
     "name": {
-      "en": "Promethium"
+      "en": "Promethium",
+      "pt-BR": "Promécio"
     },
     "atomic_number": 61,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 23, 8, 2],
     "isotopes": []
   },
@@ -892,13 +1075,16 @@ module.exports = {
     "id": "Sm",
     "symbol": "Sm",
     "name": {
-      "en": "Samarium"
+      "en": "Samarium",
+      "pt-BR": "Samário"
     },
     "atomic_number": 62,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 24, 8, 2],
     "isotopes": []
   },
@@ -906,13 +1092,16 @@ module.exports = {
     "id": "Eu",
     "symbol": "Eu",
     "name": {
-      "en": "Europium"
+      "en": "Europium",
+      "pt-BR": "Európio"
     },
     "atomic_number": 63,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 25, 8, 2],
     "isotopes": []
   },
@@ -920,13 +1109,16 @@ module.exports = {
     "id": "Gd",
     "symbol": "Gd",
     "name": {
-      "en": "Gadolinium"
+      "en": "Gadolinium",
+      "pt-BR": "Gadolínio"
     },
     "atomic_number": 64,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 25, 9, 2],
     "isotopes": []
   },
@@ -934,13 +1126,16 @@ module.exports = {
     "id": "Tb",
     "symbol": "Tb",
     "name": {
-      "en": "Terbium"
+      "en": "Terbium",
+      "pt-BR": "Térbio"
     },
     "atomic_number": 65,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 27, 8, 2],
     "isotopes": []
   },
@@ -948,13 +1143,16 @@ module.exports = {
     "id": "Dy",
     "symbol": "Dy",
     "name": {
-      "en": "Dysprosium"
+      "en": "Dysprosium",
+      "pt-BR": "Disprósio"
     },
     "atomic_number": 66,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 28, 8, 2],
     "isotopes": []
   },
@@ -962,13 +1160,16 @@ module.exports = {
     "id": "Ho",
     "symbol": "Ho",
     "name": {
-      "en": "Holmium"
+      "en": "Holmium",
+      "pt-BR": "Hólmio"
     },
     "atomic_number": 67,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 29, 8, 2],
     "isotopes": []
   },
@@ -976,13 +1177,16 @@ module.exports = {
     "id": "Er",
     "symbol": "Er",
     "name": {
-      "en": "Erbium"
+      "en": "Erbium",
+      "pt-BR": "Érbio"
     },
     "atomic_number": 68,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 30, 8, 2],
     "isotopes": []
   },
@@ -990,13 +1194,16 @@ module.exports = {
     "id": "Tm",
     "symbol": "Tm",
     "name": {
-      "en": "Thulium"
+      "en": "Thulium",
+      "pt-BR": "Túlio"
     },
     "atomic_number": 69,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 31, 8, 2],
     "isotopes": []
   },
@@ -1004,13 +1211,16 @@ module.exports = {
     "id": "Yb",
     "symbol": "Yb",
     "name": {
-      "en": "Ytterbium"
+      "en": "Ytterbium",
+      "pt-BR": "Yttérbio"
     },
     "atomic_number": 70,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 8, 2],
     "isotopes": []
   },
@@ -1018,13 +1228,16 @@ module.exports = {
     "id": "Lu",
     "symbol": "Lu",
     "name": {
-      "en": "Lutetium"
+      "en": "Lutetium",
+      "pt-BR": "Lutécio"
     },
     "atomic_number": 71,
     "weight": 4.0026,
     "period": 6,
     "group": 3,
     "type": "lanthanoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 9, 2],
     "isotopes": []
   },
@@ -1032,13 +1245,16 @@ module.exports = {
     "id": "Hf",
     "symbol": "Hf",
     "name": {
-      "en": "Hafnium"
+      "en": "Hafnium",
+      "pt-BR": "Háfnio"
     },
     "atomic_number": 72,
     "weight": 4.0026,
     "period": 6,
     "group": 4,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 10, 2],
     "isotopes": []
   },
@@ -1046,13 +1262,16 @@ module.exports = {
     "id": "Ta",
     "symbol": "Ta",
     "name": {
-      "en": "Tantalum"
+      "en": "Tantalum",
+      "pt-BR": "Tântalo"
     },
     "atomic_number": 73,
     "weight": 4.0026,
     "period": 6,
     "group": 5,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 11, 2],
     "isotopes": []
   },
@@ -1060,13 +1279,16 @@ module.exports = {
     "id": "W",
     "symbol": "W",
     "name": {
-      "en": "Tungsten"
+      "en": "Tungsten",
+      "pt-BR": "Tungstênio"
     },
     "atomic_number": 74,
     "weight": 4.0026,
     "period": 6,
     "group": 6,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 12, 2],
     "isotopes": []
   },
@@ -1074,13 +1296,16 @@ module.exports = {
     "id": "Re",
     "symbol": "Re",
     "name": {
-      "en": "Rhenium"
+      "en": "Rhenium",
+      "pt-BR": "Rênio"
     },
     "atomic_number": 75,
     "weight": 4.0026,
     "period": 6,
     "group": 7,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 13, 2],
     "isotopes": []
   },
@@ -1088,13 +1313,16 @@ module.exports = {
     "id": "Os",
     "symbol": "Os",
     "name": {
-      "en": "Osmium"
+      "en": "Osmium",
+      "pt-BR": "Ósmio"
     },
     "atomic_number": 76,
     "weight": 4.0026,
     "period": 6,
     "group": 8,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 14, 2],
     "isotopes": []
   },
@@ -1102,13 +1330,16 @@ module.exports = {
     "id": "Ir",
     "symbol": "Ir",
     "name": {
-      "en": "Iridium"
+      "en": "Iridium",
+      "pt-BR": "Irídio"
     },
     "atomic_number": 77,
     "weight": 4.0026,
     "period": 6,
     "group": 9,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 15, 2],
     "isotopes": []
   },
@@ -1116,13 +1347,16 @@ module.exports = {
     "id": "Pt",
     "symbol": "Pt",
     "name": {
-      "en": "Platinum"
+      "en": "Platinum",
+      "pt-BR": "Platina"
     },
     "atomic_number": 78,
     "weight": 4.0026,
     "period": 6,
     "group": 10,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 17, 1],
     "isotopes": []
   },
@@ -1130,13 +1364,16 @@ module.exports = {
     "id": "Au",
     "symbol": "Au",
     "name": {
-      "en": "Gold"
+      "en": "Gold",
+      "pt-BR": "Ouro"
     },
     "atomic_number": 79,
     "weight": 4.0026,
     "period": 6,
     "group": 11,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 1],
     "isotopes": []
   },
@@ -1144,13 +1381,16 @@ module.exports = {
     "id": "Hg",
     "symbol": "Hg",
     "name": {
-      "en": "Mercury"
+      "en": "Mercury",
+      "pt-BR": "Mercúrio"
     },
     "atomic_number": 80,
     "weight": 4.0026,
     "period": 6,
     "group": 12,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 2],
     "isotopes": []
   },
@@ -1158,13 +1398,16 @@ module.exports = {
     "id": "Tl",
     "symbol": "Tl",
     "name": {
-      "en": "Thallium"
+      "en": "Thallium",
+      "pt-BR": "Tálio"
     },
     "atomic_number": 81,
     "weight": 4.0026,
     "period": 6,
     "group": 13,
     "type": "post_transitional",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 3],
     "isotopes": []
   },
@@ -1172,13 +1415,16 @@ module.exports = {
     "id": "Pb",
     "symbol": "Pb",
     "name": {
-      "en": "Lead"
+      "en": "Lead",
+      "pt-BR": "Chumbo"
     },
     "atomic_number": 82,
     "weight": 4.0026,
     "period": 6,
     "group": 14,
     "type": "post_transitional",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 4],
     "isotopes": []
   },
@@ -1186,13 +1432,16 @@ module.exports = {
     "id": "Bi",
     "symbol": "Bi",
     "name": {
-      "en": "Bismuth"
+      "en": "Bismuth",
+      "pt-BR": "Bismuto"
     },
     "atomic_number": 83,
     "weight": 4.0026,
     "period": 6,
     "group": 15,
     "type": "post_transitional",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 5],
     "isotopes": []
   },
@@ -1200,13 +1449,16 @@ module.exports = {
     "id": "Po",
     "symbol": "Po",
     "name": {
-      "en": "Polonium"
+      "en": "Polonium",
+      "pt-BR": "Polônio"
     },
     "atomic_number": 84,
     "weight": 4.0026,
     "period": 6,
     "group": 16,
     "type": "post_transitional",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 6],
     "isotopes": []
   },
@@ -1214,13 +1466,16 @@ module.exports = {
     "id": "At",
     "symbol": "At",
     "name": {
-      "en": "Astatine"
+      "en": "Astatine",
+      "pt-BR": "Ástato"
     },
     "atomic_number": 85,
     "weight": 4.0026,
     "period": 6,
     "group": 17,
     "type": "metalloid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 7],
     "isotopes": []
   },
@@ -1228,13 +1483,16 @@ module.exports = {
     "id": "Rn",
     "symbol": "Rn",
     "name": {
-      "en": "Radon"
+      "en": "Radon",
+      "pt-BR": "Radônio"
     },
     "atomic_number": 86,
     "weight": 4.0026,
     "period": 6,
     "group": 18,
     "type": "noble_gas",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 8],
     "isotopes": []
   },
@@ -1242,13 +1500,16 @@ module.exports = {
     "id": "Fr",
     "symbol": "Fr",
     "name": {
-      "en": "Francium"
+      "en": "Francium",
+      "pt-BR": "Frâncio"
     },
     "atomic_number": 87,
     "weight": 4.0026,
     "period": 7,
     "group": 1,
     "type": "alkali_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 8, 1],
     "isotopes": []
   },
@@ -1256,13 +1517,16 @@ module.exports = {
     "id": "Ra",
     "symbol": "Ra",
     "name": {
-      "en": "Radium"
+      "en": "Radium",
+      "pt-BR": "Rádio"
     },
     "atomic_number": 88,
     "weight": 4.0026,
     "period": 7,
     "group": 2,
     "type": "alkaline_earth",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 8, 2],
     "isotopes": []
   },
@@ -1270,13 +1534,16 @@ module.exports = {
     "id": "Ac",
     "symbol": "Ac",
     "name": {
-      "en": "Actinium"
+      "en": "Actinium",
+      "pt-BR": "Actínio"
     },
     "atomic_number": 89,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 9, 2],
     "isotopes": []
   },
@@ -1284,13 +1551,16 @@ module.exports = {
     "id": "Th",
     "symbol": "Th",
     "name": {
-      "en": "Thorium"
+      "en": "Thorium",
+      "pt-BR": "Tório"
     },
     "atomic_number": 90,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 18, 10, 2],
     "isotopes": []
   },
@@ -1298,13 +1568,16 @@ module.exports = {
     "id": "Pa",
     "symbol": "Pa",
     "name": {
-      "en": "Protactinium"
+      "en": "Protactinium",
+      "pt-BR": "Protactínio"
     },
     "atomic_number": 91,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 20, 9, 2],
     "isotopes": []
   },
@@ -1312,13 +1585,16 @@ module.exports = {
     "id": "U",
     "symbol": "U",
     "name": {
-      "en": "Uranium"
+      "en": "Uranium",
+      "pt-BR": "Urânio"
     },
     "atomic_number": 92,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 21, 9, 2],
     "isotopes": []
   },
@@ -1326,13 +1602,16 @@ module.exports = {
     "id": "Np",
     "symbol": "Np",
     "name": {
-      "en": "Neptunium"
+      "en": "Neptunium",
+      "pt-BR": "Neptúnio"
     },
     "atomic_number": 93,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 22, 9, 2],
     "isotopes": []
   },
@@ -1340,13 +1619,16 @@ module.exports = {
     "id": "Pu",
     "symbol": "Pu",
     "name": {
-      "en": "Plutonium"
+      "en": "Plutonium",
+      "pt-BR": "Plutônio"
     },
     "atomic_number": 94,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 24, 8, 2],
     "isotopes": []
   },
@@ -1354,13 +1636,16 @@ module.exports = {
     "id": "Am",
     "symbol": "Am",
     "name": {
-      "en": "Americium"
+      "en": "Americium",
+      "pt-BR": "Amerício"
     },
     "atomic_number": 95,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 25, 8, 2],
     "isotopes": []
   },
@@ -1368,13 +1653,16 @@ module.exports = {
     "id": "Cm",
     "symbol": "Cm",
     "name": {
-      "en": "Curium"
+      "en": "Curium",
+      "pt-BR": "Cúrio"
     },
     "atomic_number": 96,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 25, 9, 2],
     "isotopes": []
   },
@@ -1382,13 +1670,16 @@ module.exports = {
     "id": "Bk",
     "symbol": "Bk",
     "name": {
-      "en": "Berkelium"
+      "en": "Berkelium",
+      "pt-BR": "Berkélio"
     },
     "atomic_number": 97,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 27, 8, 2],
     "isotopes": []
   },
@@ -1396,13 +1687,16 @@ module.exports = {
     "id": "Cf",
     "symbol": "Cf",
     "name": {
-      "en": "Californium"
+      "en": "Californium",
+      "pt-BR": "Califórnio"
     },
     "atomic_number": 98,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 28, 8, 2],
     "isotopes": []
   },
@@ -1410,13 +1704,16 @@ module.exports = {
     "id": "Es",
     "symbol": "Es",
     "name": {
-      "en": "Einsteinium"
+      "en": "Einsteinium",
+      "pt-BR": "Einstênio"
     },
     "atomic_number": 99,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 29, 8, 2],
     "isotopes": []
   },
@@ -1424,13 +1721,16 @@ module.exports = {
     "id": "Fm",
     "symbol": "Fm",
     "name": {
-      "en": "Fermium"
+      "en": "Fermium",
+      "pt-BR": "Férmio"
     },
     "atomic_number": 100,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 30, 8, 2],
     "isotopes": []
   },
@@ -1438,13 +1738,16 @@ module.exports = {
     "id": "Md",
     "symbol": "Md",
     "name": {
-      "en": "Mendelevium"
+      "en": "Mendelevium",
+      "pt-BR": "Mendelévio"
     },
     "atomic_number": 101,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 31, 8, 2],
     "isotopes": []
   },
@@ -1452,13 +1755,16 @@ module.exports = {
     "id": "No",
     "symbol": "No",
     "name": {
-      "en": "Nobelium"
+      "en": "Nobelium",
+      "pt-BR": "Nobélio"
     },
     "atomic_number": 102,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 8, 2],
     "isotopes": []
   },
@@ -1466,13 +1772,16 @@ module.exports = {
     "id": "Lr",
     "symbol": "Lr",
     "name": {
-      "en": "Lawrencium"
+      "en": "Lawrencium",
+      "pt-BR": "Lawrêncio"
     },
     "atomic_number": 103,
     "weight": 4.0026,
     "period": 7,
     "group": 3,
     "type": "actinoid",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 8, 3],
     "isotopes": []
   },
@@ -1480,13 +1789,16 @@ module.exports = {
     "id": "Rf",
     "symbol": "Rf",
     "name": {
-      "en": "Rutherfordium"
+      "en": "Rutherfordium",
+      "pt-BR": "Rutherfórdio"
     },
     "atomic_number": 104,
     "weight": 4.0026,
     "period": 7,
     "group": 4,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 10, 2],
     "isotopes": []
   },
@@ -1494,13 +1806,16 @@ module.exports = {
     "id": "Db",
     "symbol": "Db",
     "name": {
-      "en": "Dubnium"
+      "en": "Dubnium",
+      "pt-BR": "Dúbnio"
     },
     "atomic_number": 105,
     "weight": 4.0026,
     "period": 7,
     "group": 5,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 11, 2],
     "isotopes": []
   },
@@ -1508,13 +1823,16 @@ module.exports = {
     "id": "Sg",
     "symbol": "Sg",
     "name": {
-      "en": "Seaborgium"
+      "en": "Seaborgium",
+      "pt-BR": "Seabórgio"
     },
     "atomic_number": 106,
     "weight": 4.0026,
     "period": 7,
     "group": 6,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 12, 2],
     "isotopes": []
   },
@@ -1522,13 +1840,16 @@ module.exports = {
     "id": "Bh",
     "symbol": "Bh",
     "name": {
-      "en": "Bohrium"
+      "en": "Bohrium",
+      "pt-BR": "Bóhrio"
     },
     "atomic_number": 107,
     "weight": 4.0026,
     "period": 7,
     "group": 7,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 13, 2],
     "isotopes": []
   },
@@ -1536,13 +1857,16 @@ module.exports = {
     "id": "Hs",
     "symbol": "Hs",
     "name": {
-      "en": "Hassium"
+      "en": "Hassium",
+      "pt-BR": "Hássio"
     },
     "atomic_number": 108,
     "weight": 4.0026,
     "period": 7,
     "group": 8,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 14, 2],
     "isotopes": []
   },
@@ -1550,13 +1874,16 @@ module.exports = {
     "id": "Mt",
     "symbol": "Mt",
     "name": {
-      "en": "Meitnerium"
+      "en": "Meitnerium",
+      "pt-BR": "Meitnério"
     },
     "atomic_number": 109,
     "weight": 4.0026,
     "period": 7,
     "group": 9,
     "type": "unknown_type",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 15, 2],
     "isotopes": []
   },
@@ -1564,13 +1891,16 @@ module.exports = {
     "id": "Ds",
     "symbol": "Ds",
     "name": {
-      "en": "Darmstadtium"
+      "en": "Darmstadtium",
+      "pt-BR": "Darmstácio"
     },
     "atomic_number": 110,
     "weight": 4.0026,
     "period": 7,
     "group": 10,
     "type": "unknown_type",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 17, 1],
     "isotopes": []
   },
@@ -1578,13 +1908,16 @@ module.exports = {
     "id": "Rg",
     "symbol": "Rg",
     "name": {
-      "en": "Roentgenium"
+      "en": "Roentgenium",
+      "pt-BR": "Roentgênio"
     },
     "atomic_number": 111,
     "weight": 4.0026,
     "period": 7,
     "group": 11,
     "type": "unknown_type",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 17, 2],
     "isotopes": []
   },
@@ -1592,13 +1925,16 @@ module.exports = {
     "id": "Cn",
     "symbol": "Cn",
     "name": {
-      "en": "Copernicium"
+      "en": "Copernicium",
+      "pt-BR": "Copernício"
     },
     "atomic_number": 112,
     "weight": 4.0026,
     "period": 7,
     "group": 12,
     "type": "transition_metal",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 18, 2],
     "isotopes": []
   },
@@ -1606,13 +1942,16 @@ module.exports = {
     "id": "Nh",
     "symbol": "Nh",
     "name": {
-      "en": "Nihonium"
+      "en": "Nihonium",
+      "pt-BR": "Nihônio"
     },
     "atomic_number": 113,
     "weight": 4.0026,
     "period": 7,
     "group": 13,
     "type": "unknown_type",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 18, 3],
     "isotopes": []
   },
@@ -1620,13 +1959,16 @@ module.exports = {
     "id": "Fl",
     "symbol": "Fl",
     "name": {
-      "en": "Flerovium"
+      "en": "Flerovium",
+      "pt-BR": "Fleróvio"
     },
     "atomic_number": 114,
     "weight": 4.0026,
     "period": 7,
     "group": 14,
     "type": "post_transitional",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 18, 4],
     "isotopes": []
   },
@@ -1634,13 +1976,16 @@ module.exports = {
     "id": "Mc",
     "symbol": "Mc",
     "name": {
-      "en": "Moscouvium"
+      "en": "Moscouvium",
+      "pt-BR": "Moscóvio"
     },
     "atomic_number": 115,
     "weight": 4.0026,
     "period": 7,
     "group": 15,
     "type": "unknown_type",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 18, 5],
     "isotopes": []
   },
@@ -1648,13 +1993,16 @@ module.exports = {
     "id": "Lv",
     "symbol": "Lv",
     "name": {
-      "en": "Livermorium"
+      "en": "Livermorium",
+      "pt-BR": "Livermório"
     },
     "atomic_number": 116,
     "weight": 4.0026,
     "period": 7,
     "group": 16,
     "type": "unknown_type",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 18, 6],
     "isotopes": []
   },
@@ -1662,13 +2010,16 @@ module.exports = {
     "id": "Ts",
     "symbol": "Ts",
     "name": {
-      "en": "Tennessine"
+      "en": "Tennessine",
+      "pt-BR": "Tennesso"
     },
     "atomic_number": 117,
     "weight": 4.0026,
     "period": 7,
     "group": 17,
     "type": "unknown_type",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 18, 7],
     "isotopes": []
   },
@@ -1676,13 +2027,16 @@ module.exports = {
     "id": "Og",
     "symbol": "Og",
     "name": {
-      "en": "Oganesson"
+      "en": "Oganesson",
+      "pt-BR": "Oganessônio"
     },
     "atomic_number": 118,
     "weight": 4.0026,
     "period": 7,
     "group": 18,
     "type": "unknown_type",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [2, 8, 18, 32, 32, 10, 8],
     "isotopes": []
   },
@@ -1690,11 +2044,14 @@ module.exports = {
     "id": "lanthanoids",
     "symbol": "57-71",
     "name": {
-      "en": "Lanthanoids"
+      "en": "Lanthanoids",
+      "pt-BR": "Lantanoides"
     },
     "period": 6,
     "group": 3,
     "type": "lanthanoids",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [],
     "classList": ['lanthanoid']
   },
@@ -1702,11 +2059,14 @@ module.exports = {
     "id": "actinoids",
     "symbol": "89-103",
     "name": {
-      "en": "Actinoids"
+      "en": "Actinoids",
+      "pt-BR": "Actinoides"
     },
     "period": 7,
     "group": 3,
     "type": "actinoids",
+    "melting_point": 100,
+    "boiling_point": 200,
     "electrons": [],
     "classList": ['actinoid']
   },

@@ -31,6 +31,14 @@ export default class ElementBox extends React.Component {
     } 
   }
 
+  getName() {
+    let lang = this.props.lang || 'en';
+    if(this.props.elem.name.hasOwnProperty(lang))
+      return this.props.elem.name[lang];
+
+    return this.props.elem.name['en'];
+  }
+
   render() {
     let classes = [
       this.props.elem.id,
@@ -46,7 +54,7 @@ export default class ElementBox extends React.Component {
         onPointerEnter={(e) => this.onPointerEnter(e)}
         onPointerLeave={(e) => this.onPointerLeave(e)}
       >
-        <span className="name">{ elem.name['en'] }</span>
+        <span className="name">{ this.getName() }</span>
         <span className="symbol">{ elem.symbol }</span>
         <span className="atomic_number">{ elem.atomic_number }</span>
         <span className="weight">{ elem.weight }</span>

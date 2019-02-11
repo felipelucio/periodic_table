@@ -18,6 +18,11 @@ export default class NavBar extends React.Component {
             <a className="nav-link" href="#">Radius</a>
           </li>
         </ul>
+
+        <select onChange={(e) => this.props.langOnChange(e.target.value)}>
+          <option value="en">English</option>
+          <option value="pt-BR">Português</option>
+        </select>
       </nav>
     );
   }
