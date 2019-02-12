@@ -6,10 +6,11 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 #app .table {
 	list-style: none;
 	margin: 0;
-	margin-top: 20px;
+	margin-top: 60px;
 	padding: 0;
 	width: 100%;
 }
@@ -37,143 +38,147 @@ body {
 
 .hide { display: none; }
 
-@media only screen and (min-width: 920px) {
-	.nonmetal.active { background: radial-gradient(#22FF22, rgba(255,255,255,1) 120%); }
-	.alkali_metal.active { background: radial-gradient(#FFCC33, rgba(255,255,255,1) 120%); }
-	.alkaline_earth.active { background: radial-gradient(#FFFF44, rgba(255,255,255,1) 120%); }
-	.transition_metal.active { background: radial-gradient(#DDBBBB, rgba(255,255,255,1) 120%); }
-	.metalloid.active { background: radial-gradient(#77DD88, rgba(255,255,255,1) 120%); }
-	.post_transitional.active { background: radial-gradient(#99DDCC, rgba(255,255,255,1) 120%); }
-	.noble_gas.active { background: radial-gradient(#77CCFF, rgba(255,255,255,1) 120%); }
-	.lanthanoid.active { background: radial-gradient(#FFBB99, rgba(255,255,255,1) 120%); }
-	.actinoid.active { background: radial-gradient(#EEBBDD, rgba(255,255,255,1) 120%); }
 
-	
-	#app {
-		text-align: center; 
-	}
+.nonmetal.active { background: radial-gradient(#22FF22, rgba(255,255,255,1) 120%); }
+.alkali_metal.active { background: radial-gradient(#FFCC33, rgba(255,255,255,1) 120%); }
+.alkaline_earth.active { background: radial-gradient(#FFFF44, rgba(255,255,255,1) 120%); }
+.transition_metal.active { background: radial-gradient(#DDBBBB, rgba(255,255,255,1) 120%); }
+.metalloid.active { background: radial-gradient(#77DD88, rgba(255,255,255,1) 120%); }
+.post_transitional.active { background: radial-gradient(#99DDCC, rgba(255,255,255,1) 120%); }
+.noble_gas.active { background: radial-gradient(#77CCFF, rgba(255,255,255,1) 120%); }
+.lanthanoid.active { background: radial-gradient(#FFBB99, rgba(255,255,255,1) 120%); }
+.actinoid.active { background: radial-gradient(#EEBBDD, rgba(255,255,255,1) 120%); }
 
-	#app .table {
-		width: auto;
-		text-align: left;
-		display: inline-grid;
-		grid-template-columns: repeat(19, 3.5rem);
-		grid-template-rows: repeat(11, 3.5rem);
-		grid-template-areas:
-		".  g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18"
-		"p1 H  .  .  .  .  .  .  .  .   .   .   .   .   .   .   .   .  He"
-		"p2 Li Be .  .  .  .  .  .  .   .   .   .   B   C   N   O   F  Ne"
-		"p3 Na Mg .  .  .  .  .  .  .   .   .   .   Al  Si  P   S   Cl Ar"
-		"p4 K  Ca Sc Ti V  Cr Mn Fe Co Ni  Cu  Zn   Ga  Ge  As  Se  Br Kr"
-		"p5 Rb Sr Y  Zr Nb Mo Tc Ru Rh Pd  Ag  Cd   In  Sn  Sb  Te  I  Xe"
-		"p6 Cs Ba L1 Hf Ta W  Re Os Ir Pt  Au  Hg   Tl  Pb  Bi  Po  At Rn"
-		"p7 Fr Ra A2 Rf Db Sg Bh Hs Mt Ds  Rg  Cn   Nh  Fl  Mc  Lv  Ts Og"
-		".  .  .  .  .  .  .  .  .  .  .    .   .   .   .   .   .   .  ."
-		".  .  .  La Ce Pr Nd Pm Sm Eu Gd  Tb  Dy   Ho  Er  Tm  Yb  Lu ."
-		".  .  .  Ac Th Pa U  Np Pu Am Cm  Bk  Cf   Es  Fm  Md  No  Lr .";
-		gap: 4px 4px;
-		margin-left: auto;
-	}
 
-	#app .table > li {
-		border: 1px solid #666;
-		height: 3.5rem;
-		width: 3.5rem;
-		place-self: stretch;
-		border-radius: 2px;
-	}
-	#app .table > li.active {
-		height: 5.5rem;
-		width: 5.5rem;
-		left: -0.5rem;
-		top: -0.5rem;
-		position: relative;
-		z-index: 100;
-	}
-
-	.disabled {
-		background: #CCC;
-	}
-
-	.lanthanoids, .actinoids { display: block; }
-
-	.g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9,.g10,.g11,
-	.g12,.g13,.g14,.g15,.g16,.g17,.g18 {
-		border: 0 !important;
-		border-right: 1px solid #000 !important;
-		text-align: center;
-	}
-
-	.g1.highlight,.g2.highlight,.g3.highlight,.g4.highlight,.g5.highlight,
-	.g6.highlight,.g7.highlight,.g8.highlight,.g9.highlight,.g10.highlight,
-	.g11.highlight,.g12.highlight,.g13.highlight,.g14.highlight,.g15.highlight,
-	.g16.highlight,.g17.highlight,.g18.highlight {
-		background: #CCF;
-		font-weight: bold;
-	}
-
-	.p1,.p2,.p3,.p4,.p5,.p6,.p7 {
-		border: 0 !important;
-		text-align: right;
-	}
-
-	.p1.highlight,.p2.highlight,.p3.highlight,.p4.highlight,
-	.p5.highlight,.p6.highlight,.p7.highlight {
-		background: #CCF;
-		font-weight: bold;
-	}
-
-	.g1 { grid-area: g1; } .g2 { grid-area: g2; } .g3 { grid-area: g3; } 
-	.g4 { grid-area: g4; } .g5 { grid-area: g5; } .g6 { grid-area: g6; }
-	.g7 { grid-area: g7; } .g8 { grid-area: g8; } .g9 { grid-area: g9; }
-	.g10 { grid-area: g10; } .g11 { grid-area: g11; } .g12 { grid-area: g12; }
-	.g13 { grid-area: g13; } .g14 { grid-area: g14; } .g15 { grid-area: g15; }
-	.g16 { grid-area: g16; } .g17 { grid-area: g17; } .g18 { grid-area: g18; }
-
-	.p1 { grid-area: p1; } .p2 { grid-area: p2; } .p3 { grid-area: p3; }
-	.p4 { grid-area: p4; } .p5 { grid-area: p5; } .p6 { grid-area: p6; }
-	.p7 { grid-area: p7; } 
-
-	.H { grid-area: H; } .He { grid-area: He; }	.Li { grid-area: Li; } 
-	.Be { grid-area: Be; } .B { grid-area: B; } .C { grid-area: C; }   
-	.N { grid-area: N; } .O { grid-area: O; } .F { grid-area: F; }  
-	.Ne { grid-area: Ne; } .Na { grid-area: Na; } .Mg { grid-area: Mg; }
-	.Al { grid-area: Al; } .Si { grid-area: Si; } .P { grid-area: P; }   
-	.S { grid-area: S; } .Cl { grid-area: Cl; } .Ar { grid-area: Ar; }
-	.K { grid-area: K; } .Ca { grid-area: Ca; } .Sc { grid-area: Sc; } 
-	.Ti { grid-area: Ti; } .V { grid-area: V; } .Cr { grid-area: Cr; } 
-	.Mn { grid-area: Mn; } .Fe { grid-area: Fe; } .Co { grid-area: Co; } 
-	.Ni { grid-area: Ni; } .Cu { grid-area: Cu; } .Zn { grid-area: Zn; }   
-	.Ga { grid-area: Ga; } .Ge { grid-area: Ge; } .As { grid-area: As; }  
-	.Se { grid-area: Se; } .Br { grid-area: Br; } .Kr { grid-area: Kr; }
-	.Rb { grid-area: Rb; } .Sr { grid-area: Sr; } .Y { grid-area: Y; }  
-	.Zr { grid-area: Zr; } .Nb { grid-area: Nb; } .Mo { grid-area: Mo; } 
-	.Tc { grid-area: Tc; } .Ru { grid-area: Ru; } .Rh { grid-area: Rh; } 
-	.Pd { grid-area: Pd; } .Ag { grid-area: Ag; } .Cd { grid-area: Cd; }   
-	.In { grid-area: In; } .Sn { grid-area: Sn; } .Sb { grid-area: Sb; }  
-	.Te { grid-area: Te; } .I { grid-area: I; } .Xe { grid-area: Xe; }
-	.Cs { grid-area: Cs; } .Ba { grid-area: Ba; } .lanthanoids { grid-area: L1; } 
-	.Hf { grid-area: Hf; } .Ta { grid-area: Ta; } .W { grid-area: W; }  
-	.Re { grid-area: Re; } .Os { grid-area: Os; } .Ir { grid-area: Ir; } 
-	.Pt { grid-area: Pt; } .Au { grid-area: Au; } .Hg { grid-area: Hg; }   
-	.Tl { grid-area: Tl; } .Pb { grid-area: Pb; } .Bi { grid-area: Bi; }  
-	.Po { grid-area: Po; } .At { grid-area: At; } .Rn { grid-area: Rn; }
-	.Fr { grid-area: Fr; } .Ra { grid-area: Ra; } .actinoids { grid-area: A2; } 
-	.Rf { grid-area: Rf; } .Db { grid-area: Db; } .Sg { grid-area: Sg; } 
-	.Bh { grid-area: Bh; } .Hs { grid-area: Hs; } .Mt { grid-area: Mt; } 
-	.Ds { grid-area: Ds; } .Rg { grid-area: Rg; } .Cn { grid-area: Cn; }   
-	.Nh { grid-area: Nh; } .Fl { grid-area: Fl; } .Mc { grid-area: Mc; }  
-	.Lv { grid-area: Lv; } .Ts { grid-area: Ts; } .Og { grid-area: Og; }
-	.La { grid-area: La; } .Ce { grid-area: Ce; } .Pr { grid-area: Pr; } 
-	.Nd { grid-area: Nd; } .Pm { grid-area: Pm; } .Sm { grid-area: Sm; } 
-	.Eu { grid-area: Eu; } .Gd { grid-area: Gd; } .Tb { grid-area: Tb; }  
-	.Dy { grid-area: Dy; } .Ho { grid-area: Ho; } .Er { grid-area: Er; }  
-	.Tm { grid-area: Tm; } .Yb { grid-area: Yb; } .Lu { grid-area: Lu; }
-	.Ac { grid-area: Ac; } .Th { grid-area: Th; } .Pa { grid-area: Pa; } 
-	.U { grid-area: U; } .Np { grid-area: Np; }	.Pu { grid-area: Pu; } 
-	.Am { grid-area: Am; } .Cm { grid-area: Cm; } .Bk { grid-area: Bk; }  
-	.Cf { grid-area: Cf; } .Es { grid-area: Es; } .Fm { grid-area: Fm; }  
-	.Md { grid-area: Md; } .No { grid-area: No; } .Lr { grid-area: Lr; }
-
-	@import "./elementbox.css"
+#app {
+	text-align: center;
 }
+
+#app nav {
+	text-align: left;
+}
+
+#app .table {
+	width: auto;
+	text-align: left;
+	display: inline-grid;
+	grid-template-columns: repeat(19, 3.5rem);
+	grid-template-rows: repeat(11, 3.5rem);
+	grid-template-areas:
+	".  g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18"
+	"p1 H  .  .  .  .  .  .  .  .   .   .   .   .   .   .   .   .  He"
+	"p2 Li Be .  .  .  .  .  .  .   .   .   .   B   C   N   O   F  Ne"
+	"p3 Na Mg .  .  .  .  .  .  .   .   .   .   Al  Si  P   S   Cl Ar"
+	"p4 K  Ca Sc Ti V  Cr Mn Fe Co Ni  Cu  Zn   Ga  Ge  As  Se  Br Kr"
+	"p5 Rb Sr Y  Zr Nb Mo Tc Ru Rh Pd  Ag  Cd   In  Sn  Sb  Te  I  Xe"
+	"p6 Cs Ba L1 Hf Ta W  Re Os Ir Pt  Au  Hg   Tl  Pb  Bi  Po  At Rn"
+	"p7 Fr Ra A2 Rf Db Sg Bh Hs Mt Ds  Rg  Cn   Nh  Fl  Mc  Lv  Ts Og"
+	".  .  .  .  .  .  .  .  .  .  .    .   .   .   .   .   .   .  ."
+	".  .  .  La Ce Pr Nd Pm Sm Eu Gd  Tb  Dy   Ho  Er  Tm  Yb  Lu ."
+	".  .  .  Ac Th Pa U  Np Pu Am Cm  Bk  Cf   Es  Fm  Md  No  Lr .";
+	gap: 4px 4px;
+	margin-left: auto;
+}
+
+#app .table > li {
+	border: 1px solid #666;
+	height: 3.5rem;
+	width: 3.5rem;
+	place-self: stretch;
+	border-radius: 2px;
+}
+#app .table > li.active {
+	height: 5.5rem;
+	width: 5.5rem;
+	left: -0.5rem;
+	top: -0.5rem;
+	position: relative;
+	z-index: 100;
+}
+
+.disabled {
+	background: #CCC;
+}
+
+.lanthanoids, .actinoids { display: block; }
+
+.g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9,.g10,.g11,
+.g12,.g13,.g14,.g15,.g16,.g17,.g18 {
+	border: 0 !important;
+	border-right: 1px solid #000 !important;
+	text-align: center;
+}
+
+.g1.highlight,.g2.highlight,.g3.highlight,.g4.highlight,.g5.highlight,
+.g6.highlight,.g7.highlight,.g8.highlight,.g9.highlight,.g10.highlight,
+.g11.highlight,.g12.highlight,.g13.highlight,.g14.highlight,.g15.highlight,
+.g16.highlight,.g17.highlight,.g18.highlight {
+	background: #CCF;
+	font-weight: bold;
+}
+
+.p1,.p2,.p3,.p4,.p5,.p6,.p7 {
+	border: 0 !important;
+	text-align: right;
+}
+
+.p1.highlight,.p2.highlight,.p3.highlight,.p4.highlight,
+.p5.highlight,.p6.highlight,.p7.highlight {
+	background: #CCF;
+	font-weight: bold;
+}
+
+.g1 { grid-area: g1; } .g2 { grid-area: g2; } .g3 { grid-area: g3; } 
+.g4 { grid-area: g4; } .g5 { grid-area: g5; } .g6 { grid-area: g6; }
+.g7 { grid-area: g7; } .g8 { grid-area: g8; } .g9 { grid-area: g9; }
+.g10 { grid-area: g10; } .g11 { grid-area: g11; } .g12 { grid-area: g12; }
+.g13 { grid-area: g13; } .g14 { grid-area: g14; } .g15 { grid-area: g15; }
+.g16 { grid-area: g16; } .g17 { grid-area: g17; } .g18 { grid-area: g18; }
+
+.p1 { grid-area: p1; } .p2 { grid-area: p2; } .p3 { grid-area: p3; }
+.p4 { grid-area: p4; } .p5 { grid-area: p5; } .p6 { grid-area: p6; }
+.p7 { grid-area: p7; } 
+
+.H { grid-area: H; } .He { grid-area: He; }	.Li { grid-area: Li; } 
+.Be { grid-area: Be; } .B { grid-area: B; } .C { grid-area: C; }   
+.N { grid-area: N; } .O { grid-area: O; } .F { grid-area: F; }  
+.Ne { grid-area: Ne; } .Na { grid-area: Na; } .Mg { grid-area: Mg; }
+.Al { grid-area: Al; } .Si { grid-area: Si; } .P { grid-area: P; }   
+.S { grid-area: S; } .Cl { grid-area: Cl; } .Ar { grid-area: Ar; }
+.K { grid-area: K; } .Ca { grid-area: Ca; } .Sc { grid-area: Sc; } 
+.Ti { grid-area: Ti; } .V { grid-area: V; } .Cr { grid-area: Cr; } 
+.Mn { grid-area: Mn; } .Fe { grid-area: Fe; } .Co { grid-area: Co; } 
+.Ni { grid-area: Ni; } .Cu { grid-area: Cu; } .Zn { grid-area: Zn; }   
+.Ga { grid-area: Ga; } .Ge { grid-area: Ge; } .As { grid-area: As; }  
+.Se { grid-area: Se; } .Br { grid-area: Br; } .Kr { grid-area: Kr; }
+.Rb { grid-area: Rb; } .Sr { grid-area: Sr; } .Y { grid-area: Y; }  
+.Zr { grid-area: Zr; } .Nb { grid-area: Nb; } .Mo { grid-area: Mo; } 
+.Tc { grid-area: Tc; } .Ru { grid-area: Ru; } .Rh { grid-area: Rh; } 
+.Pd { grid-area: Pd; } .Ag { grid-area: Ag; } .Cd { grid-area: Cd; }   
+.In { grid-area: In; } .Sn { grid-area: Sn; } .Sb { grid-area: Sb; }  
+.Te { grid-area: Te; } .I { grid-area: I; } .Xe { grid-area: Xe; }
+.Cs { grid-area: Cs; } .Ba { grid-area: Ba; } .lanthanoids { grid-area: L1; } 
+.Hf { grid-area: Hf; } .Ta { grid-area: Ta; } .W { grid-area: W; }  
+.Re { grid-area: Re; } .Os { grid-area: Os; } .Ir { grid-area: Ir; } 
+.Pt { grid-area: Pt; } .Au { grid-area: Au; } .Hg { grid-area: Hg; }   
+.Tl { grid-area: Tl; } .Pb { grid-area: Pb; } .Bi { grid-area: Bi; }  
+.Po { grid-area: Po; } .At { grid-area: At; } .Rn { grid-area: Rn; }
+.Fr { grid-area: Fr; } .Ra { grid-area: Ra; } .actinoids { grid-area: A2; } 
+.Rf { grid-area: Rf; } .Db { grid-area: Db; } .Sg { grid-area: Sg; } 
+.Bh { grid-area: Bh; } .Hs { grid-area: Hs; } .Mt { grid-area: Mt; } 
+.Ds { grid-area: Ds; } .Rg { grid-area: Rg; } .Cn { grid-area: Cn; }   
+.Nh { grid-area: Nh; } .Fl { grid-area: Fl; } .Mc { grid-area: Mc; }  
+.Lv { grid-area: Lv; } .Ts { grid-area: Ts; } .Og { grid-area: Og; }
+.La { grid-area: La; } .Ce { grid-area: Ce; } .Pr { grid-area: Pr; } 
+.Nd { grid-area: Nd; } .Pm { grid-area: Pm; } .Sm { grid-area: Sm; } 
+.Eu { grid-area: Eu; } .Gd { grid-area: Gd; } .Tb { grid-area: Tb; }  
+.Dy { grid-area: Dy; } .Ho { grid-area: Ho; } .Er { grid-area: Er; }  
+.Tm { grid-area: Tm; } .Yb { grid-area: Yb; } .Lu { grid-area: Lu; }
+.Ac { grid-area: Ac; } .Th { grid-area: Th; } .Pa { grid-area: Pa; } 
+.U { grid-area: U; } .Np { grid-area: Np; }	.Pu { grid-area: Pu; } 
+.Am { grid-area: Am; } .Cm { grid-area: Cm; } .Bk { grid-area: Bk; }  
+.Cf { grid-area: Cf; } .Es { grid-area: Es; } .Fm { grid-area: Fm; }  
+.Md { grid-area: Md; } .No { grid-area: No; } .Lr { grid-area: Lr; }
+
+@import "./elementbox.css"
+

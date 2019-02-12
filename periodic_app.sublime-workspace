@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"no",
+				"nowrap\twhite-space"
+			],
+			[
+				"we",
+				"weight"
+			],
+			[
+				"get",
+				"getWeight"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"sta",
+				"standard"
+			],
+			[
 				"font-s",
 				"font-size\tproperty"
 			],
@@ -62,10 +82,6 @@
 			[
 				"alk",
 				"alkali_metal"
-			],
-			[
-				"get",
-				"getElementsByClassName"
 			],
 			[
 				"for",
@@ -498,32 +514,16 @@
 			[
 				"load",
 				"load_pygame"
-			],
-			[
-				"Pla",
-				"PlayState"
-			],
-			[
-				"ani",
-				"animations"
-			],
-			[
-				"fps",
-				"fps_multiplier"
-			],
-			[
-				"anim",
-				"animation_heading"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/layout.html",
+			"file": "src/index.html",
 			"settings":
 			{
-				"buffer_size": 349,
+				"buffer_size": 360,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -532,7 +532,7 @@
 			"file": "src/css/main.css",
 			"settings":
 			{
-				"buffer_size": 7195,
+				"buffer_size": 7047,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -541,7 +541,7 @@
 			"file": "src/js/main.js",
 			"settings":
 			{
-				"buffer_size": 263,
+				"buffer_size": 285,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -550,7 +550,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 562,
+				"buffer_size": 671,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -559,7 +559,7 @@
 			"file": "src/css/elementbox.css",
 			"settings":
 			{
-				"buffer_size": 989,
+				"buffer_size": 1271,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -568,7 +568,7 @@
 			"file": "src/js/elementbox.jsx",
 			"settings":
 			{
-				"buffer_size": 1935,
+				"buffer_size": 3431,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -577,7 +577,7 @@
 			"file": "src/js/app.jsx",
 			"settings":
 			{
-				"buffer_size": 30243,
+				"buffer_size": 35366,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -586,7 +586,7 @@
 			"file": "src/js/nav_bar.jsx",
 			"settings":
 			{
-				"buffer_size": 707,
+				"buffer_size": 1382,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -595,7 +595,7 @@
 			"file": "src/js/data.js",
 			"settings":
 			{
-				"buffer_size": 38025,
+				"buffer_size": 43741,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -825,7 +825,7 @@
 		"selected_items":
 		[
 			[
-				"to",
+				"te",
 				"Terminus: Toggle Panel"
 			],
 			[
@@ -833,11 +833,15 @@
 				"Terminus: Toggle Panel"
 			],
 			[
-				"t",
+				"term",
 				"Terminus: Toggle Panel"
 			],
 			[
-				"term",
+				"to",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"t",
 				"Terminus: Toggle Panel"
 			],
 			[
@@ -867,10 +871,6 @@
 			[
 				"ins",
 				"Package Control: Install Package"
-			],
-			[
-				"te",
-				"Terminus: Toggle Panel"
 			],
 			[
 				"toggle",
@@ -1112,7 +1112,7 @@
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -1126,6 +1126,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"navbarSupportedContent",
+			"class",
+			"weights",
+			"\"weight\":",
+			"mass",
+			"weight",
+			"layout",
+			"Pt-BR",
+			"platina",
+			"\"pt\"",
+			"lang=",
+			"lang",
+			"elem=",
 			"\"type\":",
 			"hide",
 			"this.props.elem.",
@@ -1245,24 +1258,24 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/layout.html",
+					"file": "src/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 349,
+						"buffer_size": 360,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								141,
-								141
+								300,
+								300
 							]
 						],
 						"settings":
@@ -1277,7 +1290,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1286,15 +1299,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7195,
+						"buffer_size": 7047,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								773,
-								773
+								1621,
+								1621
 							]
 						],
 						"settings":
@@ -1305,10 +1318,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1404.0,
+						"translation.y": 702.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1317,15 +1330,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 263,
+						"buffer_size": 285,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								24,
-								24
+								242,
+								242
 							]
 						],
 						"settings":
@@ -1340,7 +1353,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1349,15 +1362,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 562,
+						"buffer_size": 671,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								347,
-								347
+								91,
+								91
 							]
 						],
 						"settings":
@@ -1381,15 +1394,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 989,
+						"buffer_size": 1271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								913,
-								913
+								137,
+								137
 							]
 						],
 						"settings":
@@ -1399,10 +1412,10 @@
 							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1411,15 +1424,79 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1935,
+						"buffer_size": 3431,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								126,
-								126
+								2263,
+								2263
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1310.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/js/app.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 35366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								811,
+								811
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/js/nav_bar.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1080,
+								1080
 							]
 						],
 						"settings":
@@ -1438,560 +1515,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "src/js/app.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 30243,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1210,
-								1210
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/js/nav_bar.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 707,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								184,
-								184
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
 					"buffer": 8,
 					"file": "src/js/data.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 38025,
+						"buffer_size": 43741,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								259,
-								259
-							],
-							[
-								1305,
-								1305
-							],
-							[
-								1599,
-								1599
-							],
-							[
-								1900,
-								1900
-							],
-							[
-								2190,
-								2190
-							],
-							[
-								2480,
-								2480
-							],
-							[
-								2772,
-								2772
-							],
-							[
-								3062,
-								3062
-							],
-							[
-								3354,
-								3354
-							],
-							[
-								3647,
-								3647
-							],
-							[
-								3944,
-								3944
-							],
-							[
-								4249,
-								4249
-							],
-							[
-								4558,
-								4558
-							],
-							[
-								4857,
-								4857
-							],
-							[
-								5155,
-								5155
-							],
-							[
-								5449,
-								5449
-							],
-							[
-								5748,
-								5748
-							],
-							[
-								6045,
-								6045
-							],
-							[
-								6345,
-								6345
-							],
-							[
-								6651,
-								6651
-							],
-							[
-								6960,
-								6960
-							],
-							[
-								7269,
-								7269
-							],
-							[
-								7576,
-								7576
-							],
-							[
-								7886,
-								7886
-							],
-							[
-								8197,
-								8197
-							],
-							[
-								8503,
-								8503
-							],
-							[
-								8811,
-								8811
-							],
-							[
-								9120,
-								9120
-							],
-							[
-								9429,
-								9429
-							],
-							[
-								9736,
-								9736
-							],
-							[
-								10047,
-								10047
-							],
-							[
-								10352,
-								10352
-							],
-							[
-								10655,
-								10655
-							],
-							[
-								10958,
-								10958
-							],
-							[
-								11260,
-								11260
-							],
-							[
-								11563,
-								11563
-							],
-							[
-								11869,
-								11869
-							],
-							[
-								12181,
-								12181
-							],
-							[
-								12490,
-								12490
-							],
-							[
-								12804,
-								12804
-							],
-							[
-								13117,
-								13117
-							],
-							[
-								13433,
-								13433
-							],
-							[
-								13749,
-								13749
-							],
-							[
-								14064,
-								14064
-							],
-							[
-								14377,
-								14377
-							],
-							[
-								14693,
-								14693
-							],
-							[
-								15003,
-								15003
-							],
-							[
-								15317,
-								15317
-							],
-							[
-								15631,
-								15631
-							],
-							[
-								15942,
-								15942
-							],
-							[
-								16250,
-								16250
-							],
-							[
-								16558,
-								16558
-							],
-							[
-								16860,
-								16860
-							],
-							[
-								17165,
-								17165
-							],
-							[
-								17474,
-								17474
-							],
-							[
-								17787,
-								17787
-							],
-							[
-								18099,
-								18099
-							],
-							[
-								18408,
-								18408
-							],
-							[
-								18723,
-								18723
-							],
-							[
-								19035,
-								19035
-							],
-							[
-								19348,
-								19348
-							],
-							[
-								19659,
-								19659
-							],
-							[
-								19970,
-								19970
-							],
-							[
-								20283,
-								20283
-							],
-							[
-								20593,
-								20593
-							],
-							[
-								20906,
-								20906
-							],
-							[
-								21216,
-								21216
-							],
-							[
-								21525,
-								21525
-							],
-							[
-								21835,
-								21835
-							],
-							[
-								22147,
-								22147
-							],
-							[
-								22458,
-								22458
-							],
-							[
-								22774,
-								22774
-							],
-							[
-								23092,
-								23092
-							],
-							[
-								23407,
-								23407
-							],
-							[
-								23724,
-								23724
-							],
-							[
-								24040,
-								24040
-							],
-							[
-								24357,
-								24357
-							],
-							[
-								24676,
-								24676
-							],
-							[
-								24991,
-								24991
-							],
-							[
-								25309,
-								25309
-							],
-							[
-								25629,
-								25629
-							],
-							[
-								25945,
-								25945
-							],
-							[
-								26264,
-								26264
-							],
-							[
-								26584,
-								26584
-							],
-							[
-								26896,
-								26896
-							],
-							[
-								27205,
-								27205
-							],
-							[
-								27519,
-								27519
-							],
-							[
-								27836,
-								27836
-							],
-							[
-								28149,
-								28149
-							],
-							[
-								28461,
-								28461
-							],
-							[
-								28779,
-								28779
-							],
-							[
-								29088,
-								29088
-							],
-							[
-								29402,
-								29402
-							],
-							[
-								29716,
-								29716
-							],
-							[
-								30030,
-								30030
-							],
-							[
-								30341,
-								30341
-							],
-							[
-								30655,
-								30655
-							],
-							[
-								30971,
-								30971
-							],
-							[
-								31287,
-								31287
-							],
-							[
-								31600,
-								31600
-							],
-							[
-								31917,
-								31917
-							],
-							[
-								32231,
-								32231
-							],
-							[
-								32547,
-								32547
-							],
-							[
-								32874,
-								32874
-							],
-							[
-								33196,
-								33196
-							],
-							[
-								33521,
-								33521
-							],
-							[
-								33843,
-								33843
-							],
-							[
-								34165,
-								34165
-							],
-							[
-								34486,
-								34486
-							],
-							[
-								34810,
-								34810
-							],
-							[
-								35133,
-								35133
-							],
-							[
-								35460,
-								35460
-							],
-							[
-								35780,
-								35780
-							],
-							[
-								36106,
-								36106
-							],
-							[
-								36428,
-								36428
-							],
-							[
-								36751,
-								36751
-							],
-							[
-								37073,
-								37073
-							],
-							[
-								37394,
-								37394
-							],
-							[
-								37688,
-								37688
-							],
-							[
-								37965,
-								37965
+								43498,
+								43498
 							]
 						],
 						"settings":
@@ -2003,10 +1540,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 34126.0,
+						"translation.y": 36733.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
