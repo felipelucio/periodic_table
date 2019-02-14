@@ -1,9 +1,15 @@
-li.element {
-	display: inline-grid;
+.element {
+
+}
+
+.element > span {
+	display: none;
 	grid-template-columns: repeat(3, 33.3%);
 	grid-template-rows: 15% 35% 25% 25%;
-	overflow: hidden;
+	height: 100%;
 }
+
+.element span.show { display: grid; }
 
 .element .symbol { 
 	grid-row: 2;

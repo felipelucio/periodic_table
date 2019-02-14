@@ -39,6 +39,13 @@ export default class ElementBox extends React.Component {
     return this.props.elem.name['en'];
   }
 
+  _showFlags(section) {
+    if(this.props.showFlags.hasOwnProperty(section))
+      if(this.props.showFlags[section]) return 'show';
+
+    return '';
+  }
+
   _precision(a) {
     let e = 1;
     while (Math.round(a * e) / e !== a) e *= 10;
@@ -90,24 +97,31 @@ export default class ElementBox extends React.Component {
         onPointerEnter={(e) => this.onPointerEnter(e)}
         onPointerLeave={(e) => this.onPointerLeave(e)}
       >
-        <span className="name">{ this.getName() }</span>
-        <span className="symbol">{ elem.symbol }</span>
-        <span className="atomic_number">{ elem.atomic_number }</span>
-        <span className="weight small">{ this.getWeight(3) }</span>
-        <span className="weight big">
-          {elem.weight && elem.weight.hasOwnProperty('conventional') &&
-            <p>{`[${elem.weight.standard[0]},${elem.weight.standard[1]}]`}</p>
-          }
-          <p>{ this.getWeight(false) }</p>
+        <span className="basic" className={this._showFlags('basic')}>
+          <span className="name">{ this.getName() }</span>
+          <span className="symbol">{ elem.symbol }</span>
+          <span className="atomic_number">{ elem.atomic_number }</span>
+          <span className="weight small">{ this.getWeight(3) }</span>
+          <span className="weight big">
+            {elem.weight && elem.weight.hasOwnProperty('conventional') &&
+              <p>{`[${elem.weight.standard[0]},${elem.weight.standard[1]}]`}</p>
+            }
+            <p>{ this.getWeight(false) }</p>
+          </span>
+          <span className="electrons">
+            <p>{ elem.electrons[0] }</p>
+            <p>{ elem.electrons[1] }</p>
+            <p>{ elem.electrons[2] }</p>
+            <p>{ elem.electrons[3] }</p>
+            <p>{ elem.electrons[4] }</p>
+            <p>{ elem.electrons[5] }</p>
+            <p>{ elem.electrons[6] }</p>
+          </span>
         </span>
-        <span className="electrons">
-          <p>{ elem.electrons[0] }</p>
-          <p>{ elem.electrons[1] }</p>
-          <p>{ elem.electrons[2] }</p>
-          <p>{ elem.electrons[3] }</p>
-          <p>{ elem.electrons[4] }</p>
-          <p>{ elem.electrons[5] }</p>
-          <p>{ elem.electrons[6] }</p>
+
+        <span className="electronic" className={this._showFlags('electronic')}>
+          <span className="symbol">{ elem.symbol }</span>
+          <span className="atomic_number">{ elem.atomic_number }</span>
         </span>
       </li>
     );
