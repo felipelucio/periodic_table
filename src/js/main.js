@@ -6,6 +6,7 @@ import React from 'react';
 import { render } from 'react-dom';
 
 import App from './app';
+import ElementPage from './element_page';
 
 function main(ev) {
     render(<App />, document.getElementById('app'));

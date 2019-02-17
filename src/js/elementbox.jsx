@@ -96,8 +96,9 @@ export default class ElementBox extends React.Component {
         data-type={elem.type}
         onPointerEnter={(e) => this.onPointerEnter(e)}
         onPointerLeave={(e) => this.onPointerLeave(e)}
+        onClick={this.props.showElementInfo}
       >
-        <span className="basic" className={this._showFlags('basic')}>
+        <span className={`basic ${this._showFlags('basic')}`}>
           <span className="name">{ this.getName() }</span>
           <span className="symbol">{ elem.symbol }</span>
           <span className="atomic_number">{ elem.atomic_number }</span>
@@ -119,9 +120,20 @@ export default class ElementBox extends React.Component {
           </span>
         </span>
 
-        <span className="electronic" className={this._showFlags('electronic')}>
+        <span className={`electronic ${this._showFlags('electronic')}`}>
           <span className="symbol">{ elem.symbol }</span>
           <span className="atomic_number">{ elem.atomic_number }</span>
+          { (elem.id == 'lanthanoids' || elem.id == 'actinoids') && 
+            <span className="name">{ this.getName() }</span>
+          }
+        </span>
+
+        <span className={`isotopes ${this._showFlags('isotopes')}`}>
+          <span className="symbol">{ elem.symbol }</span>
+          <span className="atomic_number">{ elem.atomic_number }</span>
+          { (elem.id == 'lanthanoids' || elem.id == 'actinoids') && 
+            <span className="name">{ this.getName() }</span>
+          }
         </span>
       </li>
     );

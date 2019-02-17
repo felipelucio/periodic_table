@@ -532,7 +532,7 @@
 			"file": "src/css/main.css",
 			"settings":
 			{
-				"buffer_size": 7047,
+				"buffer_size": 7063,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -542,15 +542,6 @@
 			"settings":
 			{
 				"buffer_size": 285,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 671,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -825,15 +816,15 @@
 		"selected_items":
 		[
 			[
+				"term",
+				"Terminus: Toggle Panel"
+			],
+			[
 				"te",
 				"Terminus: Toggle Panel"
 			],
 			[
 				"ter",
-				"Terminus: Toggle Panel"
-			],
-			[
-				"term",
 				"Terminus: Toggle Panel"
 			],
 			[
@@ -975,19 +966,17 @@
 	"expanded_folders":
 	[
 		"/G/Felipe/projetos/periodic_app",
-		"/G/Felipe/projetos/periodic_app/src",
-		"/G/Felipe/projetos/periodic_app/src/css",
-		"/G/Felipe/projetos/periodic_app/src/js"
+		"/G/Felipe/projetos/periodic_app/src"
 	],
 	"file_history":
 	[
+		"/G/Felipe/projetos/periodic_app/package.json",
 		"/G/Felipe/projetos/periodic_app/.babelrc",
 		"/G/Felipe/projetos/periodic_app/.editorconfig",
 		"/G/Felipe/projetos/periodic_app/src/js/app.jsx",
 		"/G/Felipe/projetos/periodic_app/nunjucks.config.js",
 		"/G/Felipe/projetos/periodic_app/src/js/element.js",
 		"/G/Felipe/projetos/periodic_app/src/element.njk",
-		"/G/Felipe/projetos/periodic_app/package.json",
 		"/G/Felipe/projetos/periodic_app/src/js/data.js",
 		"/G/Felipe/projetos/periodic_app/src/layout.njk",
 		"/G/Felipe/projetos/periodic_app/index.html",
@@ -1126,6 +1115,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			";\n",
 			"navbarSupportedContent",
 			"class",
 			"weights",
@@ -1258,7 +1248,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -1299,15 +1289,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7047,
+						"buffer_size": 7063,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1621,
-								1621
+								1636,
+								1636
 							]
 						],
 						"settings":
@@ -1321,7 +1311,7 @@
 						"translation.y": 702.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1353,43 +1343,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 671,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								91,
-								91
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "src/css/elementbox.css",
 					"semi_transient": false,
 					"settings":
@@ -1409,7 +1367,8 @@
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1419,7 +1378,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "src/js/elementbox.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1431,8 +1390,8 @@
 						"selection":
 						[
 							[
-								2263,
-								2263
+								2569,
+								2569
 							]
 						],
 						"settings":
@@ -1444,14 +1403,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1310.0,
+						"translation.y": 1404.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "src/js/app.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1483,7 +1442,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "src/js/nav_bar.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1495,8 +1454,8 @@
 						"selection":
 						[
 							[
-								1080,
-								1080
+								1322,
+								1322
 							]
 						],
 						"settings":
@@ -1511,11 +1470,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "src/js/data.js",
 					"semi_transient": false,
 					"settings":

@@ -10,12 +10,14 @@ export default class App extends React.Component {
     super(props);
     this.state = { 
       elements: data,
-      curr_lang: this._getCurrLang(),
-      show_basic: false,
-      show_electronic: true,
-      show_isotopes: false,
-      show_radius: false,
-      show_state: false,
+      curr_lang: this._getDefaultLang() || 'en',
+      show_flags: {
+        basic: true,
+        electronic: false,
+        isotopes: false,
+        radius: false,
+        state: false
+      },
       temperature: 273
     };
     
@@ -23,35 +25,45 @@ export default class App extends React.Component {
     this.toggleHighlightPeriod = this.toggleHighlightPeriod.bind(this);
     this.toggleHighlightGroup = this.toggleHighlightGroup.bind(this);
     this.setLang = this.setLang.bind(this);
-    this.setShowFlag = this.setShowFlag.bind(this);
+    this.showHandler = this.showHandler.bind(this);
   }
 
-  setShowFlag(flag) {
-    let flags = ['show_basic','show_electronic','show_isotopes',
-      'show_radius','show_state'
-    ];
+  activateShowFlag(flag) {
+    this.setState(function(state, props) {
+      if(state.show_flags.hasOwnProperty(flag) && !state.show_flags[flag]) {
+        let new_flags = {};
+        for(let i in state.show_flags) {
+          new_flags[i] = false;
+        }
+        new_flags[flag] = true;
 
-
+        return { show_flags: new_flags };
+      } else {
+        return {};
+      }
+    });
   }
 
-  getShowFlags() {
-    return {
-      basic: this.state.show_basic,
-      electronic: this.state.show_electronic,
-      isotopes: this.state.show_isotopes,
-      radius: this.state.show_radius,
-      state: this.state.show_state,
-      temperature: this.state.temperature
-    }
+  showHandler(e) {
+    e.preventDefault();
+    let link = e.target.getAttribute('href');
+    let flag = link.substr(1);
+    
+    this.activateShowFlag(flag);
   }
 
-  _getCurrLang() {
-    return document.documentElement.lang;
+  showElementInfo(e) {
+    e.preventDefault();
+    let id = e.currentTarget.getAttribute('data-key');
+    console.log(id);
+  }
+
+  _getDefaultLang() {
+    return navigator.language || navigator.userLanguage;
   }
 
   setLang(lang) {
     this.setState(function(state) { return { curr_lang: lang } });
-    document.documentElement.setAttribute('lang', lang);
   }
 
   toggleHighlight(id, type, event) {
@@ -237,7 +249,11 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <NavBar langOnChange={this.setLang} />
+        <NavBar langOnChange={this.setLang} 
+          showHandler={this.showHandler}
+          curr_lang={this.state.curr_lang}
+          show_flags={this.state.show_flags}
+        />
         <ul className="table">
           <li ref="g1"  data-key="g1" className="g1"
             onPointerEnter={this.toggleHighlightGroup}
@@ -341,724 +357,844 @@ export default class App extends React.Component {
           >7</li>
           <ElementBox elem={this.state.elements.H} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.He} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Li} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Be} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.B} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.C} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.N} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.O} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.F} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ne} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Na} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Mg} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Al} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Si} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.P} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.S} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Cl} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ar} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.K} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ca} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Sc} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ti} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.V} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Cr} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Mn} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Fe} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Co} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ni} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Cu} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Zn} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ga} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ge} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.As} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Se} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Br} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Kr} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Rb} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Sr} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Y} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Zr} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Nb} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Mo} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Tc} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ru} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Rh} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Pd} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ag} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Cd} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.In} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Sn} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Sb} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Te} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.I} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Xe} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Cs} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ba} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.lanthanoids} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.La} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ce} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Pr} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Nd} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Pm} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Sm} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Eu} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Gd} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Tb} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Dy} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ho} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Er} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Tm} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Yb} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Lu} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.actinoids}
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Hf} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ta} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.W} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Re} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Os} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ir} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Pt} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Au} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Hg} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Tl} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Pb} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Bi} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Po} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.At} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Rn} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Fr} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ra} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           
           <ElementBox elem={this.state.elements.Ac} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Th} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Pa} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.U} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Np} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Pu} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Am} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Cm} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Bk} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Cf} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Es} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Fm} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Md} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.No} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Lr} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Rf} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Db} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Sg} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           /> 
           <ElementBox elem={this.state.elements.Bh} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Hs} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Mt} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ds} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Rg} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Cn} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Nh} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Fl} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Mc} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Lv} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Ts} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
           <ElementBox elem={this.state.elements.Og} 
             lang={this.state.curr_lang}
-            showFlags={this.getShowFlags()}
+            showFlags={this.state.show_flags}
             onPointerEnter={this.toggleHighlight}
             onPointerLeave={this.toggleHighlight}
+            showElementInfo={this.showElementInfo}
           />
         </ul>
       </div>
