@@ -5,12 +5,49 @@ html { font-size: 12pt; }
 body {
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
+}
+
+#app {
+	box-sizing: border-box;
+	text-align: center;
+	height: 100vh;
+}
+
+#app nav {
+	text-align: left;
+	width: 100%;
+}
+
+#app .content {
+	position: relative;
+	margin-top: 60px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	height: calc(100vh - 60px);
+	overflow: auto;
+}
+
+#app .elementpage {
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: calc(100% + 60px);
+	background: #FFF;
+	display: none;
+	padding: 1rem;
+}
+
+#app .elementpage.show {
+	display: block;
+	z-index: 20;
 }
 
 #app .table {
 	list-style: none;
 	margin: 0;
-	margin-top: 60px;
 	padding: 0;
 	width: 100%;
 }
@@ -50,14 +87,6 @@ body {
 .actinoid.active { background: radial-gradient(#EEBBDD, rgba(255,255,255,1) 120%); }
 
 
-#app {
-	text-align: center;
-}
-
-#app nav {
-	text-align: left;
-}
-
 #app .table {
 	width: auto;
 	text-align: left;
@@ -87,13 +116,14 @@ body {
 	place-self: stretch;
 	border-radius: 2px;
 }
+
 #app .table > li.active {
 	height: 5.5rem;
 	width: 5.5rem;
-	left: -0.5rem;
-	top: -0.5rem;
+	left: -1rem;
+	top: -1rem;
 	position: relative;
-	z-index: 100;
+	z-index: 10;
 }
 
 .disabled {

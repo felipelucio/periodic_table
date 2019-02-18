@@ -1,16 +1,25 @@
 import React from 'react';
 import update from 'immutability-helper';
 
+import Element from './element';
 import ElementBox from './elementbox';
+import ElementPage from './element_page';
 import NavBar from './nav_bar';
 import data from './data';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+
+    let elements = {};
+    for(let id in data) {
+      elements[id] = new Element(data[id]);
+    }
+
     this.state = { 
-      elements: data,
+      elements,
       curr_lang: this._getDefaultLang() || 'en',
+      curr_elem: null,
       show_flags: {
         basic: true,
         electronic: false,
@@ -18,7 +27,7 @@ export default class App extends React.Component {
         radius: false,
         state: false
       },
-      temperature: 273
+      temperature: 273,
     };
     
     this.toggleHighlight = this.toggleHighlight.bind(this);
@@ -26,6 +35,8 @@ export default class App extends React.Component {
     this.toggleHighlightGroup = this.toggleHighlightGroup.bind(this);
     this.setLang = this.setLang.bind(this);
     this.showHandler = this.showHandler.bind(this);
+    this.showElementInfo = this.showElementInfo.bind(this);
+    this.closeElementInfo = this.closeElementInfo.bind(this);
   }
 
   activateShowFlag(flag) {
@@ -55,7 +66,12 @@ export default class App extends React.Component {
   showElementInfo(e) {
     e.preventDefault();
     let id = e.currentTarget.getAttribute('data-key');
-    console.log(id);
+    this.setState({curr_elem: this.state.elements[id]});
+  }
+
+  closeElementInfo(e) {
+    e.preventDefault();
+    this.setState({curr_elem: null});
   }
 
   _getDefaultLang() {
@@ -254,949 +270,955 @@ export default class App extends React.Component {
           curr_lang={this.state.curr_lang}
           show_flags={this.state.show_flags}
         />
-        <ul className="table">
-          <li ref="g1"  data-key="g1" className="g1"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >1</li>
-          <li ref="g2"  data-key="g2" className="g2"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >2</li>
-          <li ref="g3"  data-key="g3" className="g3"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >3</li>
-          <li ref="g4"  data-key="g4" className="g4"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >4</li>
-          <li ref="g5"  data-key="g5" className="g5"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >5</li>
-          <li ref="g6"  data-key="g6" className="g6"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >6</li>
-          <li ref="g7"  data-key="g7" className="g7"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >7</li>
-          <li ref="g8"  data-key="g8" className="g8"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >8</li>
-          <li ref="g9"  data-key="g9" className="g9"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >9</li>
-          <li ref="g10" data-key="g10" className="g10"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >10</li>
-          <li ref="g11" data-key="g11" className="g11"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >11</li>
-          <li ref="g12" data-key="g12" className="g12"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >12</li>
-          <li ref="g13" data-key="g13" className="g13"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >13</li>
-          <li ref="g14" data-key="g14" className="g14"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >14</li>
-          <li ref="g15" data-key="g15" className="g15"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >15</li>
-          <li ref="g16" data-key="g16" className="g16"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >16</li>
-          <li ref="g17" data-key="g17" className="g17"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >17</li>
-          <li ref="g18" data-key="g18" className="g18"
-            onPointerEnter={this.toggleHighlightGroup}
-            onPointerLeave={this.toggleHighlightGroup}
-          >18</li>
-          <li ref="p1" data-key="p1" className="p1"
-            onPointerEnter={this.toggleHighlightPeriod}
-            onPointerLeave={this.toggleHighlightPeriod}
-          >1</li>
-          <li ref="p2" data-key="p2" className="p2"
-            onPointerEnter={this.toggleHighlightPeriod}
-            onPointerLeave={this.toggleHighlightPeriod}
-          >2</li>
-          <li ref="p3" data-key="p3" className="p3"
-            onPointerEnter={this.toggleHighlightPeriod}
-            onPointerLeave={this.toggleHighlightPeriod}
-          >3</li>
-          <li ref="p4" data-key="p4" className="p4"
-            onPointerEnter={this.toggleHighlightPeriod}
-            onPointerLeave={this.toggleHighlightPeriod}
-          >4</li>
-          <li ref="p5" data-key="p5" className="p5"
-            onPointerEnter={this.toggleHighlightPeriod}
-            onPointerLeave={this.toggleHighlightPeriod}
-          >5</li>
-          <li ref="p6" data-key="p6" className="p6"
-            onPointerEnter={this.toggleHighlightPeriod}
-            onPointerLeave={this.toggleHighlightPeriod}
-          >6</li>
-          <li ref="p7" data-key="p7" className="p7"
-            onPointerEnter={this.toggleHighlightPeriod}
-            onPointerLeave={this.toggleHighlightPeriod}
-          >7</li>
-          <ElementBox elem={this.state.elements.H} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.He} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Li} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Be} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.B} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.C} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.N} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.O} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.F} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ne} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Na} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Mg} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Al} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Si} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.P} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.S} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Cl} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ar} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.K} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ca} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Sc} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ti} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.V} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Cr} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Mn} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Fe} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Co} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ni} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Cu} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Zn} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ga} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ge} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.As} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Se} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Br} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Kr} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Rb} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Sr} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Y} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Zr} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Nb} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Mo} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Tc} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ru} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Rh} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Pd} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ag} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Cd} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.In} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Sn} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Sb} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Te} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.I} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Xe} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Cs} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ba} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.lanthanoids} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.La} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ce} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Pr} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Nd} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Pm} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Sm} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Eu} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Gd} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Tb} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Dy} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ho} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Er} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Tm} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Yb} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Lu} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.actinoids}
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Hf} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ta} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.W} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Re} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Os} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ir} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Pt} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Au} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Hg} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Tl} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Pb} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Bi} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Po} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.At} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Rn} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Fr} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ra} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          
-          <ElementBox elem={this.state.elements.Ac} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Th} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Pa} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.U} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Np} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Pu} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Am} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Cm} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Bk} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Cf} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Es} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Fm} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Md} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.No} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Lr} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Rf} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Db} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Sg} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          /> 
-          <ElementBox elem={this.state.elements.Bh} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Hs} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Mt} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ds} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Rg} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Cn} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Nh} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Fl} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Mc} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Lv} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Ts} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-          <ElementBox elem={this.state.elements.Og} 
-            lang={this.state.curr_lang}
-            showFlags={this.state.show_flags}
-            onPointerEnter={this.toggleHighlight}
-            onPointerLeave={this.toggleHighlight}
-            showElementInfo={this.showElementInfo}
-          />
-        </ul>
+        <div className="content">
+          <ElementPage curr_lang={this.state.curr_lang} 
+            element={this.state.curr_elem}
+            closeElemPage={this.closeElementInfo}
+          />
+          <ul className="table">
+            <li ref="g1"  data-key="g1" className="g1"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >1</li>
+            <li ref="g2"  data-key="g2" className="g2"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >2</li>
+            <li ref="g3"  data-key="g3" className="g3"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >3</li>
+            <li ref="g4"  data-key="g4" className="g4"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >4</li>
+            <li ref="g5"  data-key="g5" className="g5"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >5</li>
+            <li ref="g6"  data-key="g6" className="g6"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >6</li>
+            <li ref="g7"  data-key="g7" className="g7"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >7</li>
+            <li ref="g8"  data-key="g8" className="g8"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >8</li>
+            <li ref="g9"  data-key="g9" className="g9"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >9</li>
+            <li ref="g10" data-key="g10" className="g10"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >10</li>
+            <li ref="g11" data-key="g11" className="g11"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >11</li>
+            <li ref="g12" data-key="g12" className="g12"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >12</li>
+            <li ref="g13" data-key="g13" className="g13"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >13</li>
+            <li ref="g14" data-key="g14" className="g14"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >14</li>
+            <li ref="g15" data-key="g15" className="g15"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >15</li>
+            <li ref="g16" data-key="g16" className="g16"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >16</li>
+            <li ref="g17" data-key="g17" className="g17"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >17</li>
+            <li ref="g18" data-key="g18" className="g18"
+              onPointerEnter={this.toggleHighlightGroup}
+              onPointerLeave={this.toggleHighlightGroup}
+            >18</li>
+            <li ref="p1" data-key="p1" className="p1"
+              onPointerEnter={this.toggleHighlightPeriod}
+              onPointerLeave={this.toggleHighlightPeriod}
+            >1</li>
+            <li ref="p2" data-key="p2" className="p2"
+              onPointerEnter={this.toggleHighlightPeriod}
+              onPointerLeave={this.toggleHighlightPeriod}
+            >2</li>
+            <li ref="p3" data-key="p3" className="p3"
+              onPointerEnter={this.toggleHighlightPeriod}
+              onPointerLeave={this.toggleHighlightPeriod}
+            >3</li>
+            <li ref="p4" data-key="p4" className="p4"
+              onPointerEnter={this.toggleHighlightPeriod}
+              onPointerLeave={this.toggleHighlightPeriod}
+            >4</li>
+            <li ref="p5" data-key="p5" className="p5"
+              onPointerEnter={this.toggleHighlightPeriod}
+              onPointerLeave={this.toggleHighlightPeriod}
+            >5</li>
+            <li ref="p6" data-key="p6" className="p6"
+              onPointerEnter={this.toggleHighlightPeriod}
+              onPointerLeave={this.toggleHighlightPeriod}
+            >6</li>
+            <li ref="p7" data-key="p7" className="p7"
+              onPointerEnter={this.toggleHighlightPeriod}
+              onPointerLeave={this.toggleHighlightPeriod}
+            >7</li>
+            <ElementBox elem={this.state.elements.H} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.He} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Li} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Be} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.B} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.C} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.N} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.O} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.F} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ne} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Na} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Mg} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Al} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Si} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.P} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.S} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Cl} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ar} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.K} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ca} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Sc} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ti} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.V} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Cr} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Mn} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Fe} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Co} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ni} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Cu} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Zn} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ga} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ge} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.As} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Se} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Br} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Kr} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Rb} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Sr} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Y} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Zr} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Nb} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Mo} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Tc} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ru} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Rh} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Pd} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ag} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Cd} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.In} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Sn} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Sb} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Te} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.I} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Xe} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Cs} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ba} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.lanthanoids} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.La} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ce} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Pr} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Nd} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Pm} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Sm} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Eu} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Gd} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Tb} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Dy} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ho} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Er} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Tm} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Yb} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Lu} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.actinoids}
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Hf} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ta} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.W} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Re} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Os} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ir} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Pt} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Au} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Hg} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Tl} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Pb} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Bi} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Po} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.At} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Rn} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Fr} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ra} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            
+            <ElementBox elem={this.state.elements.Ac} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Th} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Pa} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.U} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Np} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Pu} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Am} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Cm} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Bk} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Cf} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Es} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Fm} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Md} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.No} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Lr} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Rf} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Db} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Sg} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            /> 
+            <ElementBox elem={this.state.elements.Bh} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Hs} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Mt} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ds} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Rg} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Cn} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Nh} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Fl} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Mc} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Lv} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Ts} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+            <ElementBox elem={this.state.elements.Og} 
+              lang={this.state.curr_lang}
+              showFlags={this.state.show_flags}
+              onPointerEnter={this.toggleHighlight}
+              onPointerLeave={this.toggleHighlight}
+              showElementInfo={this.showElementInfo}
+            />
+          </ul>
+        </div>
       </div>
     );
   }
