@@ -33,6 +33,7 @@ export default class NavBar extends React.Component {
             </li>
           </ul>
           <form className="ml-auto form-inline">
+            <input className="temperature" value={this.props.temperature} onChange={this.props.changeTemperature} />
             <select className="form-control" 
               value={this.props.curr_lang}
               onChange={(e) => this.props.langOnChange(e.target.value)}

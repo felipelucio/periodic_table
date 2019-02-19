@@ -37,6 +37,14 @@ export default class App extends React.Component {
     this.showHandler = this.showHandler.bind(this);
     this.showElementInfo = this.showElementInfo.bind(this);
     this.closeElementInfo = this.closeElementInfo.bind(this);
+    this.changeTemperature = this.changeTemperature.bind(this);
+  }
+
+  changeTemperature(e) {
+    e.preventDefault();
+    let temp = e.target.value;
+    
+    this.setState({temperature: temp});
   }
 
   activateShowFlag(flag) {
@@ -307,6 +315,8 @@ export default class App extends React.Component {
           showHandler={this.showHandler}
           curr_lang={this.state.curr_lang}
           show_flags={this.state.show_flags}
+          temperature={this.state.temperature}
+          changeTemperature={this.changeTemperature}
         />
         <div className="content">
           <ElementPage curr_lang={this.state.curr_lang} 

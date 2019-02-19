@@ -5,9 +5,13 @@ export default class Element {
 
   // return state at given temperature (in Kelvin)
   stateAtTemp(temp) {
-    if (temp < this.fusion_temp) return 'state-solid';
-    if (temp < this.boiling_temp) return 'state-liquid';
-    return 'state-gas';
+    if(this.boiling_point != null && this.melting_point != null)
+      if(temp < this.boiling_point && temp >= this.melting_point) return 'liquid';
+    
+    if(this.melting_point != null && temp < this.melting_point) return 'solid';
+    if(this.boiling_point != null && temp >= this.boiling_point) return 'gas';
+
+    return 'unknown';
   }
 
   getName(lang) {
