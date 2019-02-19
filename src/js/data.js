@@ -11,8 +11,8 @@ module.exports = {
     "period": 1,
     "group": 1,
     "type": "nonmetal",
-    "melting_point": 100,
-    "boiling_point": 200,
+    "melting_point": 14.01,
+    "boiling_point": 20.28,
     "electrons": [1],
     "isotopes": [
       {
@@ -63,8 +63,8 @@ module.exports = {
     "period": 1,
     "group": 18,
     "type": "noble_gas",
-    "melting_point": 100,
-    "boiling_point": 200,
+    "melting_point": 0,
+    "boiling_point": 4.22,
     "electrons": [2],
     "isotopes": []
   },
@@ -80,8 +80,8 @@ module.exports = {
     "period": 2,
     "group": 1,
     "type": "alkali_metal",
-    "melting_point": 100,
-    "boiling_point": 200,
+    "melting_point": 453.69,
+    "boiling_point": 1615,
     "electrons": [2, 1],
     "isotopes": []
   },
@@ -97,8 +97,8 @@ module.exports = {
     "period": 2,
     "group": 2,
     "type": "alkaline_earth",
-    "melting_point": 100,
-    "boiling_point": 200,
+    "melting_point": 1560,
+    "boiling_point": 2743,
     "electrons": [2, 2],
     "isotopes": []
   },
