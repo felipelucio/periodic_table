@@ -50,7 +50,7 @@ export default class ElementBox extends React.Component {
         onClick={this.props.showElementInfo}
       >
         <span className={`basic ${this._showFlags('basic')}`}>
-          <span className="name">{ elem.getName(this.props.curr_lang) }</span>
+          <span className="name">{ elem.getName(this.props.lang) }</span>
           <span className={`symbol ${state}`}>{ elem.symbol }</span>
           <span className="atomic_number">{ elem.atomic_number }</span>
           <span className="weight small">{ elem.getWeight(3) }</span>

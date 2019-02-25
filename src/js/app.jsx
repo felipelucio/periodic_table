@@ -28,6 +28,7 @@ export default class App extends React.Component {
         state: false
       },
       temperature: 273,
+      temperature_scale: 'kelvin'
     };
     
     this.toggleHighlight = this.toggleHighlight.bind(this);
@@ -42,7 +43,7 @@ export default class App extends React.Component {
 
   changeTemperature(e) {
     e.preventDefault();
-    let temp = e.target.value;
+    let temp = e.target.value * 1;
     
     this.setState({temperature: temp});
   }
@@ -316,6 +317,7 @@ export default class App extends React.Component {
           curr_lang={this.state.curr_lang}
           show_flags={this.state.show_flags}
           temperature={this.state.temperature}
+          temperature_scale={this.state.temperature_scale}
           changeTemperature={this.changeTemperature}
         />
         <div className="content">

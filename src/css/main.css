@@ -19,6 +19,17 @@ body {
 	width: 100%;
 }
 
+nav .temperature_scale {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	background-color: #DDD;
+	border-bottom-color: #DDD;
+}
+
+nav .temperature_input {
+	width: 5rem !important;
+}
+
 .content {
 	position: relative;
 	margin-top: 60px;

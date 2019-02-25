@@ -1,4 +1,4 @@
 .cache
 dist
 node_modules
-*.sublime-workspace
+{*.}.sublime-workspace
