@@ -135,6 +135,7 @@ nav .temperature_input {
 
 .table .disabled {
 	background: #CCC;
+	color: #666;
 }
 
 .lanthanoids, .actinoids { display: block; }

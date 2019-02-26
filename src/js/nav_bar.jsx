@@ -1,5 +1,6 @@
 import React from 'react';
 import {convert_temperature} from './utils';
+import {strings} from './l10n';
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -10,6 +11,7 @@ export default class NavBar extends React.Component {
       shown_temperature: props.temperature
     }
 
+    this.strings = strings;
     this.changeTemperature = this.changeTemperature.bind(this);
   }
 
@@ -33,6 +35,10 @@ export default class NavBar extends React.Component {
 
   render() {
     let flags = this.props.show_flags;
+    
+    this.strings.setLanguage(this.props.curr_lang);
+    let strings = this.strings;
+
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,22 +50,22 @@ export default class NavBar extends React.Component {
             <li className="nav-item">
               <a className={`nav-link ${flags.basic ? 'active' : ''}`} 
                 href="#basic" onClick={this.props.showHandler}
-              >Basic</a>
+              >{strings.getString('basic')}</a>
             </li>
             <li className="nav-item">
               <a className={`nav-link ${flags.electronic ? 'active' : ''}`} 
                 href="#electronic" onClick={this.props.showHandler}
-              >Electronic</a>
+              >{strings.getString('electronic')}</a>
             </li>
             <li className="nav-item">
               <a className={`nav-link ${flags.isotopes ? 'active' : ''}`} 
                 href="#isotopes" onClick={this.props.showHandler}
-              >Isotopes</a>
+              >{strings.getString('isotopes')}</a>
             </li>
             <li className="nav-item">
               <a className={`nav-link ${flags.radius ? 'active' : ''}`} 
                 href="#radius" onClick={this.props.showHandler}
-              >Radius</a>
+              >{strings.getString('radius')}</a>
             </li>
           </ul>
           <form className="ml-auto form-inline" onSubmit={(e) => {e.preventDefault(); return false;}}>

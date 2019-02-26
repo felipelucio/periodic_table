@@ -21,7 +21,11 @@
 .element .symbol.solid { color: #000; }
 .element .symbol.liquid { color: #00F; }
 .element .symbol.gas { color: #F00; }
-.element .symbol.unknown { color: #666; }
+.element .symbol.unknown { color: #444; }
+.disabled .symbol
+{ 
+	color: #666 !important; 
+}
 
 .element.lanthanoids .symbol,
 .element.actinoids .symbol { 
