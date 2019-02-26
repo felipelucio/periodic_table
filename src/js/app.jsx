@@ -6,6 +6,7 @@ import ElementBox from './elementbox';
 import ElementPage from './element_page';
 import NavBar from './nav_bar';
 import data from './data';
+import { convert_temperature } from './utils';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -27,8 +28,7 @@ export default class App extends React.Component {
         radius: false,
         state: false
       },
-      temperature: 273,
-      temperature_scale: 'kelvin'
+      temperature: 298
     };
     
     this.toggleHighlight = this.toggleHighlight.bind(this);
@@ -38,13 +38,10 @@ export default class App extends React.Component {
     this.showHandler = this.showHandler.bind(this);
     this.showElementInfo = this.showElementInfo.bind(this);
     this.closeElementInfo = this.closeElementInfo.bind(this);
-    this.changeTemperature = this.changeTemperature.bind(this);
+    this.setTemperature = this.setTemperature.bind(this);
   }
 
-  changeTemperature(e) {
-    e.preventDefault();
-    let temp = e.target.value * 1;
-    
+  setTemperature(temp) {
     this.setState({temperature: temp});
   }
 
@@ -318,7 +315,7 @@ export default class App extends React.Component {
           show_flags={this.state.show_flags}
           temperature={this.state.temperature}
           temperature_scale={this.state.temperature_scale}
-          changeTemperature={this.changeTemperature}
+          setTemperature={this.setTemperature}
         />
         <div className="content">
           <ElementPage curr_lang={this.state.curr_lang} 

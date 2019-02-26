@@ -1,11 +1,35 @@
 import React from 'react';
+import {convert_temperature} from './utils';
 
 export default class NavBar extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      temperature_scale: 'kelvin',
+      shown_temperature: props.temperature
+    }
+
+    this.changeTemperature = this.changeTemperature.bind(this);
   }
 
-  
+  changeTemperature(e) {
+    e.preventDefault();
+    let form = e.target.form;
+    let temp = form.temperature.value * 1;
+    let new_scale = form.temperature_scale.value;
+
+    this.setState(function(state, props) {
+      let shown_temp = convert_temperature(temp, state.temperature_scale, new_scale);
+      let kelvin_temp = convert_temperature(shown_temp, new_scale, 'kelvin');
+      this.props.setTemperature(kelvin_temp);
+
+      return {
+        temperature_scale: new_scale,
+        shown_temperature: shown_temp
+      }
+    });
+  }
 
   render() {
     let flags = this.props.show_flags;
@@ -40,14 +64,16 @@ export default class NavBar extends React.Component {
           </ul>
           <form className="ml-auto form-inline" onSubmit={(e) => {e.preventDefault(); return false;}}>
             <span className="input-group mr-sm-2 mb-xs-2 mb-md-0">
-              <input type="number" className="form-control temperature_input"
-                value={this.props.temperature} onChange={this.props.changeTemperature} />
+              <input type="number" name="temperature" className="form-control temperature_input"
+                value={this.state.shown_temperature} onChange={this.changeTemperature} />
 
               <span className="input-group-btn">
-                <select className="temperature_scale btn" defaultValue={this.props.temperature_scale}>
+                <select name="temperature_scale" className="temperature_scale btn" 
+                  defaultValue={this.props.temperature_scale} onChange={this.changeTemperature}
+                >
                   <option value="kelvin">K</option>
                   <option value="celsius">°C</option>
-                  <option value="farenheit">°F</option>
+                  <option value="fahrenheit">°F</option>
                 </select>
               </span>
             </span>
