@@ -4,6 +4,7 @@ import update from 'immutability-helper';
 import Element from './element';
 import ElementBox from './elementbox';
 import ElementPage from './element_page';
+import InfoArea from './info_area';
 import NavBar from './nav_bar';
 import data from './data';
 import { convert_temperature } from './utils';
@@ -28,7 +29,8 @@ export default class App extends React.Component {
         radius: false,
         state: false
       },
-      temperature: 298
+      temperature: 298,
+      show_page: false
     };
     
     this.toggleHighlight = this.toggleHighlight.bind(this);
@@ -36,8 +38,8 @@ export default class App extends React.Component {
     this.toggleHighlightGroup = this.toggleHighlightGroup.bind(this);
     this.setLang = this.setLang.bind(this);
     this.showHandler = this.showHandler.bind(this);
-    this.showElementInfo = this.showElementInfo.bind(this);
-    this.closeElementInfo = this.closeElementInfo.bind(this);
+    this.showElementPage = this.showElementPage.bind(this);
+    this.closeElementPage = this.closeElementPage.bind(this);
     this.setTemperature = this.setTemperature.bind(this);
   }
 
@@ -67,18 +69,31 @@ export default class App extends React.Component {
     let flag = link.substr(1);
     
     this.activateShowFlag(flag);
-    this.closeElementInfo(e);
+    this.closeElementPage(e);
   }
 
-  showElementInfo(e) {
+  showElementPage(e) {
     e.preventDefault();
+    e.persist();
+
     let id = e.currentTarget.getAttribute('data-key');
     this.setState({curr_elem: this.state.elements[id]});
+    
+    let that = this;
+    let target = e.currentTarget;
+    let hold = window.setTimeout(function() {
+      that.setState({show_page: true});
+    }, 500);
+
+    target.addEventListener('pointerup', function _pointer() {
+      window.clearTimeout(hold);
+      target.removeEventListener('pointerup', _pointer);
+    })
   }
 
-  closeElementInfo(e) {
+  closeElementPage(e) {
     e.preventDefault();
-    this.setState({curr_elem: null});
+    this.setState({show_page: false});
   }
 
   _getDefaultLang() {
@@ -280,7 +295,7 @@ export default class App extends React.Component {
           showFlags={this.state.show_flags}
           onPointerEnter={this.toggleHighlight}
           onPointerLeave={this.toggleHighlight}
-          showElementInfo={this.showElementInfo}
+          showElementPage={this.showElementPage}
         />
       );
     }
@@ -320,9 +335,15 @@ export default class App extends React.Component {
         <div className="content">
           <ElementPage curr_lang={this.state.curr_lang} 
             element={this.state.curr_elem}
-            closeElemPage={this.closeElementInfo}
+            show_page={this.state.show_page}
+            closeElemPage={this.closeElementPage}
           />
           <ul className="table">
+            <InfoArea element={this.state.curr_elem} 
+              lang={this.state.curr_lang}
+              curr_temp={this.state.temperature}
+              showFlags={this.state.show_flags}
+            />
             {groups}
             {periods}
             {boxes}

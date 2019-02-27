@@ -47,7 +47,7 @@ export default class ElementBox extends React.Component {
         data-type={elem.type}
         onPointerEnter={(e) => this.onPointerEnter(e)}
         onPointerLeave={(e) => this.onPointerLeave(e)}
-        onClick={this.props.showElementInfo}
+        onPointerDown={this.props.showElementPage}
       >
         <span className={`basic ${this._showFlags('basic')}`}>
           <span className="name">{ elem.getName(this.props.lang) }</span>
