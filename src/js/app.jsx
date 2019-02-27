@@ -16,6 +16,12 @@ export default class App extends React.Component {
     let elements = {};
     for(let id in data) {
       elements[id] = new Element(data[id]);
+      for(let iso in data[id].isotopes) {
+        let isotope = data[id].isotopes[iso];
+        isotope.group = data[id].group;
+        isotope.period = data[id].period;
+        elements[id].isotopes[iso] = new Element(isotope);
+      }
     }
 
     this.state = { 
@@ -77,7 +83,7 @@ export default class App extends React.Component {
     e.persist();
 
     let id = e.currentTarget.getAttribute('data-key');
-    this.setState({curr_elem: this.state.elements[id]});
+    this.setState({curr_elem: this._getElement(id)});
     
     let that = this;
     let target = e.currentTarget;
@@ -104,6 +110,17 @@ export default class App extends React.Component {
     this.setState(function(state) { return { curr_lang: lang } });
   }
 
+  _getElement(id) {
+    let regexp = /([a-zA-Z]+)(\[(.+?)\])?/;
+    let matches = regexp.exec(id);
+    
+    if(matches[1] && matches[3]) {
+      return this.state.elements[matches[1]].isotopes[matches[3]];
+    }
+
+    return this.state.elements[matches[1]];
+  }
+
   toggleHighlight(id, type, event) {
     let elems = [];
     
@@ -120,8 +137,8 @@ export default class App extends React.Component {
 
     if (elems.length) this._toggleElementsClass(elems, 'disabled');
     
-    let gref = 'g' + this.state.elements[id].group;
-    let pref = 'p' + this.state.elements[id].period;
+    let gref = 'g' + this._getElement(id).group;
+    let pref = 'p' + this._getElement(id).period;
     let group = this.refs[gref];
     let period = this.refs[pref];
     if (event.type == 'pointerenter') {

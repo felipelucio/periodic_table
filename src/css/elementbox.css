@@ -1,5 +1,10 @@
 .element {
 	overflow: hidden;
+	position: relative;
+}
+
+.element.active {
+	overflow: visible;
 }
 
 .element > span {
@@ -10,6 +15,59 @@
 }
 
 .element span.show { display: grid; }
+
+.element.active.basic {
+	height: 5.5rem;
+	width: 5.5rem;
+	left: -1rem;
+	top: -1rem;
+	position: relative;
+	z-index: 10;
+}
+
+.element .isotope {
+	position: absolute;
+	display: none;
+	width: 3.5rem;
+	height: 3.5rem;
+	border: 1px solid #000;
+	background: #FFF;
+}
+.element.active .isotope {
+	display: block;
+}
+
+.element .isotope.order-0 {
+	z-index: 20;
+	left: 0;
+	top: 0;
+}
+.element .isotope.order-1 {
+	z-index: 21;
+	left: 1rem;
+	top: 1rem;
+}
+.element .isotope.order-2 {
+	z-index: 22;
+	left: 2rem;
+	top: 2rem;
+}
+.element .isotope.order-3 {
+	z-index: 23;
+	left: 3rem;
+	top: 3rem;
+}
+.element .isotope.order-4 {
+	z-index: 24;
+	left: 4rem;
+	top: 4rem;
+}
+.element .isotope.order-5 {
+	z-index: 25;
+	left: 5rem;
+	top: 5rem;
+}
+
 
 .element .symbol { 
 	grid-row: 2;

@@ -21,7 +21,7 @@ module.exports = {
           "en": "Protium"
         },
         "neutrons": 1,
-        "weight": { "conventional": 1.00782503207 },
+        "weight": { "standard": 1.00782503207 },
         "abundance": 99.9885,
         "decays": "stable"
       },
@@ -31,7 +31,7 @@ module.exports = {
           "en": "Deuterium"
         },
         "neutrons": 2,
-        "weight": { "conventional": 2.01410177785 },
+        "weight": { "standard": 2.01410177785 },
         "abundance": 0.0115,
         "decays": "stable"
       },
@@ -40,7 +40,7 @@ module.exports = {
         "name": {
           "en": "Tritium",
           "neutrons": 3,
-          "weight": { "conventional": 3.01604927767 },
+          "weight": { "standard": 3.01604927767 },
           "abundance": 0,
           "decays": [{
             "mode": "beta_emission",

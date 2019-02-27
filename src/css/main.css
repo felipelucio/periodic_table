@@ -126,12 +126,7 @@ nav .temperature_input {
 }
 
 .table > li.active {
-	height: 5.5rem;
-	width: 5.5rem;
-	left: -1rem;
-	top: -1rem;
-	position: relative;
-	z-index: 10;
+	
 }
 
 .table .disabled {

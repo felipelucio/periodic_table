@@ -32,14 +32,36 @@ export default class ElementBox extends React.Component {
   }
 
   render() {
+    let _lang = this.props.lang;
+    let show_flags = this.props.showFlags;
     let classes = [
       this.props.elem.id,
       this.props.elem.type,
+      Object.keys(show_flags).filter(function(e) {
+        if(show_flags[e]) return true;
+      }),
       'element'
     ].concat(this.props.elem.classList).join(' ');
    
-   let elem = this.props.elem;
-   let state = elem.stateAtTemp(this.props.curr_temp);
+    let elem = this.props.elem;
+    let state = elem.stateAtTemp(this.props.curr_temp);
+
+    let isotopes = [];
+    let count = 0;
+    for(let id in elem.isotopes) {
+      let iso = elem.isotopes[id];
+      isotopes.push(
+        <span className={`isotope order-${count}`} key={id}
+          data-key={`${elem.id}[${id}]`}
+          onPointerEnter={(e) => this.onPointerEnter(e)}
+          onPointerLeave={(e) => this.onPointerLeave(e)}
+          onPointerDown={this.props.showElementPage}
+        >
+          {iso.getName(_lang)}
+        </span>
+      );
+      count++;
+    }
    
     return (
       <li className={classes} 
@@ -50,7 +72,7 @@ export default class ElementBox extends React.Component {
         onPointerDown={this.props.showElementPage}
       >
         <span className={`basic ${this._showFlags('basic')}`}>
-          <span className="name">{ elem.getName(this.props.lang) }</span>
+          <span className="name">{ elem.getName(_lang) }</span>
           <span className={`symbol ${state}`}>{ elem.symbol }</span>
           <span className="atomic_number">{ elem.atomic_number }</span>
           <span className="weight small">{ elem.getWeight(3) }</span>
@@ -75,15 +97,14 @@ export default class ElementBox extends React.Component {
           <span className="symbol">{ elem.symbol }</span>
           <span className="atomic_number">{ elem.atomic_number }</span>
           { (elem.id == 'lanthanoids' || elem.id == 'actinoids') && 
-            <span className="name">{ elem.getName(this.props.curr_lang) }</span>
+            <span className="name">{ elem.getName(_lang) }</span>
           }
         </span>
 
         <span className={`isotopes ${this._showFlags('isotopes')}`}>
-          <span className="symbol">{ elem.symbol }</span>
-          <span className="atomic_number">{ elem.atomic_number }</span>
+          {isotopes}
           { (elem.id == 'lanthanoids' || elem.id == 'actinoids') && 
-            <span className="name">{ elem.getName(this.props.curr_lang) }</span>
+            <span className="name">{ elem.getName(_lang) }</span>
           }
         </span>
       </li>
