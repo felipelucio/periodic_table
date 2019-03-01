@@ -104,6 +104,7 @@
 	grid-column: 1 / span 3; 
 	justify-self: center;
 	font-size: 0.6rem; 
+	font-weight: bold;
 }
 
 .element .weight {

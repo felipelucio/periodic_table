@@ -39,51 +39,8 @@ nav .temperature_input {
 	overflow: auto;
 }
 
-.elementpage {
-	box-sizing: border-box;
-	position: fixed;
-	left: 0;
-	top: 60px;
-	width: 100%;
-	min-height: calc(100% + 60px);
-	background: #FFF;
-	display: none;
-	padding: 1rem;
-}
 
-.elementpage.show {
-	display: block;
-	z-index: 20;
-}
-
-
-.lanthanoids, .actinoids { display: none; }
-
-.nonmetal { background: #22FF22; } 
-.alkali_metal { background: #FFCC33; } 
-.alkaline_earth { background: #FFFF44; } 
-.transition_metal { background: #DDBBBB; } 
-.metalloid { background: #77DD88; } 
-.post_transitional { background: #99DDCC; } 
-.noble_gas { background: #77CCFF; } 
-.lanthanoid { background: #FFBB99; } 
-.actinoid { background: #EEBBDD; } 
-.unknown_type { background: #FFF; }
-
-.hide { display: none; }
-
-
-.nonmetal.active { background: radial-gradient(#22FF22, rgba(255,255,255,1) 120%); }
-.alkali_metal.active { background: radial-gradient(#FFCC33, rgba(255,255,255,1) 120%); }
-.alkaline_earth.active { background: radial-gradient(#FFFF44, rgba(255,255,255,1) 120%); }
-.transition_metal.active { background: radial-gradient(#DDBBBB, rgba(255,255,255,1) 120%); }
-.metalloid.active { background: radial-gradient(#77DD88, rgba(255,255,255,1) 120%); }
-.post_transitional.active { background: radial-gradient(#99DDCC, rgba(255,255,255,1) 120%); }
-.noble_gas.active { background: radial-gradient(#77CCFF, rgba(255,255,255,1) 120%); }
-.lanthanoid.active { background: radial-gradient(#FFBB99, rgba(255,255,255,1) 120%); }
-.actinoid.active { background: radial-gradient(#EEBBDD, rgba(255,255,255,1) 120%); }
-
-
+/************* MAIN TABLE RULES ******************/
 #app .table {
 	width: auto;
 	text-align: left;
@@ -125,21 +82,11 @@ nav .temperature_input {
 	cursor: pointer;
 }
 
-.table > li.active {
-	
-}
-
 .table .disabled {
 	background: #CCC;
 	color: #666;
 }
 
-.table > li.info_area {
-	grid-area: 2 / 4 / 5 / 14;
-	height: auto;
-	width: auto;
-	border: none;
-}
 .lanthanoids, .actinoids { display: block; }
 
 .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9,.g10,.g11,
@@ -220,6 +167,118 @@ nav .temperature_input {
 .Am { grid-area: Am; } .Cm { grid-area: Cm; } .Bk { grid-area: Bk; }  
 .Cf { grid-area: Cf; } .Es { grid-area: Es; } .Fm { grid-area: Fm; }  
 .Md { grid-area: Md; } .No { grid-area: No; } .Lr { grid-area: Lr; }
+
+
+/***************** INFO BOX *************/
+.table > li.info_area {
+	grid-area: 2 / 4 / 5 / 14;
+	width: auto;
+	height: auto;
+	
+	border: none;
+	font-size: 0.8rem;
+}
+
+.info_area .basic {
+	display: grid;
+	margin: 0;
+	height: 100%;
+	grid-template-columns: 30% 1fr;
+	grid-template-rows: 100%;
+}
+
+.info_area .elementbox {
+	grid-column: 1;
+	display: grid;
+	position: relative;
+	height: 100%;
+	border: 1px solid #666;
+	border-radius: 2px;
+	
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+}
+
+.info_area .info {
+	grid-column: 2;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+}
+
+.info_area .symbol {
+	grid-row: 2;
+	grid-column: 2;
+	justify-self: center;
+	font-weight: bold;
+	font-size: 2em;
+
+}
+.info_area .name {
+	grid-row: 3;
+	grid-column: 2;
+	justify-self: center;
+}
+.info_area .atomic_number {
+	grid-row: 1;
+	grid-column: 1;
+	padding-left: 0.6rem;
+	padding-top: 0.5rem;
+}
+.info_area .weight {
+	grid-row: 4;
+	grid-column: 2;
+	justify-self: center;
+	text-align: center;
+	white-space: nowrap;
+}
+
+
+
+/*********** ELEMENT PAGE ***************/
+.elementpage {
+	box-sizing: border-box;
+	position: fixed;
+	left: 0;
+	top: 60px;
+	width: 100%;
+	min-height: calc(100% + 60px);
+	background: #FFF;
+	display: none;
+	padding: 1rem;
+}
+
+.elementpage.show {
+	display: block;
+	z-index: 20;
+}
+
+
+
+/************** GENERIC RULES ***************/
+.nonmetal { background: #22FF22; } 
+.alkali_metal { background: #FFCC33; } 
+.alkaline_earth { background: #FFFF44; } 
+.transition_metal { background: #DDBBBB; } 
+.metalloid { background: #77DD88; } 
+.post_transitional { background: #99DDCC; } 
+.noble_gas { background: #77CCFF; } 
+.lanthanoid { background: #FFBB99; } 
+.actinoid { background: #EEBBDD; } 
+.unknown_type { background: #FFF; }
+
+.hide { display: none; }
+
+
+.nonmetal.active { background: radial-gradient(#22FF22, rgba(255,255,255,1) 120%); }
+.alkali_metal.active { background: radial-gradient(#FFCC33, rgba(255,255,255,1) 120%); }
+.alkaline_earth.active { background: radial-gradient(#FFFF44, rgba(255,255,255,1) 120%); }
+.transition_metal.active { background: radial-gradient(#DDBBBB, rgba(255,255,255,1) 120%); }
+.metalloid.active { background: radial-gradient(#77DD88, rgba(255,255,255,1) 120%); }
+.post_transitional.active { background: radial-gradient(#99DDCC, rgba(255,255,255,1) 120%); }
+.noble_gas.active { background: radial-gradient(#77CCFF, rgba(255,255,255,1) 120%); }
+.lanthanoid.active { background: radial-gradient(#FFBB99, rgba(255,255,255,1) 120%); }
+.actinoid.active { background: radial-gradient(#EEBBDD, rgba(255,255,255,1) 120%); }
 
 @import "./elementbox.css"
 
