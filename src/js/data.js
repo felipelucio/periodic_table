@@ -23,7 +23,7 @@ module.exports = {
         "neutrons": 1,
         "weight": { "standard": 1.00782503207 },
         "abundance": 99.9885,
-        "decays": "stable"
+        "decay_mode": "stable" 
       },
       {
         "id": "hydrogen-2",
@@ -33,21 +33,19 @@ module.exports = {
         "neutrons": 2,
         "weight": { "standard": 2.01410177785 },
         "abundance": 0.0115,
-        "decays": "stable"
+        "decay_mode": "stable"
       },
       {
         "id": "hydrogen-3",
         "name": {
           "en": "Tritium",
-          "neutrons": 3,
-          "weight": { "standard": 3.01604927767 },
-          "abundance": 0,
-          "decays": [{
-            "mode": "beta_emission",
-            "half_life": "12.32 y",
-            "to": "helium-3"
-          }]
-        }
+        },
+        "neutrons": 3,
+        "weight": { "standard": 3.01604927767 },
+        "abundance": 0,
+        "decay_mode": "beta_minus",
+        "half_life": "12.32 y",
+        "decay_to": "helium-3"
       }
     ]
   },

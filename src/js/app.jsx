@@ -45,6 +45,7 @@ export default class App extends React.Component {
     this.setLang = this.setLang.bind(this);
     this.showHandler = this.showHandler.bind(this);
     this.showElementPage = this.showElementPage.bind(this);
+    this.setActiveElement = this.setActiveElement.bind(this);
     this.closeElementPage = this.closeElementPage.bind(this);
     this.setTemperature = this.setTemperature.bind(this);
   }
@@ -78,23 +79,12 @@ export default class App extends React.Component {
     this.closeElementPage(e);
   }
 
-  showElementPage(e) {
-    e.preventDefault();
-    e.persist();
-
-    let id = e.currentTarget.getAttribute('data-key');
+  setActiveElement(id) {
     this.setState({curr_elem: this._getElement(id)});
-    
-    let that = this;
-    let target = e.currentTarget;
-    let hold = window.setTimeout(function() {
-      that.setState({show_page: true});
-    }, 500);
+  }
 
-    target.addEventListener('pointerup', function _pointer() {
-      window.clearTimeout(hold);
-      target.removeEventListener('pointerup', _pointer);
-    })
+  showElementPage() {  
+    this.setState({show_page: true});
   }
 
   closeElementPage(e) {
@@ -313,6 +303,7 @@ export default class App extends React.Component {
           onPointerEnter={this.toggleHighlight}
           onPointerLeave={this.toggleHighlight}
           showElementPage={this.showElementPage}
+          setActive={this.setActiveElement}
         />
       );
     }

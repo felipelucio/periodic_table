@@ -6,10 +6,22 @@ export default class ElementBox extends React.Component {
 
     this.onPointerEnter = this.onPointerEnter.bind(this);
     this.onPointerLeave = this.onPointerLeave.bind(this);
+    this.onPointerDown = this.onPointerDown.bind(this);
+    this.onPointerEnterIsotope = this.onPointerEnterIsotope.bind(this);
+  }
+
+  onPointerEnterIsotope(e) {
+    let el = e.currentTarget;
+    el.classList.add('selected');
+  }
+
+  onPointerLeaveIsotope(e) {
+    let el = e.currentTarget;
+    el.classList.remove('selected'); 
   }
 
   onPointerEnter(e) {
-    if (this.props.onPointerEnter) {
+    if (this.props.onPointerLeave) {
       let id = e.currentTarget.getAttribute('data-key');
       let type = e.currentTarget.getAttribute('data-type');
       this.props.onPointerEnter(id, type, e);
@@ -22,6 +34,30 @@ export default class ElementBox extends React.Component {
       let type = e.currentTarget.getAttribute('data-type');
       this.props.onPointerLeave(id, type, e);
     } 
+  }
+
+  onPointerDown(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    e.persist();
+
+    let id = e.currentTarget.getAttribute('data-key');
+    this.props.setActive(id);
+    
+    let that = this;
+    let target = e.currentTarget;
+    let hold = window.setTimeout(function() {
+      that.props.showElementPage();
+    }, 500);
+
+    target.addEventListener('pointerup', function _pointer() {
+      window.clearTimeout(hold);
+      target.removeEventListener('pointerup', _pointer);
+    });
+    target.addEventListener('pointerleave', function _pointer() {
+      window.clearTimeout(hold);
+      target.removeEventListener('pointerleave', _pointer);
+    })
   }
 
   _showFlags(section) {
@@ -50,12 +86,13 @@ export default class ElementBox extends React.Component {
     let count = 0;
     for(let id in elem.isotopes) {
       let iso = elem.isotopes[id];
+
       isotopes.push(
-        <span className={`isotope order-${count}`} key={id}
+        <span className={`isotope order_${count} ${iso.decay_mode}`} key={id}
           data-key={`${elem.id}[${id}]`}
-          onPointerEnter={(e) => this.onPointerEnter(e)}
-          onPointerLeave={(e) => this.onPointerLeave(e)}
-          onPointerDown={this.props.showElementPage}
+          onPointerEnter={this.onPointerEnterIsotope}
+          onPointerLeave={this.onPointerLeaveIsotope}
+          onPointerDown={this.onPointerDown}
         >
           {iso.getName(_lang)}
         </span>
@@ -67,9 +104,9 @@ export default class ElementBox extends React.Component {
       <li className={classes} 
         data-key={elem.id}
         data-type={elem.type}
-        onPointerEnter={(e) => this.onPointerEnter(e)}
-        onPointerLeave={(e) => this.onPointerLeave(e)}
-        onPointerDown={this.props.showElementPage}
+        onPointerEnter={this.onPointerEnter}
+        onPointerLeave={this.onPointerLeave}
+        onPointerDown={this.onPointerDown}
       >
         <span className={`basic ${this._showFlags('basic')}`}>
           <span className="name">{ elem.getName(_lang) }</span>

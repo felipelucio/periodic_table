@@ -33,39 +33,50 @@
 	border: 1px solid #000;
 	background: #FFF;
 }
+
 .element.active .isotope {
 	display: block;
 }
 
-.element .isotope.order-0 {
+.element .isotope.stable { border: 3px solid #000; }
+.element .isotope.alpha { border: 3px solid #900; }
+.element .isotope.beta_minus { border: 3px solid #CC0; };
+.element .isotope.beta_plus { border: 3px solid #009; }
+.element .isotope.k_plus { border: 3px solid #909; }
+.element .isotope.spontaneous { border: 3px dashed #000; }
+
+.element .isotope.order_0 {
 	z-index: 20;
-	left: 0;
-	top: 0;
+	left: 1.5rem;
+	top: 1.5rem;
 }
-.element .isotope.order-1 {
+.element .isotope.order_1 {
 	z-index: 21;
-	left: 1rem;
-	top: 1rem;
-}
-.element .isotope.order-2 {
-	z-index: 22;
-	left: 2rem;
-	top: 2rem;
-}
-.element .isotope.order-3 {
-	z-index: 23;
 	left: 3rem;
 	top: 3rem;
 }
-.element .isotope.order-4 {
-	z-index: 24;
-	left: 4rem;
-	top: 4rem;
+.element .isotope.order_2 {
+	z-index: 22;
+	left: 4.5rem;
+	top: 4.5rem;
 }
-.element .isotope.order-5 {
+.element .isotope.order_3 {
+	z-index: 23;
+	left: 6rem;
+	top: 6rem;
+}
+.element .isotope.order_4 {
+	z-index: 24;
+	left: 7.5rem;
+	top: 7.5rem;
+}
+.element .isotope.order_5 {
 	z-index: 25;
-	left: 5rem;
-	top: 5rem;
+	left: 9rem;
+	top: 9rem;
+}
+.element .isotope.selected {
+	z-index: 30;
 }
 
 

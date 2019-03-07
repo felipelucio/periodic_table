@@ -523,7 +523,7 @@
 			"file": "src/css/main.css",
 			"settings":
 			{
-				"buffer_size": 8709,
+				"buffer_size": 8692,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -1121,7 +1121,7 @@
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -1289,15 +1289,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8709,
+						"buffer_size": 8692,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7111,
-								7111
+								6220,
+								6220
 							]
 						],
 						"settings":
@@ -1308,7 +1308,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3618.0,
+						"translation.y": 2970.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
