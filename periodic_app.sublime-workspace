@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"set",
+				"setActiveElement"
+			],
+			[
+				"onPOinte",
+				"onPointerLeaveIsotope"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"curr",
+				"currentTarget"
+			],
+			[
 				"grid",
 				"grid-template-columns\tproperty"
 			],
@@ -14,10 +30,6 @@
 			[
 				"tema",
 				"grid-template-columns\tproperty"
-			],
-			[
-				"class",
-				"className"
 			],
 			[
 				"iso",
@@ -496,24 +508,12 @@
 				"currHref"
 			],
 			[
-				"curr",
-				"currLink"
-			],
-			[
 				"tex-al",
 				"text-align"
 			],
 			[
 				"paddi",
 				"padding-left"
-			],
-			[
-				"t",
-				"thead\tTag"
-			],
-			[
-				"intere",
-				"interestY"
 			]
 		]
 	},
@@ -532,7 +532,7 @@
 			"file": "src/css/elementbox.css",
 			"settings":
 			{
-				"buffer_size": 2344,
+				"buffer_size": 2740,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -550,7 +550,7 @@
 			"file": "src/js/elementbox.jsx",
 			"settings":
 			{
-				"buffer_size": 3671,
+				"buffer_size": 4637,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -576,7 +576,7 @@
 			"file": "src/js/app.jsx",
 			"settings":
 			{
-				"buffer_size": 10370,
+				"buffer_size": 10128,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -604,7 +604,7 @@
 			"file": "src/js/data.js",
 			"settings":
 			{
-				"buffer_size": 44025,
+				"buffer_size": 43990,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -1121,7 +1121,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -1135,6 +1135,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"2px",
+			"!important",
+			"order-",
+			"order-0",
+			"showElementPage",
+			"target",
+			"this.props.showElementPage",
 			"p",
 			"wrap",
 			"p",
@@ -1255,14 +1262,7 @@
 			".data",
 			"{data",
 			"elem=",
-			"Elem",
-			"elem",
-			"Elem",
-			"elem",
-			"Elem",
-			"elem",
-			"Elem",
-			"elem"
+			"Elem"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1280,7 +1280,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -1296,8 +1296,8 @@
 						"selection":
 						[
 							[
-								6220,
-								6220
+								6221,
+								6221
 							]
 						],
 						"settings":
@@ -1311,7 +1311,7 @@
 						"translation.y": 2970.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1320,15 +1320,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2344,
+						"buffer_size": 2740,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1813,
-								1793
+								732,
+								732
 							]
 						],
 						"settings":
@@ -1339,10 +1339,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1718.0,
+						"translation.y": 548.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1374,7 +1374,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1383,15 +1383,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3671,
+						"buffer_size": 4637,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2445,
-								2601
+								2456,
+								2456
 							]
 						],
 						"settings":
@@ -1403,10 +1403,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1188.0,
+						"translation.y": 1404.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1435,10 +1435,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1454,20 +1454,8 @@
 						"selection":
 						[
 							[
-								874,
-								874
-							],
-							[
-								939,
-								939
-							],
-							[
-								975,
-								975
-							],
-							[
-								1004,
-								1004
+								1025,
+								1025
 							]
 						],
 						"settings":
@@ -1479,10 +1467,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 54.0,
+						"translation.y": 18.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1491,15 +1479,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10370,
+						"buffer_size": 10128,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2873,
-								2873
+								2291,
+								2291
 							]
 						],
 						"settings":
@@ -1511,10 +1499,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5911.0,
+						"translation.y": 1112.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1547,7 +1535,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1579,7 +1567,7 @@
 						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1588,15 +1576,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 44025,
+						"buffer_size": 43990,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								729,
-								729
+								944,
+								944
 							]
 						],
 						"settings":
@@ -1608,10 +1596,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 108.0,
+						"translation.y": 378.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]

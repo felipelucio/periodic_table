@@ -64,7 +64,28 @@ module.exports = {
     "melting_point": 0,
     "boiling_point": 4.22,
     "electrons": [2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "helium-3",
+        "name": {
+          "en": "Helium-3",
+        },
+        "neutrons": 3,
+        "weight": { "standard": 3.01602931914 },
+        "abundance": 0.000137,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "helium-4",
+        "name": {
+          "en": "Helium-4",
+        },
+        "neutrons": 4,
+        "weight": { "standard": 4.00260325415 },
+        "abundance": 99.9999,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "Li": {
     "id": "Li",
@@ -81,7 +102,28 @@ module.exports = {
     "melting_point": 453.69,
     "boiling_point": 1615,
     "electrons": [2, 1],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "lithium-6",
+        "name": {
+          "en": "Lithium-6",
+        },
+        "neutrons": 6,
+        "weight": { "standard": 6.015122794 },
+        "abundance": 7.59,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "lithium-7",
+        "name": {
+          "en": "Lithium-7",
+        },
+        "neutrons": 7,
+        "weight": { "standard": 7.016004548 },
+        "abundance": 92.41,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "Be": {
     "id": "Be",
@@ -98,7 +140,42 @@ module.exports = {
     "melting_point": 1560,
     "boiling_point": 2743,
     "electrons": [2, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "beryllium-7",
+        "name": {
+          "en": "Beryllium-7",
+        },
+        "neutrons": 7,
+        "weight": { "standard": 7.016929828 },
+        "abundance": 0,
+        "decay_mode": "k_plus",
+        "half_life": "53.22 d",
+        "decay_to": "lithium-7"
+      },
+      {
+        "id": "beryllium-9",
+        "name": {
+          "en": "Beryllium-9",
+        },
+        "neutrons": 9,
+        "weight": { "standard": 9.012182201 },
+        "abundance": 100,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "beryllium-10",
+        "name": {
+          "en": "Beryllium-10",
+        },
+        "neutrons": 10,
+        "weight": { "standard": 10.013533818 },
+        "abundance": 0,
+        "decay_mode": "beta_minus",
+        "half_life": "1.51e6 y",
+        "decay_to": "boron-10"
+      }
+    ]
   },
   "B": {
     "id": "B",
@@ -115,7 +192,28 @@ module.exports = {
     "melting_point": 2345,
     "boiling_point": 4273,
     "electrons": [2, 3],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "boron-10",
+        "name": {
+          "en": "Boron-10",
+        },
+        "neutrons": 10,
+        "weight": { "standard": 10.012936992 },
+        "abundance": 19.9,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "boron-11",
+        "name": {
+          "en": "Boron-11",
+        },
+        "neutrons": 11,
+        "weight": { "standard": 11.009305406 },
+        "abundance": 80.1,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "C": {
     "id": "C",
@@ -132,7 +230,40 @@ module.exports = {
     "melting_point": 3823,
     "boiling_point": 4300,
     "electrons": [2, 4],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "carbon-12",
+        "name": {
+          "en": "Carbon-12",
+        },
+        "neutrons": 12,
+        "weight": { "standard": 12 },
+        "abundance": 98.93,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "carbon-13",
+        "name": {
+          "en": "Carbon-13",
+        },
+        "neutrons": 13,
+        "weight": { "standard": 13.00335483778 },
+        "abundance": 1.07,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "carbon-14",
+        "name": {
+          "en": "Carbon-14",
+        },
+        "neutrons": 14,
+        "weight": { "standard": 14.0032419887 },
+        "abundance": 0,
+        "decay_mode": "beta_minus",
+        "half_life": "5.7e3 y",
+        "decay_to": "nitrogen-14"
+      }
+    ]
   },
   "N": {
     "id": "N",
@@ -149,7 +280,40 @@ module.exports = {
     "melting_point": 63.05,
     "boiling_point": 77.36,
     "electrons": [2, 5],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "nitrogen-13",
+        "name": {
+          "en": "Nitrogen-13",
+        },
+        "neutrons": 13,
+        "weight": { "standard": 13.005738609 },
+        "abundance": 0,
+        "decay_mode": "beta_plus",
+        "half_life": "9.965 min",
+        "decay_to": "carbon-13"
+      },
+      {
+        "id": "nitrogen-14",
+        "name": {
+          "en": "Nitrogen-14",
+        },
+        "neutrons": 14,
+        "weight": { "standard": 14.00307400478 },
+        "abundance": 99.632,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "nitrogen-15",
+        "name": {
+          "en": "Nitrogen-15",
+        },
+        "neutrons": 15,
+        "weight": { "standard": 15.00010889823 },
+        "abundance": 0.368,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "O": {
     "id": "O",
@@ -166,7 +330,38 @@ module.exports = {
     "melting_point": 54.8,
     "boiling_point": 90.2,
     "electrons": [2, 6],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "oxygen-16",
+        "name": {
+          "en": "Oxygen-16",
+        },
+        "neutrons": 16,
+        "weight": { "standard": 15.99491461956 },
+        "abundance": 99.757,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "oxygen-17",
+        "name": {
+          "en": "Oxygen-17",
+        },
+        "neutrons": 17,
+        "weight": { "standard": 16.999131703 },
+        "abundance": 0.038,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "oxygen-18",
+        "name": {
+          "en": "Oxygen-18",
+        },
+        "neutrons": 18,
+        "weight": { "standard": 17.999161001 },
+        "abundance": 0.205,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "F": {
     "id": "F",
@@ -183,7 +378,30 @@ module.exports = {
     "melting_point": 53.5,
     "boiling_point": 85.03,
     "electrons": [2, 7],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "fluorine-18",
+        "name": {
+          "en": "Fluorine-18",
+        },
+        "neutrons": 18,
+        "weight": { "standard": 18.000937956 },
+        "abundance": 0,
+        "decay_mode": "beta_plus",
+        "half_life": "1.82952 h",
+        "decay_to": "oxygen-18"
+      },
+      {
+        "id": "fluorine-19",
+        "name": {
+          "en": "Fluorine-19",
+        },
+        "neutrons": 19,
+        "weight": { "standard": 18.998403224 },
+        "abundance": 100,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "Ne": {
     "id": "Ne",
@@ -200,7 +418,38 @@ module.exports = {
     "melting_point": 24.56,
     "boiling_point": 27.07,
     "electrons": [2, 8],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "neon-20",
+        "name": {
+          "en": "Neon-20",
+        },
+        "neutrons": 20,
+        "weight": { "standard": 19.99244017542 },
+        "abundance": 90.84,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "neon-21",
+        "name": {
+          "en": "Neon-21",
+        },
+        "neutrons": 21,
+        "weight": { "standard": 20.993846684 },
+        "abundance": 0.27,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "neon-22",
+        "name": {
+          "en": "Neon-22",
+        },
+        "neutrons": 22,
+        "weight": { "standard": 21.991385113 },
+        "abundance": 9.25,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "Na": {
     "id": "Na",
@@ -217,7 +466,30 @@ module.exports = {
     "melting_point": 370.87,
     "boiling_point": 1156,
     "electrons": [2, 8, 1],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "sodium-22",
+        "name": {
+          "en": "Sodium-22",
+        },
+        "neutrons": 22,
+        "weight": { "standard": 21.994436425 },
+        "abundance": 0,
+        "decay_mode": "beta_plus",
+        "half_life": "2.6019 y",
+        "decay_to": "neon-22"
+      },
+      {
+        "id": "sodium-23",
+        "name": {
+          "en": "Sodium-23",
+        },
+        "neutrons": 23,
+        "weight": { "standard": 22.98976928087 },
+        "abundance": 100,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "Mg": {
     "id": "Mg",
@@ -234,7 +506,38 @@ module.exports = {
     "melting_point": 923,
     "boiling_point": 1363,
     "electrons": [2, 8, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "magnesium-24",
+        "name": {
+          "en": "Magnesium-24",
+        },
+        "neutrons": 24,
+        "weight": { "standard": 23.985041699 },
+        "abundance": 78.99,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "magnesium-25",
+        "name": {
+          "en": "Magnesium-25",
+        },
+        "neutrons": 25,
+        "weight": { "standard": 24.985836917 },
+        "abundance": 10,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "magnesium-26",
+        "name": {
+          "en": "Magnesium-26",
+        },
+        "neutrons": 26,
+        "weight": { "standard": 25.982592929 },
+        "abundance": 11.01,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "Al": {
     "id": "Al",
@@ -251,7 +554,30 @@ module.exports = {
     "melting_point": 933.47,
     "boiling_point": 2792,
     "electrons": [2, 8, 3],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "aluminium-26",
+        "name": {
+          "en": "Aluminium-26",
+        },
+        "neutrons": 26,
+        "weight": { "standard": 25.986891692 },
+        "abundance": 0,
+        "decay_mode": "beta_plus",
+        "half_life": "7.16e5 y",
+        "decay_to": "magnesium-26"
+      },
+      {
+        "id": "aluminium-27",
+        "name": {
+          "en": "Aluminium-27",
+        },
+        "neutrons": 27,
+        "weight": { "standard": 26.981538627 },
+        "abundance": 0,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "Si": {
     "id": "Si",
@@ -268,7 +594,50 @@ module.exports = {
     "melting_point": 1687,
     "boiling_point": 3173,
     "electrons": [2, 8, 4],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "silicon-28",
+        "name": {
+          "en": "silicon-28",
+        },
+        "neutrons": 28,
+        "weight": { "standard": 27.97692653246 },
+        "abundance": 92.2297,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "silicon-29",
+        "name": {
+          "en": "silicon-29",
+        },
+        "neutrons": 29,
+        "weight": { "standard": 28.9764947 },
+        "abundance": 4.6832,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "silicon-30",
+        "name": {
+          "en": "silicon-30",
+        },
+        "neutrons": 30,
+        "weight": { "standard": 29.973770171 },
+        "abundance": 3.0872,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "aluminium-32",
+        "name": {
+          "en": "Aluminium-32",
+        },
+        "neutrons": 32,
+        "weight": { "standard": 31.974148082 },
+        "abundance": 0,
+        "decay_mode": "beta_minus",
+        "half_life": "132 y",
+        "decay_to": "phosphorus-32"
+      }
+    ]
   },
   "P": {
     "id": "P",
@@ -285,7 +654,42 @@ module.exports = {
     "melting_point": 317.3,
     "boiling_point": 553.6,
     "electrons": [2, 8, 5],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "phosphorus-31",
+        "name": {
+          "en": "Phosphorus-31",
+        },
+        "neutrons": 31,
+        "weight": { "standard": 30.973761629 },
+        "abundance": 100,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "phosphorus-32",
+        "name": {
+          "en": "Phosphorus-32",
+        },
+        "neutrons": 32,
+        "weight": { "standard": 31.973907274 },
+        "abundance": 0,
+        "decay_mode": "beta_minus",
+        "half_life": "14.263 d",
+        "decay_to": "sulfur-32"
+      },
+      {
+        "id": "phosphorus-33",
+        "name": {
+          "en": "Phosphorus-33",
+        },
+        "neutrons": 33,
+        "weight": { "standard": 32.971725543 },
+        "abundance": 0,
+        "decay_mode": "beta_minus",
+        "half_life": "25.34 d",
+        "decay_to": "sulfur-33"
+      }
+    ]
   },
   "S": {
     "id": "S",
@@ -302,7 +706,60 @@ module.exports = {
     "melting_point": 388.36,
     "boiling_point": 717.87,
     "electrons": [2, 8, 6],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "sulfur-32",
+        "name": {
+          "en": "Sulfur-32",
+        },
+        "neutrons": 32,
+        "weight": { "standard": 31.972070999 },
+        "abundance": 94.93,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "sulfur-33",
+        "name": {
+          "en": "Sulfur-33",
+        },
+        "neutrons": 33,
+        "weight": { "standard": 32.971458759 },
+        "abundance": 0.76,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "sulfur-34",
+        "name": {
+          "en": "Sulfur-34",
+        },
+        "neutrons": 34,
+        "weight": { "standard": 33.967866902 },
+        "abundance": 4.29,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "sulfur-35",
+        "name": {
+          "en": "Sulfur-35",
+        },
+        "neutrons": 35,
+        "weight": { "standard": 34.969032161 },
+        "abundance": 0,
+        "decay_mode": "beta_minus",
+        "half_life": "85.51 d",
+        "decay_to": "chlorine-35"
+      },
+      {
+        "id": "sulfur-36",
+        "name": {
+          "en": "Sulfur-36",
+        },
+        "neutrons": 36,
+        "weight": { "standard": 35.96708076 },
+        "abundance": 0.02,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "Cl": {
     "id": "Cl",
@@ -319,7 +776,40 @@ module.exports = {
     "melting_point": 171.6,
     "boiling_point": 239.11,
     "electrons": [2, 8, 7],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "chlorine-35",
+        "name": {
+          "en": "Chlorine-35",
+        },
+        "neutrons": 35,
+        "weight": { "standard": 34.968852682 },
+        "abundance": 75.78,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "chlorine-36",
+        "name": {
+          "en": "Chlorine-36",
+        },
+        "neutrons": 36,
+        "weight": { "standard": 35.968306981 },
+        "abundance": 0,
+        "decay_mode": "beta_minus",
+        "half_life": "3e5 y",
+        "decay_to": "argon-36"
+      },
+      {
+        "id": "chlorine-37",
+        "name": {
+          "en": "Chlorine-37",
+        },
+        "neutrons": 37,
+        "weight": { "standard": 36.965902591 },
+        "abundance": 24.22,
+        "decay_mode": "stable"
+      }
+    ]
   },
   "Ar": {
     "id": "Ar",
@@ -336,7 +826,86 @@ module.exports = {
     "melting_point": 83.9,
     "boiling_point": 87.3,
     "electrons": [2, 8, 8],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "argon-36",
+        "name": {
+          "en": "Argon-36",
+        },
+        "neutrons": 36,
+        "weight": { "standard": 35.967545105 },
+        "abundance": 0.3365,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "argon-37",
+        "name": {
+          "en": "Argon-37",
+        },
+        "neutrons": 37,
+        "weight": { "standard": 36.96677632 },
+        "abundance": 0,
+        "decay_mode": "k_plus",
+        "half_life": "35.03 d",
+        "decay_to": "chlorine-37"
+      },
+      {
+        "id": "argon-38",
+        "name": {
+          "en": "Argon-38",
+        },
+        "neutrons": 38,
+        "weight": { "standard": 37.962732394 },
+        "abundance": 0.0632,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "argon-39",
+        "name": {
+          "en": "Argon-39",
+        },
+        "neutrons": 39,
+        "weight": { "standard": 38.964313231 },
+        "abundance": 0,
+        "decay_mode": "beta_minus",
+        "half_life": "269 y",
+        "decay_to": "potassium-39"
+      },
+      {
+        "id": "argon-40",
+        "name": {
+          "en": "Argon-40",
+        },
+        "neutrons": 40,
+        "weight": { "standard": 39.96238312251 },
+        "abundance": 99.6003,
+        "decay_mode": "stable"
+      },
+      {
+        "id": "argon-41",
+        "name": {
+          "en": "Argon-41",
+        },
+        "neutrons": 41,
+        "weight": { "standard": 40.964500611 },
+        "abundance": 0,
+        "decay_mode": "beta_minus",
+        "half_life": "1.8268 h",
+        "decay_to": "potassium-41"
+      },
+      {
+        "id": "argon-42",
+        "name": {
+          "en": "Argon-42",
+        },
+        "neutrons": 42,
+        "weight": { "standard": 41.963045736 },
+        "abundance": 0,
+        "decay_mode": "beta_minus",
+        "half_life": "33 y",
+        "decay_to": "potassium-42"
+      }
+    ]
   },
   "K": {
     "id": "K",
