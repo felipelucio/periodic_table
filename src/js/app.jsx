@@ -1,7 +1,7 @@
 import React from 'react';
 import update from 'immutability-helper';
 
-import Element from './element';
+import {Element, Isotope} from './element';
 import ElementBox from './elementbox';
 import ElementPage from './element_page';
 import InfoArea from './info_area';
@@ -20,7 +20,7 @@ export default class App extends React.Component {
         let isotope = data[id].isotopes[iso];
         isotope.group = data[id].group;
         isotope.period = data[id].period;
-        elements[id].isotopes[iso] = new Element(isotope);
+        elements[id].isotopes[iso] = new Isotope(isotope, elements[id]);
       }
     }
 
@@ -105,6 +105,7 @@ export default class App extends React.Component {
     let matches = regexp.exec(id);
     
     if(matches[1] && matches[3]) {
+      console.log(matches);
       return this.state.elements[matches[1]].isotopes[matches[3]];
     }
 

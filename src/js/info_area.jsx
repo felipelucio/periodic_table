@@ -16,7 +16,26 @@ export default class InfoArea extends React.Component {
     
     return (
       <li className={`info_area`}> 
-        <span className={`basic ${this._showFlags('basic')}`}>
+        <span className={`info-container basic ${this._showFlags('basic')}`}>
+          <span className={`elementbox  ${elem.type}`}>
+            <span className="symbol">{elem.symbol}</span>
+            <span className="name">{elem.getName(lang)}</span>
+            <span className="atomic_number">{elem.atomic_number}</span>
+            <span className="weight">
+              {elem.weight && elem.weight.hasOwnProperty('conventional') &&
+                <div>{`[${elem.weight.standard[0]},${elem.weight.standard[1]}]`}</div>
+              }
+              <div>{elem.getWeight(false)}</div>
+            </span>
+          </span>
+          <span className="info">
+            <span className="">blablabalbal</span>
+            <span className="">blablabalbal</span>
+            <span className="">blablabalbal</span>
+            <span className="">blablabalbal</span>
+          </span>
+        </span>
+        <span className={`info-container isotopes ${this._showFlags('isotopes')}`}>
           <span className={`elementbox  ${elem.type}`}>
             <span className="symbol">{elem.symbol}</span>
             <span className="name">{elem.getName(lang)}</span>

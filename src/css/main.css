@@ -179,10 +179,17 @@ nav .temperature_input {
 	font-size: 0.8rem;
 }
 
-.info_area .basic {
-	display: grid;
+.info_area .info-container {
+	display: none;
 	margin: 0;
 	height: 100%;
+}
+.info_area .show {
+	display: grid;
+}
+
+.info_area .basic, 
+.info_area .isotopes {
 	grid-template-columns: 30% 1fr;
 	grid-template-rows: 100%;
 }

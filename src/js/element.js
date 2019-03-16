@@ -1,4 +1,18 @@
-export default class Element {
+function _getName(obj, lang) {
+  lang = lang || 'en';
+  if(obj.name.hasOwnProperty(lang))
+    return obj.name[lang];
+
+  return obj.name['en'];
+}
+
+function _precision(a) {
+  let e = 1;
+  while (Math.round(a * e) / e !== a) e *= 10;
+  return Math.log(e) / Math.LN10;
+}
+
+export class Element {
   constructor(data) {
     Object.assign(this, data);
   }
@@ -15,17 +29,7 @@ export default class Element {
   }
 
   getName(lang) {
-    lang = lang || 'en';
-    if(this.name.hasOwnProperty(lang))
-      return this.name[lang];
-
-    return this.name['en'];
-  }
-
-  _precision(a) {
-    let e = 1;
-    while (Math.round(a * e) / e !== a) e *= 10;
-    return Math.log(e) / Math.LN10;
+    return _getName(this, lang);
   }
 
   getWeight(precision=3) {
@@ -46,7 +50,7 @@ export default class Element {
     }
 
     
-    if(!precision || (this._precision(weights.standard) < precision)) {
+    if(!precision || (_precision(weights.standard) < precision)) {
       let str = weights.standard.toString();
       let last_digit = str[str.length - 1];
       return `${str.substr(0, str.length - 1)}(${last_digit})`;
@@ -58,3 +62,57 @@ export default class Element {
     }
   }
 };
+
+
+export class Isotope {
+  constructor(data, element) {
+    Object.assign(this, data);
+    this._element = element;
+  }
+
+  get symbol() {
+    return this._element.symbol;
+  }
+  get atomic_number() {
+    return this._element.atomic_number;
+  }
+
+  getName(lang) {
+    return _getName(this, lang);
+  }
+
+  getWeight(precision=3) {
+    let weights = this.weight;
+
+    if(!precision || (_precision(weights.standard) < precision)) {
+      let str = weights.standard.toString();
+      let last_digit = str[str.length - 1];
+      return `${str.substr(0, str.length - 1)}(${last_digit})`;
+    } else {
+      let num = weights.standard.toFixed(precision);
+      let str = num.toString();
+      let last_digit = str[str.length - 1];
+      return `${str.substr(0, str.length - 1)}`;
+    }
+  }
+
+  getDecayModes() {
+    let modes = [];
+    for(let i in this.decay) {
+      let m = this.decay[i].mode;
+      
+      if(m == 'double_beta_minus') modes.push("β-β-");
+      if(m == 'beta_minus') modes.push("β-");
+      if(m == 'beta_plus') modes.push("β+");
+      if(m == 'k_plus') modes.push("EC");
+      if(m == 'gamma') modes.push("γ");
+      if(m == 'alpha') modes.push("α");
+      if(m == 'internal_convertion') modes.push("IT");
+      if(m == 'proton') modes.push("p");
+      if(m == 'neutron') modes.push("n");
+      if(m == 'spontaneous_fission') modes.push("SF");
+    }
+
+    return modes;
+  }
+}

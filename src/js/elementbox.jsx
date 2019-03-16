@@ -69,13 +69,10 @@ export default class ElementBox extends React.Component {
 
   render() {
     let _lang = this.props.lang;
-    let show_flags = this.props.showFlags;
+    
     let classes = [
       this.props.elem.id,
       this.props.elem.type,
-      Object.keys(show_flags).filter(function(e) {
-        if(show_flags[e]) return true;
-      }),
       'element'
     ].concat(this.props.elem.classList).join(' ');
    
@@ -88,18 +85,19 @@ export default class ElementBox extends React.Component {
       let iso = elem.isotopes[id];
 
       isotopes.push(
-        <span className={`isotope order_${count} ${iso.decay_mode}`} key={id}
+        <span className={`isotope order_${count}`} key={id}
           data-key={`${elem.id}[${id}]`}
           onPointerEnter={this.onPointerEnterIsotope}
           onPointerLeave={this.onPointerLeaveIsotope}
           onPointerDown={this.onPointerDown}
         >
-          {iso.getName(_lang)}
+          <p>{iso.getName(_lang)}</p>
+          <p>{iso.getDecayModes().join(', ')}</p>
         </span>
       );
       count++;
     }
-   
+    
     return (
       <li className={classes} 
         data-key={elem.id}
@@ -131,6 +129,7 @@ export default class ElementBox extends React.Component {
         </span>
 
         <span className={`electronic ${this._showFlags('electronic')}`}>
+          <span className="name">{ elem.getName(_lang) }</span>
           <span className="symbol">{ elem.symbol }</span>
           <span className="atomic_number">{ elem.atomic_number }</span>
           { (elem.id == 'lanthanoids' || elem.id == 'actinoids') && 
@@ -139,10 +138,15 @@ export default class ElementBox extends React.Component {
         </span>
 
         <span className={`isotopes ${this._showFlags('isotopes')}`}>
-          {isotopes}
+          <span className="name">{ elem.getName(_lang) }</span>
+          <span className="symbol">{ elem.symbol }</span>
+          <span className="atomic_number">{ elem.atomic_number }</span>
           { (elem.id == 'lanthanoids' || elem.id == 'actinoids') && 
             <span className="name">{ elem.getName(_lang) }</span>
           }
+          <div className={`isotopes-container ${elem.group > 9 ? 'left' : 'right'}`}>
+            {isotopes}
+          </div>
         </span>
       </li>
     );
