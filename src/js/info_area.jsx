@@ -2,8 +2,8 @@ import React from 'react'
 
 export default class InfoArea extends React.Component {
    _showFlags(section) {
-    if(this.props.showFlags.hasOwnProperty(section))
-      if(this.props.showFlags[section]) return 'show';
+    if(this.props.show_flags.hasOwnProperty(section))
+      if(this.props.show_flags[section]) return 'show';
 
     return '';
   }

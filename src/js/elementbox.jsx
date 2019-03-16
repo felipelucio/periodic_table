@@ -42,7 +42,7 @@ export default class ElementBox extends React.Component {
     e.persist();
 
     let id = e.currentTarget.getAttribute('data-key');
-    this.props.setActive(id);
+    this.props.setSelected(id);
     
     let that = this;
     let target = e.currentTarget;
@@ -61,8 +61,8 @@ export default class ElementBox extends React.Component {
   }
 
   _showFlags(section) {
-    if(this.props.showFlags.hasOwnProperty(section))
-      if(this.props.showFlags[section]) return 'show';
+    if(this.props.show_flags.hasOwnProperty(section))
+      if(this.props.show_flags[section]) return 'show';
 
     return '';
   }
@@ -73,12 +73,14 @@ export default class ElementBox extends React.Component {
     let classes = [
       this.props.elem.id,
       this.props.elem.type,
-      'element'
+      'element',
+      (this.props.selected ? 'selected' : '')
     ].concat(this.props.elem.classList).join(' ');
    
     let elem = this.props.elem;
     let state = elem.stateAtTemp(this.props.curr_temp);
 
+    // create the isotopes boxes
     let isotopes = [];
     let count = 0;
     for(let id in elem.isotopes) {
@@ -97,6 +99,18 @@ export default class ElementBox extends React.Component {
       );
       count++;
     }
+
+    // set the isotopes box orientation
+    let isotopes_pos_x = 'right';
+    if(elem.group > 9 || 
+        (elem.atomic_number > 63 && elem.atomic_number <= 71) ||
+        (elem.atomic_number > 95 && elem.atomic_number <= 103) 
+    )
+      isotopes_pos_x = 'left';
+
+    let isotopes_pos_y = 'bottom';
+    if(elem.type == 'lanthanoid' || elem.type == 'actinoid')
+      isotopes_pos_y = 'top';
     
     return (
       <li className={classes} 
@@ -144,7 +158,7 @@ export default class ElementBox extends React.Component {
           { (elem.id == 'lanthanoids' || elem.id == 'actinoids') && 
             <span className="name">{ elem.getName(_lang) }</span>
           }
-          <div className={`isotopes-container ${elem.group > 9 ? 'left' : 'right'}`}>
+          <div className={`isotopes-container ${isotopes_pos_x} ${isotopes_pos_y}`}>
             {isotopes}
           </div>
         </span>

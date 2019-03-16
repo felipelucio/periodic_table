@@ -45,7 +45,7 @@ export default class App extends React.Component {
     this.setLang = this.setLang.bind(this);
     this.showHandler = this.showHandler.bind(this);
     this.showElementPage = this.showElementPage.bind(this);
-    this.setActiveElement = this.setActiveElement.bind(this);
+    this.setSelectedElement = this.setSelectedElement.bind(this);
     this.closeElementPage = this.closeElementPage.bind(this);
     this.setTemperature = this.setTemperature.bind(this);
   }
@@ -79,7 +79,7 @@ export default class App extends React.Component {
     this.closeElementPage(e);
   }
 
-  setActiveElement(id) {
+  setSelectedElement(id) {
     this.setState({curr_elem: this._getElement(id)});
   }
 
@@ -105,7 +105,6 @@ export default class App extends React.Component {
     let matches = regexp.exec(id);
     
     if(matches[1] && matches[3]) {
-      console.log(matches);
       return this.state.elements[matches[1]].isotopes[matches[3]];
     }
 
@@ -300,11 +299,12 @@ export default class App extends React.Component {
           elem={this.state.elements[i]} 
           lang={this.state.curr_lang}
           curr_temp={this.state.temperature}
-          showFlags={this.state.show_flags}
+          selected={this.state.curr_elem == this.state.elements[i]}
+          show_flags={this.state.show_flags}
           onPointerEnter={this.toggleHighlight}
           onPointerLeave={this.toggleHighlight}
           showElementPage={this.showElementPage}
-          setActive={this.setActiveElement}
+          setSelected={this.setSelectedElement}
         />
       );
     }
@@ -351,7 +351,7 @@ export default class App extends React.Component {
             <InfoArea element={this.state.curr_elem} 
               lang={this.state.curr_lang}
               curr_temp={this.state.temperature}
-              showFlags={this.state.show_flags}
+              show_flags={this.state.show_flags}
             />
             {groups}
             {periods}

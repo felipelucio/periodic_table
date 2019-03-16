@@ -34,7 +34,7 @@
 	z-index: 20;
 }
 
-.element.active .isotopes-container {
+.element.selected .isotopes-container {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -43,6 +43,9 @@
 .element .isotopes-container.left {
 	justify-content: flex-end;
 	left: -30vw;
+}
+.element .isotopes-container.top {
+	bottom: 0;
 }
 
 .element .isotope {
