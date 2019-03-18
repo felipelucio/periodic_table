@@ -38,6 +38,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	align-content: flex-start;
 }
 
 .element .isotopes-container.left {
@@ -45,24 +46,26 @@
 	left: -30vw;
 }
 .element .isotopes-container.top {
+	align-items: flex-end;
+	align-content: flex-end;
 	bottom: 0;
 }
 
 .element .isotope {
-	width: 3.5rem;
-	height: 3.5rem;
+	width: 4rem;
+	height: 4rem;
 	margin: 1px;
 	border: 1px solid #000;
 	background: #FFF;
 	font-size: 0.6rem;
 }
 
-.element .isotope.stable { border: 3px solid #000; }
-.element .isotope.alpha { border: 3px solid #900; }
-.element .isotope.beta_minus { border: 3px solid #CC0; }
-.element .isotope.beta_plus { border: 3px solid #009; }
-.element .isotope.k_plus { border: 3px solid #909; }
-.element .isotope.spontaneous { border: 3px dashed #000; }
+.element .isotope .stable { border: 3px solid #000; }
+.element .isotope .alpha { border: 3px solid #900; }
+.element .isotope .beta_minus { border: 3px solid #CC0; }
+.element .isotope .beta_plus { border: 3px solid #009; }
+.element .isotope .k_plus { border: 3px solid #909; }
+.element .isotope .spontaneous { border: 3px dashed #000; }
 
 .element .symbol { 
 	grid-row: 2;

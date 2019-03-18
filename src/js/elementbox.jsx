@@ -146,21 +146,17 @@ export default class ElementBox extends React.Component {
           <span className="name">{ elem.getName(_lang) }</span>
           <span className="symbol">{ elem.symbol }</span>
           <span className="atomic_number">{ elem.atomic_number }</span>
-          { (elem.id == 'lanthanoids' || elem.id == 'actinoids') && 
-            <span className="name">{ elem.getName(_lang) }</span>
-          }
         </span>
 
         <span className={`isotopes ${this._showFlags('isotopes')}`}>
           <span className="name">{ elem.getName(_lang) }</span>
           <span className="symbol">{ elem.symbol }</span>
           <span className="atomic_number">{ elem.atomic_number }</span>
-          { (elem.id == 'lanthanoids' || elem.id == 'actinoids') && 
-            <span className="name">{ elem.getName(_lang) }</span>
+          { (elem.id != 'lanthanoids' || elem.id != 'actinoids') && 
+            <div className={`isotopes-container ${isotopes_pos_x} ${isotopes_pos_y}`}>
+              {isotopes}
+            </div>
           }
-          <div className={`isotopes-container ${isotopes_pos_x} ${isotopes_pos_y}`}>
-            {isotopes}
-          </div>
         </span>
       </li>
     );

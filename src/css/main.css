@@ -196,6 +196,7 @@ nav .temperature_input {
 
 .info_area .elementbox {
 	grid-column: 1;
+	grid-row: 1;
 	display: grid;
 	position: relative;
 	height: 100%;
@@ -219,12 +220,14 @@ nav .temperature_input {
 	justify-self: center;
 	font-weight: bold;
 	font-size: 2em;
+	white-space: nowrap;
 
 }
 .info_area .name {
 	grid-row: 3;
 	grid-column: 2;
 	justify-self: center;
+	white-space: nowrap;
 }
 .info_area .atomic_number {
 	grid-row: 1;
@@ -270,8 +273,8 @@ nav .temperature_input {
 .metalloid { background: #77DD88; } 
 .post_transitional { background: #99DDCC; } 
 .noble_gas { background: #77CCFF; } 
-.lanthanoid { background: #FFBB99; } 
-.actinoid { background: #EEBBDD; } 
+.lanthanoid, .lanthanoids { background: #FFBB99; } 
+.actinoid, .actinoids { background: #EEBBDD; } 
 .unknown_type { background: #FFF; }
 
 .hide { display: none; }
