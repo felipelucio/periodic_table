@@ -2,3 +2,7 @@
 dist
 node_modules
 {*.}.sublime-workspace
+platforms
+plugins
+www/*
+!www/.gitkeep

@@ -11,4 +11,8 @@ function main(ev) {
     render(<App />, document.getElementById('app'));
 }
 
-window.addEventListener('load', main);
+if (window.cordova) {
+  document.addEventListener('deviceready', main, false);
+} else {
+  window.addEventListener('load', main);
+}
