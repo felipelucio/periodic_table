@@ -7619,7 +7619,137 @@ module.exports = {
     "melting_point": 3290,
     "boiling_point": 5731,
     "electrons": [2, 8, 18, 32, 11, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Ta-177",
+        "name": {
+          "en": "Tantalum-177",
+        },
+        "neutrons": 177,
+        "weight": { "standard": 176.9444724 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "56.56 h",
+            "decay_to": "Hf-177"
+          }
+        ]
+      },
+      {
+        "id": "Ta-178",
+        "name": {
+          "en": "Tantalum-178",
+        },
+        "neutrons": 178,
+        "weight": { "standard": 177.94577816 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "2.36 h",
+            "decay_to": "Hf-178"
+          }
+        ]
+      },
+      {
+        "id": "Ta-179",
+        "name": {
+          "en": "Tantalum-179",
+        },
+        "neutrons": 179,
+        "weight": { "standard": 178.945929523 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "1.82 y",
+            "decay_to": "Hf-179"
+          }
+        ]
+      },
+      {
+        "id": "Ta-180",
+        "name": {
+          "en": "Tantalum-180",
+        },
+        "neutrons": 180,
+        "weight": { "standard": 179.947464824 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "8.125 h",
+            "decay_to": "Hf-180"
+          },
+          {
+            "mode": "beta_minus",
+            "half_life": "8.125 h",
+            "decay_to": "W-180"
+          }
+        ]
+      },
+      {
+        "id": "Ta-180m",
+        "name": {
+          "en": "Tantalum-180m",
+        },
+        "neutrons": 180,
+        "weight": { "standard": 179.947464824 },
+        "abundance": 0.012,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Ta-181",
+        "name": {
+          "en": "Tantalum-181",
+        },
+        "neutrons": 181,
+        "weight": { "standard": 180.947995820 },
+        "abundance": 99.988,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Ta-182",
+        "name": {
+          "en": "Tantalum-182",
+        },
+        "neutrons": 182,
+        "weight": { "standard": 181.950151819 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "114.43 d",
+            "decay_to": "W-182"
+          }
+        ]
+      },
+      {
+        "id": "Ta-183",
+        "name": {
+          "en": "Tantalum-183",
+        },
+        "neutrons": 183,
+        "weight": { "standard": 182.951372619 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "5.1 d",
+            "decay_to": "W-183"
+          }
+        ]
+      }
+    ]
   },
   "W": {
     "id": "W",
@@ -7636,7 +7766,112 @@ module.exports = {
     "melting_point": 3695,
     "boiling_point": 5828,
     "electrons": [2, 8, 18, 32, 12, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "W-180",
+        "name": {
+          "en": "Tungsten-180",
+        },
+        "neutrons": 180,
+        "weight": { "standard": 179.9467044 },
+        "abundance": 0.12,
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "1.8e18 y",
+            "decay_to": "Hf-176"
+          }
+        ]
+      },
+      {
+        "id": "W-181",
+        "name": {
+          "en": "Tungsten-181",
+        },
+        "neutrons": 181,
+        "weight": { "standard": 180.9481975 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "121.2 d",
+            "decay_to": "Ta-181"
+          }
+        ]
+      },
+      {
+        "id": "W-182",
+        "name": {
+          "en": "Tungsten-182",
+        },
+        "neutrons": 182,
+        "weight": { "standard": 181.94820429 },
+        "abundance": 26.50,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "W-183",
+        "name": {
+          "en": "Tungsten-183",
+        },
+        "neutrons": 183,
+        "weight": { "standard": 182.95022309 },
+        "abundance": 14.31,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "W-184",
+        "name": {
+          "en": "Tungsten-184",
+        },
+        "neutrons": 184,
+        "weight": { "standard": 183.95093129 },
+        "abundance": 30.64,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "W-185",
+        "name": {
+          "en": "Tungsten-185",
+        },
+        "neutrons": 185,
+        "weight": { "standard": 184.953419310 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "75.1 d",
+            "decay_to": "Re-185"
+          }
+        ]
+      },
+      {
+        "id": "W-186",
+        "name": {
+          "en": "Tungsten-186",
+        },
+        "neutrons": 186,
+        "weight": { "standard": 185.954364119 },
+        "abundance": 28.43,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      }
+    ]
   },
   "Re": {
     "id": "Re",
@@ -7653,7 +7888,38 @@ module.exports = {
     "melting_point": 3459,
     "boiling_point": 5869,
     "electrons": [2, 8, 18, 32, 13, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Re-185",
+        "name": {
+          "en": "Rhenium-185",
+        },
+        "neutrons": 185,
+        "weight": { "standard": 184.952955013 },
+        "abundance": 37.4,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Re-187",
+        "name": {
+          "en": "Rhenium-187",
+        },
+        "neutrons": 187,
+        "weight": { "standard": 186.955753115 },
+        "abundance": 62.6,
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "4.12e10 y",
+            "decay_to": "Os-187"
+          }
+        ]
+      }
+    ]
   },
   "Os": {
     "id": "Os",
@@ -7670,7 +7936,172 @@ module.exports = {
     "melting_point": 3306,
     "boiling_point": 5285,
     "electrons": [2, 8, 18, 32, 14, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Os-184",
+        "name": {
+          "en": "Osmium-184",
+        },
+        "neutrons": 184,
+        "weight": { "standard": 183.952489114 },
+        "abundance": 0.02,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Os-185",
+        "name": {
+          "en": "Osmium-185",
+        },
+        "neutrons": 185,
+        "weight": { "standard": 184.954042314 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "93.6 d",
+            "decay_to": "Re-185"
+          }
+        ]
+      },
+      {
+        "id": "Os-186",
+        "name": {
+          "en": "Osmium-186",
+        },
+        "neutrons": 186,
+        "weight": { "standard": 185.953838215 },
+        "abundance": 1.59,
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "2.0e15 y",
+            "decay_to": "W-182"
+          }
+        ]
+      },
+      {
+        "id": "Os-187",
+        "name": {
+          "en": "Osmium-187",
+        },
+        "neutrons": 187,
+        "weight": { "standard": 186.955750515 },
+        "abundance": 1.96,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Os-188",
+        "name": {
+          "en": "Osmium-188",
+        },
+        "neutrons": 188,
+        "weight": { "standard": 187.955838215 },
+        "abundance": 13.24,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Os-189",
+        "name": {
+          "en": "Osmium-189",
+        },
+        "neutrons": 189,
+        "weight": { "standard": 188.958147516 },
+        "abundance": 16.15,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Os-190",
+        "name": {
+          "en": "Osmium-190",
+        },
+        "neutrons": 190,
+        "weight": { "standard": 189.958447016 },
+        "abundance": 26.26,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Os-191",
+        "name": {
+          "en": "Osmium-191",
+        },
+        "neutrons": 191,
+        "weight": { "standard": 190.960929716 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "15.4 d",
+            "decay_to": "Ir-191"
+          }
+        ]
+      },
+      {
+        "id": "Os-192",
+        "name": {
+          "en": "Osmium-192",
+        },
+        "neutrons": 192,
+        "weight": { "standard": 191.961480727 },
+        "abundance": 40.78,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Os-193",
+        "name": {
+          "en": "Osmium-193",
+        },
+        "neutrons": 193,
+        "weight": { "standard": 192.964151627 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "30.11 d",
+            "decay_to": "Ir-191"
+          }
+        ]
+      },
+      {
+        "id": "Os-194",
+        "name": {
+          "en": "Osmium-194",
+        },
+        "neutrons": 194,
+        "weight": { "standard": 193.965182128 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "6 y",
+            "decay_to": "Ir-194"
+          }
+        ]
+      }
+    ]
   },
   "Ir": {
     "id": "Ir",
@@ -7687,7 +8118,169 @@ module.exports = {
     "melting_point": 2739,
     "boiling_point": 4701,
     "electrons": [2, 8, 18, 32, 15, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Ir-188",
+        "name": {
+          "en": "Iridium-188",
+        },
+        "neutrons": 188,
+        "weight": { "standard": 187.9588538 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "1.73 d",
+            "decay_to": "Os-188"
+          }
+        ]
+      },
+      {
+        "id": "Ir-189",
+        "name": {
+          "en": "Iridium-189",
+        },
+        "neutrons": 189,
+        "weight": { "standard": 188.95871914 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "13.2 d",
+            "decay_to": "Os-189"
+          }
+        ]
+      },
+      {
+        "id": "Ir-190",
+        "name": {
+          "en": "Iridium-190",
+        },
+        "neutrons": 190,
+        "weight": { "standard": 189.960546018 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "11.8 d",
+            "decay_to": "Os-190"
+          }
+        ]
+      },
+      {
+        "id": "Ir-191",
+        "name": {
+          "en": "Iridium-191",
+        },
+        "neutrons": 191,
+        "weight": { "standard": 190.960594018 },
+        "abundance": 37.3,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Ir-192",
+        "name": {
+          "en": "Iridium-192",
+        },
+        "neutrons": 192,
+        "weight": { "standard": 191.962605018 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "73.827 d",
+            "decay_to": "Pt-192"
+          },
+          {
+            "mode": "k_plus",
+            "half_life": "73.827 d",
+            "decay_to": "Os-192"
+          }
+        ]
+      },
+      {
+        "id": "Ir-192m2",
+        "name": {
+          "en": "Iridium-192m2",
+        },
+        "neutrons": 192,
+        "weight": { "standard": 191.962605018 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "internal_convertion",
+            "half_life": "241 y",
+            "decay_to": "Ir-192"
+          }
+        ]
+      },
+      {
+        "id": "Ir-193",
+        "name": {
+          "en": "Iridium-193",
+        },
+        "neutrons": 193,
+        "weight": { "standard": 192.962926418 },
+        "abundance": 62.7,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Ir-193m",
+        "name": {
+          "en": "Iridium-193m",
+        },
+        "neutrons": 193,
+        "weight": { "standard": 192.962926418 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "internal_convertion",
+            "half_life": "10.5 d",
+            "decay_to": "Ir-193"
+          }
+        ]
+      },
+      {
+        "id": "Ir-194",
+        "name": {
+          "en": "Iridium-194",
+        },
+        "neutrons": 194,
+        "weight": { "standard": 193.965078418 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "19.3 h",
+            "decay_to": "Pt-194"
+          }
+        ]
+      },
+      {
+        "id": "Ir-194m2",
+        "name": {
+          "en": "Iridium-194m2",
+        },
+        "neutrons": 194,
+        "weight": { "standard": 193.965078418 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "internal_convertion",
+            "half_life": "171 d",
+            "decay_to": "Ir-194"
+          }
+        ]
+      }
+    ]
   },
   "Pt": {
     "id": "Pt",
@@ -7704,7 +8297,110 @@ module.exports = {
     "melting_point": 2014.4,
     "boiling_point": 4098,
     "electrons": [2, 8, 18, 32, 17, 1],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Pt-190",
+        "name": {
+          "en": "Platinum-190",
+        },
+        "neutrons": 190,
+        "weight": { "standard": 189.9599326 },
+        "abundance": 0.012,
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "6.5e11 y",
+            "decay_to": "Os-186"
+          }
+        ]
+      },
+      {
+        "id": "Pt-192",
+        "name": {
+          "en": "Platinum-192",
+        },
+        "neutrons": 192,
+        "weight": { "standard": 191.961038027 },
+        "abundance": 0.782,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Pt-193",
+        "name": {
+          "en": "Platinum-193",
+        },
+        "neutrons": 193,
+        "weight": { "standard": 192.962987418 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "50 y",
+            "decay_to": "Ir-193"
+          }
+        ]
+      },
+      {
+        "id": "Pt-194",
+        "name": {
+          "en": "Platinum-194",
+        },
+        "neutrons": 194,
+        "weight": { "standard": 193.96268039 },
+        "abundance": 32.864,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Pt-195",
+        "name": {
+          "en": "Platinum-195",
+        },
+        "neutrons": 195,
+        "weight": { "standard": 194.96479119 },
+        "abundance": 33.775,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Pt-196",
+        "name": {
+          "en": "Platinum-196",
+        },
+        "neutrons": 196,
+        "weight": { "standard": 195.96495159 },
+        "abundance": 25.211,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Pt-198",
+        "name": {
+          "en": "Platinum-198",
+        },
+        "neutrons": 198,
+        "weight": { "standard": 197.9678933 },
+        "abundance": 7.356,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      }
+    ]
   },
   "Au": {
     "id": "Au",
@@ -7721,7 +8417,91 @@ module.exports = {
     "melting_point": 1337.33,
     "boiling_point": 3129,
     "electrons": [2, 8, 18, 32, 18, 1],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Au-195",
+        "name": {
+          "en": "Gold-195",
+        },
+        "neutrons": 195,
+        "weight": { "standard": 194.965034614 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "186.10 d",
+            "decay_to": "Pt-195"
+          }
+        ]
+      },
+      {
+        "id": "Au-196",
+        "name": {
+          "en": "Gold-196",
+        },
+        "neutrons": 196,
+        "weight": { "standard": 195.9665703 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "6.183 d",
+            "decay_to": "Pt-196"
+          },
+          {
+            "mode": "beta_minus",
+            "half_life": "6.183 d",
+            "decay_to": "Hg-196"
+          }
+        ]
+      },
+      {
+        "id": "Au-197",
+        "name": {
+          "en": "Gold-197",
+        },
+        "neutrons": 197,
+        "weight": { "standard": 196.96656876 },
+        "abundance": 100,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Au-198",
+        "name": {
+          "en": "Gold-198",
+        },
+        "neutrons": 198,
+        "weight": { "standard": 197.96824236 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "2.69517 d",
+            "decay_to": "Hg-198"
+          }
+        ]
+      },
+      {
+        "id": "Au-199",
+        "name": {
+          "en": "Gold-199",
+        },
+        "neutrons": 199,
+        "weight": { "standard": 198.96876526 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "3.169 d",
+            "decay_to": "Hg-199"
+          }
+        ]
+      }
+    ]
   },
   "Hg": {
     "id": "Hg",
@@ -7738,7 +8518,170 @@ module.exports = {
     "melting_point": 234.32,
     "boiling_point": 692.88,
     "electrons": [2, 8, 18, 32, 18, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Hg-194",
+        "name": {
+          "en": "Mercury-194",
+        },
+        "neutrons": 194,
+        "weight": { "standard": 193.96543913 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "444 y",
+            "decay_to": "Au-194"
+          }
+        ]
+      },
+      {
+        "id": "Hg-195",
+        "name": {
+          "en": "Mercury-195",
+        },
+        "neutrons": 195,
+        "weight": { "standard": 194.96672025 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "9.9 h",
+            "decay_to": "Au-195"
+          }
+        ]
+      },
+      {
+        "id": "Hg-196",
+        "name": {
+          "en": "Mercury-196",
+        },
+        "neutrons": 196,
+        "weight": { "standard": 195.9658333 },
+        "abundance": 0.15,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Hg-197",
+        "name": {
+          "en": "Mercury-197",
+        },
+        "neutrons": 197,
+        "weight": { "standard": 196.9672133 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "64.14 h",
+            "decay_to": "Au-197"
+          }
+        ]
+      },
+      {
+        "id": "Hg-198",
+        "name": {
+          "en": "Mercury-198",
+        },
+        "neutrons": 198,
+        "weight": { "standard": 197.96676904 },
+        "abundance": 10.04,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Hg-199",
+        "name": {
+          "en": "Mercury-199",
+        },
+        "neutrons": 199,
+        "weight": { "standard": 198.96827994 },
+        "abundance": 16.94,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Hg-200",
+        "name": {
+          "en": "Mercury-200",
+        },
+        "neutrons": 200,
+        "weight": { "standard": 199.96832604 },
+        "abundance": 23.14,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Hg-201",
+        "name": {
+          "en": "Mercury-201",
+        },
+        "neutrons": 201,
+        "weight": { "standard": 200.97030236 },
+        "abundance": 13.17,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Hg-202",
+        "name": {
+          "en": "Mercury-202",
+        },
+        "neutrons": 202,
+        "weight": { "standard": 201.97064306 },
+        "abundance": 29.74,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Hg-203",
+        "name": {
+          "en": "Mercury-203",
+        },
+        "neutrons": 203,
+        "weight": { "standard": 202.972872518 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "46.612 d",
+            "decay_to": "Tl-203"
+          }
+        ]
+      },
+      {
+        "id": "Hg-204",
+        "name": {
+          "en": "Mercury-204",
+        },
+        "neutrons": 204,
+        "weight": { "standard": 203.97349394 },
+        "abundance": 6.82,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      }
+    ]
   },
   "Tl": {
     "id": "Tl",
@@ -7755,7 +8698,57 @@ module.exports = {
     "melting_point": 577,
     "boiling_point": 1746,
     "electrons": [2, 8, 18, 32, 18, 3],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Tl-203",
+        "name": {
+          "en": "Thallium-203",
+        },
+        "neutrons": 203,
+        "weight": { "standard": 202.972344214 },
+        "abundance": 29.5,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Tl-204",
+        "name": {
+          "en": "Thallium-204",
+        },
+        "neutrons": 204,
+        "weight": { "standard": 203.973863513 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "3.78 y",
+            "decay_to": "Pb-204"
+          },
+          {
+            "mode": "k_plus",
+            "half_life": "3.78 y",
+            "decay_to": "Hg-204"
+          }
+        ]
+      },
+      {
+        "id": "Tl-205",
+        "name": {
+          "en": "Thallium-205",
+        },
+        "neutrons": 205,
+        "weight": { "standard": 204.974427514 },
+        "abundance": 70.5,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      }
+    ]
   },
   "Pb": {
     "id": "Pb",
@@ -7772,7 +8765,176 @@ module.exports = {
     "melting_point": 660.61,
     "boiling_point": 2022,
     "electrons": [2, 8, 18, 32, 18, 4],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Pb-202",
+        "name": {
+          "en": "Lead-202",
+        },
+        "neutrons": 202,
+        "weight": { "standard": 201.9721599 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "5.2528e4 y",
+            "decay_to": "Tl-202"
+          }
+        ]
+      },
+      {
+        "id": "Pb-204",
+        "name": {
+          "en": "Lead-204",
+        },
+        "neutrons": 204,
+        "weight": { "standard": 203.973043613 },
+        "abundance": 1.4,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Pb-205",
+        "name": {
+          "en": "Lead-205",
+        },
+        "neutrons": 205,
+        "weight": { "standard": 204.974481813 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "1.537e7 y",
+            "decay_to": "Tl-205"
+          }
+        ]
+      },
+      {
+        "id": "Pb-206",
+        "name": {
+          "en": "Lead-206",
+        },
+        "neutrons": 206,
+        "weight": { "standard": 205.974465313 },
+        "abundance": 24.1,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Pb-207",
+        "name": {
+          "en": "Lead-207",
+        },
+        "neutrons": 207,
+        "weight": { "standard": 206.975896913 },
+        "abundance": 22.1,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Pb-208",
+        "name": {
+          "en": "Lead-208",
+        },
+        "neutrons": 208,
+        "weight": { "standard": 207.976652113 },
+        "abundance": 52.4,
+        "decay": [
+          {
+            "mode": "stable"
+          }
+        ]
+      },
+      {
+        "id": "Pb-209",
+        "name": {
+          "en": "Lead-209",
+        },
+        "neutrons": 209,
+        "weight": { "standard": 208.981090119 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "3.25314 h",
+            "decay_to": "Bi-209"
+          }
+        ]
+      },
+      {
+        "id": "Pb-210",
+        "name": {
+          "en": "Lead-210",
+        },
+        "neutrons": 210,
+        "weight": { "standard": 209.984188516 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "22.322 y",
+            "decay_to": "Bi-210"
+          }
+        ]
+      },
+      {
+        "id": "Pb-211",
+        "name": {
+          "en": "Lead-211",
+        },
+        "neutrons": 211,
+        "weight": { "standard": 210.988737029 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "36.12 min",
+            "decay_to": "Bi-211"
+          }
+        ]
+      },
+      {
+        "id": "Pb-212",
+        "name": {
+          "en": "Lead-212",
+        },
+        "neutrons": 212,
+        "weight": { "standard": 211.991897524 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "10.641 h",
+            "decay_to": "Bi-212"
+          }
+        ]
+      },
+      {
+        "id": "Pb-214",
+        "name": {
+          "en": "Lead-214",
+        },
+        "neutrons": 214,
+        "weight": { "standard": 213.999805426 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "26.89 min",
+            "decay_to": "Bi-214"
+          }
+        ]
+      }
+    ]
   },
   "Bi": {
     "id": "Bi",
@@ -7789,7 +8951,98 @@ module.exports = {
     "melting_point": 544.4,
     "boiling_point": 1837,
     "electrons": [2, 8, 18, 32, 18, 5],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Bi-207",
+        "name": {
+          "en": "Bismuth-207",
+        },
+        "neutrons": 207,
+        "weight": { "standard": 206.978470726 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_plus",
+            "half_life": "31.55 y",
+            "decay_to": "Pb-207"
+          }
+        ]
+      },
+      {
+        "id": "Bi-208",
+        "name": {
+          "en": "Bismuth-208",
+        },
+        "neutrons": 208,
+        "weight": { "standard": 207.979742225 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_plus",
+            "half_life": "3.68e5 y",
+            "decay_to": "Pb-208"
+          }
+        ]
+      },
+      {
+        "id": "Bi-209",
+        "name": {
+          "en": "Bismuth-209",
+        },
+        "neutrons": 209,
+        "weight": { "standard": 208.980398716 },
+        "abundance": 100,
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "1.9e19 y",
+            "decay_to": "Tl-205"
+          }
+        ]
+      },
+      {
+        "id": "Bi-210",
+        "name": {
+          "en": "Bismuth-210",
+        },
+        "neutrons": 210,
+        "weight": { "standard": 209.984120416 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "5.012 d",
+            "decay_to": "Po-210"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "5.012 d",
+            "decay_to": "Tl-206"
+          }
+        ]
+      },
+      {
+        "id": "Bi-210m",
+        "name": {
+          "en": "Bismuth-210m",
+        },
+        "neutrons": 210,
+        "weight": { "standard": 209.984120416 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "internal_convertion",
+            "half_life": "3.04e6 y",
+            "decay_to": "Bi-210"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "3.04e6 y",
+            "decay_to": "Tl-206"
+          }
+        ]
+      }
+    ]
   },
   "Po": {
     "id": "Po",
@@ -7806,7 +9059,66 @@ module.exports = {
     "melting_point": 527,
     "boiling_point": 1235,
     "electrons": [2, 8, 18, 32, 18, 6],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Po-208",
+        "name": {
+          "en": "Polonium-208",
+        },
+        "neutrons": 208,
+        "weight": { "standard": 207.981245719 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "2.898 y",
+            "decay_to": "Pb-204"
+          },
+          {
+            "mode": "beta_plus",
+            "half_life": "2.898 y",
+            "decay_to": "Bi-208"
+          }
+        ]
+      },
+      {
+        "id": "Po-209",
+        "name": {
+          "en": "Polonium-209",
+        },
+        "neutrons": 209,
+        "weight": { "standard": 208.982430420 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "125.2 y",
+            "decay_to": "Pb-205"
+          },
+          {
+            "mode": "beta_plus",
+            "half_life": "125.2 y",
+            "decay_to": "Bi-209"
+          }
+        ]
+      },
+      {
+        "id": "Po-210",
+        "name": {
+          "en": "Polonium-210",
+        },
+        "neutrons": 210,
+        "weight": { "standard": 209.982873713 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "138.376 d",
+            "decay_to": "Pb-206"
+          }
+        ]
+      }
+    ]
   },
   "At": {
     "id": "At",
@@ -7823,7 +9135,71 @@ module.exports = {
     "melting_point": 575,
     "boiling_point": 610,
     "electrons": [2, 8, 18, 32, 18, 7],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "At-209",
+        "name": {
+          "en": "Astatine-209",
+        },
+        "neutrons": 209,
+        "weight": { "standard": 208.9861738 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_plus",
+            "half_life": "5.41 h",
+            "decay_to": "Po-209"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "5.41 h",
+            "decay_to": "Bi-205"
+          }
+        ]
+      },
+      {
+        "id": "At-210",
+        "name": {
+          "en": "Astatine-210",
+        },
+        "neutrons": 210,
+        "weight": { "standard": 209.9871488 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_plus",
+            "half_life": "8.1 h",
+            "decay_to": "Po-210"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "8.1 h",
+            "decay_to": "Bi-206"
+          }
+        ]
+      },
+      {
+        "id": "At-211",
+        "name": {
+          "en": "Astatine-211",
+        },
+        "neutrons": 211,
+        "weight": { "standard": 210.987496330 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "7.21 h",
+            "decay_to": "Po-211"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "7.21 h",
+            "decay_to": "Bi-207"
+          }
+        ]
+      }
+    ]
   },
   "Rn": {
     "id": "Rn",
@@ -7840,7 +9216,77 @@ module.exports = {
     "melting_point": 202,
     "boiling_point": 211.3,
     "electrons": [2, 8, 18, 32, 18, 8],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Rn-210",
+        "name": {
+          "en": "Radon-210",
+        },
+        "neutrons": 210,
+        "weight": { "standard": 209.9896969 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "2.4 h",
+            "decay_to": "Po-206"
+          }
+        ]
+      },
+      {
+        "id": "Rn-211",
+        "name": {
+          "en": "Radon-211",
+        },
+        "neutrons": 211,
+        "weight": { "standard": 210.9906017 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "14.6 h",
+            "decay_to": "At-211"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "14.6 h",
+            "decay_to": "Po-207"
+          }
+        ]
+      },
+      {
+        "id": "Rn-222",
+        "name": {
+          "en": "Radon-222",
+        },
+        "neutrons": 222,
+        "weight": { "standard": 222.017577725 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "3.8235 d",
+            "decay_to": "Po-218"
+          }
+        ]
+      },
+      {
+        "id": "Rn-224",
+        "name": {
+          "en": "Radon-224",
+        },
+        "neutrons": 224,
+        "weight": { "standard": 224.0240932 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "1.8 h",
+            "decay_to": "Fr-224"
+          }
+        ]
+      }
+    ]
   },
   "Fr": {
     "id": "Fr",
@@ -7857,7 +9303,61 @@ module.exports = {
     "melting_point": 300,
     "boiling_point": 950,
     "electrons": [2, 8, 18, 32, 18, 8, 1],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Fr-221",
+        "name": {
+          "en": "Francium-221",
+        },
+        "neutrons": 221,
+        "weight": { "standard": 221.0142555 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "4.8 min",
+            "decay_to": "At-217"
+          }
+        ]
+      },
+      {
+        "id": "Fr-222",
+        "name": {
+          "en": "Francium-222",
+        },
+        "neutrons": 222,
+        "weight": { "standard": 222.01755223 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "14.2 min",
+            "decay_to": "Ra-222"
+          }
+        ]
+      },
+      {
+        "id": "Fr-223",
+        "name": {
+          "en": "Francium-223",
+        },
+        "neutrons": 223,
+        "weight": { "standard": 223.019735926 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "22.00 min",
+            "decay_to": "Ra-223"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "22.00 min",
+            "decay_to": "At-219"
+          }
+        ]
+      }
+    ]
   },
   "Ra": {
     "id": "Ra",
@@ -7874,7 +9374,88 @@ module.exports = {
     "melting_point": 973,
     "boiling_point": 2010,
     "electrons": [2, 8, 18, 32, 18, 8, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Ra-223",
+        "name": {
+          "en": "Radium-223",
+        },
+        "neutrons": 223,
+        "weight": { "standard": 223.018502227 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "11.43 d",
+            "decay_to": "Rn-219"
+          }
+        ]
+      },
+      {
+        "id": "Ra-224",
+        "name": {
+          "en": "Radium-224",
+        },
+        "neutrons": 224,
+        "weight": { "standard": 224.020211824 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "3.6319 d",
+            "decay_to": "Rn-220"
+          }
+        ]
+      },
+      {
+        "id": "Ra-225",
+        "name": {
+          "en": "Radium-225",
+        },
+        "neutrons": 225,
+        "weight": { "standard": 225.0236123 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "14.9 d",
+            "decay_to": "Ac-225"
+          }
+        ]
+      },
+      {
+        "id": "Ra-226",
+        "name": {
+          "en": "Radium-226",
+        },
+        "neutrons": 226,
+        "weight": { "standard": 226.025409825 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "1600 y",
+            "decay_to": "Rn-222"
+          }
+        ]
+      },
+      {
+        "id": "Ra-228",
+        "name": {
+          "en": "Radium-228",
+        },
+        "neutrons": 228,
+        "weight": { "standard": 228.031070326 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "5.75 y",
+            "decay_to": "Ac-228"
+          }
+        ]
+      }
+    ]
   },
   "Ac": {
     "id": "Ac",
@@ -7891,7 +9472,71 @@ module.exports = {
     "melting_point": 1323,
     "boiling_point": 3473,
     "electrons": [2, 8, 18, 32, 18, 9, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Ac-225",
+        "name": {
+          "en": "Actinium-225",
+        },
+        "neutrons": 225,
+        "weight": { "standard": 225.0232305 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "10 d",
+            "decay_to": "Fr-221"
+          }
+        ]
+      },
+      {
+        "id": "Ac-226",
+        "name": {
+          "en": "Actinium-226",
+        },
+        "neutrons": 226,
+        "weight": { "standard": 226.0260984 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "29.37 h",
+            "decay_to": "Th-226"
+          },
+          {
+            "mode": "k_plus",
+            "half_life": "29.37 h",
+            "decay_to": "Ra-226"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "29.37 h",
+            "decay_to": "Fr-222"
+          }
+        ]
+      },
+      {
+        "id": "Ac-227",
+        "name": {
+          "en": "Actinium-227",
+        },
+        "neutrons": 227,
+        "weight": { "standard": 227.027752126 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "21.772 y",
+            "decay_to": "Th-227"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "21.772 y",
+            "decay_to": "Fr-223"
+          }
+        ]
+      }
+    ]
   },
   "Th": {
     "id": "Th",
@@ -7908,7 +9553,120 @@ module.exports = {
     "melting_point": 2023,
     "boiling_point": 5093,
     "electrons": [2, 8, 18, 32, 18, 10, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Th-227",
+        "name": {
+          "en": "Thorium-227",
+        },
+        "neutrons": 227,
+        "weight": { "standard": 227.027704127 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "18.68 d",
+            "decay_to": "Ra-223"
+          }
+        ]
+      },
+      {
+        "id": "Th-228",
+        "name": {
+          "en": "Thorium-228",
+        },
+        "neutrons": 228,
+        "weight": { "standard": 228.028741124 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "1.9116 y",
+            "decay_to": "Ra-224"
+          }
+        ]
+      },
+      {
+        "id": "Th-229",
+        "name": {
+          "en": "Thorium-229",
+        },
+        "neutrons": 229,
+        "weight": { "standard": 229.0317623 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "7917 y",
+            "decay_to": "Ra-225"
+          }
+        ]
+      },
+      {
+        "id": "Th-230",
+        "name": {
+          "en": "Thorium-230",
+        },
+        "neutrons": 230,
+        "weight": { "standard": 230.033133819 },
+        "abundance": 0.02,
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "75400 y",
+            "decay_to": "Ra-226"
+          }
+        ]
+      },
+      {
+        "id": "Th-231",
+        "name": {
+          "en": "Thorium-231",
+        },
+        "neutrons": 231,
+        "weight": { "standard": 231.036304319 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "25.5 h",
+            "decay_to": "Pa-231"
+          }
+        ]
+      },
+      {
+        "id": "Th-232",
+        "name": {
+          "en": "Thorium-232",
+        },
+        "neutrons": 232,
+        "weight": { "standard": 232.038055321 },
+        "abundance": 99.98,
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "1.405e10 y",
+            "decay_to": "Ra-228"
+          }
+        ]
+      },
+      {
+        "id": "Th-234",
+        "name": {
+          "en": "Thorium-234",
+        },
+        "neutrons": 234,
+        "weight": { "standard": 234.0436014 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "24.1 d",
+            "decay_to": "Pa-234"
+          }
+        ]
+      }
+    ]
   },
   "Pa": {
     "id": "Pa",
@@ -7925,7 +9683,120 @@ module.exports = {
     "melting_point": 1845,
     "boiling_point": 4273,
     "electrons": [2, 8, 18, 32, 20, 9, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Pa-229",
+        "name": {
+          "en": "Protactinium-229",
+        },
+        "neutrons": 229,
+        "weight": { "standard": 229.032096830 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "1.5 d",
+            "decay_to": "Th-229"
+          }
+        ]
+      },
+      {
+        "id": "Pa-230",
+        "name": {
+          "en": "Protactinium-230",
+        },
+        "neutrons": 230,
+        "weight": { "standard": 230.0345414 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "17.4 d",
+            "decay_to": "Th-230"
+          }
+        ]
+      },
+      {
+        "id": "Pa-231",
+        "name": {
+          "en": "Protactinium-231",
+        },
+        "neutrons": 231,
+        "weight": { "standard": 231.035884024 },
+        "abundance": 100,
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "3.276e4 y",
+            "decay_to": "Ac-227"
+          }
+        ]
+      },
+      {
+        "id": "Pa-232",
+        "name": {
+          "en": "Protactinium-232",
+        },
+        "neutrons": 232,
+        "weight": { "standard": 232.0385928 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "1.31 d",
+            "decay_to": "U-232"
+          }
+        ]
+      },
+      {
+        "id": "Pa-233",
+        "name": {
+          "en": "Protactinium-233",
+        },
+        "neutrons": 233,
+        "weight": { "standard": 233.040247323 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "26.967 d",
+            "decay_to": "U-233"
+          }
+        ]
+      },
+      {
+        "id": "Pa-234",
+        "name": {
+          "en": "Protactinium-234",
+        },
+        "neutrons": 234,
+        "weight": { "standard": 234.0433085 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "6.75 h",
+            "decay_to": "U-234"
+          }
+        ]
+      },
+      {
+        "id": "Pa-234m",
+        "name": {
+          "en": "Protactinium-234m",
+        },
+        "neutrons": 234,
+        "weight": { "standard": 234.0433085 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "1.17 min",
+            "decay_to": "U-234"
+          }
+        ]
+      }
+    ]
   },
   "U": {
     "id": "U",
@@ -7942,7 +9813,133 @@ module.exports = {
     "melting_point": 1408,
     "boiling_point": 4200,
     "electrons": [2, 8, 18, 32, 21, 9, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "U-232",
+        "name": {
+          "en": "Uranium-232",
+        },
+        "neutrons": 232,
+        "weight": { "standard": 232.037156224 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "68.9 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "68.9 y",
+            "decay_to": "Th-228"
+          }
+        ]
+      },
+      {
+        "id": "U-233",
+        "name": {
+          "en": "Uranium-233",
+        },
+        "neutrons": 233,
+        "weight": { "standard": 233.039635229 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "1.592e5 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "1.592e5 y",
+            "decay_to": "Th-228"
+          }
+        ]
+      },
+      {
+        "id": "U-234",
+        "name": {
+          "en": "Uranium-234",
+        },
+        "neutrons": 234,
+        "weight": { "standard": 234.040952120 },
+        "abundance": 0.005,
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "2.455e5 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "2.455e5 y",
+            "decay_to": "Th-230"
+          }
+        ]
+      },
+      {
+        "id": "U-235",
+        "name": {
+          "en": "Uranium-235",
+        },
+        "neutrons": 235,
+        "weight": { "standard": 235.043929920 },
+        "abundance": 0.720,
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "7.04e8 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "7.04e8 y",
+            "decay_to": "Th-231"
+          }
+        ]
+      },
+      {
+        "id": "U-236",
+        "name": {
+          "en": "Uranium-236",
+        },
+        "neutrons": 236,
+        "weight": { "standard": 236.0455682 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "2.342e7 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "2.342e7 y",
+            "decay_to": "Th-232"
+          }
+        ]
+      },
+      {
+        "id": "U-238",
+        "name": {
+          "en": "Uranium-238",
+        },
+        "neutrons": 238,
+        "weight": { "standard": 238.050788220 },
+        "abundance": 99.274,
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "4.468e9 y",
+            "decay_to": "Th-234"
+          },
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "4.468e9 y"
+          },
+          {
+            "mode": "double_beta_minus",
+            "half_life": "4.468e9 y",
+            "decay_to": "Pu-238"
+          }
+        ]
+      }
+    ]
   },
   "Np": {
     "id": "Np",
@@ -7959,7 +9956,87 @@ module.exports = {
     "melting_point": 917,
     "boiling_point": 4273,
     "electrons": [2, 8, 18, 32, 22, 9, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Np-235",
+        "name": {
+          "en": "Neptunium-235",
+        },
+        "neutrons": 235,
+        "weight": { "standard": 235.044063321 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "369.1 d",
+            "decay_to": "Pa-231"
+          },
+          {
+            "mode": "k_plus",
+            "half_life": "369.1 d",
+            "decay_to": "U-235"
+          }
+        ]
+      },
+      {
+        "id": "Np-236",
+        "name": {
+          "en": "Neptunium-236",
+        },
+        "neutrons": 236,
+        "weight": { "standard": 236.046575 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "1.54e5 y",
+            "decay_to": "U-236"
+          },
+          {
+            "mode": "beta_minus",
+            "half_life": "1.54e5 y",
+            "decay_to": "Pu-236"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "1.54e5 y",
+            "decay_to": "Pa-232"
+          }
+        ]
+      },
+      {
+        "id": "Np-237",
+        "name": {
+          "en": "Neptunium-237",
+        },
+        "neutrons": 237,
+        "weight": { "standard": 237.048173420 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "2.144e6 y",
+            "decay_to": "Pa-233"
+          }
+        ]
+      },
+      {
+        "id": "Np-239",
+        "name": {
+          "en": "Neptunium-239",
+        },
+        "neutrons": 239,
+        "weight": { "standard": 239.052939022 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "2.356 d",
+            "decay_to": "Pu-239"
+          }
+        ]
+      }
+    ]
   },
   "Pu": {
     "id": "Pu",
@@ -7976,7 +10053,128 @@ module.exports = {
     "melting_point": 913,
     "boiling_point": 3503,
     "electrons": [2, 8, 18, 32, 24, 8, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Pu-238",
+        "name": {
+          "en": "Plutonium-238",
+        },
+        "neutrons": 238,
+        "weight": { "standard": 238.049559920 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "87.74 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "87.74 y",
+            "decay_to": "U-234"
+          }
+        ]
+      },
+      {
+        "id": "Pu-239",
+        "name": {
+          "en": "Plutonium-239",
+        },
+        "neutrons": 239,
+        "weight": { "standard": 239.052163420 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "2.41e4 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "2.41e4 y",
+            "decay_to": "U-235"
+          }
+        ]
+      },
+      {
+        "id": "Pu-240",
+        "name": {
+          "en": "Plutonium-240",
+        },
+        "neutrons": 240,
+        "weight": { "standard": 240.053813520 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "6500 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "6500 y",
+            "decay_to": "U-236"
+          }
+        ]
+      },
+      {
+        "id": "Pu-241",
+        "name": {
+          "en": "Plutonium-241",
+        },
+        "neutrons": 241,
+        "weight": { "standard": 241.056851520 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "beta_minus",
+            "half_life": "14 y",
+            "decay_to": "Am-241"
+          },
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "14 y"
+          }
+        ]
+      },
+      {
+        "id": "Pu-242",
+        "name": {
+          "en": "Plutonium-242",
+        },
+        "neutrons": 242,
+        "weight": { "standard": 242.058742620 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "3.73e5 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "3.73e5 y",
+            "decay_to": "U-238"
+          }
+        ]
+      },
+      {
+        "id": "Pu-244",
+        "name": {
+          "en": "Plutonium-244",
+        },
+        "neutrons": 244,
+        "weight": { "standard": 244.0642045 },
+        "abundance": "trace",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "8.08e7 y",
+            "decay_to": "U-240"
+          },
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "8.08e7 y"
+          }
+        ]
+      }
+    ]
   },
   "Am": {
     "id": "Am",
@@ -7993,7 +10191,73 @@ module.exports = {
     "melting_point": 1449,
     "boiling_point": 2284,
     "electrons": [2, 8, 18, 32, 25, 8, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Am-241",
+        "name": {
+          "en": "Americium-241",
+        },
+        "neutrons": 241,
+        "weight": { "standard": 241.056829120 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "432.2 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "432.2 y",
+            "decay_to": "Np-237"
+          }
+        ]
+      },
+      {
+        "id": "Am-242m1",
+        "name": {
+          "en": "Americium-242m1",
+        },
+        "neutrons": 242,
+        "weight": { "standard": 242.059549220 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "internal_convertion",
+            "half_life": "141 y",
+            "decay_to": "Am-242"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "141 y",
+            "decay_to": "Np-238"
+          },
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "141 y"
+          }
+        ]
+      },
+      {
+        "id": "Am-243",
+        "name": {
+          "en": "Americium-243",
+        },
+        "neutrons": 243,
+        "weight": { "standard": 243.061381125 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "7370 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "7370 y",
+            "decay_to": "Np-239"
+          }
+        ]
+      }
+    ]
   },
   "Cm": {
     "id": "Cm",
@@ -8010,7 +10274,174 @@ module.exports = {
     "melting_point": 1618,
     "boiling_point": 3383,
     "electrons": [2, 8, 18, 32, 25, 9, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Cm-242",
+        "name": {
+          "en": "Curium-242",
+        },
+        "neutrons": 242,
+        "weight": { "standard": 242.058835820 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "160 d"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "160 d",
+            "decay_to": "Pu-238"
+          }
+        ]
+      },
+      {
+        "id": "Cm-243",
+        "name": {
+          "en": "Curium-243",
+        },
+        "neutrons": 243,
+        "weight": { "standard": 243.061389122 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "29.1 y",
+            "decay_to": "Pu-239"
+          },
+          {
+            "mode": "k_plus",
+            "half_life": "29.1 y",
+            "decay_to": "Am-243"
+          },
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "29.1 y"
+          }
+        ]
+      },
+      {
+        "id": "Cm-244",
+        "name": {
+          "en": "Curium-244",
+        },
+        "neutrons": 244,
+        "weight": { "standard": 244.062752620 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "18.1 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "18.1 y",
+            "decay_to": "Pu-240"
+          }
+        ]
+      },
+      {
+        "id": "Cm-245",
+        "name": {
+          "en": "Curium-245",
+        },
+        "neutrons": 245,
+        "weight": { "standard": 245.065491222 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "8500 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "8500 y",
+            "decay_to": "Pu-241"
+          }
+        ]
+      },
+      {
+        "id": "Cm-246",
+        "name": {
+          "en": "Curium-246",
+        },
+        "neutrons": 246,
+        "weight": { "standard": 246.067223722 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "4730 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "4730 y",
+            "decay_to": "Pu-242"
+          }
+        ]
+      },
+      {
+        "id": "Cm-247",
+        "name": {
+          "en": "Curium-247",
+        },
+        "neutrons": 247,
+        "weight": { "standard": 247.0703545 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "1.56e7 y",
+            "decay_to": "Pu-243"
+          }
+        ]
+      },
+      {
+        "id": "Cm-248",
+        "name": {
+          "en": "Curium-248",
+        },
+        "neutrons": 248,
+        "weight": { "standard": 248.0723495 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "3.40e5 y",
+            "decay_to": "Pu-244"
+          },
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "3.40e5 y"
+          }
+        ]
+      },
+      {
+        "id": "Cm-250",
+        "name": {
+          "en": "Curium-250",
+        },
+        "neutrons": 250,
+        "weight": { "standard": 250.07835712 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "9000 y"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "9000 y",
+            "decay_to": "Pu-246"
+          },
+          {
+            "mode": "beta_minus",
+            "half_life": "9000 y",
+            "decay_to": "Bk-250"
+          }
+        ]
+      }
+    ]
   },
   "Bk": {
     "id": "Bk",
@@ -8027,7 +10458,107 @@ module.exports = {
     "melting_point": 1323,
     "boiling_point": null,
     "electrons": [2, 8, 18, 32, 27, 8, 2],
-    "isotopes": []
+    "isotopes": [
+      {
+        "id": "Bk-245",
+        "name": {
+          "en": "Berkelium-245",
+        },
+        "neutrons": 245,
+        "weight": { "standard": 245.066361625 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "4.94 d",
+            "decay_to": "Cm-245"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "4.94 d",
+            "decay_to": "Am-241"
+          }
+        ]
+      },
+      {
+        "id": "Bk-246",
+        "name": {
+          "en": "Berkelium-246",
+        },
+        "neutrons": 246,
+        "weight": { "standard": 246.068676 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "k_plus",
+            "half_life": "1.8 d",
+            "decay_to": "Cm-246"
+          },
+          {
+            "mode": "alpha",
+            "half_life": "1.8 d",
+            "decay_to": "Am-242"
+          }
+        ]
+      },
+      {
+        "id": "Bk-247",
+        "name": {
+          "en": "Berkelium-247",
+        },
+        "neutrons": 247,
+        "weight": { "standard": 247.0703076 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "1380 y",
+            "decay_to": "Am-243"
+          }
+        ]
+      },
+      {
+        "id": "Bk-248",
+        "name": {
+          "en": "Berkelium-248",
+        },
+        "neutrons": 248,
+        "weight": { "standard": 248.073098 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "300 y",
+            "decay_to": "Am-244"
+          }
+        ]
+      },
+      {
+        "id": "Bk-249",
+        "name": {
+          "en": "Berkelium-249",
+        },
+        "neutrons": 249,
+        "weight": { "standard": 249.074986728 },
+        "abundance": "syn",
+        "decay": [
+          {
+            "mode": "alpha",
+            "half_life": "330 d",
+            "decay_to": "Am-245"
+          },
+          {
+            "mode": "spontaneous_fission",
+            "half_life": "330 d"
+          },
+          {
+            "mode": "beta_minus",
+            "half_life": "330 d",
+            "decay_to": "Cf-249"
+          }
+        ]
+      }
+    ]
   },
   "Cf": {
     "id": "Cf",
@@ -8044,7 +10575,9 @@ module.exports = {
     "melting_point": 1173,
     "boiling_point": null,
     "electrons": [2, 8, 18, 32, 28, 8, 2],
-    "isotopes": []
+    "isotopes": [
+      
+    ]
   },
   "Es": {
     "id": "Es",

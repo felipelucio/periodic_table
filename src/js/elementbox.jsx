@@ -21,6 +21,8 @@ export default class ElementBox extends React.Component {
   }
 
   onPointerEnter(e) {
+    e.preventDefault();
+    e.stopPropagation();
     if (this.props.onPointerLeave) {
       let id = e.currentTarget.getAttribute('data-key');
       let type = e.currentTarget.getAttribute('data-type');
@@ -29,6 +31,8 @@ export default class ElementBox extends React.Component {
   }
 
   onPointerLeave(e) {
+    e.preventDefault();
+    e.stopPropagation();
     if (this.props.onPointerLeave) {
       let id = e.currentTarget.getAttribute('data-key');
       let type = e.currentTarget.getAttribute('data-type');
