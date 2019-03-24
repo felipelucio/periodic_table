@@ -32,7 +32,7 @@ nav .temperature_input {
 
 .content {
 	position: relative;
-	margin-top: 60px;
+	margin-top: 56px;
 	padding-bottom: 20px;
 	padding-right: 20px;
 	height: calc(100vh - 60px);
@@ -94,6 +94,12 @@ nav .temperature_input {
 	border: 0 !important;
 	border-right: 1px solid #000 !important;
 	text-align: center;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .g1.highlight,.g2.highlight,.g3.highlight,.g4.highlight,.g5.highlight,
@@ -108,6 +114,12 @@ nav .temperature_input {
 	border: 0 !important;
 	text-align: right;
 	line-height: 3.5rem;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .p1.highlight,.p2.highlight,.p3.highlight,.p4.highlight,
@@ -250,7 +262,7 @@ nav .temperature_input {
 	box-sizing: border-box;
 	position: fixed;
 	left: 0;
-	top: 60px;
+	top: 58px;
 	width: 100%;
 	min-height: calc(100% + 60px);
 	background: #FFF;

@@ -4,8 +4,7 @@ export default class ElementBox extends React.Component {
   constructor(props) {
     super(props);
 
-    this.onPointerEnter = this.onPointerEnter.bind(this);
-    this.onPointerLeave = this.onPointerLeave.bind(this);
+    this.onPointerOver = this.onPointerOver.bind(this);
     this.onPointerDown = this.onPointerDown.bind(this);
     this.onPointerEnterIsotope = this.onPointerEnterIsotope.bind(this);
   }
@@ -20,28 +19,12 @@ export default class ElementBox extends React.Component {
     el.classList.remove('selected'); 
   }
 
-  onPointerEnter(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (this.props.onPointerLeave) {
-      let id = e.currentTarget.getAttribute('data-key');
-      let type = e.currentTarget.getAttribute('data-type');
-      this.props.onPointerEnter(id, type, e);
-    } 
-  }
-
-  onPointerLeave(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (this.props.onPointerLeave) {
-      let id = e.currentTarget.getAttribute('data-key');
-      let type = e.currentTarget.getAttribute('data-type');
-      this.props.onPointerLeave(id, type, e);
-    } 
+  onPointerOver(e) {
+    let id = e.currentTarget.getAttribute('data-key');
+    this.props.setHovered(id);
   }
 
   onPointerDown(e) {
-    e.preventDefault();
     e.stopPropagation();
     e.persist();
 
@@ -78,7 +61,8 @@ export default class ElementBox extends React.Component {
       this.props.elem.id,
       this.props.elem.type,
       'element',
-      (this.props.selected ? 'selected' : '')
+      (this.props.selected ? 'selected' : ''),
+      (this.props.hover ? 'active' : ''),
     ].concat(this.props.elem.classList).join(' ');
    
     let elem = this.props.elem;
@@ -93,8 +77,6 @@ export default class ElementBox extends React.Component {
       isotopes.push(
         <span className={`isotope order_${count}`} key={id}
           data-key={`${elem.id}[${id}]`}
-          onPointerEnter={this.onPointerEnterIsotope}
-          onPointerLeave={this.onPointerLeaveIsotope}
           onPointerDown={this.onPointerDown}
         >
           <p>{iso.getName(_lang)}</p>
@@ -120,8 +102,7 @@ export default class ElementBox extends React.Component {
       <li className={classes} 
         data-key={elem.id}
         data-type={elem.type}
-        onPointerEnter={this.onPointerEnter}
-        onPointerLeave={this.onPointerLeave}
+        onPointerOver={this.onPointerOver}
         onPointerDown={this.onPointerDown}
       >
         <span className={`basic ${this._showFlags('basic')}`}>

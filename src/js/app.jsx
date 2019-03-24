@@ -27,7 +27,9 @@ export default class App extends React.Component {
     this.state = { 
       elements,
       curr_lang: this._getDefaultLang() || 'en',
-      curr_elem: null,
+      selected_element: null,
+      hover_element: null,
+      temperature: 298,
       show_flags: {
         basic: true,
         electronic: false,
@@ -35,7 +37,6 @@ export default class App extends React.Component {
         radius: false,
         state: false
       },
-      temperature: 298,
       show_page: false
     };
     
@@ -46,6 +47,7 @@ export default class App extends React.Component {
     this.showHandler = this.showHandler.bind(this);
     this.showElementPage = this.showElementPage.bind(this);
     this.setSelectedElement = this.setSelectedElement.bind(this);
+    this.setHoveredElement = this.setHoveredElement.bind(this);
     this.closeElementPage = this.closeElementPage.bind(this);
     this.setTemperature = this.setTemperature.bind(this);
   }
@@ -80,7 +82,11 @@ export default class App extends React.Component {
   }
 
   setSelectedElement(id) {
-    this.setState({curr_elem: this._getElement(id)});
+    this.setState({selected_element: this._getElement(id)});
+  }
+
+  setHoveredElement(id) {
+    this.setState({hover_element: this._getElement(id)});
   }
 
   showElementPage() {  
@@ -105,10 +111,16 @@ export default class App extends React.Component {
     let matches = regexp.exec(id);
     
     if(matches[1] && matches[3]) {
-      return this.state.elements[matches[1]].isotopes[matches[3]];
+      if(this.state.elements[matches[1]] && 
+        this.state.elements[matches[1]].isotopes[matches[3]]
+      )
+        return this.state.elements[matches[1]].isotopes[matches[3]];
+    } else {
+      if(this.state.elements[matches[1]])  
+        return this.state.elements[matches[1]];
     }
 
-    return this.state.elements[matches[1]];
+    return false;
   }
 
   toggleHighlight(id, type, event) {
@@ -131,22 +143,28 @@ export default class App extends React.Component {
     let pref = 'p' + this._getElement(id).period;
     let group = this.refs[gref];
     let period = this.refs[pref];
-    if (event.type == 'pointerenter') {
+    if (event.type == 'pointerenter' || event.type == 'pointerdown') {
+      for(let i=1;i<=7;i++) {
+        this.refs['p'+i].classList.remove('highlight');
+      }
+      for(let i=1;i<=18;i++) {
+        this.refs['g'+i].classList.remove('highlight');
+      }
       group.classList.add('highlight');
       period.classList.add('highlight');
+      this._removeElementsClass('active');
+      this._addClass(id, 'active');
     } 
-    if (event.type == 'pointerleave') {
+    if (event.type == 'pointerleave' || event.type == "pointerout" || event.type == 'pointerup') {
       group.classList.remove('highlight');
       period.classList.remove('highlight');
+      this._removeElementsClass('active');
     }
-
-    this._toggleClass(id, 'active');
   }
 
   toggleHighlightPeriod(e) {
     let period = e.target.getAttribute('data-key');
-    e.target.classList.toggle('highlight');
-
+    
     let elems = [];
     switch(period) {
       case 'p1':
@@ -168,20 +186,37 @@ export default class App extends React.Component {
         break;
       case 'p6':
         elems = ['Cs','Ba','lanthanoids','Hf','Ta','W','Re','Os',
-          'Ir','Pt','Au','Hg','Tl','Pb','Bi','Po','At','Rn'];
+          'Ir','Pt','Au','Hg','Tl','Pb','Bi','Po','At','Rn','La',
+          'Ce','Pr','Nd','Pm','Sm','Eu','Gd','Tb','Dy','Ho','Er',
+          'Tm','Yb','Lu'];
         break;
       case 'p7':
         elems = ['Fr','Ra','actinoids','Rf','Db','Sg','Bh','Hs',
-          'Mt','Ds','Rg','Cn','Nh','Fl','Mc','Lv','Ts','Og'];
+          'Mt','Ds','Rg','Cn','Nh','Fl','Mc','Lv','Ts','Og','Ac',
+          'Th','Pa','U','Np','Pu','Am','Cm','Bk','Cf','Es','Fm',
+          'Md','No','Lr'];
         break;
     };
 
-    this._toggleElementsClass(elems, 'disabled');
+    if (event.type == 'pointerenter' || event.type == 'pointerdown') {
+      for(let i=1;i<=7;i++) {
+        this.refs['p'+i].classList.remove('highlight');
+      }
+      for(let i=1;i<=18;i++) {
+        this.refs['g'+i].classList.remove('highlight');
+      }
+      e.target.classList.add('highlight');
+      this._addElementsClass('disabled', elems);
+    } 
+    if (event.type == 'pointerleave' || event.type == 'pointerup' || event.type == 'pointerout') {
+      e.target.classList.remove('highlight');
+      this._removeElementsClass('disabled');
+    }
+
   }
 
   toggleHighlightGroup(e) {
     let group = e.target.getAttribute('data-key');
-    e.target.classList.toggle('highlight');
 
     let elems = [];
     switch(group) {
@@ -246,7 +281,20 @@ export default class App extends React.Component {
         break;
     };
 
-    this._toggleElementsClass(elems, 'disabled');
+    if (event.type == 'pointerenter' || event.type == 'pointerdown') {
+      for(let i=1;i<=7;i++) {
+        this.refs['p'+i].classList.remove('highlight');
+      }
+      for(let i=1;i<=18;i++) {
+        this.refs['g'+i].classList.remove('highlight');
+      }
+      e.target.classList.add('highlight');
+      this._addElementsClass('disabled', elems);
+    } 
+    if (event.type == 'pointerleave' || event.type == 'pointerup' || event.type == 'pointerout') {
+      e.target.classList.remove('highlight');
+      this._removeElementsClass('disabled');
+    }
   }
 
   _toggleElementsClass(elems, class_name) {
@@ -264,6 +312,50 @@ export default class App extends React.Component {
         } else {
           class_list.push(class_name);
         }
+
+        upd[el] = { classList: {$set: class_list}};
+      });
+
+      return { elements: update(state.elements, upd) }
+    });
+  }
+
+  _addElementsClass(class_name, exceptions=[]) {
+    this.setState(function(state, props) {
+      let els = Object.keys(state.elements);
+        
+      let upd = {};
+      els.map(function(el) {
+        let class_list = state.elements[el].classList || [];
+        if(exceptions.indexOf(el) > -1) {
+          if(class_list.indexOf(class_name) > -1) {
+            let new_list = class_list.filter(function(e) { return e !== class_name} );
+            class_list = new_list;
+          }
+        } else {
+          class_list.push(class_name);
+        }
+
+        upd[el] = { classList: {$set: class_list}};
+      });
+
+      return { elements: update(state.elements, upd) }
+    });
+  }
+
+  _removeElementsClass(class_name, exceptions=[]) {
+    this.setState(function(state, props) {
+      let els = Object.keys(state.elements);
+        
+      let upd = {};
+      els.map(function(el) {
+        let class_list = state.elements[el].classList || [];
+        if(exceptions.indexOf(el) < 0) {
+          if(class_list.indexOf(class_name) > -1) {
+            let new_list = class_list.filter(function(e) { return e !== class_name} );
+            class_list = new_list;
+          }
+        } 
 
         upd[el] = { classList: {$set: class_list}};
       });
@@ -291,42 +383,88 @@ export default class App extends React.Component {
     });
   }
 
+  _addClass(id, class_name) {
+    this.setState(function(state, props) {
+      if(state.elements[id]) {
+        let upd = {};
+        let class_list = state.elements[id].classList || [];
+        if(class_list.indexOf(class_name) > -1) {
+          return true
+        } else {
+          class_list.push(class_name);
+        }
+
+        upd[id] = { classList: {$set: class_list}};
+
+        return { elements: update(state.elements, upd) }
+      }       
+    });
+  }
+
   render() {
     let boxes = [];
     for(let i in this.state.elements) {
+      let elem = this.state.elements[i];
+      let classes = {};
+      let styles = {};
+      let selected = false;
+      if(this.state.selected_element) {
+        if(elem.id == this.state.selected_element.id) selected = true;
+        
+        if(this.state.selected_element._element)
+          if(this.state.selected_element._element.id == elem.id)
+            selected = true;
+      }
+
       boxes.push(
-        <ElementBox key={this.state.elements[i].id}
-          elem={this.state.elements[i]} 
+        <ElementBox key={elem.id}
+          elem={elem} 
           lang={this.state.curr_lang}
           curr_temp={this.state.temperature}
-          selected={this.state.curr_elem == this.state.elements[i]}
+          selected={selected}
+          hover={this.state.hover_element == elem}
+          classes={classes}
+          styles={styles}
           show_flags={this.state.show_flags}
-          onPointerEnter={this.toggleHighlight}
-          onPointerLeave={this.toggleHighlight}
           showElementPage={this.showElementPage}
           setSelected={this.setSelectedElement}
+          setHovered={this.setHoveredElement}
         />
       );
     }
 
     let groups = [];
     for(let i=1; i <= 18; i++) {
+      let id = 'g'+i;
+      let highlight = '';
+      if(this.state.hover_element && 
+        (this.state.hover_element.group == i)
+      ) { highlight = 'highlight'; }
+
       groups.push(
-        <li ref={"g"+i}  data-key={"g"+i} key={"g"+i} 
-          className={"g"+i}
-          onPointerEnter={this.toggleHighlightGroup}
-          onPointerLeave={this.toggleHighlightGroup}
+        <li ref={id}  data-key={id} key={id} 
+          className={`${id} ${highlight}`}
+          onPointerDown={this.toggleHighlightGroup}
+          onPointerUp={this.toggleHighlightGroup}
+          onPointerOut={this.toggleHighlightGroup}
         >{i}</li>
       );
     }
 
     let periods = [];
     for(let i=1; i <= 7; i++) {
+      let id = 'p'+i;
+      let highlight = '';
+      if(this.state.hover_element &&
+        (this.state.hover_element.period == i)
+      ) { highlight = 'highlight'; }
+      
       periods.push(
-        <li ref={"p"+i} data-key={"p"+i} key={"g"+i} 
-          className={"p"+i}
-          onPointerEnter={this.toggleHighlightPeriod}
-          onPointerLeave={this.toggleHighlightPeriod}
+        <li ref={id} data-key={id} key={id} 
+          className={`${id} ${highlight}`}
+          onPointerDown={this.toggleHighlightPeriod}
+          onPointerUp={this.toggleHighlightPeriod}
+          onPointerOut={this.toggleHighlightPeriod}
         >{i}</li>
       );
     }
@@ -343,12 +481,12 @@ export default class App extends React.Component {
         />
         <div className="content">
           <ElementPage curr_lang={this.state.curr_lang} 
-            element={this.state.curr_elem}
+            element={this.state.selected_element}
             show_page={this.state.show_page}
             closeElemPage={this.closeElementPage}
           />
           <ul className="table">
-            <InfoArea element={this.state.curr_elem} 
+            <InfoArea element={this.state.selected_element} 
               lang={this.state.curr_lang}
               curr_temp={this.state.temperature}
               show_flags={this.state.show_flags}

@@ -1,6 +1,12 @@
 .element {
 	overflow: hidden;
 	position: relative;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .element.active {
@@ -54,7 +60,7 @@
 .element .isotope {
 	width: 4rem;
 	height: 4rem;
-	margin: 1px;
+	margin: 0 1px 1px 1px;
 	border: 1px solid #000;
 	background: #FFF;
 	font-size: 0.6rem;
