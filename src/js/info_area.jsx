@@ -1,6 +1,16 @@
 import React from 'react'
 
 export default class InfoArea extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.onPointerDown = this.onPointerDown.bind(this);
+  }
+
+  onPointerDown(e) {
+    this.props.setHovered();
+  }
+
    _showFlags(section) {
     if(this.props.show_flags.hasOwnProperty(section))
       if(this.props.show_flags[section]) return 'show';
@@ -15,7 +25,7 @@ export default class InfoArea extends React.Component {
     if(!elem) return (<li className="info_area"></li>);
     
     return (
-      <li className={`info_area`}> 
+      <li className={`info_area`} onPointerDown={this.onPointerDown}> 
         <span className={`info-container basic ${this._showFlags('basic')}`}>
           <span className={`elementbox  ${elem.type}`}>
             <span className="symbol">{elem.symbol}</span>

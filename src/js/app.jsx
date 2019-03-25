@@ -490,6 +490,7 @@ export default class App extends React.Component {
               lang={this.state.curr_lang}
               curr_temp={this.state.temperature}
               show_flags={this.state.show_flags}
+              setHovered={this.setHoveredElement}
             />
             {groups}
             {periods}

@@ -7,6 +7,7 @@ export default class ElementBox extends React.Component {
     this.onPointerOver = this.onPointerOver.bind(this);
     this.onPointerDown = this.onPointerDown.bind(this);
     this.onPointerEnterIsotope = this.onPointerEnterIsotope.bind(this);
+    this.closeIsotopes = this.closeIsotopes.bind(this);
   }
 
   onPointerEnterIsotope(e) {
@@ -29,7 +30,15 @@ export default class ElementBox extends React.Component {
     e.persist();
 
     let id = e.currentTarget.getAttribute('data-key');
-    this.props.setSelected(id);
+    if(!this.props.selected || (this.props.elem.id != id)) {
+      this.props.setSelected(id);
+      this.props.setHovered(this.props.elem.id);
+    } else {
+      if(id == this.props.elem.id) {
+        this.props.setSelected();
+        this.props.setHovered();
+      }
+    }
     
     let that = this;
     let target = e.currentTarget;
@@ -45,6 +54,11 @@ export default class ElementBox extends React.Component {
       window.clearTimeout(hold);
       target.removeEventListener('pointerleave', _pointer);
     })
+  }
+
+  closeIsotopes(e) {
+    e.stopPropagation();
+    this.props.setHovered();
   }
 
   _showFlags(section) {
@@ -138,7 +152,9 @@ export default class ElementBox extends React.Component {
           <span className="symbol">{ elem.symbol }</span>
           <span className="atomic_number">{ elem.atomic_number }</span>
           { (elem.id != 'lanthanoids' || elem.id != 'actinoids') && 
-            <div className={`isotopes-container ${isotopes_pos_x} ${isotopes_pos_y}`}>
+            <div className={`isotopes-container ${isotopes_pos_x} ${isotopes_pos_y}`}
+              onPointerDown={this.closeIsotopes}
+            >
               {isotopes}
             </div>
           }
