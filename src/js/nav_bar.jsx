@@ -40,7 +40,7 @@ export default class NavBar extends React.Component {
     let strings = this.strings;
 
     return (
-      <nav id="navigation" className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav id="navigation" className="navbar navbar-expand-lg navbar-dark bg-dark position-fixed">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -73,8 +73,8 @@ export default class NavBar extends React.Component {
               <input type="number" name="temperature" className="form-control temperature_input"
                 value={this.state.shown_temperature} onChange={this.changeTemperature} />
 
-              <span className="input-group-btn">
-                <select name="temperature_scale" className="temperature_scale btn" 
+              <span className="input-group-append">
+                <select name="temperature_scale" className="temperature_scale custom-select" 
                   defaultValue={this.props.temperature_scale} onChange={this.changeTemperature}
                 >
                   <option value="kelvin">K</option>
@@ -85,6 +85,9 @@ export default class NavBar extends React.Component {
             </span>
             
             <span className="input-group">
+              <div className="input-group-prepend">
+                <span className="input-group-text">{strings.getString('language')}</span>
+              </div>
               <select className="form-control" value={this.props.curr_lang}
                 onChange={(e) => this.props.langOnChange(e.target.value)}
               >

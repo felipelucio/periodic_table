@@ -4,122 +4,6 @@
 		"selected_items":
 		[
 			[
-				"mar",
-				"margin\tproperty"
-			],
-			[
-				"pa",
-				"padding\tproperty"
-			],
-			[
-				"padt",
-				"padding-right\tproperty"
-			],
-			[
-				"get",
-				"getString"
-			],
-			[
-				"Ogan",
-				"Oganessônio"
-			],
-			[
-				"Ogane",
-				"Oganesson"
-			],
-			[
-				"Tenn",
-				"Tennessine"
-			],
-			[
-				"Live",
-				"Livermório"
-			],
-			[
-				"Liverm",
-				"Livermorium"
-			],
-			[
-				"Mosc",
-				"Moscóvio"
-			],
-			[
-				"Mosco",
-				"Moscouvium"
-			],
-			[
-				"Fle",
-				"Fleróvio"
-			],
-			[
-				"Cope",
-				"Copernicium"
-			],
-			[
-				"Roen",
-				"Roentgenium"
-			],
-			[
-				"Darm",
-				"Darmstácio"
-			],
-			[
-				"Darms",
-				"Darmstadtium"
-			],
-			[
-				"Bhor",
-				"Bóhrio"
-			],
-			[
-				"Sea",
-				"Seabórgio"
-			],
-			[
-				"Ruther",
-				"Rutherfórdio"
-			],
-			[
-				"La",
-				"Lawrêncio"
-			],
-			[
-				"law",
-				"Lawrencium"
-			],
-			[
-				"Nobl",
-				"Nobélio"
-			],
-			[
-				"Nob",
-				"Nobelium"
-			],
-			[
-				"Me",
-				"Mendelévio"
-			],
-			[
-				"Medl",
-				"Mendelevium"
-			],
-			[
-				"E",
-				"Einstênio"
-			],
-			[
-				"Ei",
-				"Einsteinium"
-			],
-			[
-				"Am",
-				"Amerício"
-			],
-			[
-				"cl",
-				"cluster_decay"
-			],
-			[
 				"Ac",
 				"Actínio"
 			],
@@ -416,6 +300,10 @@
 				"activateShowFlag"
 			],
 			[
+				"get",
+				"getAttribute"
+			],
+			[
 				"clas",
 				"className"
 			],
@@ -450,6 +338,10 @@
 			[
 				"_to",
 				"_toggleElementsClass"
+			],
+			[
+				"cl",
+				"class_list"
 			],
 			[
 				"to",
@@ -514,122 +406,131 @@
 			[
 				"bor",
 				"border"
+			],
+			[
+				"bord",
+				"border-left"
+			],
+			[
+				"geotim",
+				"geotime_instance"
+			],
+			[
+				"geo",
+				"geotime_intance"
+			],
+			[
+				"levels",
+				"levels"
+			],
+			[
+				"coun",
+				"countKeysPerLevel"
+			],
+			[
+				"ord",
+				"ordovician-upper"
+			],
+			[
+				"lud",
+				"ludfordian"
+			],
+			[
+				"dev",
+				"devonian"
+			],
+			[
+				"_su",
+				"_subperiods"
+			],
+			[
+				"pen",
+				"pennsylvanian-upper"
+			],
+			[
+				"penn",
+				"pennsylvanian"
+			],
+			[
+				"tri",
+				"triassic-upper"
+			],
+			[
+				"jur",
+				"jurassic-upper"
+			],
+			[
+				"cre",
+				"cretaceous-lower"
+			],
+			[
+				"neo",
+				"neogene"
+			],
+			[
+				"mes",
+				"mesoproterozoic"
+			],
+			[
+				"meso",
+				"mesoproterozoic"
+			],
+			[
+				"colum",
+				"column_paleontology_width"
+			],
+			[
+				"chono",
+				"chrono_header_width"
+			],
+			[
+				"pale",
+				"paleontology"
+			],
+			[
+				"l",
+				"legend\tTag"
+			],
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"de",
+				"devonian-lower"
+			],
+			[
+				"devo",
+				"devonian"
+			],
+			[
+				"devoni",
+				"devonian-upper"
+			],
+			[
+				"ol",
+				"ol\tTag"
+			],
+			[
+				"ple",
+				"pleistocene-upper"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/css/main.css",
+			"file": "/G/Felipe/projetos/roguelike/main.py",
 			"settings":
 			{
-				"buffer_size": 9704,
+				"buffer_size": 357,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/index.html",
-			"settings":
-			{
-				"buffer_size": 871,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/css/elementbox.css",
-			"settings":
-			{
-				"buffer_size": 2820,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/elementbox.jsx",
-			"settings":
-			{
-				"buffer_size": 5061,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/app.jsx",
-			"settings":
-			{
-				"buffer_size": 17021,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/info_area.jsx",
-			"settings":
-			{
-				"buffer_size": 4295,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 1120,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/utils.js",
-			"settings":
-			{
-				"buffer_size": 737,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "export default {"
-			}
-		},
-		{
-			"file": "src/js/nav_bar.jsx",
-			"settings":
-			{
-				"buffer_size": 4029,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/data.js",
-			"settings":
-			{
-				"buffer_size": 321927,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/l10n.js",
-			"settings":
-			{
-				"buffer_size": 2375,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/main.js",
-			"settings":
-			{
-				"buffer_size": 377,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows",
+				"name": "import libtcody as tcod"
 			}
 		}
 	],
-	"build_system": "Packages/Rust Enhanced/RustEnhanced.sublime-build",
+	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -751,6 +652,30 @@
 		[
 			[
 				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/Virtualenv/Python + Virtualenv.sublime-build",
+					""
+				],
+				[
+					"Packages/User/kivy.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
 					"Packages/Rust Enhanced/RustEnhanced.sublime-build",
 					""
 				],
@@ -853,10 +778,6 @@
 		"selected_items":
 		[
 			[
-				"tem",
-				"Terminus: Toggle Panel"
-			],
-			[
 				"term",
 				"Terminus: Toggle Panel"
 			],
@@ -927,6 +848,10 @@
 			[
 				"remo",
 				"Package Control: Remove Package"
+			],
+			[
+				"tem",
+				"Terminus: Toggle Panel"
 			],
 			[
 				"termin",
@@ -1002,30 +927,34 @@
 	},
 	"expanded_folders":
 	[
-		"/G/Felipe/projetos/periodic_app",
-		"/G/Felipe/projetos/periodic_app/src",
-		"/G/Felipe/projetos/periodic_app/src/css",
-		"/G/Felipe/projetos/periodic_app/src/js"
+		"/G/Felipe/projetos/roguelike"
 	],
 	"file_history":
 	[
-		"/G/Felipe/projetos/periodic_app/src/js/element.js",
-		"/G/Felipe/projetos/periodic_app/src/js/element_page.jsx",
-		"/G/Felipe/projetos/periodic_app/src/index.html",
+		"/C/Users/Wagner/AppData/Roaming/Sublime Text 3/Packages/User/kivy.sublime-build",
+		"/G/Felipe/projetos/periodic_app/src/js/main.js",
+		"/G/Felipe/projetos/periodic_app/src/js/data.js",
+		"/G/Felipe/projetos/periodic_app/src/js/nav_bar.jsx",
+		"/G/Felipe/projetos/periodic_app/src/js/utils.js",
 		"/G/Felipe/projetos/periodic_app/package.json",
+		"/G/Felipe/projetos/periodic_app/src/js/info_area.jsx",
+		"/G/Felipe/projetos/periodic_app/src/js/element.js",
+		"/G/Felipe/projetos/periodic_app/src/js/app.jsx",
+		"/G/Felipe/projetos/periodic_app/src/js/elementbox.jsx",
+		"/G/Felipe/projetos/periodic_app/src/js/element_page.jsx",
+		"/G/Felipe/projetos/periodic_app/src/css/elementbox.css",
+		"/G/Felipe/projetos/periodic_app/src/css/main.css",
+		"/G/Felipe/projetos/periodic_app/src/index.html",
 		"/G/Felipe/projetos/periodic_app/config.xml",
 		"/G/Felipe/projetos/periodic_app/.gitignore",
 		"/G/Felipe/projetos/periodic_app/www/.gitkeep",
 		"/G/Felipe/projetos/periodic_app/www/index.html",
 		"/G/Felipe/projetos/periodic_app/src/js/l10n.js",
-		"/G/Felipe/projetos/periodic_app/src/js/app.jsx",
-		"/G/Felipe/projetos/periodic_app/src/js/main.js",
 		"/E/metadata.calibre",
 		"/G/Felipe/projetos/periodic_app/.babelrc",
 		"/G/Felipe/projetos/periodic_app/.editorconfig",
 		"/G/Felipe/projetos/periodic_app/nunjucks.config.js",
 		"/G/Felipe/projetos/periodic_app/src/element.njk",
-		"/G/Felipe/projetos/periodic_app/src/js/data.js",
 		"/G/Felipe/projetos/periodic_app/src/layout.njk",
 		"/G/Felipe/projetos/periodic_app/index.html",
 		"/G/Felipe/projetos/periodic_app/element.njk",
@@ -1129,18 +1058,11 @@
 		"/D/projetos/geohistscroll/src/templates/devTemplate.html",
 		"/D/projetos/geohistscroll/src/templates/precambrian/precambrian.html",
 		"/D/projetos/geohistscroll/src/templates/precambrian/hadean.nunjucks",
-		"/D/projetos/geohistscroll/src/templates/precambrian/archean.nunjucks",
-		"/D/projetos/geohistscroll/src/templates/index.nunjucks",
-		"/D/projetos/geohistscroll/build/index.nunjucks",
-		"/D/projetos/geohistscroll/build/hadean.html",
-		"/D/projetos/geohistscroll/src/templates/hadean.nunjucks",
-		"/D/projetos/geohistscroll/src/templates/template.nunjucks",
-		"/D/projetos/geohistscroll/css/build.css",
-		"/D/projetos/geohistscroll/js/build.js"
+		"/D/projetos/geohistscroll/src/templates/precambrian/archean.nunjucks"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -1154,104 +1076,6 @@
 		"case_sensitive": true,
 		"find_history":
 		[
-			"elec",
-			"pointer",
-			"294",
-			"293",
-			"294",
-			"293",
-			"292",
-			"291",
-			"290",
-			"289",
-			"288",
-			"287",
-			"290",
-			"289",
-			"288",
-			"287",
-			"286",
-			"285",
-			"284",
-			"290",
-			"287",
-			"286",
-			"285",
-			"284",
-			"283",
-			"282",
-			"287",
-			"286",
-			"285",
-			"283",
-			"286",
-			"283",
-			"282",
-			"281",
-			"280",
-			"279",
-			"281",
-			"279",
-			"282",
-			"278",
-			"276",
-			"274",
-			"271",
-			"270",
-			"269",
-			"274",
-			"272",
-			"271",
-			"270",
-			"267",
-			"271",
-			"270",
-			"269",
-			"267",
-			"265",
-			"270",
-			"268",
-			"267",
-			"266",
-			"26",
-			"263",
-			"262",
-			"267",
-			"266",
-			"265",
-			"263",
-			"261",
-			"alpha",
-			"266",
-			"262",
-			"261",
-			"260",
-			"259",
-			"256",
-			"255",
-			"254",
-			"259",
-			"257",
-			"255",
-			"254",
-			"253",
-			"260",
-			"258",
-			"257",
-			"255",
-			"253",
-			"252",
-			"255",
-			"254",
-			"253",
-			"252",
-			"254",
-			"253",
-			"252",
-			"250",
-			"249",
-			"248",
-			"249",
 			"half_life",
 			"\",\n",
 			"half_life",
@@ -1281,7 +1105,105 @@
 			"247",
 			"1.8 d",
 			"246",
-			"4.94 d"
+			"4.94 d",
+			"250",
+			"9000 y",
+			"3.40e5",
+			"248",
+			"247",
+			"4730",
+			"246",
+			"8500 y",
+			"245",
+			"18.1 y",
+			"244",
+			"29.1 y",
+			"243",
+			"160 d",
+			"242",
+			"7370 y",
+			"243",
+			"141 y",
+			"242m1",
+			"432.2 y",
+			"241",
+			"8.08e7 y",
+			"244",
+			"3.73e5 y",
+			"242",
+			"14 y",
+			"241",
+			"6500",
+			"240",
+			"2.41e4",
+			"239",
+			"87.74",
+			"238",
+			"beta_minus",
+			"239",
+			"237",
+			"236",
+			"235",
+			"238",
+			"236",
+			"235",
+			"234",
+			"233",
+			"232",
+			"spontaneous_fission",
+			"234m",
+			"234",
+			"233",
+			"232",
+			"231",
+			"230",
+			"229",
+			"234",
+			"232",
+			"231",
+			"230",
+			"229",
+			"228",
+			"227",
+			"226",
+			"225",
+			"228",
+			"Ra",
+			"226",
+			"225",
+			"224",
+			"223",
+			"222",
+			"211",
+			"210",
+			"211",
+			"210",
+			"224",
+			"222",
+			"211",
+			"210",
+			"211",
+			"210",
+			"209",
+			"210",
+			"209",
+			"208",
+			"210m",
+			"210",
+			"209",
+			"208",
+			"207",
+			"214",
+			"212",
+			"211",
+			"210",
+			"209",
+			"205",
+			"207",
+			"206",
+			"205",
+			"202",
+			"204"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1299,390 +1221,36 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/css/main.css",
+					"file": "/G/Felipe/projetos/roguelike/main.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9704,
+						"buffer_size": 357,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7760,
-								7760
+								11,
+								11
 							]
 						],
 						"settings":
 						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4390.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 871,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								619,
-								619
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/sublime-nunjucks/Nunjucks.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_name": "import libtcody as tcod",
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/css/elementbox.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2820,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2766,
-								2819
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2150.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/js/elementbox.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5061,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3889,
-								4163
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2052.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/js/app.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 17021,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								16786,
-								16786
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 9558.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/js/info_area.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4295,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2710,
-								2457
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 702.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1120,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1066,
-								1066
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/js/utils.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 737,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								736,
-								736
-							]
-						],
-						"settings":
-						{
-							"auto_name": "export default {",
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/js/nav_bar.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4029,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1002,
-								1081
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1134.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/js/data.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 321927,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								28295,
-								28295
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 23773.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/js/l10n.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2375,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1696,
-								1696
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "src/js/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 377,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								377,
-								377
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -1729,7 +1297,7 @@
 	},
 	"output.exec":
 	{
-		"height": 349.0
+		"height": 193.0
 	},
 	"output.find_results":
 	{
@@ -1743,8 +1311,8 @@
 	{
 		"height": 100.0
 	},
-	"pinned_build_system": "",
-	"project": "periodic_app.sublime-project",
+	"pinned_build_system": "Packages/User/kivy.sublime-build",
+	"project": "roguelike.sublime-project",
 	"replace":
 	{
 		"height": 52.0

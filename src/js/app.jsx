@@ -39,6 +39,10 @@ export default class App extends React.Component {
       },
       show_page: false
     };
+
+    this.pinchEvs = [];
+    this.pinchPrevDiff = -1;
+    this.zoomScale = 1.0;
     
     this.toggleHighlight = this.toggleHighlight.bind(this);
     this.toggleHighlightPeriod = this.toggleHighlightPeriod.bind(this);
@@ -50,6 +54,67 @@ export default class App extends React.Component {
     this.setHoveredElement = this.setHoveredElement.bind(this);
     this.closeElementPage = this.closeElementPage.bind(this);
     this.setTemperature = this.setTemperature.bind(this);
+    this.pinchHandler = this.pinchHandler.bind(this);
+    this.cancelPinchHandler = this.cancelPinchHandler.bind(this);
+  }
+
+  pinchHandler(ev) {
+    if(ev.type == 'pointerdown') {
+      ev.persist();
+      this.pinchEvs.push(ev);
+      console.log('pointerDown');
+    } else {
+      console.log('pinching');
+      for (let i = 0; i < this.pinchEvs.length; i++) {
+        if (ev.pointerId == this.pinchEvs[i].pointerId) {
+          this.pinchEvs[i] = ev;
+          break;
+        }
+      }
+
+      if (this.pinchEvs.length == 2) {
+        // Calculate the distance between the two pointers
+        let curDiff = Math.abs(this.pinchEvs[0].clientX - this.pinchEvs[1].clientX);
+
+        if (this.pinchPrevDiff > 0) {
+          if (curDiff > this.pinchPrevDiff) {
+            // The distance between the two pointers has increased
+            this.zoomIn()
+          }
+          if (curDiff < this.pinchPrevDiff) {
+            // The distance between the two pointers has decreased
+            this.zoomOut()
+          }
+        }
+        // Cache the distance for the next move event 
+        this.pinchPrevDiff = curDiff;
+      }
+    }
+  }
+
+  zoomIn() {
+    this.zoomScale += 0.5;
+    this.refs['content'].style.transform = `scale(${this.zoomScale})`;
+    console.log(this.zoomScale);
+  }
+
+  zoomOut() {
+    this.zoomScale -= 0.5;
+    if(this.zoomScale < 0.5) this.zoomScale = 0.5;
+    this.refs['content'].style.transform = `scale(${this.zoomScale})`;
+    console.log(this.zoomScale);
+  }
+
+  cancelPinchHandler(ev) {
+    console.log('cancel pinch');
+    for (let i = 0; i < this.pinchEvs.length; i++) {
+      if (this.pinchEvs[i].pointerId == ev.pointerId) {
+        this.pinchEvs.splice(i, 1);
+        break;
+      }
+    }
+
+    if (this.pinchEvs.length < 2) this.pinchPrevDiff = -1;
   }
 
   setTemperature(temp) {
@@ -470,7 +535,14 @@ export default class App extends React.Component {
     }
 
     return (
-      <div>
+      <div style={{'touchAction':"none"}}
+        // onPointerDown={this.pinchHandler}
+        // onPointerMove={this.pinchHandler}
+        // onPointerUp={this.cancelPinchHandler}
+        // onPointerCancel={this.cancelPinchHandler}
+        // onPointerOut={this.cancelPinchHandler}
+        // onPointerLeave={this.cancelPinchHandler}
+      >
         <NavBar langOnChange={this.setLang} 
           showHandler={this.showHandler}
           curr_lang={this.state.curr_lang}
@@ -479,7 +551,7 @@ export default class App extends React.Component {
           temperature_scale={this.state.temperature_scale}
           setTemperature={this.setTemperature}
         />
-        <div className="content">
+        <div className="content" ref="content">
           <ElementPage curr_lang={this.state.curr_lang} 
             element={this.state.selected_element}
             show_page={this.state.show_page}
@@ -489,6 +561,7 @@ export default class App extends React.Component {
             <InfoArea element={this.state.selected_element} 
               lang={this.state.curr_lang}
               curr_temp={this.state.temperature}
+              curr_lang={this.state.curr_lang}
               show_flags={this.state.show_flags}
               setHovered={this.setHoveredElement}
             />
