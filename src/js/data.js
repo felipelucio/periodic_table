@@ -11,17 +11,96 @@ module.exports = {
     "period": 1,
     "group": 1,
     "type": "nonmetal",
-    "melting_point": 14.01,
-    "boiling_point": 20.28,
+    "melting_point": 14.01, // K
+    "boiling_point": 20.28, // K
+    "triple_point": { 
+      "temperature": 13.8033, //K
+      "pressure": 7.041e3, //Pa
+    },
+    "critical_point": {
+      "temperature": 32.938, //Pa
+      "pressure": 1.2858e6, //Pa
+    },
+    "allotropes": [
+      {
+        "id": "default",
+        "name": {
+          "en": "diatomic",
+          "pt-BR": "diatômico"
+        },
+        "symbol": "H_2",
+        "density": 8.988e-5, // At STP, g/cm3
+        "heat": {
+          "fusion": 0.117e3, // J/mol
+          "vaporization": 0.904e3, // J/mol
+          "capacity": 28.836, // J/(mol*K)
+          "molecular": true
+        },
+        "sound": {
+          "speed": 1310, // m/s
+          "at_temp": 300.15, //K
+          "state": "gas"
+        },
+        "thermal": {
+          "expansion": null,
+          "at_temp": null,
+          "conductivity": 0.1805, // W/(m*K)
+        },
+        "electrical": {
+          "resistivity": null, // Ω·m
+          "at_temp": null, // K
+        },
+        "magnetism": {
+          "order": "diamagnetic",
+          "susceptibility": {
+            "molar": -3.98e-6, // cm3/mol
+            "at_temp": 298, // K
+          }
+        },
+        "modulus": {
+          "young": null, // Pa
+          "shear": null,
+          "bulk": null
+        },
+        "hardness": {
+          "mohs": null,
+          "brinell": null, // Pa (can be an array)
+          "vickers": null
+        },
+      }
+    ],
+    "vapor_pressures": {
+      "1": null, // Pa: K
+      "10": null,
+      "100": null, 
+      "1e3": null,
+      "10e3": 15,
+      "100e3": 20
+    },
+    "occurrence": "primordial",
     "electronegativity": 2.20,
     "oxidation_states": ["-1*","+1*"],
     "radius": { 
-      "covalent": "31±5 pm",
-      "waals": "120 pm"
+      "empirical": null,
+      "covalent": "31±5", // pm
+      "waals": "120"
     },
-    "discovery_date": "1766",
-    "discovery_by": "Henry Cavendish",
+    "ionization": {
+      "1": 1312.0e3 // J/mol (can go up to 20[?])
+    },
+    "CAS_number": "12385-13-6",
+    "discovery": {
+      "date": "1766",
+      "by": "Henry Cavendish"
+    },
+    "first_isolation": {
+      "date": null,
+      "by": null
+    },
     "electrons": [1],
+    "references": [
+
+    ],
     "isotopes": [
       {
         "id": "H-1",
@@ -87,16 +166,88 @@ module.exports = {
     "period": 1,
     "group": 18,
     "type": "noble_gas",
-    "melting_point": 0,
-    "boiling_point": 4.22,
+    "melting_point": 0.95,
+    "boiling_point": 4.222,
+    "triple_point": { 
+      "temperature": 2.177, //K
+      "pressure": 5.043e3, //Pa
+    },
+    "critical_point": {
+      "temperature": 5.1953, //K
+      "pressure": 0.22746e6, //Pa
+    },
+    "allotropes": [
+      {
+        "id": "default",
+        "name": { "en": "" },
+        "symbol": "",
+        "density": 0.0001786, // At STP, g/cm3
+        "heat": {
+          "fusion": 0.0138e3, // J/mol
+          "vaporization": 0.0829e3, // J/mol
+          "capacity": 20.78, // J/(mol*K)
+          "molecular": false
+        },
+        "sound": {
+          "speed": 972, // m/s
+          "temperature": 300.15, //K
+          "state": "gas"
+        },
+        "thermal": {
+          "conductivity": 0.1513, // W/(m*K)
+          "expansion": null,
+          "at_temp": null,
+        },
+        "electrical": {
+          "resistivity": null, // Ω·m
+          "at_temp": null, // K
+        },
+        "magnetism": {
+          "order": "diamagnetic",
+          "susceptibility": {
+            "molar": -1.88e-6, // cm3/mol
+            "at_temp": 298, // K
+          }
+        },
+        "modulus": {
+          "young": null, // Pa
+          "shear": null,
+          "bulk": null
+        },
+        "hardness": {
+          "mohs": null,
+          "brinell": null // Pa
+        },
+      }
+    ],
+    "vapor_pressures": {
+      "1": null, // Pa: K
+      "10": null,
+      "100": 1.23, 
+      "1e3": 1.67,
+      "10e3": 2.48,
+      "100e3": 4.21
+    },
     "electronegativity": null,
     "oxidation_states": ["0*"],
     "radius": { 
-      "covalent": "28 pm",
-      "waals": "140 pm"
+      "covalent": "28",
+      "waals": "140"
     },
-    "discovery_date": "1868",
-    "discovery_by": "Pierre Janssen & Norman Lockyer",
+    "ionization": {
+      "1": 2372.3e3, // J/mol
+      "2": 5250.5e3
+    },
+    "occurrence": "primordial",
+    "CAS_number": "7440-59-7",
+    "discovery": {
+      "date": "1868",
+      "by": "Pierre Janssen & Norman Lockyer"
+    },
+    "first_isolation": {
+      "date": "1895",
+      "by": "William Ramsay, Per Teodor Cleve, Abraham Langlet"
+    },
     "electrons": [2],
     "isotopes": [
       {
@@ -147,15 +298,85 @@ module.exports = {
     "type": "alkali_metal",
     "melting_point": 453.69,
     "boiling_point": 1615,
+    "triple_point": null,
+    "critical_point": {
+      "temperature": 3220, //K
+      "pressure": 67e6, //Pa
+    },
+    "allotropes": [
+      {
+        "id": "default",
+        "name": { "en": "" },
+        "symbol": "",
+        "density": 0.534, // At STP, g/cm3
+        "heat": {
+          "fusion": 3.00e3, // J/mol
+          "vaporization": 136e3, // J/mol
+          "capacity": 24.860, // J/(mol*K)
+          "molecular": false
+        },
+        "sound": {
+          "speed": 6000, // m/s
+          "at_temp": 293.15, //K
+          "state": "thin rod"
+        },
+        "thermal": {
+          "expansion": 46e-6, // m/(m*K)
+          "at_temp": 298.15, // K 
+          "conductivity": 84.8, // W/(m*K)
+        },
+        "electrical": {
+          "resistivity": 92.8e-9, // Ω·m
+          "at_temp": 293.15, // K
+        },
+        "magnetism": {
+          "order": "paramagnetic",
+          "susceptibility": {
+            "molar": 14.2e-6, // cm3/mol
+            "at_temp": 298, // K
+          }
+        },
+        "modulus": {
+          "young": 4.9e9, // Pa
+          "shear": 4.2e9,
+          "bulk": 11e9
+        },
+        "hardness": {
+          "mohs": 0.6,
+          "brinell": 5e6 // Pa
+        },
+      }
+    ],
+    "vapor_pressures": {
+      "1": 797, // Pa: K
+      "10": 885,
+      "100": 995, 
+      "1e3": 1144,
+      "10e3": 1337,
+      "100e3": 1610
+    },
+    "ionization": {
+      "1": 520.2e3, // J/mol
+      "2": 7298.1e3,
+      "3": 11815.0e3
+    },
+    "occurrence": "primordial",
+    "CAS_number": "7439-93-2",
     "electronegativity": 0.98,
     "oxidation_states": ["+1*"],
     "radius": { 
-      "empirical": "152 pm",
-      "covalent": "128±7 pm",
-      "waals": "182 pm"
+      "empirical": "152",
+      "covalent": "128±7",
+      "waals": "182"
     },
-    "discovery_date": "1871",
-    "discovery_by": "Johan August Arfwedson",
+    "discovery": {
+      "date": "1871",
+      "by": "Johan August Arfwedson",
+    },
+    "first_isolation": {
+      "date": "1821",
+      "by": "William Thomas Brande"
+    },
     "electrons": [2, 1],
     "isotopes": [
       {
@@ -206,15 +427,87 @@ module.exports = {
     "type": "alkaline_earth",
     "melting_point": 1560,
     "boiling_point": 2743,
+    "triple_point": null,
+    "critical_point": {
+      "temperature": null, //K
+      "pressure": null, //Pa
+    },
+    "allotropes": [
+      {
+        "id": "default",
+        "name": { "en": "" },
+        "symbol": "",
+        "density": 1.85, // At STP, g/cm3
+        "heat": {
+          "fusion": 12.2e3, // J/mol
+          "vaporization": 292e3, // J/mol
+          "capacity": 16.443, // J/(mol*K)
+          "molecular": false
+        },
+        "sound": {
+          "speed": 12890, // m/s
+          "at_temp": 293.15, //K
+          "state": "thin rod"
+        },
+        "thermal": {
+          "expansion": 11.3e-6, // m/(m*K)
+          "at_temp": 298.15, // K 
+          "conductivity": 200, // W/(m*K)
+        },
+        "electrical": {
+          "resistivity": 36e-9, // Ω·m
+          "at_temp": 293.15, // K
+        },
+        "magnetism": {
+          "order": "diamagnetic",
+          "susceptibility": {
+            "molar": -9.0e-6, // cm3/mol
+            "at_temp": 298, // K
+          }
+        },
+        "modulus": {
+          "young": 287e9, // Pa
+          "shear": 132e9,
+          "bulk": 130e9
+        },
+        "hardness": {
+          "mohs": 5.5,
+          "brinell": [590e6, 1320e6], // Pa
+          "vickers": 1670e6,
+        },
+      }  
+    ],
+    "vapor_pressures": {
+      "1": 1462, // Pa: K
+      "10": 1608,
+      "100": 1791, 
+      "1e3": 2023,
+      "10e3": 2327,
+      "100e3": 2742
+    },
+    "ionization": {
+      "1": 899.5e3, // J/mol
+      "2": 1757.1e3,
+      "3": 14848.7e3,
+      "4": 21006.6e3
+    },
+    "occurrence": "primordial",
+    "CAS_number": "7440-41-7",
     "electronegativity": 1.57,
     "oxidation_states": ["+1","+2*"],
     "radius": { 
-      "empirical": "112 pm",
-      "covalent": "96±3 pm",
-      "waals": "153 pm"
+      "empirical": "112",
+      "covalent": "96±3",
+      "waals": "153"
     },
-    "discovery_date": "1798",
-    "discovery_by": "Louis Nicolas Vauquelin",
+    "discovery": {
+      "date": "1798",
+      "by": "Louis Nicolas Vauquelin"
+    },
+    "first_isolation": {
+      "date": "1828",
+      "by": "Friedrich Wöhler & Antoine Bussy"
+    },
     "electrons": [2, 2],
     "isotopes": [
       {
@@ -283,17 +576,93 @@ module.exports = {
     "period": 1,
     "group": 13,
     "type": "metalloid",
+    "allotropes": [
+      {
+        "id": "crystalline",
+        "name": {
+          "en": "Crystalline",
+          "pt-BR": "Cristalino"
+        },
+        "symbol": "",
+        "density": 2.35, // At STP, g/cm3
+        "heat": {
+          "fusion": 50.2e3, // J/mol
+          "vaporization": 508e3, // J/mol
+          "capacity": 11.087, // J/(mol*K)
+          "molecular": false
+        },
+        "sound": {
+          "speed": 16200, // m/s
+          "at_temp": 293.15, //K
+          "state": "thin rod"
+        },
+        "thermal": {
+          "expansion": [5e-6, 7e-6], // m/(m*K)
+          "at_temp": 298.15, // K 
+          "conductivity": 27.4, // W/(m*K)
+        },
+        "electrical": {
+          "resistivity": 1e6, // Ω·m
+          "at_temp": 293.15, // K
+        },
+        "magnetism": {
+          "order": "diamagnetic",
+          "susceptibility": {
+            "molar": -6.7e-6, // cm3/mol
+            "at_temp": 298, // K
+          }
+        },
+        "modulus": {
+          "young": null, // Pa
+          "shear": null,
+          "bulk": 184e9
+        },
+        "hardness": {
+          "mohs": 9.5,
+          "brinell": null, // Pa
+          "vickers": null,
+        },     
+      }
+    ],
     "melting_point": 2345,
     "boiling_point": 4273,
+    "triple_point": null,
+    "critical_point": {
+      "temperature": null, //K
+      "pressure": null, //Pa
+    },
+    "vapor_pressures": {
+      "1": 2348, // Pa: K
+      "10": 2562,
+      "100": 2822, 
+      "1e3": 3141,
+      "10e3": 3545,
+      "100e3": 4072
+    },
+    "ionization": {
+      "1": 800.6e3, // J/mol
+      "2": 2427.1e3,
+      "3": 3659.7e3,
+      "4": 25025.8e3,
+      "5": 32826.7e3
+    },
+    "occurrence": "primordial",
+    "CAS_number": "7440-42-8",
     "electronegativity": 2.04,
     "oxidation_states": ["-5","-1","+1","+2","+3*"],
     "radius": { 
-      "empirical": "90 pm",
-      "covalent": "84±3 pm",
-      "waals": "192 pm",
+      "empirical": "90",
+      "covalent": "84±3",
+      "waals": "192",
     },
-    "discovery_date": "1808",
-    "discovery_by": "Joseph Louis Gay-Lussac & Louis Jaques Thénard",
+    "discovery": {
+      "date": "1808",
+      "by": "Joseph Louis Gay-Lussac & Louis Jaques Thénard"
+    },
+    "first_isolation": {
+      "date": "1808",
+      "by": "Humpry Davy"
+    },
     "electrons": [2, 3],
     "isotopes": [
       {
@@ -342,16 +711,91 @@ module.exports = {
     "period": 2,
     "group": 14,
     "type": "nonmetal",
+    "allotropes": [
+      {
+        "id": "graphite"
+        "name": {
+          "en": "Graphite",
+          "pt-BR": "Grafita"
+        },
+        "symbol": "",
+        "density": 2.267, // At STP, g/cm3
+        "heat": {
+          "fusion": 117e3, // J/mol
+          "vaporization": null, // J/mol
+          "capacity": 8.517 // J/(mol*K)
+        },
+        "sound": {
+          "speed": 18350, // m/s
+          "at_temp": 293.15, //K
+          "state": "thin rod"
+        },
+        "thermal": {
+          "expansion": null, // m/(m*K)
+          "at_temp": 298.15, // K 
+          "conductivity": [119,165], // W/(m*K)
+        },
+        "electrical": {
+          "resistivity": 7.837e-6, // Ω·m
+          "at_temp": 293.15, // K
+        },
+        "magnetism": {
+          "order": "diamagnetic",
+          "susceptibility": {
+            "molar": -5.9e-6, // cm3/mol
+            "at_temp": 298, // K
+          }
+        },
+        "modulus": {
+          "young": null, // Pa
+          "shear": null,
+          "bulk": null,
+        },
+        "hardness": {
+          "mohs": [1,2],
+          "brinell": null, // Pa
+          "vickers": null,
+        },
+        "CAS_number": ["7782-42-5"],
+      },
+    ],
     "melting_point": 3823,
     "boiling_point": 4300,
+    "triple_point": {
+      "temperature": 4600, //K
+      "pressure": 10800e3, //Pa
+    },
+    "critical_point": {
+      "temperature": null, //K
+      "pressure": null, //Pa
+    },
+    "vapor_pressures": null,
+    "ionization": {
+      "1": 1086.5e3, // J/mol
+      "2": 2352.6e3,
+      "3": 4620.5e3,
+      "4": 6222.7e3,
+      "5": 37831e3,
+      "6": 47277e3,
+    },
+    "occurrence": "primordial",
     "electronegativity": 2.55,
     "oxidation_states": ["-4*","-3","-2","-1","0","+1","+2","+3","+4*"],
     "radius": { 
-      "covalent": ["69 pm","77 pm"],
-      "waals": "170 pm",
+      "covalent": [69,73,76], // pm
+      "waals": 170,
     },
-    "discovery_date": "3750 BCE",
-    "discovery_by": "?",
+    "discovery": {
+      "date": "3750 BCE",
+      "by": {
+        "en": "Egyptians and Sumerians",
+        "pt-BR": "Egípicios e Sumérios"
+      }
+    },
+    "recognized": {
+      "date": "1789",
+      "by": "Antoine Lavoisier"
+    },
     "electrons": [2, 4],
     "isotopes": [
       {
@@ -418,16 +862,96 @@ module.exports = {
     "period": 2,
     "group": 15,
     "type": "nonmetal",
+    "allotropes": [
+      {
+        "id": "dihydrogen"
+        "name": {
+          "en": "Dihydrogen",
+          "pt-BR": "Dihidrogênio"
+        },
+        "symbol": "H_2",
+        "density": 1.251e-3, // At STP, g/cm3
+        "heat": {
+          "fusion": 0.72e3, // J/mol
+          "vaporization": 5.56e3, // J/mol
+          "capacity": 29.124 // J/(mol*K)
+        },
+        "sound": {
+          "speed": 353, // m/s
+          "at_temp": 293.15, //K
+          "state": "gas"
+        },
+        "thermal": {
+          "expansion": null, // m/(m*K)
+          "at_temp": 298.15, // K 
+          "conductivity": 25.83e-3, // W/(m*K)
+        },
+        "electrical": {
+          "resistivity": null, // Ω·m
+          "at_temp": 293.15, // K
+        },
+        "magnetism": {
+          "order": "diamagnetic",
+          "susceptibility": {
+            "molar": null, // cm3/mol
+            "at_temp": 298, // K
+          }
+        },
+        "modulus": {
+          "young": null, // Pa
+          "shear": null,
+          "bulk": null,
+        },
+        "hardness": {
+          "mohs": null,
+          "brinell": null, // Pa
+          "vickers": null,
+        },
+        "CAS_number": ["7727-37-9"],
+      },
+    ],
     "melting_point": 63.05,
     "boiling_point": 77.36,
+    "triple_point": {
+      "temperature": 61.151, //K
+      "pressure": 12.52e3, //Pa
+    },
+    "critical_point": {
+      "temperature": 126.21, //K
+      "pressure": 3.39e6, //Pa
+    },
+    "vapor_pressures": {
+      "1": 37,
+      "10": 41,
+      "100": 46,
+      "1e3": 53,
+      "10e3": 62,
+      "100e3": 77
+    },
+    "ionization": {
+      "1": 1402.3e3, // J/mol
+      "2": 2856e3,
+      "3": 4578.1e3,
+      "4": 7475.0e3,
+      "5": 9444.9e3,
+      "6": 53266.6e3,
+      "7": 64360e3
+    },
+    "occurrence": "primordial",
     "electronegativity": 3.04,
     "oxidation_states": ["-3*","-2","-1","+1","+2","+3*","+4","+5*"],
     "radius": { 
-      "covalent": "71±1 pm",
-      "waals": "155 pm",
+      "covalent": "71±1",
+      "waals": "155",
     },
-    "discovery_date": "1772",
-    "discovery_by": "Daniel Rutherford",
+    "discovery": { 
+      "date": "1772",
+      "by": "Daniel Rutherford",
+    },
+    "named": {
+      "date": "1790",
+      "by": "Jean-Antoine Chaptal"
+    },
     "electrons": [2, 5],
     "isotopes": [
       {
@@ -494,16 +1018,108 @@ module.exports = {
     "period": 2,
     "group": 16,
     "type": "nonmetal",
-    "melting_point": 54.8,
-    "boiling_point": 90.2,
+    "allotropes": [
+      {
+        "id": "dioxygen"
+        "name": {
+          "en": "Dioxygen",
+          "pt-BR": "Dioxigênio"
+        },
+        "symbol": "O_2",
+        "density": [
+          {
+            "volumetric": 1.429e-3, // At STP, g/cm3
+            "at_temp": 273.15, // K
+            "at_pressure": 101.3e3 // Pa
+          },
+          {
+            "volumetric": 1.141,
+            "at_temp": 90.118,
+            "at_pressure": 101.3e3
+          }
+        ],
+        "heat": {
+          "fusion": 0.444e3, // J/mol
+          "vaporization": 6.82e3, // J/mol
+          "capacity": 29.378 // J/(mol*K)
+        },
+        "sound": {
+          "speed": 330, // m/s
+          "at_temp": 293.15, //K
+          "state": "gas"
+        },
+        "thermal": {
+          "expansion": null, // m/(m*K)
+          "at_temp": 298.15, // K 
+          "conductivity": 26.58e-3, // W/(m*K)
+        },
+        "electrical": {
+          "resistivity": null, // Ω·m
+          "at_temp": 293.15, // K
+        },
+        "magnetism": {
+          "order": "paramagnetic",
+          "susceptibility": {
+            "molar": 3449.0e-6, // cm3/mol
+            "at_temp": 293, // K
+          }
+        },
+        "modulus": {
+          "young": null, // Pa
+          "shear": null,
+          "bulk": null,
+        },
+        "hardness": {
+          "mohs": null,
+          "brinell": null, // Pa
+          "vickers": null,
+        },
+        "CAS_number": ["7782-44-7"],
+      },
+    ],
+    "melting_point": 54.36,
+    "boiling_point": 90.188,
+    "triple_point": {
+      "temperature": 54.361, //K
+      "pressure": 0.1463e3, //Pa
+    },
+    "critical_point": {
+      "temperature": 154.581, //K
+      "pressure": 5.043e6, //Pa
+    },
+    "vapor_pressures": {
+      "1": null,
+      "10": null,
+      "100": null,
+      "1e3": 61,
+      "10e3": 73,
+      "100e3": 90
+    },
+    "ionization": {
+      "1": 1313.9e3, // J/mol
+      "2": 3388.2e3,
+      "3": 5300.3e3,
+      "4": 7469.2e3,
+      "5": 10989.5e3,
+      "6": 13326.5e3,
+      "7": 71330e3,
+      "8": 84078.0e3,
+    },
+    "occurrence": "primordial",
     "electronegativity": 3.44,
     "oxidation_states": ["-2*","-1","+1","+2"],
     "radius": { 
-      "covalent": "62±2 pm",
-      "waals": "152 pm",
+      "covalent": "62±2",
+      "waals": "152",
     },
-    "discovery_date": "1771",
-    "discovery_by": "Carl Wilhelm Scheele",
+    "discovery": {
+      "date": "1771",
+      "by": "Carl Wilhelm Scheele",
+    },
+    "named": {
+      "date": "1777",
+      "Antoine Lavoisier"
+    },
     "electrons": [2, 6],
     "isotopes": [
       {
@@ -573,8 +1189,8 @@ module.exports = {
     "electronegativity": 3.98,
     "oxidation_states": ["-1*"],
     "radius": { 
-      "covalent": "64 pm",
-      "waals": "135 pm",
+      "covalent": "64",
+      "waals": "135",
     },
     "discovery_date": "1810",
     "discovery_by": "André-Marie Ampère",
@@ -638,8 +1254,8 @@ module.exports = {
     "electronegativity": null,
     "oxidation_states": ["0*"],
     "radius": { 
-      "covalent": "58 pm",
-      "waals": "154 pm"
+      "covalent": "58",
+      "waals": "154"
     },
     "discovery_date": "1897",
     "discovery_by": "William Ramsay",
@@ -712,9 +1328,9 @@ module.exports = {
     "electronegativity": 0.93,
     "oxidation_states": ["-1","+1*"],
     "radius": { 
-      "empirical": "186 pm",
-      "covalent": "166±9 pm",
-      "waals": "227 pm",
+      "empirical": "186",
+      "covalent": "166±9",
+      "waals": "227",
     },
     "discovery_date": "1807",
     "discovery_by": "Humphry Davy",
@@ -773,9 +1389,9 @@ module.exports = {
     "electronegativity": 1.31,
     "oxidation_states": ["+1","+2*"],
     "radius": { 
-      "empirical": "160 pm",
-      "covalent": "141±7 pm",
-      "waals": "173 pm",
+      "empirical": "160",
+      "covalent": "141±7",
+      "waals": "173",
     },
     "discovery_date": "1755",
     "discovery_by": "Joseph Black",
@@ -848,9 +1464,9 @@ module.exports = {
     "electronegativity": 1.61,
     "oxidation_states": ["-2","-1","+1","+2","+3*"],
     "radius": { 
-      "empirical": "143 pm",
-      "covalent": "121±4 pm",
-      "waals": "184 pm",
+      "empirical": "143",
+      "covalent": "121±4",
+      "waals": "184",
     },
     "discovery_date": "1824",
     "discovery_by": "Hans Christian Ørsted",
@@ -909,9 +1525,9 @@ module.exports = {
     "electronegativity": 1.90,
     "oxidation_states": ["-4*","-3","-2","-1","+1","+2","+3","+4*"],
     "radius": { 
-      "empirical": "111 pm",
-      "covalent": "111 pm",
-      "waals": "210 pm",
+      "empirical": "111",
+      "covalent": "111",
+      "waals": "210",
     },
     "discovery_date": "1823",
     "discovery_by": "Jöns Jacob Berzelius",
@@ -1002,8 +1618,8 @@ module.exports = {
     "electronegativity": 2.19,
     "oxidation_states": ["-3*","-2","-1","+1","+2","+3*","+4","+5*"],
     "radius": { 
-      "covalent": "107±3 pm",
-      "waals": "180 pm",
+      "covalent": "107±3",
+      "waals": "180",
     },
     "discovery_date": "1669",
     "discovery_by": "Hennig Brand",
@@ -1080,8 +1696,8 @@ module.exports = {
     "electronegativity": 2.58,
     "oxidation_states": ["-2*","-1","+1","+2*","+3","+4*","+5","+6*"],
     "radius": { 
-      "covalent": "105±3 pm",
-      "waals": "180 pm",
+      "covalent": "105±3",
+      "waals": "180",
     },
     "discovery_date": "2000 BCE",
     "discovery_by": "?",
@@ -1188,8 +1804,8 @@ module.exports = {
     "electronegativity": 3.16,
     "oxidation_states": ["-1*","+1*","+2","+3*","+4","+5*","+6","+7*"],
     "radius": { 
-      "covalent": "102±4 pm",
-      "waals": "175 pm",
+      "covalent": "102±4",
+      "waals": "175",
     },
     "discovery_date": "1774",
     "discovery_by": "Carl Wilhelm Scheele",
@@ -1269,8 +1885,8 @@ module.exports = {
     "oxidation_states": ["0"],
     "electronegativity": null,
     "radius": { 
-      "covalent": "106±10 pm",
-      "waals": "188 pm",
+      "covalent": "106±10",
+      "waals": "188",
     },
     "discovery_date": "1894",
     "discovery_by": "Lord Rayleigh & William Ramsay",
@@ -1415,9 +2031,9 @@ module.exports = {
     "oxidation_states": ["-1","+1*"],
     "electronegativity": 0.82,
     "radius": { 
-      "empirical": "227 pm",
-      "covalent": "203±12 pm",
-      "waals": "275 pm",
+      "empirical": "227",
+      "covalent": "203±12",
+      "waals": "275",
     },
     "discovery_date": "1807",
     "discovery_by": "Hunphry Davy",
@@ -1502,9 +2118,9 @@ module.exports = {
     "oxidation_states": ["+1","+2*"],
     "electronegativity": 1.00,
     "radius": { 
-      "empirical": "197 pm",
-      "covalent": "176±10 pm",
-      "waals": "231 pm",
+      "empirical": "197",
+      "covalent": "176±10",
+      "waals": "231",
     },
     "discovery_date": "1808",
     "discovery_by": "Hunphry Davy",
@@ -1681,9 +2297,9 @@ module.exports = {
     "oxidation_states": ["+1","+2","+3"],
     "electronegativity": 1.36,
     "radius": { 
-      "empirical": "162 pm",
-      "covalent": "170±7 pm",
-      "waals": "211 pm",
+      "empirical": "162",
+      "covalent": "170±7",
+      "waals": "211",
     },
     "discovery_date": "1879",
     "discovery_by": "Lars Fredrik Nilson",
@@ -1801,8 +2417,8 @@ module.exports = {
     "oxidation_states": ["-2","-1","+1","+2","+3","+4*"],
     "electronegativity": 1.54,
     "radius": { 
-      "empirical": "147 pm",
-      "covalent": "160±8 pm"
+      "empirical": "147",
+      "covalent": "160±8"
     },
     "discovery_date": "1791",
     "discovery_by": "William Gregor",
@@ -1925,8 +2541,8 @@ module.exports = {
     "oxidation_states": ["-3","-1","+1","+2","+3","+4","+5"],
     "electronegativity": 1.63,
     "radius": { 
-      "empirical": "134 pm",
-      "empirical": "153±8 pm",
+      "empirical": "134",
+      "empirical": "153±8",
     },
     "discovery_date": "1830",
     "discovery_by": "Andrés Manuel del Rio",
@@ -2026,8 +2642,8 @@ module.exports = {
     "oxidation_states": ["-4","-2","-1","+1","+2","+3*","+4","+5","+6"],
     "electronegativity": 1.66,
     "radius": { 
-      "empirical": "128 pm",
-      "covalent": "139±5 pm",
+      "empirical": "128",
+      "covalent": "139±5",
     },
     "discovery_date": "1794",
     "discovery_by": "Louis Nicolas Vauquelin",
@@ -2134,8 +2750,8 @@ module.exports = {
     "oxidation_states": ["-3","-2","-1","+1","+2*","+3","+4*","+5","+6","+7*"],
     "electronegativity": 1.55,
     "radius": { 
-      "empirical": "127 pm",
-      "covalent": ["139±5 pm","161± pm"],
+      "empirical": "127",
+      "covalent": ["139±5","161±"],
     },
     "discovery_date": "1774",
     "discovery_by": "Carl Wilhelm Scheele",
@@ -2240,8 +2856,8 @@ module.exports = {
     "oxidation_states": ["-4","-2","-1","+1","+2*","+3*","+4","+5","+6*","+7"],
     "electronegativity": 1.83,
     "radius": { 
-      "empirical": "126 pm",
-      "covalent": ["132±3 pm","152±6 pm"],
+      "empirical": "126",
+      "covalent": ["132±3","152±6"],
     },
     "discovery_date": "5000 BCE",
     "discovery_by": "?",
@@ -2384,8 +3000,8 @@ module.exports = {
     "oxidation_states": ["-3","-1","+1","+2*","+3*","+4","+5"],
     "electronegativity": 1.88,
     "radius": { 
-      "empirical": "125 pm",
-      "covalent": ["126±3 pm","150±7 pm"],
+      "empirical": "125",
+      "covalent": ["126±3","150±7"],
     },
     "discovery_date": "1735",
     "discovery_by": "Georg Brandt",
@@ -2498,9 +3114,9 @@ module.exports = {
     "oxidation_states": ["-2","-1","+1","+2*","+3","+4"],
     "electronegativity": 1.91,
     "radius": { 
-      "empirical": "124 pm",
-      "covalent": "124±4 pm",
-      "waals": "163 pm",
+      "empirical": "124",
+      "covalent": "124±4",
+      "waals": "163",
     },
     "discovery_date": "1751",
     "discovery_by": "Axel Fredrik Cronstedt",
@@ -2664,9 +3280,9 @@ module.exports = {
     "oxidation_states": ["-2","+1","+2*","+3","+4"],
     "electronegativity": 1.90,
     "radius": { 
-      "empirical": "128 pm",
-      "covalent": "132±4 pm",
-      "waals": "140 pm",
+      "empirical": "128",
+      "covalent": "132±4",
+      "waals": "140",
     },
     "discovery_date": "9000 BCE",
     "discovery_by": "?",
@@ -2723,9 +3339,9 @@ module.exports = {
     "oxidation_states": ["-2","0","+1","+2*"],
     "electronegativity": 1.65,
     "radius": { 
-      "empirical": "134 pm",
-      "covalent": "122±4 pm",
-      "waals": "139 pm",
+      "empirical": "134",
+      "covalent": "122±4",
+      "waals": "139",
     },
     "discovery_date": "1000 BCE",
     "discovery_by": "?",
@@ -2866,9 +3482,9 @@ module.exports = {
     "oxidation_states": ["-5","-4","-2","-1","+1","+2","+3*"],
     "electronegativity": 1.81,
     "radius": { 
-      "empirical": "135 pm",
-      "covalent": "122±3 pm",
-      "waals": "187 pm",
+      "empirical": "135",
+      "covalent": "122±3",
+      "waals": "187",
     },
     "discovery_date": "1875",
     "discovery_by": "Lecoq de Boisbaudran",
@@ -2925,9 +3541,9 @@ module.exports = {
     "oxidation_states": ["-4*","-3","-2","-1","0","+1","+2*","+3","+4*"],
     "electronegativity": 2.01,
     "radius": { 
-      "empirical": "122 pm",
-      "covalent": "122 pm",
-      "waals": "211 pm",
+      "empirical": "122",
+      "covalent": "122",
+      "waals": "211",
     },
     "discovery_date": "1886",
     "discovery_by": "Clemens Winkler",
@@ -3070,9 +3686,9 @@ module.exports = {
     "oxidation_states": ["-3*","-2","-1","+1","+2","+3*","+4","+5*"],
     "electronegativity": 2.18,
     "radius": { 
-      "empirical": "119 pm",
-      "covalent": "119±4 pm",
-      "waals": "185 pm",
+      "empirical": "119",
+      "covalent": "119±4",
+      "waals": "185",
     },
     "discovery_date": "300",
     "discovery_by": "?",
@@ -3154,9 +3770,9 @@ module.exports = {
     "oxidation_states": ["-2*","-1","+1","+2*","+3","+4*","+5","+6*"],
     "electronegativity": 2.55,
     "radius": { 
-      "empirical": "120 pm",
-      "covalent": "120±4 pm",
-      "waals": "190 pm",
+      "empirical": "120",
+      "covalent": "120±4",
+      "waals": "190",
     },
     "discovery_date": "1817",
     "discovery_by": "Jöns Jakob Berzelius & Johann Gottlieb Gahn",
@@ -3333,9 +3949,9 @@ module.exports = {
     "oxidation_states": ["-1*","+1*","+3*","+4","+5*","+7"],
     "electronegativity": 2.96,
     "radius": { 
-      "empirical": "120 pm",
-      "covalent": "120±3 pm",
-      "waals": "185 pm",
+      "empirical": "120",
+      "covalent": "120±3",
+      "waals": "185",
     },
     "discovery_date": "1825",
     "discovery_by": "Antoine Jérôme Balard & Carl Jacob Löwig",
@@ -3392,8 +4008,8 @@ module.exports = {
     "oxidation_states": ["0*","+1","+2"],
     "electronegativity": 3.00,
     "radius": { 
-      "covalent": "116±4 pm",
-      "waals": "202 pm",
+      "covalent": "116±4",
+      "waals": "202",
     },
     "discovery_date": "1898",
     "discovery_by": "William Ramsay & Morris Travers",
@@ -3567,6 +4183,15 @@ module.exports = {
     "type": "alkali_metal",
     "melting_point": 312.46,
     "boiling_point": 961,
+    "oxidation_states": ["-1","+1*"],
+    "electronegativity": 0.82,
+    "radius": { 
+      "empirical": "248",
+      "covalent": "220±9",
+      "waals": "303",
+    },
+    "discovery_date": "1861",
+    "discovery_by": "Robert Bunsen & Gustav Kirchhoff",
     "electrons": [2, 8, 18, 8, 1],
     "isotopes": [
       {
@@ -3683,6 +4308,15 @@ module.exports = {
     "type": "alkaline_earth",
     "melting_point": 1050,
     "boiling_point": 1655,
+    "oxidation_states": ["+1","+2*"],
+    "electronegativity": 0.95,
+    "radius": { 
+      "empirical": "215",
+      "covalent": "195±10",
+      "waals": "249",
+    },
+    "discovery_date": "1787",
+    "discovery_by": "William Cruickshank",
     "electrons": [2, 8, 18, 8, 2],
     "isotopes": [
       {
@@ -3855,6 +4489,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 1799,
     "boiling_point": 3618,
+    "oxidation_states": ["+1","+2","+3*"],
+    "electronegativity": 1.22,
+    "radius": { 
+      "empirical": "180",
+      "covalent": "190±7"
+    },
+    "discovery_date": "1794",
+    "discovery_by": "Johan Gadolin",
     "electrons": [2, 8, 18, 9, 2],
     "isotopes": [
       {
@@ -3961,6 +4603,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 2128,
     "boiling_point": 4682,
+    "oxidation_states": ["-2","+1","+2","+3","+4*"],
+    "electronegativity": 1.33,
+    "radius": { 
+      "empirical": "160",
+      "covalent": "175±7"
+    },
+    "discovery_date": "1789",
+    "discovery_by": "Martin Heinrich Klaproth",
     "electrons": [2, 8, 18, 10, 2],
     "isotopes": [
       {
@@ -4115,6 +4765,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 2750,
     "boiling_point": 5017,
+    "oxidation_states": ["-3","-1","+1","+2","+3","+4","+5*"],
+    "electronegativity": 1.6,
+    "radius": { 
+      "empirical": "146",
+      "covalent": "164±6"
+    },
+    "discovery_date": "1801",
+    "discovery_by": "Charles Hatchett",
     "electrons": [2, 8, 18, 12, 1],
     "isotopes": [
       {
@@ -4231,6 +4889,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 2896,
     "boiling_point": 4912,
+    "oxidation_states": ["-4","-2","-1","+1","+2","+3","+4*","+5","+6*"],
+    "electronegativity": 2.16,
+    "radius": { 
+      "empirical": "139",
+      "covalent": "154±5"
+    },
+    "discovery_date": "1778",
+    "discovery_by": "Carl Wilhelm Scheele",
     "electrons": [2, 8, 18, 13, 1],
     "isotopes": [
       {
@@ -4399,6 +5065,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 2430,
     "boiling_point": 4538,
+    "oxidation_states": ["-3","+1","+2","+3","+4*","+5","+6","+7*"],
+    "electronegativity": 1.9,
+    "radius": { 
+      "empirical": "136",
+      "covalent": "147±7"
+    },
+    "discovery_date": "1937",
+    "discovery_by": "Emilio Sagrè & Carlo Perrier",
     "electrons": [2, 8, 18, 13, 2],
     "isotopes": [
       {
@@ -4558,6 +5232,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 2607,
     "boiling_point": 4423,
+    "oxidation_states": ["-4","-2","+1","+2","+3*","+4*","+5","+6","+7","+8"],
+    "electronegativity": 2.20,
+    "radius": { 
+      "empirical": "134",
+      "covalent": "146±7"
+    },
+    "discovery_date": "1844",
+    "discovery_by": "Karl Ernst Claus",
     "electrons": [2, 8, 18, 15, 1],
     "isotopes": [
       {
@@ -4742,6 +5424,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 2237,
     "boiling_point": 3968,
+    "oxidation_states": ["-3","-1","+1","+2","+3*","+4","+5","+6"],
+    "electronegativity": 2.28,
+    "radius": { 
+      "empirical": "134",
+      "covalent": "142±7"
+    },
+    "discovery_date": "1804",
+    "discovery_by": "William Hyde Wollaston",
     "electrons": [2, 8, 18, 16, 1],
     "isotopes": [
       {
@@ -4853,6 +5543,15 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 1828.05,
     "boiling_point": 3236,
+    "oxidation_states": ["0","+1","+2*","+3","+4*"],
+    "electronegativity": 2.20,
+    "radius": { 
+      "empirical": "137",
+      "covalent": "139±6",
+      "waals": "163"
+    },
+    "discovery_date": "1802",
+    "discovery_by": "William Hyde Wollaston",
     "electrons": [2, 8, 18, 18],
     "isotopes": [
       {
@@ -5021,6 +5720,15 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 1234.93,
     "boiling_point": 2435,
+    "oxidation_states": ["-2","-1","+1*","+2","+3"],
+    "electronegativity": 1.93,
+    "radius": { 
+      "empirical": "144",
+      "covalent": "145±5",
+      "waals": "172"
+    },
+    "discovery_date": "5000 BCE",
+    "discovery_by": "?",
     "electrons": [2, 8, 18, 18, 1],
     "isotopes": [
       {
@@ -5176,6 +5884,15 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 594.22,
     "boiling_point": 1040,
+    "oxidation_states": ["-2","+1","+2*"],
+    "electronegativity": 1.69,
+    "radius": { 
+      "empirical": "151",
+      "covalent": "144±9",
+      "waals": "158"
+    },
+    "discovery_date": "1817",
+    "discovery_by": "Karl Samuel Leberecht Hermann & Friedrich Stromeyer",
     "electrons": [2, 8, 18, 18, 2],
     "isotopes": [
       {
@@ -5403,6 +6120,15 @@ module.exports = {
     "type": "post_transitional",
     "melting_point": 429.75,
     "boiling_point": 2345,
+    "oxidation_states": ["-5","-2","-1","+1","+2","+3*"],
+    "electronegativity": 1.78,
+    "radius": { 
+      "empirical": "167",
+      "covalent": "142±5",
+      "waals": "193"
+    },
+    "discovery_date": "1863",
+    "discovery_by": "Ferdinand Reich & Hieronymous Theodor Richter",
     "electrons": [2, 8, 18, 18, 3],
     "isotopes": [
       {
@@ -5455,6 +6181,15 @@ module.exports = {
     "type": "post_transitional",
     "melting_point": 505.08,
     "boiling_point": 2875,
+    "oxidation_states": ["-4*","-3","-2","-1","+1","+2*","+3","+4*"],
+    "electronegativity": 1.96,
+    "radius": { 
+      "empirical": "140",
+      "covalent": "139±4",
+      "waals": "217"
+    },
+    "discovery_date": "3500 BCE",
+    "discovery_by": "?",
     "electrons": [2, 8, 18, 18, 4],
     "isotopes": [
       {
@@ -5656,6 +6391,15 @@ module.exports = {
     "type": "metalloid",
     "melting_point": 903.78,
     "boiling_point": 1860,
+    "oxidation_states": ["-3*","-2","-1","+1","+2","+3*","+4","+5*"],
+    "electronegativity": 2.05,
+    "radius": { 
+      "empirical": "140",
+      "covalent": "139±5",
+      "waals": "206"
+    },
+    "discovery_date": "800",
+    "discovery_by": "?",
     "electrons": [2, 8, 18, 18, 5],
     "isotopes": [
       {
@@ -5724,6 +6468,15 @@ module.exports = {
     "type": "metalloid",
     "melting_point": 722.66,
     "boiling_point": 1261,
+    "oxidation_states": ["-2*","-1","+1","+2*","+3","+4*","+5","+6*"],
+    "electronegativity": 2.1,
+    "radius": { 
+      "empirical": "140",
+      "covalent": "138±4",
+      "waals": "206"
+    },
+    "discovery_date": "1782",
+    "discovery_by": "Franz-Joseph Müller von Reichenstein",
     "electrons": [2, 8, 18, 18, 6],
     "isotopes": [
       {
@@ -5928,6 +6681,15 @@ module.exports = {
     "type": "nonmetal",
     "melting_point": 386.85,
     "boiling_point": 457.4,
+    "oxidation_states": ["-1*","+1*","+3*","+4","+5*","+6","+7*"],
+    "electronegativity": 2.66,
+    "radius": { 
+      "empirical": "140",
+      "covalent": "139±3",
+      "waals": "198"
+    },
+    "discovery_date": "1811",
+    "discovery_by": "Bernard Courtois",
     "electrons": [2, 8, 18, 18, 7],
     "isotopes": [
       {
@@ -5998,6 +6760,14 @@ module.exports = {
     "type": "noble_gas",
     "melting_point": 161.3,
     "boiling_point": 165.1,
+    "oxidation_states": ["0*","+1","+2","+4","+6","+8"],
+    "electronegativity": 2.6,
+    "radius": { 
+      "covalent": "140±9",
+      "waals": "216"
+    },
+    "discovery_date": "1898",
+    "discovery_by": "William Ramsay & Morris Travers",
     "electrons": [2, 8, 18, 18, 8],
     "isotopes": [
       {
@@ -6234,6 +7004,15 @@ module.exports = {
     "type": "alkali_metal",
     "melting_point": 301.59,
     "boiling_point": 944,
+    "oxidation_states": ["-1","+1*"],
+    "electronegativity": 0.79,
+    "radius": { 
+      "empirical": "265",
+      "covalent": "244±11",
+      "waals": "343"
+    },
+    "discovery_date": "1860",
+    "discovery_by": "Robert Bunsen & Gustav Kirchhoff",
     "electrons": [2, 8, 18, 18, 8, 1],
     "isotopes": [
       {
@@ -6332,6 +7111,15 @@ module.exports = {
     "type": "alkaline_earth",
     "melting_point": 1000,
     "boiling_point": 2143,
+    "oxidation_states": ["+1","+2*"],
+    "electronegativity": 0.89,
+    "radius": { 
+      "empirical": "222",
+      "covalent": "215±11",
+      "waals": "268"
+    },
+    "discovery_date": "1772",
+    "discovery_by": "Carl Wilhelm Scheele",
     "electrons": [2, 8, 18, 18, 8, 2],
     "isotopes": [
       {
@@ -6482,6 +7270,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1193,
     "boiling_point": 3737,
+    "oxidation_states": ["+1","+2","+3*"],
+    "electronegativity": 1.10,
+    "radius": { 
+      "empirical": "187",
+      "covalent": "207±8"
+    },
+    "discovery_date": "1838",
+    "discovery_by": "Carl Gustaf Mosander",
     "electrons": [2, 8, 18, 18, 9, 2],
     "isotopes": [
       {
@@ -6557,6 +7353,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1071,
     "boiling_point": 3633,
+    "oxidation_states": ["+1","+2","+3*","+4*"],
+    "electronegativity": 1.12,
+    "radius": { 
+      "empirical": "181.8",
+      "covalent": "204±9"
+    },
+    "discovery_date": "1803",
+    "discovery_by": "Martin Heinrich Klaproth, Jöns Jakob Berzelius & Wilhelm Hisinger",
     "electrons": [2, 8, 18, 19, 9, 2],
     "isotopes": [
       {
@@ -6728,7 +7532,15 @@ module.exports = {
     "group": 3,
     "type": "lanthanoid",
     "melting_point": 1204,
-    "boiling_point": 3563,
+    "boiling_point": 3563, 
+    "oxidation_states": ["+1","+2","+3*","+4","+5"],
+    "electronegativity": 1.13,
+    "radius": { 
+      "empirical": "182",
+      "covalent": "203±7"
+    },
+    "discovery_date": "1885",
+    "discovery_by": "Carl Auer von Welsbach",
     "electrons": [2, 8, 18, 21, 8, 2],
     "isotopes": [
       {
@@ -6804,6 +7616,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1294,
     "boiling_point": 3373,
+    "oxidation_states": ["+2","+3*","+4"],
+    "electronegativity": 1.14,
+    "radius": { 
+      "empirical": "181",
+      "covalent": "201±6"
+    },
+    "discovery_date": "1885",
+    "discovery_by": "Carl Auer von Welsbach",
     "electrons": [2, 8, 18, 22, 8, 2],
     "isotopes": [
       {
@@ -6938,6 +7758,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1373,
     "boiling_point": 3273,
+    "oxidation_states": ["+2","+3*"],
+    "electronegativity": 1.13,
+    "radius": { 
+      "empirical": "183",
+      "covalent": "199"
+    },
+    "discovery_date": "1942",
+    "discovery_by": "Chien Shiung Wu, Emilio Sagrè & Hans Bethe",
     "electrons": [2, 8, 18, 23, 8, 2],
     "isotopes": [
       {
@@ -7020,6 +7848,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1345,
     "boiling_point": 2076,
+    "oxidation_states": ["+1","+2","+3*","+4"],
+    "electronegativity": 1.17,
+    "radius": { 
+      "empirical": "180",
+      "covalent": "198±8"
+    },
+    "discovery_date": "1879",
+    "discovery_by": "Lecoq de Boisbaudran",
     "electrons": [2, 8, 18, 24, 8, 2],
     "isotopes": [
       {
@@ -7226,6 +8062,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1095,
     "boiling_point": 1800,
+    "oxidation_states": ["+1","+2*","+3*"],
+    "electronegativity": 1.2,
+    "radius": { 
+      "empirical": "180",
+      "covalent": "198±6"
+    },
+    "discovery_date": "1896",
+    "discovery_by": "Eugène-Anatole Demarçay",
     "electrons": [2, 8, 18, 25, 8, 2],
     "isotopes": [
       {
@@ -7365,6 +8209,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1586,
     "boiling_point": 3523,
+    "oxidation_states": ["+1","+2","+3*"],
+    "electronegativity": 1.20,
+    "radius": { 
+      "empirical": "180",
+      "covalent": "196±6"
+    },
+    "discovery_date": "1880",
+    "discovery_by": "Jean Charles Galissard de Marignac",
     "electrons": [2, 8, 18, 25, 9, 2],
     "isotopes": [
       {
@@ -7543,6 +8395,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1629,
     "boiling_point": 3503,
+    "oxidation_states": ["+1","+2","+3*","+4"],
+    "electronegativity": 1.2,
+    "radius": { 
+      "empirical": "177",
+      "covalent": "194±5"
+    },
+    "discovery_date": "1843",
+    "discovery_by": "Carl Gustaf Mosander",
     "electrons": [2, 8, 18, 27, 8, 2],
     "isotopes": [
       {
@@ -7618,6 +8478,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1685,
     "boiling_point": 2840,
+    "oxidation_states": ["+1","+2","+3*","+4"],
+    "electronegativity": 1.22,
+    "radius": { 
+      "empirical": "178",
+      "covalent": "192±7"
+    },
+    "discovery_date": "1886",
+    "discovery_by": "Lecoq de Boisbaudran",
     "electrons": [2, 8, 18, 28, 8, 2],
     "isotopes": [
       {
@@ -7771,6 +8639,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1747,
     "boiling_point": 2973,
+    "oxidation_states": ["+1","+2","+3*"],
+    "electronegativity": 1.23,
+    "radius": { 
+      "empirical": "176",
+      "covalent": "192±7"
+    },
+    "discovery_date": "1878",
+    "discovery_by": "Jacques-Louis Soret",
     "electrons": [2, 8, 18, 29, 8, 2],
     "isotopes": [
       {
@@ -7882,6 +8758,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1770,
     "boiling_point": 3141,
+    "oxidation_states": ["+1","+2","+3*"],
+    "electronegativity": 1.24,
+    "radius": { 
+      "empirical": "176",
+      "covalent": "189±6"
+    },
+    "discovery_date": "1843",
+    "discovery_by": "Carl Gustaf Mosander",
     "electrons": [2, 8, 18, 30, 8, 2],
     "isotopes": [
       {
@@ -8086,6 +8970,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1818,
     "boiling_point": 2223,
+    "oxidation_states": ["+2","+3*"],
+    "electronegativity": 1.25,
+    "radius": { 
+      "empirical": "176",
+      "covalent": "190±10"
+    },
+    "discovery_date": "1879",
+    "discovery_by": "Per Teodor Cleve",
     "electrons": [2, 8, 18, 31, 8, 2],
     "isotopes": [
       {
@@ -8202,6 +9094,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1092,
     "boiling_point": 1469,
+    "oxidation_states": ["+1","+2","+3*"],
+    "electronegativity": 1.1,
+    "radius": { 
+      "empirical": "176",
+      "covalent": "187±8"
+    },
+    "discovery_date": "1878",
+    "discovery_by": "Jean Charles Galissard de Marignac",
     "electrons": [2, 8, 18, 32, 8, 2],
     "isotopes": [
       {
@@ -8404,6 +9304,14 @@ module.exports = {
     "type": "lanthanoid",
     "melting_point": 1936,
     "boiling_point": 3675,
+    "oxidation_states": ["+1","+2","+3*"],
+    "electronegativity": 1.27,
+    "radius": { 
+      "empirical": "174",
+      "covalent": "187±8"
+    },
+    "discovery_date": "1906",
+    "discovery_by": "Carl Auer von Welsbach & Georges Urbain",
     "electrons": [2, 8, 18, 32, 9, 2],
     "isotopes": [
       {
@@ -8492,6 +9400,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 2506,
     "boiling_point": 4876,
+    "oxidation_states": ["-2","+1","+2","+3","+4"],
+    "electronegativity": 1.3,
+    "radius": { 
+      "empirical": "159",
+      "covalent": "175±10"
+    },
+    "discovery_date": "1922",
+    "discovery_by": "Dirk Coster & George de Havesy",
     "electrons": [2, 8, 18, 32, 10, 2],
     "isotopes": [
       {
@@ -8661,6 +9577,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 3290,
     "boiling_point": 5731,
+    "oxidation_states": ["-3","-1","+1","+2","+3","+4","+5*"],
+    "electronegativity": 1.5,
+    "radius": { 
+      "empirical": "146",
+      "covalent": "170±8"
+    },
+    "discovery_date": "1802",
+    "discovery_by": "Anders Gustaf Ekeberg",
     "electrons": [2, 8, 18, 32, 11, 2],
     "isotopes": [
       {
@@ -8824,6 +9748,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 3695,
     "boiling_point": 5828,
+    "oxidation_states": ["-4","-2","-1","0","+1","+2","+3","+4*","+5","+6*"],
+    "electronegativity": 2.36,
+    "radius": { 
+      "empirical": "139",
+      "covalent": "162±7"
+    },
+    "discovery_date": "1781",
+    "discovery_by": "Carl Wilhelm Scheele",
     "electrons": [2, 8, 18, 32, 12, 2],
     "isotopes": [
       {
@@ -8960,6 +9892,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 3459,
     "boiling_point": 5869,
+    "oxidation_states": ["-3","-1","0","+1","+2","+3","+4*","+5","+6","+7"],
+    "electronegativity": 1.9,
+    "radius": { 
+      "empirical": "137",
+      "covalent": "151±7"
+    },
+    "discovery_date": "1908",
+    "discovery_by": "Masataka Ogawa",
     "electrons": [2, 8, 18, 32, 13, 2],
     "isotopes": [
       {
@@ -9012,6 +9952,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 3306,
     "boiling_point": 5285,
+    "oxidation_states": ["-4","-2","-1","0","+1","+2","+3","+4*","+5","+6","+7","+8"],
+    "electronegativity": 2.2,
+    "radius": { 
+      "empirical": "135",
+      "covalent": "144±4"
+    },
+    "discovery_date": "1803",
+    "discovery_by": "Smithson Tennant",
     "electrons": [2, 8, 18, 32, 14, 2],
     "isotopes": [
       {
@@ -9216,6 +10164,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 2739,
     "boiling_point": 4701,
+    "oxidation_states": ["-3","-1","0","+1","+2","+3*","+4*","+5","+6","+7","+8","+9"],
+    "electronegativity": 2.20,
+    "radius": { 
+      "empirical": "136",
+      "covalent": "141±6"
+    },
+    "discovery_date": "1803",
+    "discovery_by": "Smithson Tennant",
     "electrons": [2, 8, 18, 32, 15, 2],
     "isotopes": [
       {
@@ -9415,6 +10371,15 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 2014.4,
     "boiling_point": 4098,
+    "oxidation_states": ["-3","-2","-1","+1","+2*","+3","+4*","+5","+6"],
+    "electronegativity": 2.28,
+    "radius": { 
+      "empirical": "139",
+      "covalent": "136±5",
+      "waals": "175"
+    },
+    "discovery_date": "1735",
+    "discovery_by": "Antonio de Ulloa",
     "electrons": [2, 8, 18, 32, 17, 1],
     "isotopes": [
       {
@@ -9549,6 +10514,15 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 1337.33,
     "boiling_point": 3129,
+    "oxidation_states": ["-3","-2","-1","+1*","+2","+3*","+5"],
+    "electronegativity": 2.54,
+    "radius": { 
+      "empirical": "144",
+      "covalent": "136±6",
+      "waals": "166"
+    },
+    "discovery_date": "6000 BCE",
+    "discovery_by": "?",
     "electrons": [2, 8, 18, 32, 18, 1],
     "isotopes": [
       {
@@ -9660,6 +10634,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": 234.32,
     "boiling_point": 692.88,
+    "oxidation_states": ["-2","+1","+2*"],
+    "electronegativity": 2.00,
+    "radius": { 
+      "empirical": "151",
+      "covalent": "155"
+    },
+    "discovery_date": "2000 BCE",
+    "discovery_by": "?",
     "electrons": [2, 8, 18, 32, 18, 2],
     "isotopes": [
       {
@@ -9862,6 +10844,15 @@ module.exports = {
     "type": "post_transitional",
     "melting_point": 577,
     "boiling_point": 1746,
+    "oxidation_states": ["-5","-2","-1","+1*","+2","+3*"],
+    "electronegativity": 1.62,
+    "radius": { 
+      "empirical": "170",
+      "covalent": "145±7",
+      "waals": "196"
+    },
+    "discovery_date": "1861",
+    "discovery_by": "William Crookes",
     "electrons": [2, 8, 18, 32, 18, 3],
     "isotopes": [
       {
@@ -9935,6 +10926,15 @@ module.exports = {
     "type": "post_transitional",
     "melting_point": 660.61,
     "boiling_point": 2022,
+    "oxidation_states": ["-4","-2","-1","+1","+2*","+3","+4*"],
+    "electronegativity": 1.87,
+    "radius": { 
+      "empirical": "175",
+      "covalent": "146±5",
+      "waals": "202",
+    },
+    "discovery_date": "7000 BCE",
+    "discovery_by": "?",
     "electrons": [2, 8, 18, 32, 18, 4],
     "isotopes": [
       {
@@ -10153,6 +11153,15 @@ module.exports = {
     "type": "post_transitional",
     "melting_point": 544.4,
     "boiling_point": 1837,
+    "oxidation_states": ["-3","-2","-1","+1","+2","+3*","+4","+5"],
+    "electronegativity": 2.02,
+    "radius": { 
+      "empirical": "156",
+      "covalent": "148±4",
+      "waals": "207"
+    },
+    "discovery_date": "1753",
+    "discovery_by": "Claude François Geoffroy",
     "electrons": [2, 8, 18, 32, 18, 5],
     "isotopes": [
       {
@@ -10266,6 +11275,15 @@ module.exports = {
     "type": "post_transitional",
     "melting_point": 527,
     "boiling_point": 1235,
+    "oxidation_states": ["-2*","+2*","+4*","+5","+6"],
+    "electronegativity": 2.0,
+    "radius": { 
+      "empirical": "168",
+      "covalent": "140±4",
+      "waals": "197"
+    },
+    "discovery_date": "1898",
+    "discovery_by": "Pierre Curie & Marie Curie",
     "electrons": [2, 8, 18, 32, 18, 6],
     "isotopes": [
       {
@@ -10348,6 +11366,14 @@ module.exports = {
     "type": "metalloid",
     "melting_point": 575,
     "boiling_point": 610,
+    "oxidation_states": ["-1*","+1*","+3","+5","+7"],
+    "electronegativity": 2.2,
+    "radius": { 
+      "empirical": "150",
+      "waals": "202"
+    },
+    "discovery_date": "1940",
+    "discovery_by": "Dale R. Corson, Kenneth Ross MacKenzie & Emilio Segrè",
     "electrons": [2, 8, 18, 32, 18, 7],
     "isotopes": [
       {
@@ -10435,6 +11461,14 @@ module.exports = {
     "type": "noble_gas",
     "melting_point": 202,
     "boiling_point": 211.3,
+    "oxidation_states": ["0*","+2","+6"],
+    "electronegativity": null,
+    "radius": { 
+      "waals": "220",
+      "covalent": "150"
+    },
+    "discovery_date": "1899",
+    "discovery_by": "Ernest Rutherford & Robert B. Owens",
     "electrons": [2, 8, 18, 32, 18, 8],
     "isotopes": [
       {
@@ -10530,6 +11564,14 @@ module.exports = {
     "type": "alkali_metal",
     "melting_point": 300,
     "boiling_point": 950,
+    "oxidation_states": ["+1*"],
+    "electronegativity": 0.79,
+    "radius": { 
+      "covalent": "260",
+      "waals": "348",
+    },
+    "discovery_date": "1939",
+    "discovery_by": "Marguerite Perey",
     "electrons": [2, 8, 18, 32, 18, 8, 1],
     "isotopes": [
       {
@@ -10617,6 +11659,14 @@ module.exports = {
     "type": "alkaline_earth",
     "melting_point": 973,
     "boiling_point": 2010,
+    "oxidation_states": ["+2*"],
+    "electronegativity": 0.9,
+    "radius": { 
+      "covalent": "221±2",
+      "waals": "283",
+    },
+    "discovery_date": "1898",
+    "discovery_by": "Pierre Curie & Marie Curie",
     "electrons": [2, 8, 18, 32, 18, 8, 2],
     "isotopes": [
       {
@@ -10745,6 +11795,13 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1323,
     "boiling_point": 3473,
+    "oxidation_states": ["+2","+3*"],
+    "electronegativity": 1.1,
+    "radius": { 
+      "covalent": "215"
+    },
+    "discovery_date": "1902",
+    "discovery_by": "Friedrich Oskar Giesel",
     "electrons": [2, 8, 18, 32, 18, 9, 2],
     "isotopes": [
       {
@@ -10837,6 +11894,14 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 2023,
     "boiling_point": 5093,
+    "oxidation_states": ["+1","+2","+3","+4*"],
+    "electronegativity": 1.3,
+    "radius": { 
+      "empirical": "179.8",
+      "covalent": "206±6",
+    },
+    "discovery_date": "1829",
+    "discovery_by": "Jöns Jakob Berzelius",
     "electrons": [2, 8, 18, 32, 18, 10, 2],
     "isotopes": [
       {
@@ -11016,6 +12081,14 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1845,
     "boiling_point": 4273,
+    "oxidation_states": ["+2","+3","+4","+5*"],
+    "electronegativity": 1.5,
+    "radius": { 
+      "empirical": "163",
+      "covalent": "200",
+    },
+    "discovery_date": "1913",
+    "discovery_by": "Kasimir Fajans & Oswald Helmuth Göhring",
     "electrons": [2, 8, 18, 32, 20, 9, 2],
     "isotopes": [
       {
@@ -11210,6 +12283,15 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1408,
     "boiling_point": 4200,
+    "oxidation_states": ["+1","+2","+3","+4","+5","+6*"],
+    "electronegativity": 1.38,
+    "radius": { 
+      "empirical": "156",
+      "covalent": "196±7",
+      "waals": "186",
+    },
+    "discovery_date": "1789",
+    "discovery_by": "Martin Heinrich Klaproth",
     "electrons": [2, 8, 18, 32, 21, 9, 2],
     "isotopes": [
       {
@@ -11406,6 +12488,14 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 917,
     "boiling_point": 4273,
+    "oxidation_states": ["+1","+2","+3","+4","+5*","+6","+7"],
+    "electronegativity": 1.36,
+    "radius": { 
+      "empirical": "155",
+      "covalent": "190±1"
+    },
+    "discovery_date": "1940",
+    "discovery_by": "Edwin McMillan & Philip H. Abelson",
     "electrons": [2, 8, 18, 32, 22, 9, 2],
     "isotopes": [
       {
@@ -11521,6 +12611,14 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 913,
     "boiling_point": 3503,
+    "oxidation_states": ["+1","+2","+3","+4*","+5","+6","+7"],
+    "electronegativity": 1.28,
+    "radius": { 
+      "empirical": "159",
+      "covalent": "187±1"
+    },
+    "discovery_date": "1940",
+    "discovery_by": "Glenn T. Seaborg, Arthur Wahl, Joseph W. Kennedy & Edwin McMillan",
     "electrons": [2, 8, 18, 32, 24, 8, 2],
     "isotopes": [
       {
@@ -11702,6 +12800,14 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1449,
     "boiling_point": 2284,
+    "oxidation_states": ["+2","+3*","+4","+5","+6","+7"],
+    "electronegativity": 1.3,
+    "radius": { 
+      "empirical": "173",
+      "covalent": "180±6"
+    },
+    "discovery_date": "1944",
+    "discovery_by": "Glenn T. Seaborg, Ralph A. James, Leon O. Morgan & Albert Ghiorso",
     "electrons": [2, 8, 18, 32, 25, 8, 2],
     "isotopes": [
       {
@@ -11798,6 +12904,14 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1618,
     "boiling_point": 3383,
+    "oxidation_states": ["+2","+3*","+4","+5","+6"],
+    "electronegativity": 1.3,
+    "radius": { 
+      "empirical": "174",
+      "covalent": "169±3"
+    },
+    "discovery_date": "1940",
+    "discovery_by": "Glenn T. Seaborg, Ralph A. James & Albert Ghiorso",
     "electrons": [2, 8, 18, 32, 25, 9, 2],
     "isotopes": [
       {
@@ -12020,6 +13134,13 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1323,
     "boiling_point": null,
+    "oxidation_states": ["+2","+3*","+4","+5"],
+    "electronegativity": 1.3,
+    "radius": { 
+      "empirical": "170"
+    },
+    "discovery_date": "1949",
+    "discovery_by": "Lawrence Berkeley National Laboratory",
     "electrons": [2, 8, 18, 32, 27, 8, 2],
     "isotopes": [
       {
@@ -12153,6 +13274,11 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1173,
     "boiling_point": null,
+    "oxidation_states": ["+2","+3*","+4","+5"],
+    "electronegativity": 1.3,
+    "radius": null,
+    "discovery_date": "1950",
+    "discovery_by": "Lawrence Berkeley National Laboratory",
     "electrons": [2, 8, 18, 32, 28, 8, 2],
     "isotopes": [
       {
@@ -12332,6 +13458,11 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1133,
     "boiling_point": null,
+    "oxidation_states": ["+2","+3*","+4"],
+    "electronegativity": 1.3,
+    "radius": null,
+    "discovery_date": "1952",
+    "discovery_by": "Lawrence Berkeley National Laboratory",
     "electrons": [2, 8, 18, 32, 29, 8, 2],
     "isotopes": [
       {
@@ -12462,6 +13593,11 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1800,
     "boiling_point": null,
+    "oxidation_states": ["+2","+3*"],
+    "electronegativity": 1.3,
+    "radius": null,
+    "discovery_date": "1952",
+    "discovery_by": "Lawrence Berkeley National Laboratory",
     "electrons": [2, 8, 18, 32, 30, 8, 2],
     "isotopes": [
       {
@@ -12577,6 +13713,11 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1100,
     "boiling_point": null,
+    "oxidation_states": ["+2","+3*"],
+    "electronegativity": 1.3,
+    "radius": null,
+    "discovery_date": "1955",
+    "discovery_by": "Lawrence Berkeley National Laboratory",
     "electrons": [2, 8, 18, 32, 31, 8, 2],
     "isotopes": [
       {
@@ -12684,6 +13825,11 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1100,
     "boiling_point": null,
+    "oxidation_states": ["+2*","+3"],
+    "electronegativity": 1.3,
+    "radius": null,
+    "discovery_date": "1966",
+    "discovery_by": "Joint Institute for Nuclear Research",
     "electrons": [2, 8, 18, 32, 32, 8, 2],
     "isotopes": [
       {
@@ -12832,6 +13978,11 @@ module.exports = {
     "type": "actinoid",
     "melting_point": 1900,
     "boiling_point": null,
+    "oxidation_states": ["+3*"],
+    "electronegativity": 1.3,
+    "radius": null,
+    "discovery_date": "1961",
+    "discovery_by": "Lawrence Berkeley National Laboratory & Joint Institute for Nuclear Research",
     "electrons": [2, 8, 18, 32, 32, 8, 3],
     "isotopes": [
       {
@@ -13054,6 +14205,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(+2)","(+2*)","+4*"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "150",
+      "covalent": "157"
+    },
+    "discovery_date": "1964",
+    "discovery_by": "Joint Institute for Nuclear Research & Lawrence Berkeley National Laboratory",
     "electrons": [2, 8, 18, 32, 32, 10, 2],
     "isotopes": [
       {
@@ -13177,6 +14336,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(+3)","(+4)","+5*"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "139",
+      "covalent": "149"
+    },
+    "discovery_date": "1970",
+    "discovery_by": "Lawrence Berkeley National Laboratory & Joint Institute for Nuclear Research",
     "electrons": [2, 8, 18, 32, 32, 11, 2],
     "isotopes": [
       {
@@ -13348,6 +14515,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["0","(+3)","(+4*)","(+5)","+6*"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "132",
+      "covalent": "143"
+    },
+    "discovery_date": "1974",
+    "discovery_by": "Lawrence Berkeley National Laboratory",
     "electrons": [2, 8, 18, 32, 32, 12, 2],
     "isotopes": [
       {
@@ -13466,6 +14641,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(+3*)","(+4*)","(+5*)","+7*"],
+    "electronegativity": 1.28,
+    "radius": { 
+      "empirical": "128",
+      "covalent": "141"
+    },
+    "discovery_date": "1981",
+    "discovery_by": "Gesellschaft für Schwerionenforschung",
     "electrons": [2, 8, 18, 32, 32, 13, 2],
     "isotopes": [
       {
@@ -13574,6 +14757,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(+2*)","(+3)","(+4*)","(+5)","(+6*)","+8*"],
+    "electronegativity": 1.28,
+    "radius": { 
+      "empirical": "126",
+      "covalent": "134"
+    },
+    "discovery_date": "1984",
+    "discovery_by": "Gesellschaft für Schwerionenforschung",
     "electrons": [2, 8, 18, 32, 32, 14, 2],
     "isotopes": [
       {
@@ -13646,6 +14837,14 @@ module.exports = {
     "type": "unknown_type",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(+1*)","(+3*)","(+4)","(+6*)","(+8)","(+9)"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "128",
+      "covalent": "129"
+    },
+    "discovery_date": "1982",
+    "discovery_by": "Gesellschaft für Schwerionenforschung",
     "electrons": [2, 8, 18, 32, 32, 15, 2],
     "isotopes": [
       {
@@ -13736,6 +14935,14 @@ module.exports = {
     "type": "unknown_type",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(0*)","(+2*)","(+4)","(+6)","(+8*)"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "132",
+      "covalent": "128"
+    },
+    "discovery_date": "1994",
+    "discovery_by": "Gesellschaft für Schwerionenforschung",
     "electrons": [2, 8, 18, 32, 32, 17, 1],
     "isotopes": [
       {
@@ -13800,6 +15007,14 @@ module.exports = {
     "type": "unknown_type",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(-1)","(+1)","(+3*)","(+5)"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "138",
+      "covalent": "121"
+    },
+    "discovery_date": "1994",
+    "discovery_by": "Gesellschaft für Schwerionenforschung",
     "electrons": [2, 8, 18, 32, 32, 17, 2],
     "isotopes": [
       {
@@ -13936,6 +15151,14 @@ module.exports = {
     "type": "transition_metal",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["0*","(+1)","+2*","(+4)"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "147",
+      "covalent": "122"
+    },
+    "discovery_date": "1996",
+    "discovery_by": "Gesellschaft für Schwerionenforschung",
     "electrons": [2, 8, 18, 32, 32, 18, 2],
     "isotopes": [
       {
@@ -14018,6 +15241,14 @@ module.exports = {
     "type": "unknown_type",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(-1)","(+1*)","(+3*)","(+5)"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "170",
+      "covalent": "172-180"
+    },
+    "discovery_date": "2004",
+    "discovery_by": "Riken",
     "electrons": [2, 8, 18, 32, 32, 18, 3],
     "isotopes": [
       {
@@ -14185,6 +15416,14 @@ module.exports = {
     "type": "post_transitional",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(0)","(+1)","(+2*)","(+4)","(+6)"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "180",
+      "covalent": "171-177"
+    },
+    "discovery_date": "1999",
+    "discovery_by": "Joint Institute for Nuclear Research & Lawrence Livermore National Laboratory",
     "electrons": [2, 8, 18, 32, 32, 18, 4],
     "isotopes": [
       {
@@ -14344,6 +15583,14 @@ module.exports = {
     "type": "unknown_type",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(+1*)","(+3*)"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "187",
+      "covalent": "156-158"
+    },
+    "discovery_date": "2003",
+    "discovery_by": "Joint Institute for Nuclear Research & Lawrence Livermore National Laboratory",
     "electrons": [2, 8, 18, 32, 32, 18, 5],
     "isotopes": [
       {
@@ -14434,6 +15681,14 @@ module.exports = {
     "type": "unknown_type",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(-2)","(+2*)","(+4)"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "183",
+      "covalent": "162-166"
+    },
+    "discovery_date": "2000",
+    "discovery_by": "Joint Institute for Nuclear Research & Lawrence Livermore National Laboratory",
     "electrons": [2, 8, 18, 32, 32, 18, 6],
     "isotopes": [
       {
@@ -14542,6 +15797,14 @@ module.exports = {
     "type": "unknown_type",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(-1)","(+1*)","(+3*)","(+5)"],
+    "electronegativity": null,
+    "radius": { 
+      "empirical": "138",
+      "covalent": "156-157"
+    },
+    "discovery_date": "2009",
+    "discovery_by": "Joint Institute for Nuclear Research, Lawrence Livermore National Laboratory, Vanderbilt University & Oak Ridge National Laboratory",
     "electrons": [2, 8, 18, 32, 32, 18, 7],
     "isotopes": [
       {
@@ -14596,6 +15859,13 @@ module.exports = {
     "type": "unknown_type",
     "melting_point": null,
     "boiling_point": null,
+    "oxidation_states": ["(-1)","(0)","(+1)","(+2*)","(+4*)","(+6)"],
+    "electronegativity": null,
+    "radius": { 
+      "covalent": "157"
+    },
+    "discovery_date": "2002",
+    "discovery_by": "Joint Institute for Nuclear Research & Lawrence Livermore National Laboratory",
     "electrons": [2, 8, 18, 32, 32, 10, 8],
     "isotopes": [
       {

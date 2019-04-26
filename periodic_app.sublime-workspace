@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"firs",
+				"first_isolation"
+			],
+			[
+				"Livermo",
+				"Livermore"
+			],
+			[
+				"RE",
+				"Research"
+			],
+			[
+				"Sc",
+				"Schwerionenforschung"
+			],
+			[
+				"f",
+				"für"
+			],
+			[
+				"In",
+				"Institute"
+			],
+			[
+				"Be",
+				"Berkeley"
+			],
+			[
+				"Ruther",
+				"Rutherford"
+			],
+			[
+				"Tenn",
+				"Tennant"
+			],
+			[
+				"Wil",
+				"Wilhelm"
+			],
+			[
+				"J",
+				"Jöns"
+			],
+			[
+				"Wi",
+				"Wilhelm"
+			],
+			[
 				"mar",
 				"margin\tproperty"
 			],
@@ -26,10 +74,6 @@
 			[
 				"Ogane",
 				"Oganesson"
-			],
-			[
-				"Tenn",
-				"Tennessine"
 			],
 			[
 				"Live",
@@ -74,10 +118,6 @@
 			[
 				"Sea",
 				"Seabórgio"
-			],
-			[
-				"Ruther",
-				"Rutherfórdio"
 			],
 			[
 				"La",
@@ -474,46 +514,6 @@
 			[
 				"tex",
 				"text-align\tproperty"
-			],
-			[
-				"alk",
-				"alkali_metal"
-			],
-			[
-				"for",
-				"for\tfor (…) {…} (Improved Native For-Loop)"
-			],
-			[
-				"session",
-				"sessionmaker"
-			],
-			[
-				"man",
-				"manufacturer_id"
-			],
-			[
-				"country",
-				"country_id"
-			],
-			[
-				"countr",
-				"country_id"
-			],
-			[
-				"decla",
-				"declarative_base"
-			],
-			[
-				"Geo",
-				"GeoTimeFolder"
-			],
-			[
-				"marg",
-				"margin-bottom"
-			],
-			[
-				"bor",
-				"border"
 			]
 		]
 	},
@@ -605,7 +605,7 @@
 			"file": "src/js/data.js",
 			"settings":
 			{
-				"buffer_size": 321927,
+				"buffer_size": 361082,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -853,6 +853,18 @@
 		"selected_items":
 		[
 			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"gita",
+				"Git: Add All"
+			],
+			[
 				"tem",
 				"Terminus: Toggle Panel"
 			],
@@ -1009,6 +1021,7 @@
 	],
 	"file_history":
 	[
+		"/F/Games/doom/gzdoom-Wagner.ini",
 		"/G/Felipe/projetos/periodic_app/src/js/element.js",
 		"/G/Felipe/projetos/periodic_app/src/js/element_page.jsx",
 		"/G/Felipe/projetos/periodic_app/src/index.html",
@@ -1135,8 +1148,7 @@
 		"/D/projetos/geohistscroll/build/hadean.html",
 		"/D/projetos/geohistscroll/src/templates/hadean.nunjucks",
 		"/D/projetos/geohistscroll/src/templates/template.nunjucks",
-		"/D/projetos/geohistscroll/css/build.css",
-		"/D/projetos/geohistscroll/js/build.js"
+		"/D/projetos/geohistscroll/css/build.css"
 	],
 	"find":
 	{
@@ -1154,6 +1166,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"speed_sound",
+			" pm\"",
 			"elec",
 			"pointer",
 			"294",
@@ -1279,9 +1293,7 @@
 			"curr_elem",
 			"248",
 			"247",
-			"1.8 d",
-			"246",
-			"4.94 d"
+			"1.8 d"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1595,15 +1607,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 321927,
+						"buffer_size": 361082,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								28295,
-								28295
+								25648,
+								25648
 							]
 						],
 						"settings":
@@ -1615,7 +1627,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 23773.0,
+						"translation.y": 18928.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1734,6 +1746,10 @@
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 126.0
 	},
 	"output.latextools":
 	{
