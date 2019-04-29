@@ -30,15 +30,16 @@ export default class App extends React.Component {
       selected_element: null,
       hover_element: null,
       temperature: 298,
-      show_flags: {
-        basic: true,
-        electronic: false,
-        isotopes: false,
-        radius: false,
-        state: false
-      },
+      temperature_scale: 'kelvin',
+      show_flags: this._generateShowFlags(),
       show_page: false
     };
+
+    let url_state = this.processURL();
+    
+    Object.keys(url_state).map(key => {
+      this.state[key] = url_state[key];
+    });
 
     this.pinchEvs = [];
     this.pinchPrevDiff = -1;
@@ -56,6 +57,58 @@ export default class App extends React.Component {
     this.setTemperature = this.setTemperature.bind(this);
     this.pinchHandler = this.pinchHandler.bind(this);
     this.cancelPinchHandler = this.cancelPinchHandler.bind(this);
+  }
+
+  componentDidMount() {
+    window.onpopstate = function(event) {
+      // event.preventDefault();
+
+      // this.setState(this.processURL());
+
+      // return false;
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    let currState = this.state;
+    let old_query = this.processURL();
+    let new_query = {};
+    let new_element = null;
+
+    if(currState.selected_element)
+        new_element = currState.selected_element.id;
+
+    if(currState.curr_lang)
+      new_query.curr_lang = currState.curr_lang;
+
+    if(currState.temperature) {
+      if(currState.temperature_scale != 'kelvin') {
+        new_query.temperature_scale = currState.temperature_scale;
+        new_query.temperature = convert_temperature(currState.temperature, 'kelvin', currState.temperature_scale);
+      } else {
+        new_query.temperature = currState.temperature;
+        if(old_query.temperature_scale) new_query.temperature_scale = old_query.temperature_scale;
+      }
+    }
+
+    let curr_mode = null;
+    Object.keys(currState.show_flags).forEach(function(key) { 
+      if(currState.show_flags[key]) 
+        curr_mode = key; 
+    });
+    if(curr_mode)
+      new_query.mode = curr_mode;
+
+    if(currState.show_page)
+      new_query.show_page = currState.show_page;
+
+    let url = "/";
+    if(new_element) url += new_element;
+    let query = new URLSearchParams();
+    Object.keys(new_query).forEach(key => query.append(key, new_query[key]))
+
+    window.history.replaceState(new_query, '', url + '?' + query.toString());
+    
   }
 
   pinchHandler(ev) {
@@ -117,8 +170,8 @@ export default class App extends React.Component {
     if (this.pinchEvs.length < 2) this.pinchPrevDiff = -1;
   }
 
-  setTemperature(temp) {
-    this.setState({temperature: temp});
+  setTemperature(temp, show_scale) {
+    this.setState({temperature: temp, temperature_scale: show_scale});
   }
 
   activateShowFlag(flag) {
@@ -133,8 +186,30 @@ export default class App extends React.Component {
         return { show_flags: new_flags };
       } else {
         return {};
+      }  
+    });
+  }
+
+  _generateShowFlags(selected='basic') {
+    let flags = {
+      "electronic": false,
+      "isotopes": false,
+      "radius": false,
+      "state": false,
+      "basic": false,
+    };
+
+    let is_selected = false;
+    Object.keys(flags).map(mode => {
+      if(mode == selected) {
+        flags[mode] = true;
+        is_selected = true;
       }
     });
+    
+    if(!is_selected) flags.basic = true;
+
+    return flags;
   }
 
   showHandler(e) {
@@ -572,5 +647,48 @@ export default class App extends React.Component {
         </div>
       </div>
     );
+  }
+
+  processURL() {
+    let url = new URL(window.location);
+    let params = url.searchParams;
+    let mode = params.get('mode');
+    let temperature = params.get('temperature') * 1;
+    let temperature_scale = params.get('temperature_scale');
+
+    let element = url.pathname.split('/')[1];
+
+    let state = {};
+    if(element) {
+      state.selected_element = this._getElement(element);
+      state.hover_element = state.selected_element;
+    }
+
+    if(mode)
+      state.show_flags = this._generateShowFlags(mode);
+
+    if(temperature) {
+      let kelvin_temp = 0;
+
+      switch(temperature_scale) {
+        case 'celsius':
+          kelvin_temp = convert_temperature(temperature, 'celsius', 'kelvin');
+          console.log(kelvin_temp);
+          break;
+        case 'fahrenheit':
+          kelvin_temp = convert_temperature(temperature, 'fahrenheit', 'kelvin');
+          break;
+        case 'kelvin':
+        default:
+          kelvin_temp = temperature;
+          temperature_scale = 'kelvin';
+          break;
+      }
+      
+      state.temperature = kelvin_temp;
+      state.temperature_scale = temperature_scale;
+    }
+
+    return state;
   }
 }

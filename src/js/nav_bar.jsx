@@ -7,8 +7,7 @@ export default class NavBar extends React.Component {
     super(props);
 
     this.state = {
-      temperature_scale: 'kelvin',
-      shown_temperature: props.temperature
+      shown_temperature: convert_temperature(props.temperature, 'kelvin', props.temperature_scale)
     }
 
     this.strings = strings;
@@ -22,12 +21,11 @@ export default class NavBar extends React.Component {
     let new_scale = form.temperature_scale.value;
 
     this.setState(function(state, props) {
-      let shown_temp = convert_temperature(temp, state.temperature_scale, new_scale);
+      let shown_temp = convert_temperature(temp, this.props.temperature_scale, new_scale);
       let kelvin_temp = convert_temperature(shown_temp, new_scale, 'kelvin');
-      this.props.setTemperature(kelvin_temp);
+      this.props.setTemperature(kelvin_temp, new_scale);
 
       return {
-        temperature_scale: new_scale,
         shown_temperature: shown_temp
       }
     });

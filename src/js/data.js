@@ -713,7 +713,7 @@ module.exports = {
     "type": "nonmetal",
     "allotropes": [
       {
-        "id": "graphite"
+        "id": "graphite",
         "name": {
           "en": "Graphite",
           "pt-BR": "Grafita"
@@ -782,7 +782,9 @@ module.exports = {
     "electronegativity": 2.55,
     "oxidation_states": ["-4*","-3","-2","-1","0","+1","+2","+3","+4*"],
     "radius": { 
-      "covalent": [69,73,76], // pm
+      "covalent": 69,
+      "covalent_2": 73,
+      "covalent_3": 76, // pm
       "waals": 170,
     },
     "discovery": {
@@ -864,7 +866,7 @@ module.exports = {
     "type": "nonmetal",
     "allotropes": [
       {
-        "id": "dihydrogen"
+        "id": "dihydrogen",
         "name": {
           "en": "Dihydrogen",
           "pt-BR": "Dihidrogênio"
@@ -1020,7 +1022,7 @@ module.exports = {
     "type": "nonmetal",
     "allotropes": [
       {
-        "id": "dioxygen"
+        "id": "dioxygen",
         "name": {
           "en": "Dioxygen",
           "pt-BR": "Dioxigênio"
@@ -1118,7 +1120,7 @@ module.exports = {
     },
     "named": {
       "date": "1777",
-      "Antoine Lavoisier"
+      "by": "Antoine Lavoisier"
     },
     "electrons": [2, 6],
     "isotopes": [

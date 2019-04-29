@@ -1,3 +1,5 @@
+import { convert_temperature } from './utils';
+
 function _getName(obj, lang) {
   lang = lang || 'en';
   if(obj.name.hasOwnProperty(lang))
@@ -30,6 +32,13 @@ export class Element {
 
   getName(lang) {
     return _getName(this, lang);
+  }
+
+  getRadius(type='covalent') {
+    if(this.radius)
+      return this.radius[type];
+
+    return false;
   }
 
   getWeight(precision=3) {

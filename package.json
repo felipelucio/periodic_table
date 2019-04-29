@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.html",
   "scripts": {
-    "dev": "parcel src/index.html --open",
+    "dev": "parcel src/index.html",
     "build": "parcel build src/index.html -d www --public-url ./",
     "emulate": "npm run build && npx cordova emulate android"
   },

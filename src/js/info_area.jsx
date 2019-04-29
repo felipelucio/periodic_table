@@ -83,7 +83,7 @@ export default class InfoArea extends React.Component {
           <span className="info">
             <span className="item">
               <b>{strings.getString('radius')}:</b>
-              <span className="value">{elem.radius}</span>
+              <span className="value">{elem.getRadius('covalent')} pm</span>
             </span>
             <span className="item">
               <b>{strings.getString('boiling_point')}:</b>
