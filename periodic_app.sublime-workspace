@@ -4,8 +4,16 @@
 		"selected_items":
 		[
 			[
-				"show",
-				"show_scale"
+				"wi",
+				"weights"
+			],
+			[
+				"cur",
+				"currState"
+			],
+			[
+				"tempera",
+				"temperature"
 			],
 			[
 				"temp",
@@ -13,7 +21,11 @@
 			],
 			[
 				"tempe",
-				"temperature_scale"
+				"temperature"
+			],
+			[
+				"show",
+				"show_scale"
 			],
 			[
 				"kel",
@@ -34,10 +46,6 @@
 			[
 				"kelvi",
 				"kelvin_temp"
-			],
-			[
-				"tempera",
-				"temperature_scale"
 			],
 			[
 				"acti",
@@ -506,14 +514,6 @@
 			[
 				"le",
 				"length"
-			],
-			[
-				"font-s",
-				"font-size\tproperty"
-			],
-			[
-				"id",
-				"id"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "src/css/main.css",
 			"settings":
 			{
-				"buffer_size": 9704,
+				"buffer_size": 9667,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -541,7 +541,7 @@
 			"file": "src/css/elementbox.css",
 			"settings":
 			{
-				"buffer_size": 2820,
+				"buffer_size": 2849,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -550,7 +550,7 @@
 			"file": "src/js/elementbox.jsx",
 			"settings":
 			{
-				"buffer_size": 5061,
+				"buffer_size": 5052,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -559,7 +559,7 @@
 			"file": "src/js/app.jsx",
 			"settings":
 			{
-				"buffer_size": 18710,
+				"buffer_size": 20271,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -568,16 +568,25 @@
 			"file": "src/js/info_area.jsx",
 			"settings":
 			{
-				"buffer_size": 4313,
+				"buffer_size": 4711,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Wagner/Documents/My Games/OpenMW/openmw.cfg",
+			"settings":
+			{
+				"buffer_size": 37912,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "src/js/element.js",
 			"settings":
 			{
-				"buffer_size": 3250,
+				"buffer_size": 3487,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -614,7 +623,7 @@
 			"file": "src/js/data.js",
 			"settings":
 			{
-				"buffer_size": 361131,
+				"buffer_size": 361110,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -1029,6 +1038,10 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Wagner/Documents/My Games/OpenMW/openmw.cfg",
+		"/F/Games/OpenMW 0.45.0/morrowind/settings-default.cfg",
+		"/F/Games/OpenMW 0.45.0/morrowind/openmw.cfg",
+		"/F/SteamLibrary/SteamApps/common/swkotor/opengl32.ini",
 		"/F/Games/doom/gzdoom-Wagner.ini",
 		"/G/Felipe/projetos/periodic_app/src/js/element.js",
 		"/G/Felipe/projetos/periodic_app/src/js/element_page.jsx",
@@ -1152,11 +1165,7 @@
 		"/D/projetos/geohistscroll/src/templates/precambrian/hadean.nunjucks",
 		"/D/projetos/geohistscroll/src/templates/precambrian/archean.nunjucks",
 		"/D/projetos/geohistscroll/src/templates/index.nunjucks",
-		"/D/projetos/geohistscroll/build/index.nunjucks",
-		"/D/projetos/geohistscroll/build/hadean.html",
-		"/D/projetos/geohistscroll/src/templates/hadean.nunjucks",
-		"/D/projetos/geohistscroll/src/templates/template.nunjucks",
-		"/D/projetos/geohistscroll/css/build.css"
+		"/D/projetos/geohistscroll/build/index.nunjucks"
 	],
 	"find":
 	{
@@ -1171,9 +1180,30 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"vurts_ascadan_isles2",
+			"li",
+			"roe",
+			"roent",
+			"console",
+			"_getElement",
+			"beryllium",
+			"hover",
+			"closeIsotopes",
+			"_element",
+			"processURL",
+			"nh-287",
+			"new_url_state",
+			"old_url_state",
+			"!old_url_state || ",
+			"processURL",
+			"old_state",
+			"new_state",
+			"prevState",
+			"this.state",
+			"_getDefaultLang",
 			"setTemperature",
 			"settem",
 			"shown_temperature",
@@ -1280,28 +1310,7 @@
 			"255",
 			"254",
 			"253",
-			"260",
-			"258",
-			"257",
-			"255",
-			"253",
-			"252",
-			"255",
-			"254",
-			"253",
-			"252",
-			"254",
-			"253",
-			"252",
-			"250",
-			"249",
-			"248",
-			"249",
-			"half_life",
-			"\",\n",
-			"half_life",
-			"59",
-			"var"
+			"260"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1319,7 +1328,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -1328,15 +1337,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9704,
+						"buffer_size": 9667,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7760,
-								7760
+								6677,
+								6677
 							]
 						],
 						"settings":
@@ -1347,7 +1356,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4390.0,
+						"translation.y": 3526.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
@@ -1382,7 +1391,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1391,15 +1400,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2820,
+						"buffer_size": 2849,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2766,
-								2819
+								673,
+								673
 							]
 						],
 						"settings":
@@ -1410,10 +1419,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2150.0,
+						"translation.y": 368.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1422,15 +1431,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5061,
+						"buffer_size": 5052,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3889,
-								4163
+								2528,
+								2501
 							]
 						],
 						"settings":
@@ -1442,10 +1451,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2052.0,
+						"translation.y": 2322.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1454,15 +1463,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18710,
+						"buffer_size": 20271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2068,
-								2068
+								6340,
+								6340
 							]
 						],
 						"settings":
@@ -1474,10 +1483,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 486.0,
+						"translation.y": 3194.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1486,15 +1495,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4313,
+						"buffer_size": 4711,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2942,
-								2942
+								3848,
+								3848
 							]
 						],
 						"settings":
@@ -1506,27 +1515,55 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1512.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "src/js/element.js",
+					"file": "/C/Users/Wagner/Documents/My Games/OpenMW/openmw.cfg",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3250,
+						"buffer_size": 37912,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								949,
-								949
+								35818,
+								35818
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 10696.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/js/element.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3487,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								724,
+								724
 							]
 						],
 						"settings":
@@ -1538,14 +1575,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 1512.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "package.json",
 					"semi_transient": false,
 					"settings":
@@ -1573,11 +1610,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "src/js/utils.js",
 					"semi_transient": false,
 					"settings":
@@ -1606,11 +1643,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "src/js/nav_bar.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1638,24 +1675,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "src/js/data.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 361131,
+						"buffer_size": 361110,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18013,
-								18013
+								339231,
+								339234
 							]
 						],
 						"settings":
@@ -1667,14 +1704,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 12201.0,
+						"translation.y": 272049.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "src/js/l10n.js",
 					"semi_transient": false,
 					"settings":
@@ -1702,11 +1739,11 @@
 						"translation.y": 378.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "src/js/main.js",
 					"semi_transient": false,
 					"settings":
@@ -1734,7 +1771,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 13,
 					"type": "text"
 				}
 			]

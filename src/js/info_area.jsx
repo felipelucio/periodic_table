@@ -31,7 +31,7 @@ export default class InfoArea extends React.Component {
       return (
         <li className="info_area">
           <span className={`info-container basic show`}>
-            <span className={`elementbox  nonmetal`}>
+            <span className={`element nonmetal`}>
               <span className="symbol">{strings.getString('symbol')}</span>
               <span className="name">{strings.getString('name')}</span>
               <span className="atomic_number">Z</span>
@@ -57,11 +57,13 @@ export default class InfoArea extends React.Component {
       );
     }
     
-    return (
-      <li className={`info_area`} onPointerDown={this.onPointerDown}> 
-        <span className={`info-container basic ${this._showFlags('basic')}`}>
-          <span className={`elementbox  ${elem.type}`}>
-            <span className="symbol">{elem.symbol}</span>
+    let state = elem.stateAtTemp(this.props.curr_temp);
+    let content = [];
+    if(this._showFlags('basic')) {
+      content.push(
+        <span className={`info-container basic`} key="basic">
+          <span className={`element ${elem.type}`}>
+            <span className={`symbol ${state}`}>{elem.symbol}</span>
             <span className="name">{elem.getName(lang)}</span>
             <span className="atomic_number">{elem.atomic_number}</span>
             <span className="weight">
@@ -95,10 +97,26 @@ export default class InfoArea extends React.Component {
             </span>
           </span>
         </span>
-        
-        <span className={`info-container isotopes ${this._showFlags('isotopes')}`}>
-          <span className={`elementbox  ${elem.type}`}>
-            <span className="symbol">{elem.symbol}</span>
+      );
+    }
+
+    // ------------- ISOTOPES ------------------------
+    if(this._showFlags('isotopes')) {
+      let isotopes = elem.isotopes.map(function(iso) {
+        return (
+          <span key={iso.id} className={`isotope`} 
+            data-key={iso.id}
+            //onPointerDown={}
+          >
+            <p>{iso.getName(lang)}</p>
+          </span>
+        );
+      });
+
+      content.push(
+        <span className={`info-container isotopes`} key="isotopes">
+          <span className={`element ${elem.type}`}>
+            <span className={`symbol ${state}`}>{elem.symbol}</span>
             <span className="name">{elem.getName(lang)}</span>
             <span className="atomic_number">{elem.atomic_number}</span>
             <span className="weight">
@@ -108,13 +126,17 @@ export default class InfoArea extends React.Component {
               <div>{elem.getWeight(false)}</div>
             </span>
           </span>
-          <span className="info">
-            <span className="">blablabalbal</span>
-            <span className="">blablabalbal</span>
-            <span className="">blablabalbal</span>
-            <span className="">blablabalbal</span>
+          <span className="info isotopes-container">
+            {isotopes}
           </span>
         </span>
+      );
+    }
+
+    // ============== RENDER ========================
+    return (
+      <li className={`info_area`} onPointerDown={this.onPointerDown}> 
+        {content}
       </li>
     );
   }

@@ -13,7 +13,10 @@
 	overflow: visible;
 }
 
-.element > span {
+.element > .basic, 
+.element > .electronic, 
+.element > .radius, 
+.element > .isotopes {
 	display: none;
 	grid-template-columns: repeat(3, 33.3%);
 	grid-template-rows: 15% 35% 25% 25%;
@@ -38,6 +41,7 @@
 	height: 30vh;
 	left: 5.5rem;
 	z-index: 20;
+	/*border: 1px solid #000;*/
 }
 
 .element.selected .isotopes-container {

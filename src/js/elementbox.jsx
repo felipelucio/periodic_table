@@ -82,36 +82,6 @@ export default class ElementBox extends React.Component {
     let elem = this.props.elem;
     let state = elem.stateAtTemp(this.props.curr_temp);
 
-    // create the isotopes boxes
-    let isotopes = [];
-    let count = 0;
-    for(let id in elem.isotopes) {
-      let iso = elem.isotopes[id];
-
-      isotopes.push(
-        <span className={`isotope order_${count}`} key={id}
-          data-key={`${elem.id}[${id}]`}
-          onPointerDown={this.onPointerDown}
-        >
-          <p>{iso.getName(_lang)}</p>
-          <p>{iso.getDecayModes().join(', ')}</p>
-        </span>
-      );
-      count++;
-    }
-
-    // set the isotopes box orientation
-    let isotopes_pos_x = 'right';
-    if(elem.group > 9 || 
-        (elem.atomic_number > 63 && elem.atomic_number <= 71) ||
-        (elem.atomic_number > 95 && elem.atomic_number <= 103) 
-    )
-      isotopes_pos_x = 'left';
-
-    let isotopes_pos_y = 'bottom';
-    if(elem.type == 'lanthanoid' || elem.type == 'actinoid')
-      isotopes_pos_y = 'top';
-    
     return (
       <li className={classes} 
         data-key={elem.id}
@@ -143,21 +113,14 @@ export default class ElementBox extends React.Component {
 
         <span className={`electronic ${this._showFlags('electronic')}`}>
           <span className="name">{ elem.getName(_lang) }</span>
-          <span className="symbol">{ elem.symbol }</span>
+          <span className={`symbol ${state}`}>{ elem.symbol }</span>
           <span className="atomic_number">{ elem.atomic_number }</span>
         </span>
 
         <span className={`isotopes ${this._showFlags('isotopes')}`}>
           <span className="name">{ elem.getName(_lang) }</span>
-          <span className="symbol">{ elem.symbol }</span>
+          <span className={`symbol ${state}`}>{ elem.symbol }</span>
           <span className="atomic_number">{ elem.atomic_number }</span>
-          { (elem.id != 'lanthanoids' || elem.id != 'actinoids') && 
-            <div className={`isotopes-container ${isotopes_pos_x} ${isotopes_pos_y}`}
-              onPointerDown={this.closeIsotopes}
-            >
-              {isotopes}
-            </div>
-          }
         </span>
       </li>
     );

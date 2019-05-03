@@ -108,7 +108,6 @@ export default class App extends React.Component {
     Object.keys(new_query).forEach(key => query.append(key, new_query[key]))
 
     window.history.replaceState(new_query, '', url + '?' + query.toString());
-    
   }
 
   pinchHandler(ev) {
@@ -247,14 +246,13 @@ export default class App extends React.Component {
   }
 
   _getElement(id) {
-    let regexp = /([a-zA-Z]+)(\[(.+?)\])?/;
+    //let regexp = /([a-zA-Z]+)(\[(.+?)\])?/;
+    let regexp = /([a-zA-Z]+)(\-([0-9]+))?/;
     let matches = regexp.exec(id);
     
     if(matches[1] && matches[3]) {
-      if(this.state.elements[matches[1]] && 
-        this.state.elements[matches[1]].isotopes[matches[3]]
-      )
-        return this.state.elements[matches[1]].isotopes[matches[3]];
+      if(this.state.elements[matches[1]])
+        return this.state.elements[matches[1]].getIsotope(matches[0]);
     } else {
       if(this.state.elements[matches[1]])  
         return this.state.elements[matches[1]];
@@ -551,8 +549,8 @@ export default class App extends React.Component {
       if(this.state.selected_element) {
         if(elem.id == this.state.selected_element.id) selected = true;
         
-        if(this.state.selected_element._element)
-          if(this.state.selected_element._element.id == elem.id)
+        if(this.state.selected_element.element)
+          if(this.state.selected_element.element.id == elem.id) 
             selected = true;
       }
 
@@ -630,6 +628,7 @@ export default class App extends React.Component {
           <ElementPage curr_lang={this.state.curr_lang} 
             element={this.state.selected_element}
             show_page={this.state.show_page}
+            curr_temp={this.state.temperature}
             closeElemPage={this.closeElementPage}
           />
           <ul className="table">
@@ -661,7 +660,7 @@ export default class App extends React.Component {
     let state = {};
     if(element) {
       state.selected_element = this._getElement(element);
-      state.hover_element = state.selected_element;
+      state.hover_element = state.selected_element.element ? state.selected_element.element : state.selected_element;
     }
 
     if(mode)

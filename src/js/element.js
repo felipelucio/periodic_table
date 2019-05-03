@@ -19,6 +19,15 @@ export class Element {
     Object.assign(this, data);
   }
 
+  getIsotope(id) {
+    let iso = null;
+    this.isotopes.forEach(item => { 
+      if(item.id == id) iso = item;  
+    });
+    
+    return iso;
+  }
+
   // return state at given temperature (in Kelvin)
   stateAtTemp(temp) {
     if(this.boiling_point != null && this.melting_point != null)
@@ -82,8 +91,13 @@ export class Isotope {
   get symbol() {
     return this._element.symbol;
   }
+
   get atomic_number() {
     return this._element.atomic_number;
+  }
+
+  get element() {
+    return this._element;
   }
 
   getName(lang) {
@@ -92,6 +106,8 @@ export class Isotope {
 
   getWeight(precision=3) {
     let weights = this.weight;
+
+    if(!weights.standard) return '-';
 
     if(!precision || (_precision(weights.standard) < precision)) {
       let str = weights.standard.toString();

@@ -511,7 +511,7 @@ module.exports = {
     "electrons": [2, 2],
     "isotopes": [
       {
-        "id": "beryllium-7",
+        "id": "Be-7",
         "name": {
           "en": "Beryllium-7",
           "pt-BR": "Berílio-7",
@@ -529,7 +529,7 @@ module.exports = {
         ]
       },
       {
-        "id": "beryllium-9",
+        "id": "Be-9",
         "name": {
           "en": "Beryllium-9",
           "pt-BR": "Berílio-9",
@@ -545,7 +545,7 @@ module.exports = {
         ]
       },
       {
-        "id": "beryllium-10",
+        "id": "Be-10",
         "name": {
           "en": "Beryllium-10",
           "pt-BR": "Berílio-10",
@@ -15254,10 +15254,10 @@ module.exports = {
     "electrons": [2, 8, 18, 32, 32, 18, 3],
     "isotopes": [
       {
-        "id": "Nh-287",
+        "id": "Nh-278",
         "name": {
-          "en": "Nihonium-287",
-          "pt-BR": "Nihônio-287",
+          "en": "Nihonium-278",
+          "pt-BR": "Nihônio-278",
         },
         "neutrons": 165,
         "weight": { "standard": 278.17058 },

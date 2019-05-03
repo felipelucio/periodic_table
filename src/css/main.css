@@ -196,12 +196,9 @@ nav .temperature_input {
 }
 
 .info_area .info-container {
-	display: none;
+	display: grid;
 	margin: 0;
 	height: 100%;
-}
-.info_area .show {
-	display: grid;
 }
 
 .info_area .basic, 
@@ -210,7 +207,7 @@ nav .temperature_input {
 	grid-template-rows: 100%;
 }
 
-.info_area .elementbox {
+.info_area .element {
 	grid-column: 1;
 	grid-row: 1;
 	display: grid;
@@ -260,10 +257,12 @@ nav .temperature_input {
 	grid-column: 1 / span 4;
 	justify-self: center;
 	white-space: nowrap;
+	font-size: 1rem;
 }
 .info_area .atomic_number {
 	grid-row: 1;
 	grid-column: 1;
+	font-size: 0.8rem;
 	padding-left: 0.4rem;
 	padding-top: 0.3rem;
 }
@@ -273,10 +272,13 @@ nav .temperature_input {
 	justify-self: center;
 	text-align: center;
 	white-space: nowrap;
+	font-size: 0.75rem;
 }
 .info_area .electrons {
+	display: block;
 	grid-row: 1 / span 3;
-	grid-column: 4;
+	font-size: 0.8rem;
+	grid-column: 3;
 	padding-top: 0.4rem;
 	padding-right: 0.4rem;
 	text-align: right;
@@ -287,6 +289,30 @@ nav .temperature_input {
 	padding: 0;
 	line-height: 0.9rem;
 }
+
+.info_area .isotopes-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	overflow-y: auto;
+}
+
+.info_area .isotope {
+	width: 4rem;
+	height: 4rem;
+	margin: 0 1px 1px 1px;
+	border: 1px solid #000;
+	background: #FFF;
+	font-size: 0.6rem;
+}
+
+.info_area .isotope .stable { border: 3px solid #000; }
+.info_area .isotope .alpha { border: 3px solid #900; }
+.info_area .isotope .beta_minus { border: 3px solid #CC0; }
+.info_area .isotope .beta_plus { border: 3px solid #009; }
+.info_area .isotope .k_plus { border: 3px solid #909; }
+.info_area .isotope .spontaneous { border: 3px dashed #000; }
 
 
 
