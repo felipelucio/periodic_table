@@ -1186,16 +1186,113 @@ module.exports = {
     "period": 2,
     "group": 17,
     "type": "nonmetal",
+    "allotropes": [
+      {
+        "id": "difluorine",
+        "name": {
+          "en": "Difluorine",
+          "pt-BR": "Diflúor"
+        },
+        "symbol": "F_2",
+        "density": [
+          {
+            "volumetric": 1.696e-3, // At STP, g/cm3
+            "at_temp": 273.15, // K
+            "at_pressure": 101.3e3 // Pa
+          },
+          {
+            "volumetric": 1.505,
+            "at_temp": 85.03,
+            "at_pressure": 101.3e3
+          }
+        ],
+        "heat": {
+          "fusion": null, // J/mol
+          "vaporization": 6.51e3, // J/mol
+          "capacity": 31 // J/(mol*K)
+        },
+        "sound": {
+          "speed": null, // m/s
+          "at_temp": null, //K
+          "state": null
+        },
+        "thermal": {
+          "expansion": null, // m/(m*K)
+          "at_temp": null, // K 
+          "conductivity": 0.02591, // W/(m*K)
+        },
+        "electrical": {
+          "resistivity": null, // Ω·m
+          "at_temp": null, // K
+        },
+        "magnetism": {
+          "order": "diamagnetic",
+          "susceptibility": {
+            "molar": -1.2e-4, // cm3/mol
+            "at_temp": 293, // K
+          }
+        },
+        "modulus": {
+          "young": null, // Pa
+          "shear": null,
+          "bulk": null,
+        },
+        "hardness": {
+          "mohs": null,
+          "brinell": null, // Pa
+          "vickers": null,
+        },
+        "CAS_number": ["7782-41-4"],
+      },
+    ],
     "melting_point": 53.5,
     "boiling_point": 85.03,
+    "triple_point": {
+      "temperature": 53.48, //K
+      "pressure": 90e3, //Pa
+    },
+    "critical_point": {
+      "temperature": 144.41, //K
+      "pressure": 5.1724e6, //Pa
+    },
+    "vapor_pressures": {
+      "1": 38,
+      "10": 44,
+      "100": 50,
+      "1e3": 58,
+      "10e3": 69,
+      "100e3": 85
+    },
+    "ionization": {
+      "1": 1681.0e3, // J/mol
+      "2": 3374.2e3,
+      "3": 6050.4e3,
+      "4": 8407.7e3,
+      "5": 11022.7e3,
+      "6": 15164.1e3,
+      "7": 17868e3,
+      "8": 92038.1e3,
+      "9": 106434.3e3,
+    },
+    "occurrence": "primordial",
     "electronegativity": 3.98,
     "oxidation_states": ["-1*"],
     "radius": { 
       "covalent": "64",
       "waals": "135",
     },
-    "discovery_date": "1810",
-    "discovery_by": "André-Marie Ampère",
+    "discovery": {
+      "date": "1810",
+      "by": "André-Marie Ampère",
+    },
+    "first_isolation": {
+      "date": "1886",
+      "by": "Henry Moissan"
+    },
+    "named": {
+      "date": "?",
+      "by": "Humphry Davy"
+    },
     "electrons": [2, 7],
     "isotopes": [
       {

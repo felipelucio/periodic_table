@@ -87,7 +87,7 @@ export default class App extends React.Component {
         new_query.temperature = convert_temperature(currState.temperature, 'kelvin', currState.temperature_scale);
       } else {
         new_query.temperature = currState.temperature;
-        if(old_query.temperature_scale) new_query.temperature_scale = old_query.temperature_scale;
+        if(old_query.temperature_scale) new_query.temperature_scale = 'kelvin';
       }
     }
 
@@ -672,7 +672,6 @@ export default class App extends React.Component {
       switch(temperature_scale) {
         case 'celsius':
           kelvin_temp = convert_temperature(temperature, 'celsius', 'kelvin');
-          console.log(kelvin_temp);
           break;
         case 'fahrenheit':
           kelvin_temp = convert_temperature(temperature, 'fahrenheit', 'kelvin');

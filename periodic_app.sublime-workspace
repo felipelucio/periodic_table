@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"over",
+				"overflow-y\tproperty"
+			],
+			[
 				"wi",
 				"weights"
 			],
@@ -388,10 +392,6 @@
 				"Erbium"
 			],
 			[
-				"over",
-				"text-overflow\tproperty"
-			],
-			[
 				"row",
 				"row-reverse\tflex-direction"
 			],
@@ -523,7 +523,7 @@
 			"file": "src/css/main.css",
 			"settings":
 			{
-				"buffer_size": 9667,
+				"buffer_size": 10390,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -538,10 +538,19 @@
 			}
 		},
 		{
+			"file": "src/js/app.jsx",
+			"settings":
+			{
+				"buffer_size": 20263,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "src/css/elementbox.css",
 			"settings":
 			{
-				"buffer_size": 2849,
+				"buffer_size": 2920,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -550,16 +559,7 @@
 			"file": "src/js/elementbox.jsx",
 			"settings":
 			{
-				"buffer_size": 5052,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/app.jsx",
-			"settings":
-			{
-				"buffer_size": 20271,
+				"buffer_size": 3953,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -568,25 +568,16 @@
 			"file": "src/js/info_area.jsx",
 			"settings":
 			{
-				"buffer_size": 4711,
+				"buffer_size": 5200,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/Wagner/Documents/My Games/OpenMW/openmw.cfg",
-			"settings":
-			{
-				"buffer_size": 37912,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "src/js/element.js",
 			"settings":
 			{
-				"buffer_size": 3487,
+				"buffer_size": 3714,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -604,7 +595,7 @@
 			"file": "src/js/utils.js",
 			"settings":
 			{
-				"buffer_size": 737,
+				"buffer_size": 916,
 				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": "export default {"
@@ -632,7 +623,7 @@
 			"file": "src/js/l10n.js",
 			"settings":
 			{
-				"buffer_size": 2375,
+				"buffer_size": 2639,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -1038,6 +1029,7 @@
 	],
 	"file_history":
 	[
+		"/G/Felipe/projetos/periodic_app/src/js/app.jsx",
 		"/C/Users/Wagner/Documents/My Games/OpenMW/openmw.cfg",
 		"/F/Games/OpenMW 0.45.0/morrowind/settings-default.cfg",
 		"/F/Games/OpenMW 0.45.0/morrowind/openmw.cfg",
@@ -1052,7 +1044,6 @@
 		"/G/Felipe/projetos/periodic_app/www/.gitkeep",
 		"/G/Felipe/projetos/periodic_app/www/index.html",
 		"/G/Felipe/projetos/periodic_app/src/js/l10n.js",
-		"/G/Felipe/projetos/periodic_app/src/js/app.jsx",
 		"/G/Felipe/projetos/periodic_app/src/js/main.js",
 		"/E/metadata.calibre",
 		"/G/Felipe/projetos/periodic_app/.babelrc",
@@ -1169,7 +1160,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -1183,6 +1174,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console",
+			"temperature",
+			"Temperature",
+			"unknown",
+			" span",
+			"> span",
+			".element > span",
+			"span",
+			"elementbox",
+			"element",
 			"vurts_ascadan_isles2",
 			"li",
 			"roe",
@@ -1300,16 +1301,6 @@
 			"266",
 			"262",
 			"261",
-			"260",
-			"259",
-			"256",
-			"255",
-			"254",
-			"259",
-			"257",
-			"255",
-			"254",
-			"253",
 			"260"
 		],
 		"highlight": false,
@@ -1328,7 +1319,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -1337,15 +1328,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9667,
+						"buffer_size": 10390,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6677,
-								6677
+								7908,
+								7908
 							]
 						],
 						"settings":
@@ -1356,10 +1347,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3526.0,
+						"translation.y": 3662.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1391,24 +1382,56 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "src/css/elementbox.css",
+					"file": "src/js/app.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2849,
+						"buffer_size": 20263,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								673,
-								673
+								2946,
+								2946
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2106.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/css/elementbox.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2920,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
 							]
 						],
 						"settings":
@@ -1419,59 +1442,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 368.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/js/elementbox.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5052,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2528,
-								2501
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2322.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "src/js/app.jsx",
+					"file": "src/js/elementbox.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 20271,
+						"buffer_size": 3953,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6340,
-								6340
+								2992,
+								3325
 							]
 						],
 						"settings":
@@ -1483,7 +1474,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3194.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1495,15 +1486,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4711,
+						"buffer_size": 5200,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3848,
-								3848
+								3825,
+								3825
 							]
 						],
 						"settings":
@@ -1515,55 +1506,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1512.0,
+						"translation.y": 1404.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "/C/Users/Wagner/Documents/My Games/OpenMW/openmw.cfg",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 37912,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								35818,
-								35818
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 10696.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
 					"file": "src/js/element.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3487,
+						"buffer_size": 3714,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								724,
-								724
+								660,
+								660
 							]
 						],
 						"settings":
@@ -1575,14 +1538,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1512.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "package.json",
 					"semi_transient": false,
 					"settings":
@@ -1614,20 +1577,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "src/js/utils.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 737,
+						"buffer_size": 916,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								736,
-								736
+								796,
+								796
 							]
 						],
 						"settings":
@@ -1643,11 +1606,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "src/js/nav_bar.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1659,8 +1622,8 @@
 						"selection":
 						[
 							[
-								862,
-								862
+								918,
+								918
 							]
 						],
 						"settings":
@@ -1675,11 +1638,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "src/js/data.js",
 					"semi_transient": false,
 					"settings":
@@ -1704,27 +1667,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 272049.0,
+						"translation.y": 2677.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "src/js/l10n.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2375,
+						"buffer_size": 2639,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1696,
-								1696
+								587,
+								587
 							]
 						],
 						"settings":
@@ -1736,14 +1699,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 710.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 12,
 					"file": "src/js/main.js",
 					"semi_transient": false,
 					"settings":
@@ -1771,7 +1734,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1779,7 +1742,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -1840,7 +1803,7 @@
 	"project": "periodic_app.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":

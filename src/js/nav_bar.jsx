@@ -67,7 +67,7 @@ export default class NavBar extends React.Component {
             </li>
           </ul>
           <form className="ml-auto form-inline" onSubmit={(e) => {e.preventDefault(); return false;}}>
-            <span className="input-group mr-sm-2 mb-xs-2 mb-md-0">
+            <span className="input-group mr-sm-2 mb-xs-2 mb-md-0 col">
               <input type="number" name="temperature" className="form-control temperature_input"
                 value={this.state.shown_temperature} onChange={this.changeTemperature} />
 
@@ -82,7 +82,7 @@ export default class NavBar extends React.Component {
               </span>
             </span>
             
-            <span className="input-group">
+            <span className="input-group col">
               <div className="input-group-prepend">
                 <span className="input-group-text">{strings.getString('language')}</span>
               </div>

@@ -16,6 +16,11 @@ export let strings = new LocalizedStrings({
     electrons_per_shell: 'Electrons per shell',
     boiling_point: 'Boiling point',
     melting_point: 'Melting point',
+    triple_point: 'Triple point',
+    pressure: 'Pressure',
+    temperature: 'Temperature',
+    NA: 'NA',
+    unknown: 'unknown',
 
 
     // ELEMENTS
@@ -48,6 +53,11 @@ export let strings = new LocalizedStrings({
     electrons_per_shell: 'Elétrons por camada',
     boiling_point: 'Ponto de ebulição',
     melting_point: 'Ponto de fusão',
+    triple_point: 'Ponto triplo',
+    pressure: 'Pressão',
+    temperature: 'Temperatura',
+    NA: 'ND',
+    unknown: 'Desconhecido',
 
     // ELEMENTS
     H_sources: 'Hydrocarbon processing and water electrolysis',

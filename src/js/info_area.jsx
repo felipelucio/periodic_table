@@ -1,5 +1,6 @@
 import React from 'react'
 import {strings} from './l10n';
+import {valueOrNA} from './utils';
 
 export default class InfoArea extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ export default class InfoArea extends React.Component {
     let elem = this.props.element;
     this.strings.setLanguage(this.props.curr_lang);
     let strings = this.strings;
+    let NA = this.strings.getString('NA');
 
     // DEFAULT INFO AREA
     if(!elem) {
@@ -89,11 +91,18 @@ export default class InfoArea extends React.Component {
             </span>
             <span className="item">
               <b>{strings.getString('boiling_point')}:</b>
-              <span className="value">{elem.boiling_point} K</span>
+              <span className="value">{valueOrNA(elem.boiling_point, 'K', NA)}</span>
             </span>
             <span className="item">
               <b>{strings.getString('melting_point')}:</b>
-              <span className="value">{elem.melting_point} K</span>
+              <span className="value">{valueOrNA(elem.melting_point,'K', NA)}</span>
+            </span>
+            <span className="item">
+              <b>{strings.getString('triple_point')} (P/T):</b>
+              <span className="value">
+                {valueOrNA(elem.getProp('triple_point.temperature'), 'K', NA)} / 
+                {valueOrNA(elem.getProp('triple_point.pressure'), 'Pa', NA)} 
+              </span>
             </span>
           </span>
         </span>

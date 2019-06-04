@@ -17,3 +17,15 @@ export function convert_temperature(temp, from_scale, to_scale) {
 
   return Math.ceil(new_temp);
 }
+
+export function valueOrNA(value, unit, NA) {
+  if(value) {
+    if(unit) {
+      return `${value} ${unit}`;
+    } else {
+      return value;
+    }
+  } else {
+    return NA;
+  }
+}

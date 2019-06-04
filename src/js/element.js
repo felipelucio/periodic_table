@@ -28,6 +28,18 @@ export class Element {
     return iso;
   }
 
+  getProp(path) {
+    let levels = path.split('.');
+
+    let curr = this;
+    for(let i in levels) {
+      if(curr && curr.hasOwnProperty(levels[i])) curr = curr[levels[i]];
+      else return null;
+    }
+
+    return curr;
+  }
+
   // return state at given temperature (in Kelvin)
   stateAtTemp(temp) {
     if(this.boiling_point != null && this.melting_point != null)
